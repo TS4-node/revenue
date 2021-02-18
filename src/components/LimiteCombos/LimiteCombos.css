@@ -1,0 +1,26 @@
+.encabezado {
+	font-family: "Roboto", sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+.add-combo {
+	background: #ffffff;
+	border: none;
+	border-radius: 2px;
+	outline: none !important;
+	cursor: pointer;
+	text-align: center;
+}
+
+.total {
+	margin: 1rem 0 0 1rem;
+	font-family: "Roboto", sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 16px;
+	color: rgba(0, 0, 0, 0.65);
+}
