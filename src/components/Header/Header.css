@@ -1,0 +1,11 @@
+.combos-generator {
+  width: 296px;
+  height: 55px;
+  font-family: Roboto;
+  font-size: 24px;
+  color: #1890ff;
+}
+
+hr {
+  border-top: 1.5px solid #dadada;
+}
