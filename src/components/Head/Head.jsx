@@ -1,9 +1,9 @@
 import React from 'react';
-import './Header.css';
+import './Head.css';
 import { Row, Col } from 'reactstrap';
-import HeaderMenu from './HeaderMenu'
+import HeadMenu from './HeadMenu'
 
-const Header = () => {
+const Head = () => {
   return (
     <>
       <Row className='mt-3 nav d-flex flex-nowrap justify-content-center'style={{height: '55px'}}>
@@ -14,7 +14,7 @@ const Header = () => {
           <img src='images/header/ABInBev-logo.png' alt='ABInBev Logo' />
         </Col>
         <Col xs='4' sm='4' className='mt-3'>
-          <HeaderMenu/>
+          <HeadMenu/>
         </Col>
       </Row>
       <hr className='my-0'/>
@@ -22,4 +22,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Head;
