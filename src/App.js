@@ -1,9 +1,16 @@
-import { Header }from './components/index'
+import { Head, LimiteCombos, Nav } from './components/index'
 
 function App() {
   return (
+	<>
+		<header>
+			<Head />
+			<Nav />
+		</header>
 
-      <Header/>
+		<LimiteCombos />
+
+	</>
 
   );
 }
