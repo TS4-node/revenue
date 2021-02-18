@@ -5,10 +5,10 @@ const Search = () => {
   return (
     <>
       <form >
-        <input class='' type='text' placeholder='Busca aquí'/>
-        <input type='submit' class='submit-buscador' />
+        <input type='text' placeholder='Busca aquí'/>
+        <input type='submit' className='submit-buscador' />
       </form>
-      <img src="images/header/Desc.png" alt="Desc icon" className='image-search'/>
+      <img src="images/header/Desc.png" alt="Desc icon" className='pt-2 float-right'/>
     </>
   );
 };

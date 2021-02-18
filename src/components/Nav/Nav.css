@@ -1,7 +1,7 @@
 .text {
-  min-width: 109px;
+  min-width: 125px;
   height: 20px;
-  padding: 0 46px 3px 0;
+  padding: 0 4.5rem;
   font-family: Inter;
   font-size: 12px;
   font-weight: normal;
@@ -36,11 +36,12 @@
 
 form .form-search {
   position: relative;
+
 }
 
 form input[type="text"] {
   position: absolute;
-  left: -300px;
+  left: -90px;
   right: 0;
   top: 0;
   width: 290px;
@@ -55,12 +56,13 @@ form input[type="text"] {
 form input[type="submit"] {
   margin-top: 0.1rem;
   position: absolute;
-  left: -45px;
+  left: 166px;
   right: 0;
   top: 0;
   background-image: url("./Search/Search.png");
   background-repeat: no-repeat;
   background-position: center center;
+  background-color: #ffffff;
   width: 2rem;
   height: 1.6rem;
   display: block;

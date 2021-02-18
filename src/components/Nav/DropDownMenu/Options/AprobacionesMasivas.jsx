@@ -18,9 +18,9 @@ const AprobacionesMasivas = () => {
           Aprobaciones Masivas
         </DropdownToggle>
         <DropdownMenu className="submenu">
-            <DropdownItem className='option'>Action 1</DropdownItem>
-            <DropdownItem className='option'>Action 2</DropdownItem>
-            <DropdownItem className='option'>Action 3</DropdownItem>
+          <DropdownItem className='option'>Action 1</DropdownItem>
+          <DropdownItem className='option'>Action 2</DropdownItem>
+          <DropdownItem className='option'>Action 3</DropdownItem>
         </DropdownMenu>
       </Dropdown>
     </div>

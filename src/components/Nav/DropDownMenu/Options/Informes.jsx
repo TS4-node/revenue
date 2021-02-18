@@ -10,13 +10,13 @@ const Informes = () => {
     return (
         <div>
         <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
-            <DropdownToggle nav caret className="text pl-1">
+            <DropdownToggle nav caret className='text pl-1'>
                 Informes
             </DropdownToggle>
-                <DropdownMenu className="submenu">
-                <DropdownItem className="option">Action 1</DropdownItem>
-                <DropdownItem className="option">Action 2</DropdownItem>
-                <DropdownItem className="option">Action 3</DropdownItem>
+                <DropdownMenu className='submenu'>
+                <DropdownItem className='option'>Action 1</DropdownItem>
+                <DropdownItem className='option'>Action 2</DropdownItem>
+                <DropdownItem className='option'>Action 3</DropdownItem>
             </DropdownMenu>
         </Dropdown>
         </div>
