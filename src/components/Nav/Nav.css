@@ -1,0 +1,70 @@
+.text {
+  min-width: 109px;
+  height: 20px;
+  padding: 0 46px 3px 0;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.83;
+  letter-spacing: normal;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.submenu {
+  min-width: 120px;
+  min-height: 65px;
+  background-color: #f9f9f9;
+  border: none;
+}
+
+.option {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.option:hover {
+  background-color: #e6f7ff;
+  color: #1890ff;
+  outline: none;
+}
+
+form .form-search {
+  position: relative;
+}
+
+form input[type="text"] {
+  position: absolute;
+  left: -300px;
+  right: 0;
+  top: 0;
+  width: 290px;
+  height: 30px;
+  padding: 3px 4px 3px 14.1px;
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  outline: none;
+}
+
+form input[type="submit"] {
+  margin-top: 0.1rem;
+  position: absolute;
+  left: -45px;
+  right: 0;
+  top: 0;
+  background-image: url("./Search/Search.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 2rem;
+  height: 1.6rem;
+  display: block;
+  text-indent: -9999px;
+  border: none;
+  cursor: pointer;
+}
