@@ -1,8 +1,8 @@
 .text {
   min-width: 125px;
   height: 20px;
-  padding: 0 4.5rem;
-  font-family: Inter;
+  padding: 0 2.5rem;
+  font-family: 'Inter';
   font-size: 12px;
   font-weight: normal;
   font-stretch: normal;
@@ -39,27 +39,28 @@ form .form-search {
 
 }
 
-form input[type="text"] {
+form input[type="text"].buscador {
   position: absolute;
-  left: -90px;
+  left: -60px;
   right: 0;
   top: 0;
-  width: 290px;
+  width: 232px;
   height: 30px;
   padding: 3px 4px 3px 14.1px;
   background-color: #fff;
   border: 1px solid #d9d9d9;
   border-radius: 4px;
   outline: none;
+  margin-right: 1rem;
 }
 
-form input[type="submit"] {
+form input[type="submit"].lupa {
   margin-top: 0.1rem;
   position: absolute;
-  left: 166px;
+  left: 135px;
   right: 0;
   top: 0;
-  background-image: url("./Search/Search.png");
+  background-image: url('../../assets/images/nav/Search.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-color: #ffffff;

@@ -9,3 +9,8 @@ body {
   margin: 0 3rem;
   font-family: 'Inter', 'sans-serif';
 }
+
+button.boton-gris:hover {
+  background-color: #1890ff!important;
+  color: #ffffff!important;
+}
