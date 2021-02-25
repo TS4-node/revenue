@@ -4,7 +4,7 @@ import gridImage from '../../assets/images/nav/Grid.png'
 
 import { Col, Row } from 'reactstrap'
 import DropDownMenu from './DropDownMenu/DropDownMenu'
-import Search from './Search/Search'
+
 
 const Nav = () => {
     return (
@@ -18,7 +18,7 @@ const Nav = () => {
                 </div>
             </Col>
             <Col xs='2' sm='2' className='align-left'>
-                <Search />
+                {/* <Search /> */}
             </Col>
         </Row>
     )
