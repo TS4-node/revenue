@@ -1,3 +1,7 @@
 export { default as Head } from './Head/Head'
 export { default as Nav } from './Nav/Nav'
-export { default as LimiteCombos } from './LimiteCombos/LimiteCombos'
+export { default as LimitOfCombos } from './LimitOfCombos/LimitOfCombos'
+export { default as ModalCreateLimit } from './ModalCreateLimit/ModalCreateLimit'
+export { default as Spinner } from './Spinner/Spinner'
+export { default as AlertGeneric } from './AlertGeneric/AlertGeneric'
+// export { default as TabsCreateCombo } from './TabsCreateCombo/TabsCreateCombo'
