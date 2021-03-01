@@ -8,7 +8,7 @@ import DropDownMenu from './DropDownMenu/DropDownMenu'
 
 const Nav = () => {
     return (
-        <Row className='mt-2'>
+        <Row className='mt-1'>
             <Col xs='10' sm='10' className='d-flex mx-auto'>
                 <div className='media mr-4'>
                     <img src={gridImage} alt="Grid icon" />
