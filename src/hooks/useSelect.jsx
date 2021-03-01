@@ -12,14 +12,16 @@ const DropdownIndicator = (props) => {
 };
 
 
-const useSelect = ( initialState, optionsList,placeholder='Busca Aquí') => {
+const useSelect = ( initialState, optionsList,placeholder='Busca Aquí', isMulti = false) => {
     const [selectedOption, setSelectedOption] = useState(initialState);
 
     const handleChange = option => {
 		setSelectedOption(option);
 	};
 
-	const SelectSearch = ({}) => (
+	const SelectSearch = () => (
+
+
 		<Select
 			value={selectedOption}
 			onChange={handleChange}
@@ -29,10 +31,15 @@ const useSelect = ( initialState, optionsList,placeholder='Busca Aquí') => {
 			styles={{
 				control: (css) => ({ ...css, paddingLeft: ".5rem" }),
 			}}
+			isMulti={isMulti}
 		/>
 	);
 
-	return [selectedOption.value, SelectSearch];
+	if(isMulti){
+		return [selectedOption, setSelectedOption, SelectSearch];
+	}
+
+	return [selectedOption.value, setSelectedOption, SelectSearch];
 };
 
 export default useSelect;
