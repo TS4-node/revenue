@@ -16,7 +16,7 @@ import {
 import { useSelect } from "../../hooks";
 import { AlertGeneric } from '../index'
 
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { createLimitOfComboAction } from "../../redux/actions/limitOfCombosActions";
 
 //Simulate DB
@@ -30,23 +30,29 @@ const optionsList = [
 	{ value: "CMM Macfe", label: "CMM Macfe" },
 ];
 
+const initialLimitOfCombo = {
+	nivelCombo: "",
+	estructuraVenta: "",
+	combosPermitidos: 0,
+	activo: false,
+};
+
 const ModalCreateLimit = ({ modal, setModal, toggle }) => {
+	/*
+	 * Redux
+	 */
+
+	const dispatch = useDispatch();
+
+	const addLimitOfCombo = limitOfCombo => dispatch(createLimitOfComboAction(limitOfCombo));
+
 	/*
 	 * Local State
 	 */
-	const initialLimitOfCombo = {
-		nivelCombo: "",
-		estructuraVenta: "",
-		combosPermitidos: 0,
-		activo: false,
-	};
-
 	const [limitOfCombo, setLimitOfCombo] = useState(initialLimitOfCombo);
-
 	const [error, setError] = useState(false);
 	const [saved, setSaved] = useState(false);
-
-	const [saleStructure, SelectStructure] = useSelect( "", optionsList, "Estructura de Ventas" );
+	const [saleStructure, setSaleStructure, SelectStructure] = useSelect( "", optionsList, "Estructura de Ventas");
 
 	const handleChange = (e) => {
 		setLimitOfCombo({
@@ -56,63 +62,51 @@ const ModalCreateLimit = ({ modal, setModal, toggle }) => {
 	};
 
 	useEffect(() => {
-		const updateState = () => {
-			setLimitOfCombo({
-				...limitOfCombo,
-				estructuraVenta: saleStructure,
-			});
-		};
-		updateState();
+		setLimitOfCombo({
+			...limitOfCombo,
+			estructuraVenta: saleStructure,
+		});
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [saleStructure]);
 
-	/*
-	 * Redux
-	 */
 
-	const dispatch = useDispatch();
-
-	const addLimitOfCombo = (limitOfCombo) =>
-		dispatch(createLimitOfComboAction(limitOfCombo));
-
-	const saveLimitOfCombo = (e) => {
+	const saveLimitOfCombo = e => {
 		e.preventDefault();
 
-		//validar formulario
 		if ( limitOfCombo.nivelCombo.trim() === "" || limitOfCombo.estructuraVenta === "" ||limitOfCombo.combosPermitidos === 0 ){
 			setError(true);
 		} else {
 			setError(false);
-
 			addLimitOfCombo(limitOfCombo);
-
 			setSaved(true)
 
 			setTimeout(() => {
 				setLimitOfCombo(initialLimitOfCombo);
 				setSaved(false)
+				setSaleStructure('')
+				document.getElementById('combosPermitidos').value = '0';
+				document.getElementById('radio').checked = false;
 				toggle();
-			}, 1500);
+			}, 500);
 		}
 	};
 
 	const saveAndNewLimitOfCombo = (e) => {
 		e.preventDefault();
 
-		//validar formulario
 		if ( limitOfCombo.nivelCombo.trim() === "" || limitOfCombo.estructuraVenta === "" ||limitOfCombo.combosPermitidos === 0 ){
 			setError(true);
 		} else {
 			setError(false);
-
 			addLimitOfCombo(limitOfCombo);
-
 			setSaved(true)
-
 			setTimeout(() => {
 				setLimitOfCombo(initialLimitOfCombo);
+				setSaleStructure('');
+				document.getElementById('combosPermitidos').value = '';
+				document.getElementById('radio').checked = false;
 				setSaved(false)
-			}, 1500);
+			}, 500);
 		}
 	};
 
@@ -172,7 +166,7 @@ const ModalCreateLimit = ({ modal, setModal, toggle }) => {
 										className="option-select"
 										value="Organizacion de Ventas"
 									>
-										Organzación de Ventas
+										Organización de Ventas
 									</option>
 									<option
 										className="option-select"
@@ -192,7 +186,7 @@ const ModalCreateLimit = ({ modal, setModal, toggle }) => {
 									style={{ height: "4rem" }}
 									className="mt-4"
 								>
-									<SelectStructure/>
+									<SelectStructure isMulti={false}/>
 								</div>
 
 								<Row>
@@ -221,8 +215,9 @@ const ModalCreateLimit = ({ modal, setModal, toggle }) => {
 											className="mr-2"
 											name="combosPermitidos"
 											onChange={handleChange}
+											id='combosPermitidos'
 										>
-											<option value="0" disabled>-</option>
+											<option value="0" disabled selected>-</option>
 											<option value="1">1</option>
 											<option value="2">2</option>
 											<option value="3">3</option>
@@ -233,6 +228,7 @@ const ModalCreateLimit = ({ modal, setModal, toggle }) => {
 										<FormGroup check>
 											<Label check className="mt-1 id">
 												<Input
+													id='radio'
 													type="radio"
 													name="activo"
 													value={true}
