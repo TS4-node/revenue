@@ -19,7 +19,7 @@ const customStyles = {
     table:{
         style: {
             border: '1px solid rgba(0, 0, 0, 0.15)',
-            height: '20rem'
+            height: '24rem'
         }
     },
     headCells: {
@@ -34,15 +34,20 @@ const customStyles = {
 }
 
 const CombosTable = () => {
-
-    const [filterText, setFilterText] = useState('');
-	const [resetPaginationToggle, setResetPaginationToggle] = useState(false);
-
     /*
      * Redux
     */
 
     const dispatch = useDispatch();
+    const limitsOfCombos = useSelector( state => state.limitOfCombos.limitsOfCombos);
+    const loading = useSelector ( state => state.limitOfCombos.loading );
+
+    /*
+    * Local State
+    */
+
+   const [filterText, setFilterText] = useState('');
+   const [resetPaginationToggle, setResetPaginationToggle] = useState(false);
 
     useEffect(() => {
         const getLimitsCombos = () => dispatch( getAllLimitOfCombosAction() );
@@ -50,8 +55,6 @@ const CombosTable = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    const limitsOfCombos = useSelector( state => state.limitOfCombos.limitsOfCombos);
-    const loading = useSelector ( state => state.limitOfCombos.loading );
 
 
     // //filtrar elementos
@@ -80,7 +83,7 @@ const CombosTable = () => {
 	}, [filterText, resetPaginationToggle]);
 
     const component = loading
-        ?<Spinner />
+        ? <Spinner />
         : (
         <>
             <DataTable
