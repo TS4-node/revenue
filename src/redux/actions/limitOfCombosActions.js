@@ -18,7 +18,6 @@ export function getAllLimitOfCombosAction(){
         dispatch(getAllLimitOfCombos());
         try {
             const limitOfCombos = await axiosClient.get('/limiteCombos');
-            console.log(limitOfCombos.data)
             dispatch( getAllLimitOfCombosSuccess(limitOfCombos.data));
         } catch (error) {
             console.log('this is the error: ', error);
@@ -55,7 +54,7 @@ export function createLimitOfComboAction(limitOfCombo){
             await axiosClient.post('/limiteCombos', limitOfCombo);
             dispatch( addLimitOfComboSuccess(limitOfCombo));
         } catch (error) {
-            console.log(error)
+            console.log('this is the error:', error);
             dispatch( addLimitOfComboError());
         }
     }

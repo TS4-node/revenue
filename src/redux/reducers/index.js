@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux'
 import limitOfCombosReducer from './limitOfCombosReducer'
+import comboDataReducer from './comboDataReducer';
 
 export default combineReducers({
-    limitOfCombos: limitOfCombosReducer
+    limitOfCombos: limitOfCombosReducer,
+    comboData: comboDataReducer
 });
