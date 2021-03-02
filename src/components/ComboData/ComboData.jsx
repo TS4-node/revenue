@@ -122,7 +122,7 @@ const ComboData = ({ setValue }) => {
 	return (
 		<Container
 			style={{ fontSize: '14px', width: '30rem', height: '34rem' }}
-			className='mt-3'
+			className='mt-1'
 		>
 			<div className='d-flex justify-content-between'>
 				<p className='label mr-1 '>
@@ -140,7 +140,7 @@ const ComboData = ({ setValue }) => {
 				</p>
 			</div>
 
-			<Row className='mt-2'>
+			<Row className='mt-1'>
 				<Col sm='6' md='6'>
 					<TextField
 						id='startDate'
@@ -294,13 +294,13 @@ const ComboData = ({ setValue }) => {
 
 			<Row className='mt-3 d-flex align-items-center'>
 				<Col sm='9' md='9' style={{ height: '1rem' }}>
-					<Label for='aplicaciones' className='text-left'>
+					<Label for='aplicaciones' className='text-left my-0'>
 						Aplicaciones:
 					</Label>
 				</Col>
 			</Row>
 
-			<Row className='mt-3 ml-1'>
+			<Row className='mt-2 ml-1'>
 				<FormControlLabel
 					control={
 						<Checkbox
@@ -350,11 +350,11 @@ const ComboData = ({ setValue }) => {
 					label='BDR'
 				/>
 			</Row>
-            <Row className='my-2 px-3'>
+            <Row className='my-1 px-3'>
                 {error &&  <AlertGeneric severity="warning" text="Todos los campos son obligatorios." />}
                 {/* {saved &&  <AlertGeneric severity="success" text="Se ha guardado el Limite de Combo" />} */}
             </Row>
-			<Row className='mt-3 px-3'>
+			<Row className='mt-1 px-3'>
 				<Button className=' boton-gris boton-combo' type='submit' onClick={saveCombo}>
 					Guardar
 				</Button>
