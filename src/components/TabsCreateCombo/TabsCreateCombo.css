@@ -21,3 +21,11 @@ button.MuiButtonBase-root {
 	outline: none;
 }
 
+span.MuiTab-wrapper {
+	margin-top: 0;
+    flex-direction: row-reverse;
+}
+button.MuiTab-labelIcon {
+    min-height: 5px;
+    padding-top: 9px;
+}
