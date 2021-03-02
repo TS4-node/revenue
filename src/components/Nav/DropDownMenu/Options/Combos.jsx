@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import {
     Dropdown,
     DropdownItem,
@@ -16,9 +17,13 @@ const Combos = () => {
             <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
                 <DropdownToggle nav caret className="text pl-1">
                     Combos
-        </DropdownToggle>
+                </DropdownToggle>
                 <DropdownMenu className="submenu">
-                    <DropdownItem className="option">Crear Combo</DropdownItem>
+                    <DropdownItem className="option">
+                        <Link to={'/crear-combo'} >
+                            Crear Combo
+                        </Link>
+                    </DropdownItem>
                     <DropdownItem className="option">Detalle</DropdownItem>
                     <DropdownItem className="option">Relacionado</DropdownItem>
                 </DropdownMenu>

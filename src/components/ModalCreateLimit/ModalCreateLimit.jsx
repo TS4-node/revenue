@@ -34,6 +34,7 @@ const initialLimitOfCombo = {
 	nivelCombo: "",
 	estructuraVenta: "",
 	combosPermitidos: 0,
+	CombosDisponibles: 0,
 	activo: false,
 };
 
@@ -77,7 +78,10 @@ const ModalCreateLimit = ({ modal, setModal, toggle }) => {
 			setError(true);
 		} else {
 			setError(false);
-			addLimitOfCombo(limitOfCombo);
+			addLimitOfCombo({
+				...limitOfCombo,
+				CombosDisponibles: limitOfCombo.combosPermitidos
+			});
 			setSaved(true)
 
 			setTimeout(() => {
@@ -87,7 +91,7 @@ const ModalCreateLimit = ({ modal, setModal, toggle }) => {
 				document.getElementById('combosPermitidos').value = '0';
 				document.getElementById('radio').checked = false;
 				toggle();
-			}, 500);
+			}, 1200);
 		}
 	};
 
@@ -98,7 +102,10 @@ const ModalCreateLimit = ({ modal, setModal, toggle }) => {
 			setError(true);
 		} else {
 			setError(false);
-			addLimitOfCombo(limitOfCombo);
+			addLimitOfCombo({
+				...limitOfCombo,
+				CombosDisponibles: limitOfCombo.combosPermitidos
+			});
 			setSaved(true)
 			setTimeout(() => {
 				setLimitOfCombo(initialLimitOfCombo);
@@ -106,7 +113,7 @@ const ModalCreateLimit = ({ modal, setModal, toggle }) => {
 				document.getElementById('combosPermitidos').value = '';
 				document.getElementById('radio').checked = false;
 				setSaved(false)
-			}, 500);
+			}, 1200);
 		}
 	};
 

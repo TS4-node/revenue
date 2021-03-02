@@ -5,13 +5,20 @@ import { Col, Row } from 'reactstrap';
 import CombosTable from './CombosTable/CombosTable';
 import { ModalCreateLimit } from '../index'
 
+import { useHistory } from 'react-router-dom'
+
 // import { getCombosLimit } from '../../web-services/combosService'
 
 
 const LimitsOfCombos = () => {
-	const [modal, setModal] = useState(false);
+
+	const history = useHistory();
+
+	const [modal, setModal] = useState(true);
 
 	const toggle = () => setModal(!modal);
+
+	const createComboPush = () => history.push('/crear-combo')
 
 	return (
 		<>
@@ -23,11 +30,12 @@ const LimitsOfCombos = () => {
 				</Col>
 
 				<Col xs='2' sm='2' className='d-flex'>
-					<button className='add-combo mt-3' onClick={toggle}>
+					<button className='add-combo mt-3'>
 						<img
 							src={addImage}
 							alt='Add logo'
 							className='py-2 mr-3'
+							onClick={ createComboPush }
 						/>
 					</button>
 					<h3 className='encabezado text-center pt-4'>
