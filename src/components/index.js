@@ -5,4 +5,6 @@ export { default as ModalCreateLimit } from './ModalCreateLimit/ModalCreateLimit
 export { default as Spinner } from './Spinner/Spinner'
 export { default as AlertGeneric } from './AlertGeneric/AlertGeneric'
 export { default as TabsCreateCombo } from './TabsCreateCombo/TabsCreateCombo'
+export { default as TabPanel } from './TabPanel/TabPanel'
 export { default as ComboData } from './ComboData/ComboData'
+export { default as ExclusionsAndInclusions } from './ExclusionsAndInclusions/ExclusionsAndInclusions'
