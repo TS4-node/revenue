@@ -5,7 +5,7 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { AppBar, Tabs, Tab } from "@material-ui/core";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 
-import { TabPanel , ComboData, ExclusionsAndInclusions } from "../index";
+import { TabPanel , ComboData, ExclusionsAndInclusions, SumaryCombo } from "../index";
 import PopoverExclusionsAndInclusions from './PopoverExclusionsAndInclusions/PopoverExclusionsAndInclusions';
 
 import { useDispatch } from 'react-redux';
@@ -114,7 +114,7 @@ const TabsCreateCombo = () => {
 				</TabPanel>
 
 				<TabPanel value={value} index={3} dir={theme.direction}>
-
+					<SumaryCombo />
 				</TabPanel>
 
 			</SwipeableViews>
