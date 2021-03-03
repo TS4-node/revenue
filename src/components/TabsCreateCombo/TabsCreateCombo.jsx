@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./TabsCreateCombo.css";
 import SwipeableViews from "react-swipeable-views";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { AppBar, Tabs, Tab } from "@material-ui/core";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 
-import { TabPanel , ComboData, ExclusionsAndInclusions } from "../index";
+import { TabPanel , ComboData, ExclusionsAndInclusions, SumaryCombo } from "../index";
 import PopoverExclusionsAndInclusions from './PopoverExclusionsAndInclusions/PopoverExclusionsAndInclusions';
 
+import { useDispatch } from 'react-redux';
+import { getAllGeneralDirectorateSalesAction } from '../../redux/actions/generalDirectorateSalesActions'
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -28,6 +30,18 @@ function a11yProps(index) {
 
 
 const TabsCreateCombo = () => {
+
+	/*
+	 * Redux
+	*/
+
+	const dispatch = useDispatch();
+	 useEffect(() => {
+		 const getGeneralDirectorateSales = () => dispatch( getAllGeneralDirectorateSalesAction() );
+		 getGeneralDirectorateSales();
+	 }, [])
+
+
 	/*
 	 * For de Tabs in nav
 	 */
@@ -85,6 +99,7 @@ const TabsCreateCombo = () => {
 				axis='x'
 				index={value}
 				onChangeIndex={handleChangeIndex}
+				style={{paddingTop:'0rem'}}
 			>
 				<TabPanel value={value} index={0} dir={theme.direction}>
 					<ComboData setValue={setValue} />
@@ -99,7 +114,7 @@ const TabsCreateCombo = () => {
 				</TabPanel>
 
 				<TabPanel value={value} index={3} dir={theme.direction}>
-
+					<SumaryCombo />
 				</TabPanel>
 
 			</SwipeableViews>

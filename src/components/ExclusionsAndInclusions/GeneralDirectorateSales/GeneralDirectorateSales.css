@@ -1,0 +1,26 @@
+
+button.boton-exclusion{
+    border: 1px solid #1890FF;
+    background-color: #fff;
+    color: #1890FF;
+
+    font-family: 'Inter'!important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    width: 422px;
+    transition: .3s ease all;
+    outline: none!important;
+}
+
+button.boton-exclusion:hover{
+    background-color: #1890FF;
+    color: #fff;
+    outline: none;
+    border: none;
+}
+
+button.boton-exclusion:focus{
+    box-shadow: none;
+    outline: none;
+}
