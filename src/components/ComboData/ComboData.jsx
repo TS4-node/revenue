@@ -3,9 +3,7 @@ import './ComboData.css';
 import assignment_ind from '../../assets/images/assignment_ind.png';
 
 import { Container, Row, Col, Label, Input, Button } from 'reactstrap';
-import TextField from '@material-ui/core/TextField';
-import Checkbox from '@material-ui/core/Checkbox';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
+import { TextField, Checkbox, FormControlLabel } from '@material-ui/core'
 import { useSelect } from '../../hooks';
 import { AlertGeneric } from '../index'
 
@@ -122,7 +120,7 @@ const ComboData = ({ setValue }) => {
 	return (
 		<Container
 			style={{ fontSize: '14px', width: '30rem', height: '34rem' }}
-			className='mt-1'
+			className='mt-3'
 		>
 			<div className='d-flex justify-content-between'>
 				<p className='label mr-1 '>
