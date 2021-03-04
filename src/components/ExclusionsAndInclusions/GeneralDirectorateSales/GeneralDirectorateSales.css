@@ -24,3 +24,7 @@ button.boton-exclusion:focus{
     box-shadow: none;
     outline: none;
 }
+
+.MuiRadio-colorSecondary.Mui-checked {
+    color: #1890ff!important;
+}

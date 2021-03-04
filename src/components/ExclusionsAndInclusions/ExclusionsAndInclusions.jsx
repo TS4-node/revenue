@@ -1,4 +1,4 @@
-import React,{ useEffect } from 'react';
+import React from 'react';
 import SwipeableViews from 'react-swipeable-views';
 import { useTheme } from '@material-ui/core/styles';
 import {
@@ -12,16 +12,21 @@ import { Container } from 'reactstrap';
 
 import { useSelector } from 'react-redux';
 
-const ExclusionsAndInclusions = ({ view, setView }) => {
+const ExclusionsAndInclusions = ({ view, setView, setValue }) => {
+
 	const theme = useTheme();
+
+	/*
+	* Redux
+	*/
+	const regionalDirectorateSales = useSelector( state => state.exclusionsAndInclusions.GET_regionalSalesDirectorate);
+	const filteredDirectorateSales = useSelector( state => state.exclusionsAndInclusions.FILTERED_regionalSalesDirectorate);
+	const filteredSalesOffice = useSelector( state => state.exclusionsAndInclusions.FILTERED_salesOrganization);
+
 
 	const handleChangeIndex = (index) => {
 		setView(index);
 	};
-
-
-	const loading = useSelector( state => state.generalDirectorateSales.loading );
-	const generalDirectorateSales = useSelector ( state => state.generalDirectorateSales.generalDirectorateSales );
 
 	return (
 		<Container>
@@ -34,17 +39,25 @@ const ExclusionsAndInclusions = ({ view, setView }) => {
 				<TabPanel value={view} index={0} dir={theme.direction}>
 					<GeneralDirectorateSales
 						setView={setView}
-						generalDirectorateSales={generalDirectorateSales}
-						loading={loading}
+						generalDirectorateSales={regionalDirectorateSales}
+						setValue={setValue}
+						// loading={loadingGeneralDirectorateSales}
 					/>
 				</TabPanel>
 
 				<TabPanel value={view} index={1} dir={theme.direction}>
-					<SalesOrganization setView={setView} />
+					<SalesOrganization
+						setView={setView}
+						salesOrganization={filteredDirectorateSales}
+						// loading={loadingSalesOrganization}
+					/>
 				</TabPanel>
 
 				<TabPanel value={view} index={2} dir={theme.direction}>
-					<SalesOfice setView={setView} />
+					<SalesOfice
+						setView={setView}
+						salesOffice={filteredSalesOffice}
+					/>
 				</TabPanel>
 
 				<TabPanel value={view} index={3} dir={theme.direction}>

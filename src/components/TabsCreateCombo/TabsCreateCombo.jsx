@@ -9,12 +9,13 @@ import { TabPanel , ComboData, ExclusionsAndInclusions, SumaryCombo } from "../i
 import PopoverExclusionsAndInclusions from './PopoverExclusionsAndInclusions/PopoverExclusionsAndInclusions';
 
 import { useDispatch } from 'react-redux';
-import { getAllGeneralDirectorateSalesAction } from '../../redux/actions/generalDirectorateSalesActions'
+import { getAllDataAction } from '../../redux/actions/exclusionsAndInclusionsActions';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
 		backgroundColor: theme.palette.background.paper,
 		width: 1200,
+		margin: '0 auto'
 	},
 	Tab: {
 		flexDirection: 'row-reverse'
@@ -34,12 +35,13 @@ const TabsCreateCombo = () => {
 	/*
 	 * Redux
 	*/
-
 	const dispatch = useDispatch();
-	 useEffect(() => {
-		 const getGeneralDirectorateSales = () => dispatch( getAllGeneralDirectorateSalesAction() );
-		 getGeneralDirectorateSales();
-	 }, [])
+
+	const getAllData = () => dispatch( getAllDataAction() );
+
+	useEffect(() => {
+		getAllData();
+	}, [])
 
 
 	/*
@@ -99,14 +101,14 @@ const TabsCreateCombo = () => {
 				axis='x'
 				index={value}
 				onChangeIndex={handleChangeIndex}
-				style={{paddingTop:'0rem'}}
+				style={{paddingTop:'0rem', height:'45rem'}}
 			>
 				<TabPanel value={value} index={0} dir={theme.direction}>
 					<ComboData setValue={setValue} />
 				</TabPanel>
 
 				<TabPanel value={value} index={1} dir={theme.direction}>
-					<ExclusionsAndInclusions view={view} setView={setView}/>
+					<ExclusionsAndInclusions view={view} setView={setView} setValue={setValue}/>
 				</TabPanel>
 
 				<TabPanel value={value} index={2} dir={theme.direction}>

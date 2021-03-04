@@ -1,12 +1,11 @@
-import { combineReducers } from 'redux'
-import limitOfCombosReducer from './limitOfCombosReducer'
+import { combineReducers } from 'redux';
+import limitOfCombosReducer from './limitOfCombosReducer';
 import comboDataReducer from './comboDataReducer';
-import generalDirectorateSalesReducer from './generalDirectorateSalesReducer';
-import exclusiosnAndInclusionsReducer from './exclusiosnAndInclusionsReducer'
+import exclusionsAndInclusionsReducer from './exclusionsAndInclusionsReducer';
+
 
 export default combineReducers({
     limitOfCombos: limitOfCombosReducer,
     comboData: comboDataReducer,
-    generalDirectorateSales: generalDirectorateSalesReducer,
-    exclusionAndInclusion: exclusiosnAndInclusionsReducer
+    exclusionsAndInclusions: exclusionsAndInclusionsReducer,
 });
