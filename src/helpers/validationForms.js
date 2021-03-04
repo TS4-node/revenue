@@ -19,7 +19,7 @@ export const filterGeneralDirectorateSales = (searchItem, idSAP,setFoundItem, ge
             setFoundItem(generalDirectorateSales)
         }else{
             let searchResult = generalDirectorateSales.filter( item => {
-                if (item.numeroSAP.toString().includes(searchItem) ) {
+                if (item.id.toString().includes(searchItem) ) {
                     return item;
                 }
             });
@@ -30,9 +30,39 @@ export const filterGeneralDirectorateSales = (searchItem, idSAP,setFoundItem, ge
             setFoundItem(generalDirectorateSales)
         } else {
             let searchResult = generalDirectorateSales.filter( item => {
-                    if (item.numeroSAP.toString().includes(searchItem) ||
+                    if (item.id.toString().includes(searchItem) ||
                         item.nombre.toLowerCase().includes(searchItem.toLocaleLowerCase()) ||
-                        item.direccionGeneralVentas.toLowerCase().includes(searchItem.toLocaleLowerCase())
+                        item.direccionRegionalVentas.toLowerCase().includes(searchItem.toLocaleLowerCase())
+                    ){
+                        return item;
+                    }
+            });
+            setFoundItem(searchResult);
+        }
+    }
+}
+
+export const filterSalesOrganization = (searchItem, idSAP, setFoundItem, salesOrganization) => {
+
+    if(idSAP){
+        if (searchItem.length === 1) {
+            setFoundItem(salesOrganization)
+        }else{
+            let searchResult = salesOrganization.filter( item => {
+                if (item.id.toString().includes(searchItem) ) {
+                    return item;
+                }
+            });
+            setFoundItem(searchResult);
+        }
+    } else {
+        if (searchItem.length === 1) {
+            setFoundItem(salesOrganization)
+        } else {
+            let searchResult = salesOrganization.filter( item => {
+                    if (item.id.toString().includes(searchItem) ||
+                        item.nombre.toLowerCase().includes(searchItem.toLocaleLowerCase()) ||
+                        item.direccionRegionalVentas.toLowerCase().includes(searchItem.toLocaleLowerCase())
                     ){
                         return item;
                     }
