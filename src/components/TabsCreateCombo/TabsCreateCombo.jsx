@@ -9,12 +9,13 @@ import { TabPanel , ComboData, ExclusionsAndInclusions, SumaryCombo } from "../i
 import PopoverExclusionsAndInclusions from './PopoverExclusionsAndInclusions/PopoverExclusionsAndInclusions';
 
 import { useDispatch } from 'react-redux';
-import { getAllGeneralDirectorateSalesAction } from '../../redux/actions/generalDirectorateSalesActions'
+import { getAllData } from '../../redux/actions/exclusionsAndInclusionsActions';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
 		backgroundColor: theme.palette.background.paper,
 		width: 1200,
+		margin: '0 auto'
 	},
 	Tab: {
 		flexDirection: 'row-reverse'
@@ -34,12 +35,13 @@ const TabsCreateCombo = () => {
 	/*
 	 * Redux
 	*/
-
 	const dispatch = useDispatch();
-	 useEffect(() => {
-		 const getGeneralDirectorateSales = () => dispatch( getAllGeneralDirectorateSalesAction() );
-		 getGeneralDirectorateSales();
-	 }, [])
+
+	const getAllDataTabs = () => dispatch( getAllData() );
+
+	useEffect(() => {
+		getAllDataTabs();
+	}, [])
 
 
 	/*

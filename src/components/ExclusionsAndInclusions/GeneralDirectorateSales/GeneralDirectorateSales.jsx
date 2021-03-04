@@ -1,18 +1,20 @@
 import React, { useState } from 'react'
 import { Button, Col, Container, Row } from 'reactstrap';
-import { FormControlLabel, Checkbox } from '@material-ui/core'
+import { FormControlLabel, Checkbox, Radio } from '@material-ui/core'
 import DataTable from 'react-data-table-component'
-import { Spinner } from '../../index';
-import TableFilter from './TableFilter'
 
-
-import { filterGeneralDirectorateSales } from '../../../helpers/validationForms'
 import  './GeneralDirectorateSales.css';
+import { Spinner, AlertGeneric } from '../../index';
+import TableFilter from './TableFilter'
+import { filterGeneralDirectorateSales } from '../../../helpers/validationForms'
+
+import { useDispatch } from 'react-redux';
+import { setRegionalSalesDirectorate } from '../../../redux/actions/exclusionsAndInclusionsActions';
 
 const columns = [
-    { name: 'Número SAP', selector: 'numeroSAP', sortable: true },
+    { name: 'Número SAP', selector: 'id', sortable: true },
     { name: 'Nombre', selector: 'nombre', sortable: true },
-    { name: 'Dirección Regional de Ventas', selector: 'direccionGeneralVentas', sortable: true }
+    { name: 'Dirección Regional de Ventas', selector: 'direccionRegionalVentas', sortable: true }
 ];
 
 
@@ -27,7 +29,7 @@ const customStyles = {
     table:{
         style: {
             border: '1px solid rgba(0, 0, 0, 0.15)',
-            height: '14rem',
+            height: '12rem',
             width: '45rem'
         }
     },
@@ -44,13 +46,18 @@ const customStyles = {
 
 
 ///this is the view #0 for the Exclusions and Inclusions
-const GeneralDirectorateSales =  ({setView, generalDirectorateSales, loading }) => {
+const GeneralDirectorateSales =  ({setView, generalDirectorateSales /*, loading*/ }) => {
+
+    const dispatch = useDispatch();
+
+    const setGeneralDirectorateSales = DGR => dispatch( setRegionalSalesDirectorate(DGR) );
 
     const [searchItem, setSearchItem] = useState('');
     const [foundItem, setFoundItem] = useState(generalDirectorateSales);
     const [idSAP, setIdSAP] = useState(false);
-    const [rowSelect, setRowSelect] = useState({});
-    const [clear, setClear] = useState(false)
+    const [rowSelect, setRowSelect] = useState([]);
+    const [clear, setClear] = useState(false);
+    const [error, setError] = useState(false);
 
     const handleChangeCheckbox = () => setIdSAP(!idSAP);
 
@@ -70,7 +77,12 @@ const GeneralDirectorateSales =  ({setView, generalDirectorateSales, loading }) 
     }
 
     const handleButtonContinue = () => {
-
+        if(rowSelect.length === 0){
+            setError(true);
+            return;
+        }
+        setGeneralDirectorateSales(rowSelect);
+        setView(1);
     }
 
     return (
@@ -83,14 +95,14 @@ const GeneralDirectorateSales =  ({setView, generalDirectorateSales, loading }) 
             <Row>
                 <Col sm='10' md='10'  className='text-center'>
                     <h3 className='encabezado text-center mt-3 '>
-                        Direccion General de Ventas
+                        Direccion Regional de Ventas
                     </h3>
                 </Col>
             </Row>
 
-            { loading
+            {/* { loading
                 ?( <Spinner /> )
-                :(
+                :( */}
                     <>
                         <Row>
                             <TableFilter
@@ -112,6 +124,7 @@ const GeneralDirectorateSales =  ({setView, generalDirectorateSales, loading }) 
                                 paginationComponentOptions={optionsPagination}
                                 selectableRows
                                 onSelectedRowsChange={handleRowSelect}
+                                selectableRowsComponent={Radio}
                                 clearSelectedRows={clear}
                                 dense
                                 striped
@@ -123,14 +136,26 @@ const GeneralDirectorateSales =  ({setView, generalDirectorateSales, loading }) 
                         </Row>
 
                     </>
-                )
-            }
-
+                {/* )
+            } */}
         </Container>
 
-            {
-                !loading && (
-                    <Row className='mt-2 mx-auto'>
+        {
+            error &&
+                (
+                    <Row className='my-1'>
+                        <Col sm='8' md='8' className='mx-auto'>
+                            <AlertGeneric severity='warning' text='Selecciona al menos una Organizacion de Ventas' />
+                        </Col>
+                    </Row>
+                )
+        }
+
+
+        {/* {
+            !loading &&
+                ( */}
+                    <Row className='mt-3 mx-auto'>
                         <Col smd='10' md='10' className='d-flex justify-content-around' style={{marginLeft:'5rem'}}>
                             <Button
                                 className='boton-exclusion'
@@ -138,13 +163,16 @@ const GeneralDirectorateSales =  ({setView, generalDirectorateSales, loading }) 
                             >
                                 Cancelar
                             </Button>
-                            <Button className='boton-exclusion'>
+                            <Button
+                                className='boton-exclusion'
+                                onClick={handleButtonContinue}
+                            >
                                 Continuar
                             </Button>
                         </Col>
                     </Row>
-                )
-            }
+                {/* )
+        } */}
     </>
     )
 }
