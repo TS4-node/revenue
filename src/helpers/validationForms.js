@@ -72,3 +72,32 @@ export const filterSalesOrganization = (searchItem, idSAP, setFoundItem, salesOr
     }
 }
 
+export const filterSalesOffice = (searchItem, idSAP, setFoundItem, salesOffice) => {
+
+    if(idSAP){
+        if (searchItem.length === 1) {
+            setFoundItem(salesOffice)
+        }else{
+            let searchResult = salesOffice.filter( item => {
+                if (item.id.toString().toLowerCase().includes(searchItem.toLocaleLowerCase()) ) {
+                    return item;
+                }
+            });
+            setFoundItem(searchResult);
+        }
+    } else {
+        if (searchItem.length === 1) {
+            setFoundItem(salesOffice)
+        } else {
+            let searchResult = salesOffice.filter( item => {
+                    if (item.id.toString().toLocaleLowerCase().includes(searchItem.toLocaleLowerCase()) ||
+                        item.nombre.toLowerCase().includes(searchItem.toLocaleLowerCase()) ||
+                        item.direccionRegionalVentas.toLowerCase().includes(searchItem.toLocaleLowerCase())
+                    ){
+                        return item;
+                    }
+            });
+            setFoundItem(searchResult);
+        }
+    }
+}
