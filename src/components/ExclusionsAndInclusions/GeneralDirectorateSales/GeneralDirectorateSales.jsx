@@ -9,7 +9,7 @@ import TableFilter from './TableFilter'
 import { filterGeneralDirectorateSales } from '../../../helpers/validationForms'
 
 import { useDispatch } from 'react-redux';
-import { setRegionalSalesDirectorate } from '../../../redux/actions/exclusionsAndInclusionsActions';
+import { setRegionalSalesDirectorateAction } from '../../../redux/actions/exclusionsAndInclusionsActions';
 
 const columns = [
     { name: 'Número SAP', selector: 'id', sortable: true },
@@ -46,11 +46,11 @@ const customStyles = {
 
 
 ///this is the view #0 for the Exclusions and Inclusions
-const GeneralDirectorateSales =  ({setView, generalDirectorateSales /*, loading*/ }) => {
+const GeneralDirectorateSales =  ({setView, generalDirectorateSales, setValue /*, loading*/ }) => {
 
     const dispatch = useDispatch();
 
-    const setGeneralDirectorateSales = DGR => dispatch( setRegionalSalesDirectorate(DGR) );
+    const setGeneralDirectorateSales = DGR => dispatch( setRegionalSalesDirectorateAction(DGR) );
 
     const [searchItem, setSearchItem] = useState('');
     const [foundItem, setFoundItem] = useState(generalDirectorateSales);
@@ -74,6 +74,8 @@ const GeneralDirectorateSales =  ({setView, generalDirectorateSales /*, loading*
     const handleButtonCancel = () => {
         setClear(!clear);
         setRowSelect({});
+        setView(0)
+        setValue(0)
     }
 
     const handleButtonContinue = () => {

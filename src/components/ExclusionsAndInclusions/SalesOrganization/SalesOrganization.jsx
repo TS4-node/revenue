@@ -8,7 +8,7 @@ import { Spinner, AlertGeneric } from "../../index";
 import TableFilter from "./TableFilter";
 
 import { useDispatch } from "react-redux";
-import { setSalesOrganization } from "../../../redux/actions/exclusionsAndInclusionsActions";
+import { setSalesOrganizationAction } from "../../../redux/actions/exclusionsAndInclusionsActions";
 
 const columns = [
 	{ name: "Número SAP", selector: "id", sortable: true },
@@ -31,7 +31,7 @@ const customStyles = {
 	table: {
 		style: {
 			border: "1px solid rgba(0, 0, 0, 0.15)",
-			height: "12rem",
+			height: "18rem",
 			width: "45rem",
 		},
 	},
@@ -50,7 +50,7 @@ const SalesOrganization = ({ setView, salesOrganization /*, loading */}) => {
 
     const dispatch = useDispatch();
 
-	const setSalesOrganizations = (DGR) => dispatch(setSalesOrganization(DGR));
+	const setSalesOrganizations = (DGR) => dispatch(setSalesOrganizationAction(DGR));
 
 	const newSalesOrganization = salesOrganization.map((item) => {
 		let obj = {};
@@ -84,6 +84,7 @@ const SalesOrganization = ({ setView, salesOrganization /*, loading */}) => {
 	const handleButtonCancel = () => {
 		setClear(!clear);
 		setRowSelect({});
+		setView(0)
 	};
 
 	const handleButtonContinue = () => {
@@ -114,50 +115,44 @@ const SalesOrganization = ({ setView, salesOrganization /*, loading */}) => {
 					</Col>
 				</Row>
 
-				{/* {loading ? (
-					<Spinner />
-				) : (
-					<> */}
-						<Row>
-							<TableFilter
-								name={"search"}
-								value={searchItem}
-								onChange={handleChangeInputSearch}
+				<Row>
+					<TableFilter
+						name={"search"}
+						value={searchItem}
+						onChange={handleChangeInputSearch}
+					/>
+					<FormControlLabel
+						value="idSAP"
+						control={
+							<Checkbox
+								color="primary"
+								onChange={handleChangeCheckbox}
 							/>
-							<FormControlLabel
-								value="idSAP"
-								control={
-									<Checkbox
-										color="primary"
-										onChange={handleChangeCheckbox}
-									/>
-								}
-								label="Buscar por lista de ID de SAP de la oficina de ventas"
-								labelPlacement="end"
-							/>
-							<DataTable
-								columns={columns}
-								data={foundItem}
-								customStyles={customStyles}
-								noDataComponent={
-									<span>No se encontró ningún elemento</span>
-								}
-								paginationComponentOptions={optionsPagination}
-								selectableRows
-								onSelectedRowsChange={handleRowSelect}
-								selectableRowsComponent={Radio}
-								clearSelectedRows={clear}
-								dense
-								striped
-								fixedHeader
-								responsive
-								highlightOnHover
-								pagination
-							/>
-						</Row>
-					{/* </>
-				)} */}
-			</Container>
+						}
+						label="Buscar por lista de ID de SAP de la oficina de ventas"
+						labelPlacement="end"
+					/>
+					<DataTable
+						columns={columns}
+						data={foundItem}
+						customStyles={customStyles}
+						noDataComponent={
+							<span>No se encontró ningún elemento</span>
+						}
+						paginationComponentOptions={optionsPagination}
+						selectableRows
+						onSelectedRowsChange={handleRowSelect}
+						selectableRowsComponent={Radio}
+						clearSelectedRows={clear}
+						dense
+						striped
+						fixedHeader
+						responsive
+						highlightOnHover
+						pagination
+					/>
+				</Row>
+
 
 			{error && (
 				<Row className="my-1">
@@ -169,9 +164,9 @@ const SalesOrganization = ({ setView, salesOrganization /*, loading */}) => {
 					</Col>
 				</Row>
 			)}
+			</Container>
 
-			{/* {!loading && ( */}
-				<Row className="mt-3 mx-auto">
+				<Row className="mt-5 mx-auto">
 					<Col
 						smd="10"
 						md="10"
@@ -192,7 +187,6 @@ const SalesOrganization = ({ setView, salesOrganization /*, loading */}) => {
 						</Button>
 					</Col>
 				</Row>
-			{/* )} */}
 		</>
 	);
 };

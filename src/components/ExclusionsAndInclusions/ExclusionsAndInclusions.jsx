@@ -12,7 +12,7 @@ import { Container } from 'reactstrap';
 
 import { useSelector } from 'react-redux';
 
-const ExclusionsAndInclusions = ({ view, setView }) => {
+const ExclusionsAndInclusions = ({ view, setView, setValue }) => {
 
 	const theme = useTheme();
 
@@ -20,7 +20,8 @@ const ExclusionsAndInclusions = ({ view, setView }) => {
 	* Redux
 	*/
 	const regionalDirectorateSales = useSelector( state => state.exclusionsAndInclusions.GET_regionalSalesDirectorate);
-	const filteredDirectorateSales = useSelector( state => state.exclusionsAndInclusions.FILTERED_regionalSalesDirectorate)
+	const filteredDirectorateSales = useSelector( state => state.exclusionsAndInclusions.FILTERED_regionalSalesDirectorate);
+	const filteredSalesOffice = useSelector( state => state.exclusionsAndInclusions.FILTERED_salesOrganization);
 
 
 	const handleChangeIndex = (index) => {
@@ -39,6 +40,7 @@ const ExclusionsAndInclusions = ({ view, setView }) => {
 					<GeneralDirectorateSales
 						setView={setView}
 						generalDirectorateSales={regionalDirectorateSales}
+						setValue={setValue}
 						// loading={loadingGeneralDirectorateSales}
 					/>
 				</TabPanel>
@@ -52,7 +54,10 @@ const ExclusionsAndInclusions = ({ view, setView }) => {
 				</TabPanel>
 
 				<TabPanel value={view} index={2} dir={theme.direction}>
-					<SalesOfice setView={setView} />
+					<SalesOfice
+						setView={setView}
+						salesOffice={filteredSalesOffice}
+					/>
 				</TabPanel>
 
 				<TabPanel value={view} index={3} dir={theme.direction}>
