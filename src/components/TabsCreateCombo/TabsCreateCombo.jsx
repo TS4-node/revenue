@@ -8,6 +8,7 @@ import SwipeableViews from 'react-swipeable-views';
 import './TabsCreateCombo.css';
 import { TabPanel, ComboData, ExclusionsAndInclusions, SumaryCombo } from '../index';
 import PopoverExclusionsAndInclusions from './PopoverExclusionsAndInclusions/PopoverExclusionsAndInclusions';
+import { handleSpanIndicator } from '../../helpers/styles';
 import { getAllDataAction } from '../../redux/actions/exclusionsAndInclusionsActions';
 
 const useStyles = makeStyles(theme => ({
@@ -69,6 +70,12 @@ const TabsCreateCombo = () => {
 		setAnchorEL(event.currentTarget);
 	};
 
+	useEffect(() => {
+		handleSpanIndicator(value);
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [value])
+
+
 	return (
 		<div className={classes.root}>
 			<AppBar position='static' color='default' className='mt-2'>
@@ -87,6 +94,10 @@ const TabsCreateCombo = () => {
 
 				<PopoverExclusionsAndInclusions anchorEl={anchorEl} setAnchorEL={setAnchorEL} setView={setView} />
 			</AppBar>
+					<div
+						id='selector'
+						style={{backgroundColor:'#1890ff', height:'.22rem',left:'0px', width:'300px'}}
+					></div>
 
 			<SwipeableViews
 				axis='x'
