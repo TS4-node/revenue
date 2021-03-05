@@ -2,7 +2,6 @@
 export const GET_LIMIT_OF_COMBOS = 'GET_LIMIT_OF_COMBOS';
 export const GET_LIMIT_OF_COMBOS_SUCCESS = 'GET_LIMIT_OF_COMBOS_SUCCESS';
 export const GET_LIMIT_OF_COMBOS_ERROR = 'GET_LIMIT_OF_COMBOS_ERROR'; //no action for the error yet
-
 export const ADD_LIMIT_OF_COMBO = 'ADD_LIMIT_OF_COMBO';
 export const ADD_LIMIT_OF_COMBO_SUCCESS = 'ADD_LIMIT_OF_COMBO_SUCCESS';
 export const ADD_LIMIT_OF_COMBO_ERROR = 'ADD_LIMIT_OF_COMBO_ERROR'; //no action for the error yet
@@ -11,8 +10,9 @@ export const ADD_LIMIT_OF_COMBO_ERROR = 'ADD_LIMIT_OF_COMBO_ERROR'; //no action 
 export const CREATE_DATA_COMBO = 'CREATE_DATA_COMBO';
 export const CLEAR_DATA_COMBO = 'CLEAR_DATA_COMBO';
 
-
-/*  exclusion and inclusions    */
+/*
+ *  exclusion and inclusions
+*/
 
 //regional sales department
 export const GET_GENERAL_REGIONAL_SALES = 'GET_GENERAL_DIRECTORATE_SALES';
@@ -28,3 +28,8 @@ export const FILTER_SALES_ORGANIZATION = 'FILTER_SALES_ORGANIZATION';
 export const GET_SALES_OFFICE = 'GET_SALES_OFFICE';
 export const SET_SALES_OFFICE = 'SET_SALES_OFFICE';
 export const FILTER_SALES_OFFICE = 'FILTER_SALES_OFFICE';
+
+//clients
+export const GET_CLIENTS = 'GET_CLIENTS';
+export const SET_CLIENTS = 'SET_CLIENTS';
+export const FILTER_CLIENTS = 'FILTER_CLIENTS';

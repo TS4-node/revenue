@@ -154,559 +154,3871 @@
     },
     {
       "nivelCombo": "Oficina de Ventas",
-      "estructuraVenta": "CMM Morelos",
-      "combosPermitidos": "3",
-      "CombosDisponibles": "3",
+      "estructuraVenta": "CMM Metropolitan",
+      "combosPermitidos": "2",
+      "CombosDisponibles": "2",
       "activo": "true",
       "id": 20
-    },
-    {
-      "nivelCombo": "Organizacion de Ventas",
-      "estructuraVenta": "CMM Morelos",
-      "combosPermitidos": "4",
-      "CombosDisponibles": "4",
-      "activo": "true",
-      "id": 21
-    },
-    {
-      "nivelCombo": "Oficina de Ventas",
-      "estructuraVenta": "CMM Metropolitan",
-      "combosPermitidos": "3",
-      "CombosDisponibles": "3",
-      "activo": "true",
-      "id": 22
-    },
-    {
-      "nivelCombo": "Organizacion de Ventas",
-      "estructuraVenta": "CMM Morelos",
-      "combosPermitidos": "3",
-      "CombosDisponibles": "3",
-      "activo": false,
-      "id": 23
-    },
-    {
-      "nivelCombo": "Oficina de Ventas",
-      "estructuraVenta": "CMM Michoacana",
-      "combosPermitidos": "3",
-      "CombosDisponibles": "3",
-      "activo": "true",
-      "id": 24
-    },
-    {
-      "nivelCombo": "Organizacion de Ventas",
-      "estructuraVenta": "CMM Michoacana",
-      "combosPermitidos": "3",
-      "CombosDisponibles": "3",
-      "activo": false,
-      "id": 25
-    },
-    {
-      "nivelCombo": "Oficina de Ventas",
-      "estructuraVenta": "CMM Michoacana",
-      "combosPermitidos": "3",
-      "CombosDisponibles": "3",
-      "activo": "true",
-      "id": 26
-    },
-    {
-      "nivelCombo": "Organizacion de Ventas",
-      "estructuraVenta": "CMM Metropolitan",
-      "combosPermitidos": "1",
-      "CombosDisponibles": "1",
-      "activo": false,
-      "id": 27
-    },
-    {
-      "nivelCombo": "Oficina de Ventas",
-      "estructuraVenta": "CMM Michoacana",
-      "combosPermitidos": "5",
-      "CombosDisponibles": "5",
-      "activo": "true",
-      "id": 28
-    },
-    {
-      "nivelCombo": "Organizacion de Ventas",
-      "estructuraVenta": "CMM Michoacana",
-      "combosPermitidos": "3",
-      "CombosDisponibles": "3",
-      "activo": false,
-      "id": 29
-    },
-    {
-      "nivelCombo": "Oficina de Ventas",
-      "estructuraVenta": "CMM Michoacana",
-      "combosPermitidos": "3",
-      "CombosDisponibles": "3",
-      "activo": false,
-      "id": 30
-    },
-    {
-      "nivelCombo": "Oficina de Ventas",
-      "estructuraVenta": "CMM Michoacana",
-      "combosPermitidos": "2",
-      "CombosDisponibles": "2",
-      "activo": "true",
-      "id": 31
-    },
-    {
-      "nivelCombo": "Organizacion de Ventas",
-      "estructuraVenta": "CMM Michoacana",
-      "combosPermitidos": "4",
-      "CombosDisponibles": "4",
-      "activo": false,
-      "id": 32
-    },
-    {
-      "nivelCombo": "Oficina de Ventas",
-      "estructuraVenta": "CMM Michoacana",
-      "combosPermitidos": "2",
-      "CombosDisponibles": "2",
-      "activo": false,
-      "id": 33
-    },
-    {
-      "nivelCombo": "Organizacion de Ventas",
-      "estructuraVenta": "CMM Morelos",
-      "combosPermitidos": "3",
-      "CombosDisponibles": "3",
-      "activo": "true",
-      "id": 34
-    },
-    {
-      "nivelCombo": "Oficina de Ventas",
-      "estructuraVenta": "CMM Michoacana",
-      "combosPermitidos": "3",
-      "CombosDisponibles": "3",
-      "activo": false,
-      "id": 35
-    },
-    {
-      "nivelCombo": "Organizacion de Ventas",
-      "estructuraVenta": "CMM Michoacana",
-      "combosPermitidos": "3",
-      "CombosDisponibles": "3",
-      "activo": "true",
-      "id": 36
     }
   ],
   "direccionRegionalVentas": [
-    { "id": "GM0001", "nombre": "Central-Bajío", "direccionRegionalVentas": "GM0001 Central-Bajío" },
-    { "id": "GM0003", "nombre": "Norte", "direccionRegionalVentas": "GM0003 Norte" },
-    { "id": "GM0005", "nombre": "Sureste", "direccionRegionalVentas": "GM0005 Sureste" },
-    { "id": "GM0006", "nombre": "Occidente-Pacífico", "direccionRegionalVentas": "GM0006 Occidente-Pacífico" }
+    {
+      "id": "GM0001",
+      "nombre": "Central-Bajío",
+      "direccionRegionalVentas": "GM0001 Central-Bajío"
+    },
+    {
+      "id": "GM0003",
+      "nombre": "Norte",
+      "direccionRegionalVentas": "GM0003 Norte"
+    },
+    {
+      "id": "GM0005",
+      "nombre": "Sureste",
+      "direccionRegionalVentas": "GM0005 Sureste"
+    },
+    {
+      "id": "GM0006",
+      "nombre": "Occidente-Pacífico",
+      "direccionRegionalVentas": "GM0006 Occidente-Pacífico"
+    }
   ],
   "organizacionVentas": [
-    { "id": 3108, "nombre": "CMM Hidalgo", "idDGR": "GM0001", "nombreDGR": "Central-Bajío" },
-    { "id": 3116, "nombre": "CMM Edo de Mexico", "idDGR": "GM0001", "nombreDGR": "Central-Bajío" },
-    { "id": 3117, "nombre": "CMM Centro", "idDGR": "GM0001", "nombreDGR": "Central-Bajío" },
-    { "id": 3118, "nombre": "CMM Del Bajío", "idDGR": "GM0001", "nombreDGR": "Central-Bajío" },
-    { "id": 3119, "nombre": "CMM Metropolitana", "idDGR": "GM0001", "nombreDGR": "Central-Bajío" },
-    { "id": 3122, "nombre": "CMM Morelos", "idDGR": "GM0001", "nombreDGR": "Central-Bajío" },
-    { "id": 3125, "nombre": "CMM Altiplano", "idDGR": "GM0001", "nombreDGR": "Central-Bajío" },
-    { "id": 3102, "nombre": "CMM Sonora", "idDGR": "GM0003", "nombreDGR": "Norte" },
-    { "id": 3103, "nombre": "CMM Pacífico", "idDGR": "GM0003", "nombreDGR": "Norte" },
-    { "id": 3126, "nombre": "CMM Chihuahua", "idDGR": "GM0003", "nombreDGR": "Norte" },
-    { "id": 3127, "nombre": "CMM Norte", "idDGR": "GM0003", "nombreDGR": "Norte" },
-    { "id": 3128, "nombre": "CMM Nuevo León", "idDGR": "GM0003", "nombreDGR": "Norte" },
-    { "id": 3129, "nombre": "CMM Noreste", "idDGR": "GM0003", "nombreDGR": "Norte" },
-    { "id": 3131, "nombre": "CMM Culiacán", "idDGR": "GM0003", "nombreDGR": "Norte" },
-    { "id": 3115, "nombre": "CMM Veracruz", "idDGR": "GM0005", "nombreDGR": "Sureste" },
-    { "id": 3113, "nombre": "CMM Tabasco", "idDGR": "GM0005", "nombreDGR": "Sureste" },
-    { "id": 3111, "nombre": "CMM Sureste", "idDGR": "GM0005", "nombreDGR": "Sureste" },
-    { "id": 3112, "nombre": "CMM Campeche", "idDGR": "GM0005", "nombreDGR": "Sureste" },
-    { "id": 3114, "nombre": "CMM Macfe", "idDGR": "GM0005", "nombreDGR": "Sureste" },
-    { "id": 3123, "nombre": "CMM Oaxaca", "idDGR": "GM0005", "nombreDGR": "Sureste" },
-    { "id": 3124, "nombre": "CMM Istmo", "idDGR": "GM0005", "nombreDGR": "Sureste" },
-    { "id": 3104, "nombre": "CMM Nayarit", "idDGR": "GM0006", "nombreDGR": "Occidente-Pacífico" },
-    { "id": 3105, "nombre": "CMM Occidente", "idDGR": "GM0006", "nombreDGR": "Occidente-Pacífico" },
-    { "id": 3106, "nombre": "CMM Michoacan", "idDGR": "GM0006", "nombreDGR": "Occidente-Pacífico" },
-    { "id": 3109, "nombre": "CMM San Luis Potosí", "idDGR": "GM0006", "nombreDGR": "Occidente-Pacífico" },
-    { "id": 3110, "nombre": "CMM Zacatecas", "idDGR": "GM0006", "nombreDGR": "Occidente-Pacífico" },
-    { "id": 3120, "nombre": "CMM Acapulco", "idDGR": "GM0006", "nombreDGR": "Occidente-Pacífico" },
-    { "id": 3121, "nombre": "CMM Guerrero", "idDGR": "GM0006", "nombreDGR": "Occidente-Pacífico" }
+    {
+      "id": 3108,
+      "nombre": "CMM Hidalgo",
+      "idDGR": "GM0001",
+      "nombreDGR": "Central-Bajío"
+    },
+    {
+      "id": 3116,
+      "nombre": "CMM Edo de Mexico",
+      "idDGR": "GM0001",
+      "nombreDGR": "Central-Bajío"
+    },
+    {
+      "id": 3117,
+      "nombre": "CMM Centro",
+      "idDGR": "GM0001",
+      "nombreDGR": "Central-Bajío"
+    },
+    {
+      "id": 3118,
+      "nombre": "CMM Del Bajío",
+      "idDGR": "GM0001",
+      "nombreDGR": "Central-Bajío"
+    },
+    {
+      "id": 3119,
+      "nombre": "CMM Metropolitana",
+      "idDGR": "GM0001",
+      "nombreDGR": "Central-Bajío"
+    },
+    {
+      "id": 3122,
+      "nombre": "CMM Morelos",
+      "idDGR": "GM0001",
+      "nombreDGR": "Central-Bajío"
+    },
+    {
+      "id": 3125,
+      "nombre": "CMM Altiplano",
+      "idDGR": "GM0001",
+      "nombreDGR": "Central-Bajío"
+    },
+    {
+      "id": 3102,
+      "nombre": "CMM Sonora",
+      "idDGR": "GM0003",
+      "nombreDGR": "Norte"
+    },
+    {
+      "id": 3103,
+      "nombre": "CMM Pacífico",
+      "idDGR": "GM0003",
+      "nombreDGR": "Norte"
+    },
+    {
+      "id": 3126,
+      "nombre": "CMM Chihuahua",
+      "idDGR": "GM0003",
+      "nombreDGR": "Norte"
+    },
+    {
+      "id": 3127,
+      "nombre": "CMM Norte",
+      "idDGR": "GM0003",
+      "nombreDGR": "Norte"
+    },
+    {
+      "id": 3128,
+      "nombre": "CMM Nuevo León",
+      "idDGR": "GM0003",
+      "nombreDGR": "Norte"
+    },
+    {
+      "id": 3129,
+      "nombre": "CMM Noreste",
+      "idDGR": "GM0003",
+      "nombreDGR": "Norte"
+    },
+    {
+      "id": 3131,
+      "nombre": "CMM Culiacán",
+      "idDGR": "GM0003",
+      "nombreDGR": "Norte"
+    },
+    {
+      "id": 3115,
+      "nombre": "CMM Veracruz",
+      "idDGR": "GM0005",
+      "nombreDGR": "Sureste"
+    },
+    {
+      "id": 3113,
+      "nombre": "CMM Tabasco",
+      "idDGR": "GM0005",
+      "nombreDGR": "Sureste"
+    },
+    {
+      "id": 3111,
+      "nombre": "CMM Sureste",
+      "idDGR": "GM0005",
+      "nombreDGR": "Sureste"
+    },
+    {
+      "id": 3112,
+      "nombre": "CMM Campeche",
+      "idDGR": "GM0005",
+      "nombreDGR": "Sureste"
+    },
+    {
+      "id": 3114,
+      "nombre": "CMM Macfe",
+      "idDGR": "GM0005",
+      "nombreDGR": "Sureste"
+    },
+    {
+      "id": 3123,
+      "nombre": "CMM Oaxaca",
+      "idDGR": "GM0005",
+      "nombreDGR": "Sureste"
+    },
+    {
+      "id": 3124,
+      "nombre": "CMM Istmo",
+      "idDGR": "GM0005",
+      "nombreDGR": "Sureste"
+    },
+    {
+      "id": 3104,
+      "nombre": "CMM Nayarit",
+      "idDGR": "GM0006",
+      "nombreDGR": "Occidente-Pacífico"
+    },
+    {
+      "id": 3105,
+      "nombre": "CMM Occidente",
+      "idDGR": "GM0006",
+      "nombreDGR": "Occidente-Pacífico"
+    },
+    {
+      "id": 3106,
+      "nombre": "CMM Michoacan",
+      "idDGR": "GM0006",
+      "nombreDGR": "Occidente-Pacífico"
+    },
+    {
+      "id": 3109,
+      "nombre": "CMM San Luis Potosí",
+      "idDGR": "GM0006",
+      "nombreDGR": "Occidente-Pacífico"
+    },
+    {
+      "id": 3110,
+      "nombre": "CMM Zacatecas",
+      "idDGR": "GM0006",
+      "nombreDGR": "Occidente-Pacífico"
+    },
+    {
+      "id": 3120,
+      "nombre": "CMM Acapulco",
+      "idDGR": "GM0006",
+      "nombreDGR": "Occidente-Pacífico"
+    },
+    {
+      "id": 3121,
+      "nombre": "CMM Guerrero",
+      "idDGR": "GM0006",
+      "nombreDGR": "Occidente-Pacífico"
+    }
   ],
   "oficinaVentas": [
-    { "id": "FK03", "nombre": "CMM  Tehuacan", "IdOV": 3125, "nombreOV": "CMM Altiplano" },
-    { "id": "FZ02", "nombre": "CMM Acambaro", "IdOV": 3118, "nombreOV": "CMM Del Bajío" },
-    { "id": "GC01", "nombre": "CMM Actopan", "IdOV": 3108, "nombreOV": "CMM Hidalgo" },
-    { "id": "FK13", "nombre": "CMM Amalucan", "IdOV": 3125, "nombreOV": "CMM Altiplano" },
-    { "id": "FZ16", "nombre": "CMM Amealco", "IdOV": 3118, "nombreOV": "CMM Del Bajío" },
-    { "id": "GC02", "nombre": "CMM Apan", "IdOV": 3108, "nombreOV": "CMM Hidalgo" },
-    { "id": "FG02", "nombre": "CMM Atlacomulco", "IdOV": 3116, "nombreOV": "CMM Edo de Mexico" },
-    { "id": "GC03", "nombre": "CMM Atotonilco", "IdOV": 3108, "nombreOV": "CMM Hidalgo" },
-    { "id": "FT02", "nombre": "CMM Axochiapan", "IdOV": 3122, "nombreOV": "CMM Morelos" },
-    { "id": "FK16", "nombre": "CMM Calpulalpan", "IdOV": 3125, "nombreOV": "CMM Altiplano" },
-    { "id": "FF05", "nombre": "CMM Chalco", "IdOV": 3117, "nombreOV": "CMM Centro" },
-    { "id": "FG10", "nombre": "CMM Chalma", "IdOV": 3116, "nombreOV": "CMM Edo de Mexico" },
-    { "id": "FK05", "nombre": "CMM Chazumba", "IdOV": 3125, "nombreOV": "CMM Altiplano" },
-    { "id": "FF08", "nombre": "CMM Chiconautla", "IdOV": 3117, "nombreOV": "CMM Centro" },
-    { "id": "FF04", "nombre": "CMM Chimalhuacan", "IdOV": 3117, "nombreOV": "CMM Centro" },
-    { "id": "FK14", "nombre": "CMM Cholula", "IdOV": 3125, "nombreOV": "CMM Altiplano" },
-    { "id": "FK02", "nombre": "CMM Ciudad Serdan", "IdOV": 3125, "nombreOV": "CMM Altiplano" },
-    { "id": "FF11", "nombre": "CMM Coacalco", "IdOV": 3117, "nombreOV": "CMM Centro" },
-    { "id": "GE04", "nombre": "CMM Coacalco Metro", "IdOV": 3119, "nombreOV": "CMM Metropolitana" },
-    { "id": "FZ17", "nombre": "CMM Colon", "IdOV": 3118, "nombreOV": "CMM Del Bajío" },
-    { "id": "GE07", "nombre": "CMM Cuautitlan", "IdOV": 3119, "nombreOV": "CMM Metropolitana" },
-    { "id": "FT01", "nombre": "CMM Cuautla", "IdOV": 3122, "nombreOV": "CMM Morelos" },
-    { "id": "FZ20", "nombre": "CMM Cueramaro", "IdOV": 3118, "nombreOV": "CMM Del Bajío" },
-    { "id": "FK10", "nombre": "CMM Cuicatl√°n", "IdOV": 3125, "nombreOV": "CMM Altiplano" },
-    { "id": "GE02", "nombre": "CMM Doctores", "IdOV": 3119, "nombreOV": "CMM Metropolitana" },
-    { "id": "FZ08", "nombre": "CMM Dolores", "IdOV": 3118, "nombreOV": "CMM Del Bajío" },
-    { "id": "FZ21", "nombre": "CMM El Marqu√©s", "IdOV": 3118, "nombreOV": "CMM Del Bajío" },
-    { "id": "FG06", "nombre": "CMM El Oro", "IdOV": 3116, "nombreOV": "CMM Edo de Mexico" },
-    { "id": "FZ06", "nombre": "CMM Guanajuato", "IdOV": 3118, "nombreOV": "CMM Del Bajío" },
-    { "id": "FZ11", "nombre": "CMM Hidalgo", "IdOV": 3118, "nombreOV": "CMM Del Bajío" },
-    { "id": "FK07", "nombre": "CMM Huautla", "IdOV": 3125, "nombreOV": "CMM Altiplano" },
-    { "id": "GC14", "nombre": "CMM Huayacocotla", "IdOV": 3108, "nombreOV": "CMM Hidalgo" },
-    { "id": "GC10", "nombre": "CMM Huejutla", "IdOV": 3108, "nombreOV": "CMM Hidalgo" },
-    { "id": "GC05", "nombre": "CMM Huichapan", "IdOV": 3108, "nombreOV": "CMM Hidalgo" },
-    { "id": "GE03", "nombre": "CMM Huixquilucan", "IdOV": 3119, "nombreOV": "CMM Metropolitana" },
-    { "id": "FZ03", "nombre": "CMM Irapuato", "IdOV": 3118, "nombreOV": "CMM Del Bajío" },
-    { "id": "GC06", "nombre": "CMM Ixmiquilpan", "IdOV": 3108, "nombreOV": "CMM Hidalgo" },
-    { "id": "FG08", "nombre": "CMM Ixtapan d laSal", "IdOV": 3116, "nombreOV": "CMM Edo de Mexico" },
-    { "id": "GC12", "nombre": "CMM Jacala", "IdOV": 3108, "nombreOV": "CMM Hidalgo" },
-    { "id": "FG14", "nombre": "CMM La Liga", "IdOV": 3116, "nombreOV": "CMM Edo de Mexico" },
-    { "id": "FZ01", "nombre": "CMM León URBAN", "IdOV": 3118, "nombreOV": "CMM Del Bajío" },
-    { "id": "FZ10", "nombre": "CMM Leon", "IdOV": 3118, "nombreOV": "CMM Del Bajío" },
-    { "id": "FF02", "nombre": "CMM Los Reyes", "IdOV": 3117, "nombreOV": "CMM Centro" },
-    { "id": "FK00", "nombre": "CMM M Altiplano", "IdOV": 3125, "nombreOV": "CMM Altiplano" },
-    { "id": "FZ00", "nombre": "CMM M Celaya", "IdOV": 3118, "nombreOV": "CMM Del Bajío" },
-    { "id": "FT00", "nombre": "CMM M Cuernavaca", "IdOV": 3122, "nombreOV": "CMM Morelos" },
-    { "id": "FG00", "nombre": "CMM M Metepec", "IdOV": 3116, "nombreOV": "CMM Edo de Mexico" },
-    { "id": "GC00", "nombre": "CMM M Pachuca", "IdOV": 3108, "nombreOV": "CMM Hidalgo" },
-    { "id": "FF00", "nombre": "CMM M San Crist√≥bal", "IdOV": 3117, "nombreOV": "CMM Centro" },
-    { "id": "GE00", "nombre": "CMM M San Pablo", "IdOV": 3119, "nombreOV": "CMM Metropolitana" },
-    { "id": "", "nombre": "CMM M San Pablo", "IdOV": 3119, "nombreOV": "CMM Metropolitana" },
-    { "id": "FG01", "nombre": "CMM Metepec URBAN", "IdOV": 3116, "nombreOV": "CMM Edo de Mexico" },
-    { "id": "GC11", "nombre": "CMM Molango", "IdOV": 3108, "nombreOV": "CMM Hidalgo" },
-    { "id": "FF01", "nombre": "CMM Nezahualcoyotl", "IdOV": 3117, "nombreOV": "CMM Centro" },
-    { "id": "GE01", "nombre": "CMM Oceania", "IdOV": 3119, "nombreOV": "CMM Metropolitana" },
-    { "id": "GE06", "nombre": "CMM Popocatepetl", "IdOV": 3119, "nombreOV": "CMM Metropolitana" },
-    { "id": "FK01", "nombre": "CMM Puebla URBAN", "IdOV": 3125, "nombreOV": "CMM Altiplano" },
-    { "id": "FZ14", "nombre": "CMM Queretaro", "IdOV": 3118, "nombreOV": "CMM Del Bajío" },
-    { "id": "FZ13", "nombre": "CMM Queretaro URBAN", "IdOV": 3118, "nombreOV": "CMM Del Bajío" },
-    { "id": "FZ04", "nombre": "CMM Salamanca", "IdOV": 3118, "nombreOV": "CMM Del Bajío" },
-    { "id": "GC07", "nombre": "CMM San Agustin", "IdOV": 3108, "nombreOV": "CMM Hidalgo" },
-    { "id": "GC13", "nombre": "CMM San Bartolo", "IdOV": 3108, "nombreOV": "CMM Hidalgo" },
-    { "id": "FZ12", "nombre": "CMM San Francisco", "IdOV": 3118, "nombreOV": "CMM Del Bajío" },
-    { "id": "FK04", "nombre": "CMM San Juan Ixcaqu", "IdOV": 3125, "nombreOV": "CMM Altiplano" },
-    { "id": "FK17", "nombre": "CMM San Martin Texm", "IdOV": 3125, "nombreOV": "CMM Altiplano" },
-    { "id": "FG12", "nombre": "CMM San Pedro Limon", "IdOV": 3116, "nombreOV": "CMM Edo de Mexico" },
-    { "id": "FZ15", "nombre": "CMM SanJuan del Rio", "IdOV": 3118, "nombreOV": "CMM Del Bajío" },
-    { "id": "FZ05", "nombre": "CMM Silao", "IdOV": 3118, "nombreOV": "CMM Del Bajío" },
-    { "id": "FF09", "nombre": "CMM Sn JuanTeotihua", "IdOV": 3117, "nombreOV": "CMM Centro" },
-    { "id": "FZ07", "nombre": "CMM Sn Miguel dAlle", "IdOV": 3118, "nombreOV": "CMM Del Bajío" },
-    { "id": "FZ09", "nombre": "CMM SnJose Iturbide", "IdOV": 3118, "nombreOV": "CMM Del Bajío" },
-    { "id": "FK18", "nombre": "CMM Tecamachalco", "IdOV": 3125, "nombreOV": "CMM Altiplano" },
-    { "id": "FG07", "nombre": "CMM Tejupilco", "IdOV": 3116, "nombreOV": "CMM Edo de Mexico" },
-    { "id": "FG09", "nombre": "CMM Temascalcingo", "IdOV": 3116, "nombreOV": "CMM Edo de Mexico" },
-    { "id": "FG05", "nombre": "CMM Tenancingo", "IdOV": 3116, "nombreOV": "CMM Edo de Mexico" },
-    { "id": "FK06", "nombre": "CMM Teotitl√°n", "IdOV": 3125, "nombreOV": "CMM Altiplano" },
-    { "id": "FT05", "nombre": "CMM Tetecala", "IdOV": 3122, "nombreOV": "CMM Morelos" },
-    { "id": "FG11", "nombre": "CMM Texcaltitlan", "IdOV": 3116, "nombreOV": "CMM Edo de Mexico" },
-    { "id": "FF06", "nombre": "CMM Texcoco", "IdOV": 3117, "nombreOV": "CMM Centro" },
-    { "id": "FF03", "nombre": "CMM Tizayuca", "IdOV": 3117, "nombreOV": "CMM Centro" },
-    { "id": "FK12", "nombre": "CMM Tlacotepec d Ju", "IdOV": 3125, "nombreOV": "CMM Altiplano" },
-    { "id": "FK11", "nombre": "CMM Tlacotepec Díaz", "IdOV": 3125, "nombreOV": "CMM Altiplano" },
-    { "id": "FF10", "nombre": "CMM Tlahuac", "IdOV": 3117, "nombreOV": "CMM Centro" },
-    { "id": "FK15", "nombre": "CMM Tlaxcala", "IdOV": 3125, "nombreOV": "CMM Altiplano" },
-    { "id": "GC08", "nombre": "CMM Tula", "IdOV": 3108, "nombreOV": "CMM Hidalgo" },
-    { "id": "GC04", "nombre": "CMM Tulancingo", "IdOV": 3108, "nombreOV": "CMM Hidalgo" },
-    { "id": "FG04", "nombre": "CMM Valle de Bravo", "IdOV": 3116, "nombreOV": "CMM Edo de Mexico" },
-    { "id": "FK08", "nombre": "CMM Vicente Guerrer", "IdOV": 3125, "nombreOV": "CMM Altiplano" },
-    { "id": "FG03", "nombre": "CMM Villa Victoria", "IdOV": 3116, "nombreOV": "CMM Edo de Mexico" },
-    { "id": "GE05", "nombre": "CMM Xochimilco", "IdOV": 3119, "nombreOV": "CMM Metropolitana" },
-    { "id": "FT03", "nombre": "CMM Xochitepec", "IdOV": 3122, "nombreOV": "CMM Morelos" },
-    { "id": "FG13", "nombre": "CMM Xonacatlan", "IdOV": 3116, "nombreOV": "CMM Edo de Mexico" },
-    { "id": "FT04", "nombre": "CMM Zacatepec", "IdOV": 3122, "nombreOV": "CMM Morelos" },
-    { "id": "GC09", "nombre": "CMM Zimapan", "IdOV": 3108, "nombreOV": "CMM Hidalgo" },
-    { "id": "FK09", "nombre": "CMM Zoquitl√°n", "IdOV": 3125, "nombreOV": "CMM Altiplano" },
-    { "id": "FF07", "nombre": "CMM Zumpango", "IdOV": 3117, "nombreOV": "CMM Centro" },
-    { "id": "FC19", "nombre": "CMM Acu√±a", "IdOV": 3127, "nombreOV": "CMM Norte" },
-    { "id": "FL05", "nombre": "CMM Agua Prieta", "IdOV": 3102, "nombreOV": "CMM Sonora" },
-    { "id": "FV08", "nombre": "CMM Alamo", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "FV04", "nombre": "CMM Aldama", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "FC18", "nombre": "CMM Allende", "IdOV": 3127, "nombreOV": "CMM Norte" },
-    { "id": "GD02", "nombre": "CMM Apodaca BA", "IdOV": 3128, "nombreOV": "CMM Nuevo León" },
-    { "id": "FC03", "nombre": "CMM Bermejillo", "IdOV": 3127, "nombreOV": "CMM Norte" },
-    { "id": "FL06", "nombre": "CMM Caborca", "IdOV": 3102, "nombreOV": "CMM Sonora" },
-    { "id": "FB07", "nombre": "CMM Camargo", "IdOV": 3126, "nombreOV": "CMM Chihuahua" },
-    { "id": "FV22", "nombre": "CMM Camargo", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "FL08", "nombre": "CMM Cananea", "IdOV": 3102, "nombreOV": "CMM Sonora" },
-    { "id": "FC12", "nombre": "CMM Canatlan", "IdOV": 3127, "nombreOV": "CMM Norte" },
-    { "id": "FS05", "nombre": "CMM Cd Constitucion", "IdOV": 3103, "nombreOV": "CMM Pacífico" },
-    { "id": "GD03", "nombre": "CMM Cercado", "IdOV": 3128, "nombreOV": "CMM Nuevo León" },
-    { "id": "GD04", "nombre": "CMM Cerralvo", "IdOV": 3128, "nombreOV": "CMM Nuevo León" },
-    { "id": "GD05", "nombre": "CMM China", "IdOV": 3128, "nombreOV": "CMM Nuevo León" },
-    { "id": "FV02", "nombre": "CMM Ciudad Mante", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "FV21", "nombre": "CMM Ciudad Reynosa", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "FV24", "nombre": "CMM Ciudad Victoria", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "FB01", "nombre": "CMM Cuauhtemoc", "IdOV": 3126, "nombreOV": "CMM Chihuahua" },
-    { "id": "FC02", "nombre": "CMM Cuencame", "IdOV": 3127, "nombreOV": "CMM Norte" },
-    { "id": "FB02", "nombre": "CMM Delicias", "IdOV": 3126, "nombreOV": "CMM Chihuahua" },
-    { "id": "FC09", "nombre": "CMM Durango", "IdOV": 3127, "nombreOV": "CMM Norte" },
-    { "id": "FV01", "nombre": "CMM Ebano", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "GF01", "nombre": "CMM El Dorado", "IdOV": 3131, "nombreOV": "CMM Culiacán" },
-    { "id": "FS11", "nombre": "CMM El Fuerte", "IdOV": 3103, "nombreOV": "CMM Pacífico" },
-    { "id": "FC11", "nombre": "CMM El Salto", "IdOV": 3127, "nombreOV": "CMM Norte" },
-    { "id": "FA03", "nombre": "CMM Ensenada", "IdOV": 3101, "nombreOV": "CMM Baja California" },
-    { "id": "FC05", "nombre": "CMM Fco. I. Madero", "IdOV": 3127, "nombreOV": "CMM Norte" },
-    { "id": "FC07", "nombre": "CMM Galeana", "IdOV": 3127, "nombreOV": "CMM Norte" },
-    { "id": "FC01", "nombre": "CMM Gomez Palacio", "IdOV": 3127, "nombreOV": "CMM Norte" },
-    { "id": "GD09", "nombre": "CMM Guadalupe", "IdOV": 3128, "nombreOV": "CMM Nuevo León" },
-    { "id": "FC10", "nombre": "CMM GuadalupeVictor", "IdOV": 3127, "nombreOV": "CMM Norte" },
-    { "id": "FS01", "nombre": "CMM Guamuchil", "IdOV": 3103, "nombreOV": "CMM Pacífico" },
-    { "id": "FS13", "nombre": "CMM Guasave", "IdOV": 3103, "nombreOV": "CMM Pacífico" },
-    { "id": "FL03", "nombre": "CMM Guaymas", "IdOV": 3102, "nombreOV": "CMM Sonora" },
-    { "id": "FS08", "nombre": "CMM Guerrero Negro", "IdOV": 3103, "nombreOV": "CMM Pacífico" },
-    { "id": "FV12", "nombre": "CMM Gutierrez Zamor", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "FL09", "nombre": "CMM Huatabampo", "IdOV": 3102, "nombreOV": "CMM Sonora" },
-    { "id": "FB06", "nombre": "CMM Jimenez", "IdOV": 3126, "nombreOV": "CMM Chihuahua" },
-    { "id": "FB04", "nombre": "CMM Juarez", "IdOV": 3126, "nombreOV": "CMM Chihuahua" },
-    { "id": "GD08", "nombre": "CMM La Fe", "IdOV": 3128, "nombreOV": "CMM Nuevo León" },
-    { "id": "FS03", "nombre": "CMM La Paz", "IdOV": 3103, "nombreOV": "CMM Pacífico" },
-    { "id": "FV17", "nombre": "CMM La Uno", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "GD01", "nombre": "CMM Lincoln", "IdOV": 3128, "nombreOV": "CMM Nuevo León" },
-    { "id": "FS06", "nombre": "CMM Loreto", "IdOV": 3103, "nombreOV": "CMM Pacífico" },
-    { "id": "FS02", "nombre": "CMM Los Mochis", "IdOV": 3103, "nombreOV": "CMM Pacífico" },
-    { "id": "FV00", "nombre": "CMM M Altamira", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "GD00", "nombre": "CMM M Apodaca", "IdOV": 3128, "nombreOV": "CMM Nuevo León" },
-    { "id": "FB00", "nombre": "CMM M Chihuahua", "IdOV": 3126, "nombreOV": "CMM Chihuahua" },
-    { "id": "GF00", "nombre": "CMM M Culiacán", "IdOV": 3131, "nombreOV": "CMM Culiacán" },
-    { "id": "FL00", "nombre": "CMM M Hermosillo", "IdOV": 3102, "nombreOV": "CMM Sonora" },
-    { "id": "FS00", "nombre": "CMM M Mazatlan", "IdOV": 3103, "nombreOV": "CMM Pacífico" },
-    { "id": "FA00", "nombre": "CMM M Tijuana", "IdOV": 3101, "nombreOV": "CMM Baja California" },
-    { "id": "FC00", "nombre": "CMM M Torre√≥n", "IdOV": 3127, "nombreOV": "CMM Norte" },
-    { "id": "FL07", "nombre": "CMM Magdalena", "IdOV": 3102, "nombreOV": "CMM Sonora" },
-    { "id": "FV13", "nombre": "CMM Martinez d l To", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "FV18", "nombre": "CMM Matamoros", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "FS09", "nombre": "CMM Mazatlán URBAN", "IdOV": 3103, "nombreOV": "CMM Pacífico" },
-    { "id": "FA04", "nombre": "CMM Mexicali", "IdOV": 3101, "nombreOV": "CMM Baja California" },
-    { "id": "FL10", "nombre": "CMM Moctezuma", "IdOV": 3102, "nombreOV": "CMM Sonora" },
-    { "id": "GD06", "nombre": "CMM Montemorelos", "IdOV": 3128, "nombreOV": "CMM Nuevo León" },
-    { "id": "FV07", "nombre": "CMM Naranjos", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "FL02", "nombre": "CMM Navojoa", "IdOV": 3102, "nombreOV": "CMM Sonora" },
-    { "id": "FL04", "nombre": "CMM Nogales", "IdOV": 3102, "nombreOV": "CMM Sonora" },
-    { "id": "FB03", "nombre": "CMM Nuevas CasasGra", "IdOV": 3126, "nombreOV": "CMM Chihuahua" },
-    { "id": "FV23", "nombre": "CMM Nuevo Laredo", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "FV20", "nombre": "CMM Nuevo Progreso", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "FL01", "nombre": "CMM Obregon", "IdOV": 3102, "nombreOV": "CMM Sonora" },
-    { "id": "FV06", "nombre": "CMM Ozuluama", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "FV11", "nombre": "CMM Papantla", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "FB05", "nombre": "CMM Parral", "IdOV": 3126, "nombreOV": "CMM Chihuahua" },
-    { "id": "FC08", "nombre": "CMM Parras de lafue", "IdOV": 3127, "nombreOV": "CMM Norte" },
-    { "id": "FA02", "nombre": "CMM Pe√±asco", "IdOV": 3101, "nombreOV": "CMM Baja California" },
-    { "id": "FC20", "nombre": "CMM Piedras Negras", "IdOV": 3127, "nombreOV": "CMM Norte" },
-    { "id": "FV05", "nombre": "CMM Poza Rica", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "FV03", "nombre": "CMM Pueblo Viejo", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "FC17", "nombre": "CMM Sabinas", "IdOV": 3127, "nombreOV": "CMM Norte" },
-    { "id": "GD07", "nombre": "CMM Sabinas", "IdOV": 3128, "nombreOV": "CMM Nuevo León" },
-    { "id": "FC06", "nombre": "CMM Saltillo", "IdOV": 3127, "nombreOV": "CMM Norte" },
-    { "id": "FA08", "nombre": "CMM San Felipe", "IdOV": 3101, "nombreOV": "CMM Baja California" },
-    { "id": "FV25", "nombre": "CMM San Fernando", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "FA01", "nombre": "CMM San Luis", "IdOV": 3101, "nombreOV": "CMM Baja California" },
-    { "id": "FC04", "nombre": "CMM San Pedro", "IdOV": 3127, "nombreOV": "CMM Norte" },
-    { "id": "FA09", "nombre": "CMM San Quintin", "IdOV": 3101, "nombreOV": "CMM Baja California" },
-    { "id": "FV14", "nombre": "CMM San Rafael", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "FS07", "nombre": "CMM Santa Rosalia", "IdOV": 3103, "nombreOV": "CMM Pacífico" },
-    { "id": "FC16", "nombre": "CMM SantaMa del Oro", "IdOV": 3127, "nombreOV": "CMM Norte" },
-    { "id": "FC15", "nombre": "CMM SantiagoPapasqu", "IdOV": 3127, "nombreOV": "CMM Norte" },
-    { "id": "FS12", "nombre": "CMM Sinaloa deLeyva", "IdOV": 3103, "nombreOV": "CMM Pacífico" },
-    { "id": "FS04", "nombre": "CMM SnJose del Cabo", "IdOV": 3103, "nombreOV": "CMM Pacífico" },
-    { "id": "FA07", "nombre": "CMM Sonoyta", "IdOV": 3101, "nombreOV": "CMM Baja California" },
-    { "id": "FV26", "nombre": "CMM Soto La Marina", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "FC14", "nombre": "CMM Tepehuanes", "IdOV": 3127, "nombreOV": "CMM Norte" },
-    { "id": "FV10", "nombre": "CMM Tihuatlan", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "FA06", "nombre": "CMM Tijuana zonaNor", "IdOV": 3101, "nombreOV": "CMM Baja California" },
-    { "id": "FA05", "nombre": "CMM Tijuana-Playas", "IdOV": 3101, "nombreOV": "CMM Baja California" },
-    { "id": "FV27", "nombre": "CMM Tula", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "FV09", "nombre": "CMM Tuxpan", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "FV19", "nombre": "CMM Valle Hermoso", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "FV15", "nombre": "CMM Vega de Alatorr", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "FC13", "nombre": "CMM VicenteGuerrero", "IdOV": 3127, "nombreOV": "CMM Norte" },
-    { "id": "FV16", "nombre": "CMM Xicotepec", "IdOV": 3129, "nombreOV": "CMM Noreste" },
-    { "id": "FS10", "nombre": "San Jose Cabo URBAN", "IdOV": 3103, "nombreOV": "CMM Pacífico" },
-    { "id": "FU05", "nombre": "CMM Acaponeta", "IdOV": 3104, "nombreOV": "CMM Nayarit" },
-    { "id": "FY17", "nombre": "CMM Aguililla", "IdOV": 3106, "nombreOV": "CMM Michoacan" },
-    { "id": "GB10", "nombre": "CMM Ahualulco", "IdOV": 3109, "nombreOV": "CMM San Luis Potosí" },
-    { "id": "FY12", "nombre": "CMM Apatzingan", "IdOV": 3106, "nombreOV": "CMM Michoacan" },
-    { "id": "FD01", "nombre": "CMM Atoyac", "IdOV": 3120, "nombreOV": "CMM Acapulco" },
-    { "id": "FE05", "nombre": "CMM Autlan", "IdOV": 3105, "nombreOV": "CMM Occidente" },
-    { "id": "FD08", "nombre": "CMM Ayutla", "IdOV": 3120, "nombreOV": "CMM Acapulco" },
-    { "id": "GB06", "nombre": "CMM Cardenas", "IdOV": 3109, "nombreOV": "CMM San Luis Potosí" },
-    { "id": "FD04", "nombre": "CMM Cayaco", "IdOV": 3120, "nombreOV": "CMM Acapulco" },
-    { "id": "FY09", "nombre": "CMM Cd. Hidalgo", "IdOV": 3106, "nombreOV": "CMM Michoacan" },
-    { "id": "GB02", "nombre": "CMM Cd. Valles", "IdOV": 3109, "nombreOV": "CMM San Luis Potosí" },
-    { "id": "GB07", "nombre": "CMM Cerritos", "IdOV": 3109, "nombreOV": "CMM San Luis Potosí" },
-    { "id": "FE23", "nombre": "CMM Chapala", "IdOV": 3105, "nombreOV": "CMM Occidente" },
-    { "id": "GA01", "nombre": "CMM Chilapa", "IdOV": 3121, "nombreOV": "CMM Guerrero" },
-    { "id": "FE19", "nombre": "CMM Cihuatlan", "IdOV": 3105, "nombreOV": "CMM Occidente" },
-    { "id": "FE16", "nombre": "CMM Ciudad Guzman", "IdOV": 3105, "nombreOV": "CMM Occidente" },
-    { "id": "FY16", "nombre": "CMM Coalcoman", "IdOV": 3106, "nombreOV": "CMM Michoacan" },
-    { "id": "FE03", "nombre": "CMM Cocula", "IdOV": 3105, "nombreOV": "CMM Occidente" },
-    { "id": "FE15", "nombre": "CMM Colima", "IdOV": 3105, "nombreOV": "CMM Occidente" },
-    { "id": "FQ09", "nombre": "CMM Colotlan", "IdOV": 3110, "nombreOV": "CMM Zacatecas" },
-    { "id": "FY18", "nombre": "CMM Cotija de la Pa", "IdOV": 3106, "nombreOV": "CMM Michoacan" },
-    { "id": "FD07", "nombre": "CMM Cruz Grande", "IdOV": 3120, "nombreOV": "CMM Acapulco" },
-    { "id": "FD11", "nombre": "CMM Cuajinicuilapa", "IdOV": 3120, "nombreOV": "CMM Acapulco" },
-    { "id": "FY11", "nombre": "CMM Cutzamala", "IdOV": 3106, "nombreOV": "CMM Michoacan" },
-    { "id": "GB17", "nombre": "CMM Dr. Arroyo", "IdOV": 3109, "nombreOV": "CMM San Luis Potosí" },
-    { "id": "FQ15", "nombre": "CMM Estacion Camach", "IdOV": 3110, "nombreOV": "CMM Zacatecas" },
-    { "id": "FQ01", "nombre": "CMM Fresnillo", "IdOV": 3110, "nombreOV": "CMM Zacatecas" },
-    { "id": "FY03", "nombre": "CMM Gabriel Zamora", "IdOV": 3106, "nombreOV": "CMM Michoacan" },
-    { "id": "FQ10", "nombre": "CMM Huejuquilla", "IdOV": 3110, "nombreOV": "CMM Zacatecas" },
-    { "id": "FY10", "nombre": "CMM Huetamo", "IdOV": 3106, "nombreOV": "CMM Michoacan" },
-    { "id": "GB09", "nombre": "CMM Huizache", "IdOV": 3109, "nombreOV": "CMM San Luis Potosí" },
-    { "id": "GA05", "nombre": "CMM Iguala", "IdOV": 3121, "nombreOV": "CMM Guerrero" },
-    { "id": "FE14", "nombre": "CMM Ixtlahuacan", "IdOV": 3105, "nombreOV": "CMM Occidente" },
-    { "id": "FU03", "nombre": "CMM Ixtlan del Rio", "IdOV": 3104, "nombreOV": "CMM Nayarit" },
-    { "id": "FQ03", "nombre": "CMM Jerez", "IdOV": 3110, "nombreOV": "CMM Zacatecas" },
-    { "id": "FQ11", "nombre": "CMM Juan Aldama", "IdOV": 3110, "nombreOV": "CMM Zacatecas" },
-    { "id": "FE06", "nombre": "CMM La Huerta", "IdOV": 3105, "nombreOV": "CMM Occidente" },
-    { "id": "FU01", "nombre": "CMM La Pe√±ita de J.", "IdOV": 3104, "nombreOV": "CMM Nayarit" },
-    { "id": "FY05", "nombre": "CMM La Piedad", "IdOV": 3106, "nombreOV": "CMM Michoacan" },
-    { "id": "GA04", "nombre": "CMM La Union", "IdOV": 3121, "nombreOV": "CMM Guerrero" },
-    { "id": "FY13", "nombre": "CMM Lazaro Cardenas", "IdOV": 3106, "nombreOV": "CMM Michoacan" },
-    { "id": "FY06", "nombre": "CMM Los Reyes Mich", "IdOV": 3106, "nombreOV": "CMM Michoacan" },
-    { "id": "FD00", "nombre": "CMM M Acapulco", "IdOV": 3120, "nombreOV": "CMM Acapulco" },
-    { "id": "FE00", "nombre": "CMM M Guadalajara", "IdOV": 3105, "nombreOV": "CMM Occidente" },
-    { "id": "GA00", "nombre": "CMM M Guerrero", "IdOV": 3121, "nombreOV": "CMM Guerrero" },
-    { "id": "FY00", "nombre": "CMM M Morelia", "IdOV": 3106, "nombreOV": "CMM Michoacan" },
-    { "id": "FY01", "nombre": "CMM M Morelia URBAN", "IdOV": 3106, "nombreOV": "CMM Michoacan" },
-    { "id": "GB01", "nombre": "CMM M SanLuisPotosi", "IdOV": 3109, "nombreOV": "CMM San Luis Potosí" },
-    { "id": "FU00", "nombre": "CMM M Xalisco", "IdOV": 3104, "nombreOV": "CMM Nayarit" },
-    { "id": "FQ00", "nombre": "CMM M Zacatecas", "IdOV": 3110, "nombreOV": "CMM Zacatecas" },
-    { "id": "FE17", "nombre": "CMM Manzanillo", "IdOV": 3105, "nombreOV": "CMM Occidente" },
-    { "id": "FD09", "nombre": "CMM Marquelia", "IdOV": 3120, "nombreOV": "CMM Acapulco" },
-    { "id": "GB03", "nombre": "CMM Matehuala", "IdOV": 3109, "nombreOV": "CMM San Luis Potosí" },
-    { "id": "GB05", "nombre": "CMM Matlapa", "IdOV": 3109, "nombreOV": "CMM San Luis Potosí" },
-    { "id": "FQ14", "nombre": "CMM Nieves", "IdOV": 3110, "nombreOV": "CMM Zacatecas" },
-    { "id": "FY14", "nombre": "CMM Nueva Italia", "IdOV": 3106, "nombreOV": "CMM Michoacan" },
-    { "id": "GB16", "nombre": "CMM Ocampo", "IdOV": 3109, "nombreOV": "CMM San Luis Potosí" },
-    { "id": "FE04", "nombre": "CMM Occidente URBAN", "IdOV": 3105, "nombreOV": "CMM Occidente" },
-    { "id": "FE10", "nombre": "CMM Ocotlan", "IdOV": 3105, "nombreOV": "CMM Occidente" },
-    { "id": "FQ02", "nombre": "CMM Ojocaliente", "IdOV": 3110, "nombreOV": "CMM Zacatecas" },
-    { "id": "FD10", "nombre": "CMM Ometepec", "IdOV": 3120, "nombreOV": "CMM Acapulco" },
-    { "id": "FU07", "nombre": "CMM P. S√°nchez", "IdOV": 3104, "nombreOV": "CMM Nayarit" },
-    { "id": "GA03", "nombre": "CMM Petatlan", "IdOV": 3121, "nombreOV": "CMM Guerrero" },
-    { "id": "FD03", "nombre": "CMM Pie de la Cuest", "IdOV": 3120, "nombreOV": "CMM Acapulco" },
-    { "id": "FE21", "nombre": "CMM Puerto Vallarta", "IdOV": 3105, "nombreOV": "CMM Occidente" },
-    { "id": "FY07", "nombre": "CMM Puruandiro", "IdOV": 3106, "nombreOV": "CMM Michoacan" },
-    { "id": "FE11", "nombre": "CMM PVallarta URBAN", "IdOV": 3105, "nombreOV": "CMM Occidente" },
-    { "id": "FQ04", "nombre": "CMM Rio Grande", "IdOV": 3110, "nombreOV": "CMM Zacatecas" },
-    { "id": "GB04", "nombre": "CMM Rio Verde", "IdOV": 3109, "nombreOV": "CMM San Luis Potosí" },
-    { "id": "FU06", "nombre": "CMM Ruiz", "IdOV": 3104, "nombreOV": "CMM Nayarit" },
-    { "id": "FE12", "nombre": "CMM Sahuayo", "IdOV": 3105, "nombreOV": "CMM Occidente" },
-    { "id": "GB14", "nombre": "CMM Salinas", "IdOV": 3109, "nombreOV": "CMM San Luis Potosí" },
-    { "id": "FU04", "nombre": "CMM San Blas", "IdOV": 3104, "nombreOV": "CMM Nayarit" },
-    { "id": "FD06", "nombre": "CMM San Marcos", "IdOV": 3120, "nombreOV": "CMM Acapulco" },
-    { "id": "GB00", "nombre": "CMM SanLuis Potos I", "IdOV": 3109, "nombreOV": "CMM San Luis Potosí" },
-    { "id": "GB11", "nombre": "CMM Santa Maria", "IdOV": 3109, "nombreOV": "CMM San Luis Potosí" },
-    { "id": "FU02", "nombre": "CMM Santiago", "IdOV": 3104, "nombreOV": "CMM Nayarit" },
-    { "id": "GB08", "nombre": "CMM SLP URBAN", "IdOV": 3109, "nombreOV": "CMM San Luis Potosí" },
-    { "id": "FQ05", "nombre": "CMM Sombrerete", "IdOV": 3110, "nombreOV": "CMM Zacatecas" },
-    { "id": "FE09", "nombre": "CMM Tala", "IdOV": 3105, "nombreOV": "CMM Occidente" },
-    { "id": "FE08", "nombre": "CMM Talpa", "IdOV": 3105, "nombreOV": "CMM Occidente" },
-    { "id": "FE18", "nombre": "CMM Tamazula CdGuzm", "IdOV": 3105, "nombreOV": "CMM Occidente" },
-    { "id": "GB15", "nombre": "CMM Tamuin", "IdOV": 3109, "nombreOV": "CMM San Luis Potosí" },
-    { "id": "GB12", "nombre": "CMM Tanquian dEscob", "IdOV": 3109, "nombreOV": "CMM San Luis Potosí" },
-    { "id": "GA06", "nombre": "CMM Taxco", "IdOV": 3121, "nombreOV": "CMM Guerrero" },
-    { "id": "FE20", "nombre": "CMM Tecoman", "IdOV": 3105, "nombreOV": "CMM Occidente" },
-    { "id": "FD02", "nombre": "CMM Tecpan", "IdOV": 3120, "nombreOV": "CMM Acapulco" },
-    { "id": "GA07", "nombre": "CMM Teloloapan", "IdOV": 3121, "nombreOV": "CMM Guerrero" },
-    { "id": "FY15", "nombre": "CMM Tepalcatepec", "IdOV": 3106, "nombreOV": "CMM Michoacan" },
-    { "id": "FE13", "nombre": "CMM Tequila", "IdOV": 3105, "nombreOV": "CMM Occidente" },
-    { "id": "FD05", "nombre": "CMM Tierra Colorada", "IdOV": 3120, "nombreOV": "CMM Acapulco" },
-    { "id": "FQ08", "nombre": "CMM Tlaltenango", "IdOV": 3110, "nombreOV": "CMM Zacatecas" },
-    { "id": "FE02", "nombre": "CMM Tlaquepaque", "IdOV": 3105, "nombreOV": "CMM Occidente" },
-    { "id": "FE22", "nombre": "CMM Tomatlan", "IdOV": 3105, "nombreOV": "CMM Occidente" },
-    { "id": "FE24", "nombre": "CMM Tormenta", "IdOV": 3105, "nombreOV": "CMM Occidente" },
-    { "id": "FE07", "nombre": "CMM Union de Tula", "IdOV": 3105, "nombreOV": "CMM Occidente" },
-    { "id": "FY02", "nombre": "CMM Uruapan", "IdOV": 3106, "nombreOV": "CMM Michoacan" },
-    { "id": "FQ12", "nombre": "CMM Valparaiso", "IdOV": 3110, "nombreOV": "CMM Zacatecas" },
-    { "id": "FQ06", "nombre": "CMM Villa de Cos", "IdOV": 3110, "nombreOV": "CMM Zacatecas" },
-    { "id": "GB13", "nombre": "CMM Villa Hidalgo", "IdOV": 3109, "nombreOV": "CMM San Luis Potosí" },
-    { "id": "FQ13", "nombre": "CMM Villa Hidalgo", "IdOV": 3110, "nombreOV": "CMM Zacatecas" },
-    { "id": "FQ07", "nombre": "CMM Villanueva", "IdOV": 3110, "nombreOV": "CMM Zacatecas" },
-    { "id": "FY04", "nombre": "CMM Zacapu", "IdOV": 3106, "nombreOV": "CMM Michoacan" },
-    { "id": "FE01", "nombre": "CMM Zapopan", "IdOV": 3105, "nombreOV": "CMM Occidente" },
-    { "id": "GA02", "nombre": "CMM Zihuatanejo", "IdOV": 3121, "nombreOV": "CMM Guerrero" },
-    { "id": "FY08", "nombre": "CMM Zitacuaro", "IdOV": 3106, "nombreOV": "CMM Michoacan" },
-    { "id": "NE00", "nombre": "CMO M Guadalajara", "IdOV": 3105, "nombreOV": "CMM Occidente" },
-    { "id": "FN02", "nombre": "CMM Acayucan", "IdOV": 3115, "nombreOV": "CMM Veracruz" },
-    { "id": "FW10", "nombre": "CMM Amuzgos", "IdOV": 3123, "nombreOV": "CMM Oaxaca" },
-    { "id": "FM08", "nombre": "CMM Balancan", "IdOV": 3113, "nombreOV": "CMM Tabasco" },
-    { "id": "FP12", "nombre": "CMM Bochil", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FP18", "nombre": "CMM Canc√∫n URBAN", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FP07", "nombre": "CMM Cancun", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FX05", "nombre": "CMM Candelaria", "IdOV": 3112, "nombreOV": "CMM Campeche" },
-    { "id": "FX03", "nombre": "CMM Carmen", "IdOV": 3112, "nombreOV": "CMM Campeche" },
-    { "id": "FP08", "nombre": "CMM Carrillo Puerto", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FN01", "nombre": "CMM Cd. Isla", "IdOV": 3115, "nombreOV": "CMM Veracruz" },
-    { "id": "FX01", "nombre": "CMM Champoton", "IdOV": 3112, "nombreOV": "CMM Campeche" },
-    { "id": "FP13", "nombre": "CMM Cintalapa", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FP14", "nombre": "CMM Comalapa", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FP15", "nombre": "CMM Comitan", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FP19", "nombre": "CMM Concordia", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FP16", "nombre": "CMM Copainala", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FP30", "nombre": "CMM Cozumel", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FM01", "nombre": "CMM Emiliano Zapata", "IdOV": 3113, "nombreOV": "CMM Tabasco" },
-    { "id": "FX04", "nombre": "CMM Escarcega", "IdOV": 3112, "nombreOV": "CMM Campeche" },
-    { "id": "FP17", "nombre": "CMM Escuintla", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FM07", "nombre": "CMM Frontera", "IdOV": 3113, "nombreOV": "CMM Tabasco" },
-    { "id": "FX02", "nombre": "CMM Hopelchen", "IdOV": 3112, "nombreOV": "CMM Campeche" },
-    { "id": "FW08", "nombre": "CMM Huatulco", "IdOV": 3123, "nombreOV": "CMM Oaxaca" },
-    { "id": "FM02", "nombre": "CMM Huimanguillo", "IdOV": 3113, "nombreOV": "CMM Tabasco" },
-    { "id": "FP09", "nombre": "CMM Isla Mujeres", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FJ01", "nombre": "CMM Ixtepec", "IdOV": 3124, "nombreOV": "CMM Istmo" },
-    { "id": "FP01", "nombre": "CMM Izamal", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FM03", "nombre": "CMM Jalpa de Mendez", "IdOV": 3113, "nombreOV": "CMM Tabasco" },
-    { "id": "FN03", "nombre": "CMM Jaltipan", "IdOV": 3115, "nombreOV": "CMM Veracruz" },
-    { "id": "FJ02", "nombre": "CMM Jesus Carranza", "IdOV": 3124, "nombreOV": "CMM Istmo" },
-    { "id": "FX00", "nombre": "CMM M Campeche", "IdOV": 3112, "nombreOV": "CMM Campeche" },
-    { "id": "FR00", "nombre": "CMM M Cardenas", "IdOV": 3114, "nombreOV": "CMM Macfe" },
-    { "id": "FJ00", "nombre": "CMM M Juchitan", "IdOV": 3124, "nombreOV": "CMM Istmo" },
-    { "id": "FP00", "nombre": "CMM M Merida", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FN00", "nombre": "CMM M Minatitlan", "IdOV": 3115, "nombreOV": "CMM Veracruz" },
-    { "id": "FW00", "nombre": "CMM M Oaxaca", "IdOV": 3123, "nombreOV": "CMM Oaxaca" },
-    { "id": "FM00", "nombre": "CMM M Villahermosa", "IdOV": 3113, "nombreOV": "CMM Tabasco" },
-    { "id": "FJ07", "nombre": "CMM Maria Lombardo", "IdOV": 3124, "nombreOV": "CMM Istmo" },
-    { "id": "FJ03", "nombre": "CMM Matias Romero", "IdOV": 3124, "nombreOV": "CMM Istmo" },
-    { "id": "FP02", "nombre": "CMM Maxcanu", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FW04", "nombre": "CMM Miahuatlan", "IdOV": 3123, "nombreOV": "CMM Oaxaca" },
-    { "id": "FW03", "nombre": "CMM Mitla", "IdOV": 3123, "nombreOV": "CMM Oaxaca" },
-    { "id": "FP23", "nombre": "CMM Ocosingo", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FW02", "nombre": "CMM Ocotlan", "IdOV": 3123, "nombreOV": "CMM Oaxaca" },
-    { "id": "FM09", "nombre": "CMM Palenque", "IdOV": 3113, "nombreOV": "CMM Tabasco" },
-    { "id": "FM04", "nombre": "CMM Paraiso", "IdOV": 3113, "nombreOV": "CMM Tabasco" },
-    { "id": "FP20", "nombre": "CMM Pijijiapan", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FW05", "nombre": "CMM PinotepaNaciona", "IdOV": 3123, "nombreOV": "CMM Oaxaca" },
-    { "id": "FP10", "nombre": "CMM Playa del Carme", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FN04", "nombre": "CMM Playa Vicente", "IdOV": 3115, "nombreOV": "CMM Veracruz" },
-    { "id": "FW07", "nombre": "CMM Pochutla", "IdOV": 3123, "nombreOV": "CMM Oaxaca" },
-    { "id": "FP03", "nombre": "CMM Progreso", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FW06", "nombre": "CMM PuertoEscondido", "IdOV": 3123, "nombreOV": "CMM Oaxaca" },
-    { "id": "FW09", "nombre": "CMM Rio Grande", "IdOV": 3123, "nombreOV": "CMM Oaxaca" },
-    { "id": "FJ04", "nombre": "CMM Salina Cruz", "IdOV": 3124, "nombreOV": "CMM Istmo" },
-    { "id": "FP21", "nombre": "CMM San Cristobal", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FJ08", "nombre": "CMM Santiago Astata", "IdOV": 3124, "nombreOV": "CMM Istmo" },
-    { "id": "FP22", "nombre": "CMM Simojovel", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FW01", "nombre": "CMM SnBartolo Coyot", "IdOV": 3123, "nombreOV": "CMM Oaxaca" },
-    { "id": "FM05", "nombre": "CMM Teapa", "IdOV": 3113, "nombreOV": "CMM Tabasco" },
-    { "id": "FP04", "nombre": "CMM Tekax", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FM06", "nombre": "CMM Tenosique", "IdOV": 3113, "nombreOV": "CMM Tabasco" },
-    { "id": "FP05", "nombre": "CMM Tizimin", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FP24", "nombre": "CMM Tonala", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FP29", "nombre": "CMM Tulum", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FN05", "nombre": "CMM Tuxtepec", "IdOV": 3115, "nombreOV": "CMM Veracruz" },
-    { "id": "FP11", "nombre": "CMM Tuxtla Gutierre", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FJ05", "nombre": "CMM Union Hidalgo", "IdOV": 3124, "nombreOV": "CMM Istmo" },
-    { "id": "FP06", "nombre": "CMM Valladolid", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FN06", "nombre": "CMM Valle Nacional", "IdOV": 3115, "nombreOV": "CMM Veracruz" },
-    { "id": "FP25", "nombre": "CMM Venustiano Carr", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FP26", "nombre": "CMM Villa de Acala", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FP27", "nombre": "CMM Villaflores", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FP28", "nombre": "CMM Yajalon", "IdOV": 3111, "nombreOV": "CMM Sureste" },
-    { "id": "FJ06", "nombre": "CMM Zanatepec", "IdOV": 3124, "nombreOV": "CMM Istmo" }
+    {
+      "id": "FK03",
+      "nombre": "CMM  Tehuacan",
+      "IdOV": 3125,
+      "nombreOV": "CMM Altiplano"
+    },
+    {
+      "id": "FZ02",
+      "nombre": "CMM Acambaro",
+      "IdOV": 3118,
+      "nombreOV": "CMM Del Bajío"
+    },
+    {
+      "id": "GC01",
+      "nombre": "CMM Actopan",
+      "IdOV": 3108,
+      "nombreOV": "CMM Hidalgo"
+    },
+    {
+      "id": "FK13",
+      "nombre": "CMM Amalucan",
+      "IdOV": 3125,
+      "nombreOV": "CMM Altiplano"
+    },
+    {
+      "id": "FZ16",
+      "nombre": "CMM Amealco",
+      "IdOV": 3118,
+      "nombreOV": "CMM Del Bajío"
+    },
+    {
+      "id": "GC02",
+      "nombre": "CMM Apan",
+      "IdOV": 3108,
+      "nombreOV": "CMM Hidalgo"
+    },
+    {
+      "id": "FG02",
+      "nombre": "CMM Atlacomulco",
+      "IdOV": 3116,
+      "nombreOV": "CMM Edo de Mexico"
+    },
+    {
+      "id": "GC03",
+      "nombre": "CMM Atotonilco",
+      "IdOV": 3108,
+      "nombreOV": "CMM Hidalgo"
+    },
+    {
+      "id": "FT02",
+      "nombre": "CMM Axochiapan",
+      "IdOV": 3122,
+      "nombreOV": "CMM Morelos"
+    },
+    {
+      "id": "FK16",
+      "nombre": "CMM Calpulalpan",
+      "IdOV": 3125,
+      "nombreOV": "CMM Altiplano"
+    },
+    {
+      "id": "FF05",
+      "nombre": "CMM Chalco",
+      "IdOV": 3117,
+      "nombreOV": "CMM Centro"
+    },
+    {
+      "id": "FG10",
+      "nombre": "CMM Chalma",
+      "IdOV": 3116,
+      "nombreOV": "CMM Edo de Mexico"
+    },
+    {
+      "id": "FK05",
+      "nombre": "CMM Chazumba",
+      "IdOV": 3125,
+      "nombreOV": "CMM Altiplano"
+    },
+    {
+      "id": "FF08",
+      "nombre": "CMM Chiconautla",
+      "IdOV": 3117,
+      "nombreOV": "CMM Centro"
+    },
+    {
+      "id": "FF04",
+      "nombre": "CMM Chimalhuacan",
+      "IdOV": 3117,
+      "nombreOV": "CMM Centro"
+    },
+    {
+      "id": "FK14",
+      "nombre": "CMM Cholula",
+      "IdOV": 3125,
+      "nombreOV": "CMM Altiplano"
+    },
+    {
+      "id": "FK02",
+      "nombre": "CMM Ciudad Serdan",
+      "IdOV": 3125,
+      "nombreOV": "CMM Altiplano"
+    },
+    {
+      "id": "FF11",
+      "nombre": "CMM Coacalco",
+      "IdOV": 3117,
+      "nombreOV": "CMM Centro"
+    },
+    {
+      "id": "GE04",
+      "nombre": "CMM Coacalco Metro",
+      "IdOV": 3119,
+      "nombreOV": "CMM Metropolitana"
+    },
+    {
+      "id": "FZ17",
+      "nombre": "CMM Colon",
+      "IdOV": 3118,
+      "nombreOV": "CMM Del Bajío"
+    },
+    {
+      "id": "GE07",
+      "nombre": "CMM Cuautitlan",
+      "IdOV": 3119,
+      "nombreOV": "CMM Metropolitana"
+    },
+    {
+      "id": "FT01",
+      "nombre": "CMM Cuautla",
+      "IdOV": 3122,
+      "nombreOV": "CMM Morelos"
+    },
+    {
+      "id": "FZ20",
+      "nombre": "CMM Cueramaro",
+      "IdOV": 3118,
+      "nombreOV": "CMM Del Bajío"
+    },
+    {
+      "id": "FK10",
+      "nombre": "CMM Cuicatl√°n",
+      "IdOV": 3125,
+      "nombreOV": "CMM Altiplano"
+    },
+    {
+      "id": "GE02",
+      "nombre": "CMM Doctores",
+      "IdOV": 3119,
+      "nombreOV": "CMM Metropolitana"
+    },
+    {
+      "id": "FZ08",
+      "nombre": "CMM Dolores",
+      "IdOV": 3118,
+      "nombreOV": "CMM Del Bajío"
+    },
+    {
+      "id": "FZ21",
+      "nombre": "CMM El Marqu√©s",
+      "IdOV": 3118,
+      "nombreOV": "CMM Del Bajío"
+    },
+    {
+      "id": "FG06",
+      "nombre": "CMM El Oro",
+      "IdOV": 3116,
+      "nombreOV": "CMM Edo de Mexico"
+    },
+    {
+      "id": "FZ06",
+      "nombre": "CMM Guanajuato",
+      "IdOV": 3118,
+      "nombreOV": "CMM Del Bajío"
+    },
+    {
+      "id": "FZ11",
+      "nombre": "CMM Hidalgo",
+      "IdOV": 3118,
+      "nombreOV": "CMM Del Bajío"
+    },
+    {
+      "id": "FK07",
+      "nombre": "CMM Huautla",
+      "IdOV": 3125,
+      "nombreOV": "CMM Altiplano"
+    },
+    {
+      "id": "GC14",
+      "nombre": "CMM Huayacocotla",
+      "IdOV": 3108,
+      "nombreOV": "CMM Hidalgo"
+    },
+    {
+      "id": "GC10",
+      "nombre": "CMM Huejutla",
+      "IdOV": 3108,
+      "nombreOV": "CMM Hidalgo"
+    },
+    {
+      "id": "GC05",
+      "nombre": "CMM Huichapan",
+      "IdOV": 3108,
+      "nombreOV": "CMM Hidalgo"
+    },
+    {
+      "id": "GE03",
+      "nombre": "CMM Huixquilucan",
+      "IdOV": 3119,
+      "nombreOV": "CMM Metropolitana"
+    },
+    {
+      "id": "FZ03",
+      "nombre": "CMM Irapuato",
+      "IdOV": 3118,
+      "nombreOV": "CMM Del Bajío"
+    },
+    {
+      "id": "GC06",
+      "nombre": "CMM Ixmiquilpan",
+      "IdOV": 3108,
+      "nombreOV": "CMM Hidalgo"
+    },
+    {
+      "id": "FG08",
+      "nombre": "CMM Ixtapan d laSal",
+      "IdOV": 3116,
+      "nombreOV": "CMM Edo de Mexico"
+    },
+    {
+      "id": "GC12",
+      "nombre": "CMM Jacala",
+      "IdOV": 3108,
+      "nombreOV": "CMM Hidalgo"
+    },
+    {
+      "id": "FG14",
+      "nombre": "CMM La Liga",
+      "IdOV": 3116,
+      "nombreOV": "CMM Edo de Mexico"
+    },
+    {
+      "id": "FZ01",
+      "nombre": "CMM León URBAN",
+      "IdOV": 3118,
+      "nombreOV": "CMM Del Bajío"
+    },
+    {
+      "id": "FZ10",
+      "nombre": "CMM Leon",
+      "IdOV": 3118,
+      "nombreOV": "CMM Del Bajío"
+    },
+    {
+      "id": "FF02",
+      "nombre": "CMM Los Reyes",
+      "IdOV": 3117,
+      "nombreOV": "CMM Centro"
+    },
+    {
+      "id": "FK00",
+      "nombre": "CMM M Altiplano",
+      "IdOV": 3125,
+      "nombreOV": "CMM Altiplano"
+    },
+    {
+      "id": "FZ00",
+      "nombre": "CMM M Celaya",
+      "IdOV": 3118,
+      "nombreOV": "CMM Del Bajío"
+    },
+    {
+      "id": "FT00",
+      "nombre": "CMM M Cuernavaca",
+      "IdOV": 3122,
+      "nombreOV": "CMM Morelos"
+    },
+    {
+      "id": "FG00",
+      "nombre": "CMM M Metepec",
+      "IdOV": 3116,
+      "nombreOV": "CMM Edo de Mexico"
+    },
+    {
+      "id": "GC00",
+      "nombre": "CMM M Pachuca",
+      "IdOV": 3108,
+      "nombreOV": "CMM Hidalgo"
+    },
+    {
+      "id": "FF00",
+      "nombre": "CMM M San Crist√≥bal",
+      "IdOV": 3117,
+      "nombreOV": "CMM Centro"
+    },
+    {
+      "id": "GE00",
+      "nombre": "CMM M San Pablo",
+      "IdOV": 3119,
+      "nombreOV": "CMM Metropolitana"
+    },
+    {
+      "id": "",
+      "nombre": "CMM M San Pablo",
+      "IdOV": 3119,
+      "nombreOV": "CMM Metropolitana"
+    },
+    {
+      "id": "FG01",
+      "nombre": "CMM Metepec URBAN",
+      "IdOV": 3116,
+      "nombreOV": "CMM Edo de Mexico"
+    },
+    {
+      "id": "GC11",
+      "nombre": "CMM Molango",
+      "IdOV": 3108,
+      "nombreOV": "CMM Hidalgo"
+    },
+    {
+      "id": "FF01",
+      "nombre": "CMM Nezahualcoyotl",
+      "IdOV": 3117,
+      "nombreOV": "CMM Centro"
+    },
+    {
+      "id": "GE01",
+      "nombre": "CMM Oceania",
+      "IdOV": 3119,
+      "nombreOV": "CMM Metropolitana"
+    },
+    {
+      "id": "GE06",
+      "nombre": "CMM Popocatepetl",
+      "IdOV": 3119,
+      "nombreOV": "CMM Metropolitana"
+    },
+    {
+      "id": "FK01",
+      "nombre": "CMM Puebla URBAN",
+      "IdOV": 3125,
+      "nombreOV": "CMM Altiplano"
+    },
+    {
+      "id": "FZ14",
+      "nombre": "CMM Queretaro",
+      "IdOV": 3118,
+      "nombreOV": "CMM Del Bajío"
+    },
+    {
+      "id": "FZ13",
+      "nombre": "CMM Queretaro URBAN",
+      "IdOV": 3118,
+      "nombreOV": "CMM Del Bajío"
+    },
+    {
+      "id": "FZ04",
+      "nombre": "CMM Salamanca",
+      "IdOV": 3118,
+      "nombreOV": "CMM Del Bajío"
+    },
+    {
+      "id": "GC07",
+      "nombre": "CMM San Agustin",
+      "IdOV": 3108,
+      "nombreOV": "CMM Hidalgo"
+    },
+    {
+      "id": "GC13",
+      "nombre": "CMM San Bartolo",
+      "IdOV": 3108,
+      "nombreOV": "CMM Hidalgo"
+    },
+    {
+      "id": "FZ12",
+      "nombre": "CMM San Francisco",
+      "IdOV": 3118,
+      "nombreOV": "CMM Del Bajío"
+    },
+    {
+      "id": "FK04",
+      "nombre": "CMM San Juan Ixcaqu",
+      "IdOV": 3125,
+      "nombreOV": "CMM Altiplano"
+    },
+    {
+      "id": "FK17",
+      "nombre": "CMM San Martin Texm",
+      "IdOV": 3125,
+      "nombreOV": "CMM Altiplano"
+    },
+    {
+      "id": "FG12",
+      "nombre": "CMM San Pedro Limon",
+      "IdOV": 3116,
+      "nombreOV": "CMM Edo de Mexico"
+    },
+    {
+      "id": "FZ15",
+      "nombre": "CMM SanJuan del Rio",
+      "IdOV": 3118,
+      "nombreOV": "CMM Del Bajío"
+    },
+    {
+      "id": "FZ05",
+      "nombre": "CMM Silao",
+      "IdOV": 3118,
+      "nombreOV": "CMM Del Bajío"
+    },
+    {
+      "id": "FF09",
+      "nombre": "CMM Sn JuanTeotihua",
+      "IdOV": 3117,
+      "nombreOV": "CMM Centro"
+    },
+    {
+      "id": "FZ07",
+      "nombre": "CMM Sn Miguel dAlle",
+      "IdOV": 3118,
+      "nombreOV": "CMM Del Bajío"
+    },
+    {
+      "id": "FZ09",
+      "nombre": "CMM SnJose Iturbide",
+      "IdOV": 3118,
+      "nombreOV": "CMM Del Bajío"
+    },
+    {
+      "id": "FK18",
+      "nombre": "CMM Tecamachalco",
+      "IdOV": 3125,
+      "nombreOV": "CMM Altiplano"
+    },
+    {
+      "id": "FG07",
+      "nombre": "CMM Tejupilco",
+      "IdOV": 3116,
+      "nombreOV": "CMM Edo de Mexico"
+    },
+    {
+      "id": "FG09",
+      "nombre": "CMM Temascalcingo",
+      "IdOV": 3116,
+      "nombreOV": "CMM Edo de Mexico"
+    },
+    {
+      "id": "FG05",
+      "nombre": "CMM Tenancingo",
+      "IdOV": 3116,
+      "nombreOV": "CMM Edo de Mexico"
+    },
+    {
+      "id": "FK06",
+      "nombre": "CMM Teotitl√°n",
+      "IdOV": 3125,
+      "nombreOV": "CMM Altiplano"
+    },
+    {
+      "id": "FT05",
+      "nombre": "CMM Tetecala",
+      "IdOV": 3122,
+      "nombreOV": "CMM Morelos"
+    },
+    {
+      "id": "FG11",
+      "nombre": "CMM Texcaltitlan",
+      "IdOV": 3116,
+      "nombreOV": "CMM Edo de Mexico"
+    },
+    {
+      "id": "FF06",
+      "nombre": "CMM Texcoco",
+      "IdOV": 3117,
+      "nombreOV": "CMM Centro"
+    },
+    {
+      "id": "FF03",
+      "nombre": "CMM Tizayuca",
+      "IdOV": 3117,
+      "nombreOV": "CMM Centro"
+    },
+    {
+      "id": "FK12",
+      "nombre": "CMM Tlacotepec d Ju",
+      "IdOV": 3125,
+      "nombreOV": "CMM Altiplano"
+    },
+    {
+      "id": "FK11",
+      "nombre": "CMM Tlacotepec Díaz",
+      "IdOV": 3125,
+      "nombreOV": "CMM Altiplano"
+    },
+    {
+      "id": "FF10",
+      "nombre": "CMM Tlahuac",
+      "IdOV": 3117,
+      "nombreOV": "CMM Centro"
+    },
+    {
+      "id": "FK15",
+      "nombre": "CMM Tlaxcala",
+      "IdOV": 3125,
+      "nombreOV": "CMM Altiplano"
+    },
+    {
+      "id": "GC08",
+      "nombre": "CMM Tula",
+      "IdOV": 3108,
+      "nombreOV": "CMM Hidalgo"
+    },
+    {
+      "id": "GC04",
+      "nombre": "CMM Tulancingo",
+      "IdOV": 3108,
+      "nombreOV": "CMM Hidalgo"
+    },
+    {
+      "id": "FG04",
+      "nombre": "CMM Valle de Bravo",
+      "IdOV": 3116,
+      "nombreOV": "CMM Edo de Mexico"
+    },
+    {
+      "id": "FK08",
+      "nombre": "CMM Vicente Guerrer",
+      "IdOV": 3125,
+      "nombreOV": "CMM Altiplano"
+    },
+    {
+      "id": "FG03",
+      "nombre": "CMM Villa Victoria",
+      "IdOV": 3116,
+      "nombreOV": "CMM Edo de Mexico"
+    },
+    {
+      "id": "GE05",
+      "nombre": "CMM Xochimilco",
+      "IdOV": 3119,
+      "nombreOV": "CMM Metropolitana"
+    },
+    {
+      "id": "FT03",
+      "nombre": "CMM Xochitepec",
+      "IdOV": 3122,
+      "nombreOV": "CMM Morelos"
+    },
+    {
+      "id": "FG13",
+      "nombre": "CMM Xonacatlan",
+      "IdOV": 3116,
+      "nombreOV": "CMM Edo de Mexico"
+    },
+    {
+      "id": "FT04",
+      "nombre": "CMM Zacatepec",
+      "IdOV": 3122,
+      "nombreOV": "CMM Morelos"
+    },
+    {
+      "id": "GC09",
+      "nombre": "CMM Zimapan",
+      "IdOV": 3108,
+      "nombreOV": "CMM Hidalgo"
+    },
+    {
+      "id": "FK09",
+      "nombre": "CMM Zoquitl√°n",
+      "IdOV": 3125,
+      "nombreOV": "CMM Altiplano"
+    },
+    {
+      "id": "FF07",
+      "nombre": "CMM Zumpango",
+      "IdOV": 3117,
+      "nombreOV": "CMM Centro"
+    },
+    {
+      "id": "FC19",
+      "nombre": "CMM Acu√±a",
+      "IdOV": 3127,
+      "nombreOV": "CMM Norte"
+    },
+    {
+      "id": "FL05",
+      "nombre": "CMM Agua Prieta",
+      "IdOV": 3102,
+      "nombreOV": "CMM Sonora"
+    },
+    {
+      "id": "FV08",
+      "nombre": "CMM Alamo",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "FV04",
+      "nombre": "CMM Aldama",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "FC18",
+      "nombre": "CMM Allende",
+      "IdOV": 3127,
+      "nombreOV": "CMM Norte"
+    },
+    {
+      "id": "GD02",
+      "nombre": "CMM Apodaca BA",
+      "IdOV": 3128,
+      "nombreOV": "CMM Nuevo León"
+    },
+    {
+      "id": "FC03",
+      "nombre": "CMM Bermejillo",
+      "IdOV": 3127,
+      "nombreOV": "CMM Norte"
+    },
+    {
+      "id": "FL06",
+      "nombre": "CMM Caborca",
+      "IdOV": 3102,
+      "nombreOV": "CMM Sonora"
+    },
+    {
+      "id": "FB07",
+      "nombre": "CMM Camargo",
+      "IdOV": 3126,
+      "nombreOV": "CMM Chihuahua"
+    },
+    {
+      "id": "FV22",
+      "nombre": "CMM Camargo",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "FL08",
+      "nombre": "CMM Cananea",
+      "IdOV": 3102,
+      "nombreOV": "CMM Sonora"
+    },
+    {
+      "id": "FC12",
+      "nombre": "CMM Canatlan",
+      "IdOV": 3127,
+      "nombreOV": "CMM Norte"
+    },
+    {
+      "id": "FS05",
+      "nombre": "CMM Cd Constitucion",
+      "IdOV": 3103,
+      "nombreOV": "CMM Pacífico"
+    },
+    {
+      "id": "GD03",
+      "nombre": "CMM Cercado",
+      "IdOV": 3128,
+      "nombreOV": "CMM Nuevo León"
+    },
+    {
+      "id": "GD04",
+      "nombre": "CMM Cerralvo",
+      "IdOV": 3128,
+      "nombreOV": "CMM Nuevo León"
+    },
+    {
+      "id": "GD05",
+      "nombre": "CMM China",
+      "IdOV": 3128,
+      "nombreOV": "CMM Nuevo León"
+    },
+    {
+      "id": "FV02",
+      "nombre": "CMM Ciudad Mante",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "FV21",
+      "nombre": "CMM Ciudad Reynosa",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "FV24",
+      "nombre": "CMM Ciudad Victoria",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "FB01",
+      "nombre": "CMM Cuauhtemoc",
+      "IdOV": 3126,
+      "nombreOV": "CMM Chihuahua"
+    },
+    {
+      "id": "FC02",
+      "nombre": "CMM Cuencame",
+      "IdOV": 3127,
+      "nombreOV": "CMM Norte"
+    },
+    {
+      "id": "FB02",
+      "nombre": "CMM Delicias",
+      "IdOV": 3126,
+      "nombreOV": "CMM Chihuahua"
+    },
+    {
+      "id": "FC09",
+      "nombre": "CMM Durango",
+      "IdOV": 3127,
+      "nombreOV": "CMM Norte"
+    },
+    {
+      "id": "FV01",
+      "nombre": "CMM Ebano",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "GF01",
+      "nombre": "CMM El Dorado",
+      "IdOV": 3131,
+      "nombreOV": "CMM Culiacán"
+    },
+    {
+      "id": "FS11",
+      "nombre": "CMM El Fuerte",
+      "IdOV": 3103,
+      "nombreOV": "CMM Pacífico"
+    },
+    {
+      "id": "FC11",
+      "nombre": "CMM El Salto",
+      "IdOV": 3127,
+      "nombreOV": "CMM Norte"
+    },
+    {
+      "id": "FA03",
+      "nombre": "CMM Ensenada",
+      "IdOV": 3101,
+      "nombreOV": "CMM Baja California"
+    },
+    {
+      "id": "FC05",
+      "nombre": "CMM Fco. I. Madero",
+      "IdOV": 3127,
+      "nombreOV": "CMM Norte"
+    },
+    {
+      "id": "FC07",
+      "nombre": "CMM Galeana",
+      "IdOV": 3127,
+      "nombreOV": "CMM Norte"
+    },
+    {
+      "id": "FC01",
+      "nombre": "CMM Gomez Palacio",
+      "IdOV": 3127,
+      "nombreOV": "CMM Norte"
+    },
+    {
+      "id": "GD09",
+      "nombre": "CMM Guadalupe",
+      "IdOV": 3128,
+      "nombreOV": "CMM Nuevo León"
+    },
+    {
+      "id": "FC10",
+      "nombre": "CMM GuadalupeVictor",
+      "IdOV": 3127,
+      "nombreOV": "CMM Norte"
+    },
+    {
+      "id": "FS01",
+      "nombre": "CMM Guamuchil",
+      "IdOV": 3103,
+      "nombreOV": "CMM Pacífico"
+    },
+    {
+      "id": "FS13",
+      "nombre": "CMM Guasave",
+      "IdOV": 3103,
+      "nombreOV": "CMM Pacífico"
+    },
+    {
+      "id": "FL03",
+      "nombre": "CMM Guaymas",
+      "IdOV": 3102,
+      "nombreOV": "CMM Sonora"
+    },
+    {
+      "id": "FS08",
+      "nombre": "CMM Guerrero Negro",
+      "IdOV": 3103,
+      "nombreOV": "CMM Pacífico"
+    },
+    {
+      "id": "FV12",
+      "nombre": "CMM Gutierrez Zamor",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "FL09",
+      "nombre": "CMM Huatabampo",
+      "IdOV": 3102,
+      "nombreOV": "CMM Sonora"
+    },
+    {
+      "id": "FB06",
+      "nombre": "CMM Jimenez",
+      "IdOV": 3126,
+      "nombreOV": "CMM Chihuahua"
+    },
+    {
+      "id": "FB04",
+      "nombre": "CMM Juarez",
+      "IdOV": 3126,
+      "nombreOV": "CMM Chihuahua"
+    },
+    {
+      "id": "GD08",
+      "nombre": "CMM La Fe",
+      "IdOV": 3128,
+      "nombreOV": "CMM Nuevo León"
+    },
+    {
+      "id": "FS03",
+      "nombre": "CMM La Paz",
+      "IdOV": 3103,
+      "nombreOV": "CMM Pacífico"
+    },
+    {
+      "id": "FV17",
+      "nombre": "CMM La Uno",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "GD01",
+      "nombre": "CMM Lincoln",
+      "IdOV": 3128,
+      "nombreOV": "CMM Nuevo León"
+    },
+    {
+      "id": "FS06",
+      "nombre": "CMM Loreto",
+      "IdOV": 3103,
+      "nombreOV": "CMM Pacífico"
+    },
+    {
+      "id": "FS02",
+      "nombre": "CMM Los Mochis",
+      "IdOV": 3103,
+      "nombreOV": "CMM Pacífico"
+    },
+    {
+      "id": "FV00",
+      "nombre": "CMM M Altamira",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "GD00",
+      "nombre": "CMM M Apodaca",
+      "IdOV": 3128,
+      "nombreOV": "CMM Nuevo León"
+    },
+    {
+      "id": "FB00",
+      "nombre": "CMM M Chihuahua",
+      "IdOV": 3126,
+      "nombreOV": "CMM Chihuahua"
+    },
+    {
+      "id": "GF00",
+      "nombre": "CMM M Culiacán",
+      "IdOV": 3131,
+      "nombreOV": "CMM Culiacán"
+    },
+    {
+      "id": "FL00",
+      "nombre": "CMM M Hermosillo",
+      "IdOV": 3102,
+      "nombreOV": "CMM Sonora"
+    },
+    {
+      "id": "FS00",
+      "nombre": "CMM M Mazatlan",
+      "IdOV": 3103,
+      "nombreOV": "CMM Pacífico"
+    },
+    {
+      "id": "FA00",
+      "nombre": "CMM M Tijuana",
+      "IdOV": 3101,
+      "nombreOV": "CMM Baja California"
+    },
+    {
+      "id": "FC00",
+      "nombre": "CMM M Torre√≥n",
+      "IdOV": 3127,
+      "nombreOV": "CMM Norte"
+    },
+    {
+      "id": "FL07",
+      "nombre": "CMM Magdalena",
+      "IdOV": 3102,
+      "nombreOV": "CMM Sonora"
+    },
+    {
+      "id": "FV13",
+      "nombre": "CMM Martinez d l To",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "FV18",
+      "nombre": "CMM Matamoros",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "FS09",
+      "nombre": "CMM Mazatlán URBAN",
+      "IdOV": 3103,
+      "nombreOV": "CMM Pacífico"
+    },
+    {
+      "id": "FA04",
+      "nombre": "CMM Mexicali",
+      "IdOV": 3101,
+      "nombreOV": "CMM Baja California"
+    },
+    {
+      "id": "FL10",
+      "nombre": "CMM Moctezuma",
+      "IdOV": 3102,
+      "nombreOV": "CMM Sonora"
+    },
+    {
+      "id": "GD06",
+      "nombre": "CMM Montemorelos",
+      "IdOV": 3128,
+      "nombreOV": "CMM Nuevo León"
+    },
+    {
+      "id": "FV07",
+      "nombre": "CMM Naranjos",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "FL02",
+      "nombre": "CMM Navojoa",
+      "IdOV": 3102,
+      "nombreOV": "CMM Sonora"
+    },
+    {
+      "id": "FL04",
+      "nombre": "CMM Nogales",
+      "IdOV": 3102,
+      "nombreOV": "CMM Sonora"
+    },
+    {
+      "id": "FB03",
+      "nombre": "CMM Nuevas CasasGra",
+      "IdOV": 3126,
+      "nombreOV": "CMM Chihuahua"
+    },
+    {
+      "id": "FV23",
+      "nombre": "CMM Nuevo Laredo",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "FV20",
+      "nombre": "CMM Nuevo Progreso",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "FL01",
+      "nombre": "CMM Obregon",
+      "IdOV": 3102,
+      "nombreOV": "CMM Sonora"
+    },
+    {
+      "id": "FV06",
+      "nombre": "CMM Ozuluama",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "FV11",
+      "nombre": "CMM Papantla",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "FB05",
+      "nombre": "CMM Parral",
+      "IdOV": 3126,
+      "nombreOV": "CMM Chihuahua"
+    },
+    {
+      "id": "FC08",
+      "nombre": "CMM Parras de lafue",
+      "IdOV": 3127,
+      "nombreOV": "CMM Norte"
+    },
+    {
+      "id": "FA02",
+      "nombre": "CMM Pe√±asco",
+      "IdOV": 3101,
+      "nombreOV": "CMM Baja California"
+    },
+    {
+      "id": "FC20",
+      "nombre": "CMM Piedras Negras",
+      "IdOV": 3127,
+      "nombreOV": "CMM Norte"
+    },
+    {
+      "id": "FV05",
+      "nombre": "CMM Poza Rica",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "FV03",
+      "nombre": "CMM Pueblo Viejo",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "FC17",
+      "nombre": "CMM Sabinas",
+      "IdOV": 3127,
+      "nombreOV": "CMM Norte"
+    },
+    {
+      "id": "GD07",
+      "nombre": "CMM Sabinas",
+      "IdOV": 3128,
+      "nombreOV": "CMM Nuevo León"
+    },
+    {
+      "id": "FC06",
+      "nombre": "CMM Saltillo",
+      "IdOV": 3127,
+      "nombreOV": "CMM Norte"
+    },
+    {
+      "id": "FA08",
+      "nombre": "CMM San Felipe",
+      "IdOV": 3101,
+      "nombreOV": "CMM Baja California"
+    },
+    {
+      "id": "FV25",
+      "nombre": "CMM San Fernando",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "FA01",
+      "nombre": "CMM San Luis",
+      "IdOV": 3101,
+      "nombreOV": "CMM Baja California"
+    },
+    {
+      "id": "FC04",
+      "nombre": "CMM San Pedro",
+      "IdOV": 3127,
+      "nombreOV": "CMM Norte"
+    },
+    {
+      "id": "FA09",
+      "nombre": "CMM San Quintin",
+      "IdOV": 3101,
+      "nombreOV": "CMM Baja California"
+    },
+    {
+      "id": "FV14",
+      "nombre": "CMM San Rafael",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "FS07",
+      "nombre": "CMM Santa Rosalia",
+      "IdOV": 3103,
+      "nombreOV": "CMM Pacífico"
+    },
+    {
+      "id": "FC16",
+      "nombre": "CMM SantaMa del Oro",
+      "IdOV": 3127,
+      "nombreOV": "CMM Norte"
+    },
+    {
+      "id": "FC15",
+      "nombre": "CMM SantiagoPapasqu",
+      "IdOV": 3127,
+      "nombreOV": "CMM Norte"
+    },
+    {
+      "id": "FS12",
+      "nombre": "CMM Sinaloa deLeyva",
+      "IdOV": 3103,
+      "nombreOV": "CMM Pacífico"
+    },
+    {
+      "id": "FS04",
+      "nombre": "CMM SnJose del Cabo",
+      "IdOV": 3103,
+      "nombreOV": "CMM Pacífico"
+    },
+    {
+      "id": "FA07",
+      "nombre": "CMM Sonoyta",
+      "IdOV": 3101,
+      "nombreOV": "CMM Baja California"
+    },
+    {
+      "id": "FV26",
+      "nombre": "CMM Soto La Marina",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "FC14",
+      "nombre": "CMM Tepehuanes",
+      "IdOV": 3127,
+      "nombreOV": "CMM Norte"
+    },
+    {
+      "id": "FV10",
+      "nombre": "CMM Tihuatlan",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "FA06",
+      "nombre": "CMM Tijuana zonaNor",
+      "IdOV": 3101,
+      "nombreOV": "CMM Baja California"
+    },
+    {
+      "id": "FA05",
+      "nombre": "CMM Tijuana-Playas",
+      "IdOV": 3101,
+      "nombreOV": "CMM Baja California"
+    },
+    {
+      "id": "FV27",
+      "nombre": "CMM Tula",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "FV09",
+      "nombre": "CMM Tuxpan",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "FV19",
+      "nombre": "CMM Valle Hermoso",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "FV15",
+      "nombre": "CMM Vega de Alatorr",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "FC13",
+      "nombre": "CMM VicenteGuerrero",
+      "IdOV": 3127,
+      "nombreOV": "CMM Norte"
+    },
+    {
+      "id": "FV16",
+      "nombre": "CMM Xicotepec",
+      "IdOV": 3129,
+      "nombreOV": "CMM Noreste"
+    },
+    {
+      "id": "FS10",
+      "nombre": "San Jose Cabo URBAN",
+      "IdOV": 3103,
+      "nombreOV": "CMM Pacífico"
+    },
+    {
+      "id": "FU05",
+      "nombre": "CMM Acaponeta",
+      "IdOV": 3104,
+      "nombreOV": "CMM Nayarit"
+    },
+    {
+      "id": "FY17",
+      "nombre": "CMM Aguililla",
+      "IdOV": 3106,
+      "nombreOV": "CMM Michoacan"
+    },
+    {
+      "id": "GB10",
+      "nombre": "CMM Ahualulco",
+      "IdOV": 3109,
+      "nombreOV": "CMM San Luis Potosí"
+    },
+    {
+      "id": "FY12",
+      "nombre": "CMM Apatzingan",
+      "IdOV": 3106,
+      "nombreOV": "CMM Michoacan"
+    },
+    {
+      "id": "FD01",
+      "nombre": "CMM Atoyac",
+      "IdOV": 3120,
+      "nombreOV": "CMM Acapulco"
+    },
+    {
+      "id": "FE05",
+      "nombre": "CMM Autlan",
+      "IdOV": 3105,
+      "nombreOV": "CMM Occidente"
+    },
+    {
+      "id": "FD08",
+      "nombre": "CMM Ayutla",
+      "IdOV": 3120,
+      "nombreOV": "CMM Acapulco"
+    },
+    {
+      "id": "GB06",
+      "nombre": "CMM Cardenas",
+      "IdOV": 3109,
+      "nombreOV": "CMM San Luis Potosí"
+    },
+    {
+      "id": "FD04",
+      "nombre": "CMM Cayaco",
+      "IdOV": 3120,
+      "nombreOV": "CMM Acapulco"
+    },
+    {
+      "id": "FY09",
+      "nombre": "CMM Cd. Hidalgo",
+      "IdOV": 3106,
+      "nombreOV": "CMM Michoacan"
+    },
+    {
+      "id": "GB02",
+      "nombre": "CMM Cd. Valles",
+      "IdOV": 3109,
+      "nombreOV": "CMM San Luis Potosí"
+    },
+    {
+      "id": "GB07",
+      "nombre": "CMM Cerritos",
+      "IdOV": 3109,
+      "nombreOV": "CMM San Luis Potosí"
+    },
+    {
+      "id": "FE23",
+      "nombre": "CMM Chapala",
+      "IdOV": 3105,
+      "nombreOV": "CMM Occidente"
+    },
+    {
+      "id": "GA01",
+      "nombre": "CMM Chilapa",
+      "IdOV": 3121,
+      "nombreOV": "CMM Guerrero"
+    },
+    {
+      "id": "FE19",
+      "nombre": "CMM Cihuatlan",
+      "IdOV": 3105,
+      "nombreOV": "CMM Occidente"
+    },
+    {
+      "id": "FE16",
+      "nombre": "CMM Ciudad Guzman",
+      "IdOV": 3105,
+      "nombreOV": "CMM Occidente"
+    },
+    {
+      "id": "FY16",
+      "nombre": "CMM Coalcoman",
+      "IdOV": 3106,
+      "nombreOV": "CMM Michoacan"
+    },
+    {
+      "id": "FE03",
+      "nombre": "CMM Cocula",
+      "IdOV": 3105,
+      "nombreOV": "CMM Occidente"
+    },
+    {
+      "id": "FE15",
+      "nombre": "CMM Colima",
+      "IdOV": 3105,
+      "nombreOV": "CMM Occidente"
+    },
+    {
+      "id": "FQ09",
+      "nombre": "CMM Colotlan",
+      "IdOV": 3110,
+      "nombreOV": "CMM Zacatecas"
+    },
+    {
+      "id": "FY18",
+      "nombre": "CMM Cotija de la Pa",
+      "IdOV": 3106,
+      "nombreOV": "CMM Michoacan"
+    },
+    {
+      "id": "FD07",
+      "nombre": "CMM Cruz Grande",
+      "IdOV": 3120,
+      "nombreOV": "CMM Acapulco"
+    },
+    {
+      "id": "FD11",
+      "nombre": "CMM Cuajinicuilapa",
+      "IdOV": 3120,
+      "nombreOV": "CMM Acapulco"
+    },
+    {
+      "id": "FY11",
+      "nombre": "CMM Cutzamala",
+      "IdOV": 3106,
+      "nombreOV": "CMM Michoacan"
+    },
+    {
+      "id": "GB17",
+      "nombre": "CMM Dr. Arroyo",
+      "IdOV": 3109,
+      "nombreOV": "CMM San Luis Potosí"
+    },
+    {
+      "id": "FQ15",
+      "nombre": "CMM Estacion Camach",
+      "IdOV": 3110,
+      "nombreOV": "CMM Zacatecas"
+    },
+    {
+      "id": "FQ01",
+      "nombre": "CMM Fresnillo",
+      "IdOV": 3110,
+      "nombreOV": "CMM Zacatecas"
+    },
+    {
+      "id": "FY03",
+      "nombre": "CMM Gabriel Zamora",
+      "IdOV": 3106,
+      "nombreOV": "CMM Michoacan"
+    },
+    {
+      "id": "FQ10",
+      "nombre": "CMM Huejuquilla",
+      "IdOV": 3110,
+      "nombreOV": "CMM Zacatecas"
+    },
+    {
+      "id": "FY10",
+      "nombre": "CMM Huetamo",
+      "IdOV": 3106,
+      "nombreOV": "CMM Michoacan"
+    },
+    {
+      "id": "GB09",
+      "nombre": "CMM Huizache",
+      "IdOV": 3109,
+      "nombreOV": "CMM San Luis Potosí"
+    },
+    {
+      "id": "GA05",
+      "nombre": "CMM Iguala",
+      "IdOV": 3121,
+      "nombreOV": "CMM Guerrero"
+    },
+    {
+      "id": "FE14",
+      "nombre": "CMM Ixtlahuacan",
+      "IdOV": 3105,
+      "nombreOV": "CMM Occidente"
+    },
+    {
+      "id": "FU03",
+      "nombre": "CMM Ixtlan del Rio",
+      "IdOV": 3104,
+      "nombreOV": "CMM Nayarit"
+    },
+    {
+      "id": "FQ03",
+      "nombre": "CMM Jerez",
+      "IdOV": 3110,
+      "nombreOV": "CMM Zacatecas"
+    },
+    {
+      "id": "FQ11",
+      "nombre": "CMM Juan Aldama",
+      "IdOV": 3110,
+      "nombreOV": "CMM Zacatecas"
+    },
+    {
+      "id": "FE06",
+      "nombre": "CMM La Huerta",
+      "IdOV": 3105,
+      "nombreOV": "CMM Occidente"
+    },
+    {
+      "id": "FU01",
+      "nombre": "CMM La Pe√±ita de J.",
+      "IdOV": 3104,
+      "nombreOV": "CMM Nayarit"
+    },
+    {
+      "id": "FY05",
+      "nombre": "CMM La Piedad",
+      "IdOV": 3106,
+      "nombreOV": "CMM Michoacan"
+    },
+    {
+      "id": "GA04",
+      "nombre": "CMM La Union",
+      "IdOV": 3121,
+      "nombreOV": "CMM Guerrero"
+    },
+    {
+      "id": "FY13",
+      "nombre": "CMM Lazaro Cardenas",
+      "IdOV": 3106,
+      "nombreOV": "CMM Michoacan"
+    },
+    {
+      "id": "FY06",
+      "nombre": "CMM Los Reyes Mich",
+      "IdOV": 3106,
+      "nombreOV": "CMM Michoacan"
+    },
+    {
+      "id": "FD00",
+      "nombre": "CMM M Acapulco",
+      "IdOV": 3120,
+      "nombreOV": "CMM Acapulco"
+    },
+    {
+      "id": "FE00",
+      "nombre": "CMM M Guadalajara",
+      "IdOV": 3105,
+      "nombreOV": "CMM Occidente"
+    },
+    {
+      "id": "GA00",
+      "nombre": "CMM M Guerrero",
+      "IdOV": 3121,
+      "nombreOV": "CMM Guerrero"
+    },
+    {
+      "id": "FY00",
+      "nombre": "CMM M Morelia",
+      "IdOV": 3106,
+      "nombreOV": "CMM Michoacan"
+    },
+    {
+      "id": "FY01",
+      "nombre": "CMM M Morelia URBAN",
+      "IdOV": 3106,
+      "nombreOV": "CMM Michoacan"
+    },
+    {
+      "id": "GB01",
+      "nombre": "CMM M SanLuisPotosi",
+      "IdOV": 3109,
+      "nombreOV": "CMM San Luis Potosí"
+    },
+    {
+      "id": "FU00",
+      "nombre": "CMM M Xalisco",
+      "IdOV": 3104,
+      "nombreOV": "CMM Nayarit"
+    },
+    {
+      "id": "FQ00",
+      "nombre": "CMM M Zacatecas",
+      "IdOV": 3110,
+      "nombreOV": "CMM Zacatecas"
+    },
+    {
+      "id": "FE17",
+      "nombre": "CMM Manzanillo",
+      "IdOV": 3105,
+      "nombreOV": "CMM Occidente"
+    },
+    {
+      "id": "FD09",
+      "nombre": "CMM Marquelia",
+      "IdOV": 3120,
+      "nombreOV": "CMM Acapulco"
+    },
+    {
+      "id": "GB03",
+      "nombre": "CMM Matehuala",
+      "IdOV": 3109,
+      "nombreOV": "CMM San Luis Potosí"
+    },
+    {
+      "id": "GB05",
+      "nombre": "CMM Matlapa",
+      "IdOV": 3109,
+      "nombreOV": "CMM San Luis Potosí"
+    },
+    {
+      "id": "FQ14",
+      "nombre": "CMM Nieves",
+      "IdOV": 3110,
+      "nombreOV": "CMM Zacatecas"
+    },
+    {
+      "id": "FY14",
+      "nombre": "CMM Nueva Italia",
+      "IdOV": 3106,
+      "nombreOV": "CMM Michoacan"
+    },
+    {
+      "id": "GB16",
+      "nombre": "CMM Ocampo",
+      "IdOV": 3109,
+      "nombreOV": "CMM San Luis Potosí"
+    },
+    {
+      "id": "FE04",
+      "nombre": "CMM Occidente URBAN",
+      "IdOV": 3105,
+      "nombreOV": "CMM Occidente"
+    },
+    {
+      "id": "FE10",
+      "nombre": "CMM Ocotlan",
+      "IdOV": 3105,
+      "nombreOV": "CMM Occidente"
+    },
+    {
+      "id": "FQ02",
+      "nombre": "CMM Ojocaliente",
+      "IdOV": 3110,
+      "nombreOV": "CMM Zacatecas"
+    },
+    {
+      "id": "FD10",
+      "nombre": "CMM Ometepec",
+      "IdOV": 3120,
+      "nombreOV": "CMM Acapulco"
+    },
+    {
+      "id": "FU07",
+      "nombre": "CMM P. S√°nchez",
+      "IdOV": 3104,
+      "nombreOV": "CMM Nayarit"
+    },
+    {
+      "id": "GA03",
+      "nombre": "CMM Petatlan",
+      "IdOV": 3121,
+      "nombreOV": "CMM Guerrero"
+    },
+    {
+      "id": "FD03",
+      "nombre": "CMM Pie de la Cuest",
+      "IdOV": 3120,
+      "nombreOV": "CMM Acapulco"
+    },
+    {
+      "id": "FE21",
+      "nombre": "CMM Puerto Vallarta",
+      "IdOV": 3105,
+      "nombreOV": "CMM Occidente"
+    },
+    {
+      "id": "FY07",
+      "nombre": "CMM Puruandiro",
+      "IdOV": 3106,
+      "nombreOV": "CMM Michoacan"
+    },
+    {
+      "id": "FE11",
+      "nombre": "CMM PVallarta URBAN",
+      "IdOV": 3105,
+      "nombreOV": "CMM Occidente"
+    },
+    {
+      "id": "FQ04",
+      "nombre": "CMM Rio Grande",
+      "IdOV": 3110,
+      "nombreOV": "CMM Zacatecas"
+    },
+    {
+      "id": "GB04",
+      "nombre": "CMM Rio Verde",
+      "IdOV": 3109,
+      "nombreOV": "CMM San Luis Potosí"
+    },
+    {
+      "id": "FU06",
+      "nombre": "CMM Ruiz",
+      "IdOV": 3104,
+      "nombreOV": "CMM Nayarit"
+    },
+    {
+      "id": "FE12",
+      "nombre": "CMM Sahuayo",
+      "IdOV": 3105,
+      "nombreOV": "CMM Occidente"
+    },
+    {
+      "id": "GB14",
+      "nombre": "CMM Salinas",
+      "IdOV": 3109,
+      "nombreOV": "CMM San Luis Potosí"
+    },
+    {
+      "id": "FU04",
+      "nombre": "CMM San Blas",
+      "IdOV": 3104,
+      "nombreOV": "CMM Nayarit"
+    },
+    {
+      "id": "FD06",
+      "nombre": "CMM San Marcos",
+      "IdOV": 3120,
+      "nombreOV": "CMM Acapulco"
+    },
+    {
+      "id": "GB00",
+      "nombre": "CMM SanLuis Potos I",
+      "IdOV": 3109,
+      "nombreOV": "CMM San Luis Potosí"
+    },
+    {
+      "id": "GB11",
+      "nombre": "CMM Santa Maria",
+      "IdOV": 3109,
+      "nombreOV": "CMM San Luis Potosí"
+    },
+    {
+      "id": "FU02",
+      "nombre": "CMM Santiago",
+      "IdOV": 3104,
+      "nombreOV": "CMM Nayarit"
+    },
+    {
+      "id": "GB08",
+      "nombre": "CMM SLP URBAN",
+      "IdOV": 3109,
+      "nombreOV": "CMM San Luis Potosí"
+    },
+    {
+      "id": "FQ05",
+      "nombre": "CMM Sombrerete",
+      "IdOV": 3110,
+      "nombreOV": "CMM Zacatecas"
+    },
+    {
+      "id": "FE09",
+      "nombre": "CMM Tala",
+      "IdOV": 3105,
+      "nombreOV": "CMM Occidente"
+    },
+    {
+      "id": "FE08",
+      "nombre": "CMM Talpa",
+      "IdOV": 3105,
+      "nombreOV": "CMM Occidente"
+    },
+    {
+      "id": "FE18",
+      "nombre": "CMM Tamazula CdGuzm",
+      "IdOV": 3105,
+      "nombreOV": "CMM Occidente"
+    },
+    {
+      "id": "GB15",
+      "nombre": "CMM Tamuin",
+      "IdOV": 3109,
+      "nombreOV": "CMM San Luis Potosí"
+    },
+    {
+      "id": "GB12",
+      "nombre": "CMM Tanquian dEscob",
+      "IdOV": 3109,
+      "nombreOV": "CMM San Luis Potosí"
+    },
+    {
+      "id": "GA06",
+      "nombre": "CMM Taxco",
+      "IdOV": 3121,
+      "nombreOV": "CMM Guerrero"
+    },
+    {
+      "id": "FE20",
+      "nombre": "CMM Tecoman",
+      "IdOV": 3105,
+      "nombreOV": "CMM Occidente"
+    },
+    {
+      "id": "FD02",
+      "nombre": "CMM Tecpan",
+      "IdOV": 3120,
+      "nombreOV": "CMM Acapulco"
+    },
+    {
+      "id": "GA07",
+      "nombre": "CMM Teloloapan",
+      "IdOV": 3121,
+      "nombreOV": "CMM Guerrero"
+    },
+    {
+      "id": "FY15",
+      "nombre": "CMM Tepalcatepec",
+      "IdOV": 3106,
+      "nombreOV": "CMM Michoacan"
+    },
+    {
+      "id": "FE13",
+      "nombre": "CMM Tequila",
+      "IdOV": 3105,
+      "nombreOV": "CMM Occidente"
+    },
+    {
+      "id": "FD05",
+      "nombre": "CMM Tierra Colorada",
+      "IdOV": 3120,
+      "nombreOV": "CMM Acapulco"
+    },
+    {
+      "id": "FQ08",
+      "nombre": "CMM Tlaltenango",
+      "IdOV": 3110,
+      "nombreOV": "CMM Zacatecas"
+    },
+    {
+      "id": "FE02",
+      "nombre": "CMM Tlaquepaque",
+      "IdOV": 3105,
+      "nombreOV": "CMM Occidente"
+    },
+    {
+      "id": "FE22",
+      "nombre": "CMM Tomatlan",
+      "IdOV": 3105,
+      "nombreOV": "CMM Occidente"
+    },
+    {
+      "id": "FE24",
+      "nombre": "CMM Tormenta",
+      "IdOV": 3105,
+      "nombreOV": "CMM Occidente"
+    },
+    {
+      "id": "FE07",
+      "nombre": "CMM Union de Tula",
+      "IdOV": 3105,
+      "nombreOV": "CMM Occidente"
+    },
+    {
+      "id": "FY02",
+      "nombre": "CMM Uruapan",
+      "IdOV": 3106,
+      "nombreOV": "CMM Michoacan"
+    },
+    {
+      "id": "FQ12",
+      "nombre": "CMM Valparaiso",
+      "IdOV": 3110,
+      "nombreOV": "CMM Zacatecas"
+    },
+    {
+      "id": "FQ06",
+      "nombre": "CMM Villa de Cos",
+      "IdOV": 3110,
+      "nombreOV": "CMM Zacatecas"
+    },
+    {
+      "id": "GB13",
+      "nombre": "CMM Villa Hidalgo",
+      "IdOV": 3109,
+      "nombreOV": "CMM San Luis Potosí"
+    },
+    {
+      "id": "FQ13",
+      "nombre": "CMM Villa Hidalgo",
+      "IdOV": 3110,
+      "nombreOV": "CMM Zacatecas"
+    },
+    {
+      "id": "FQ07",
+      "nombre": "CMM Villanueva",
+      "IdOV": 3110,
+      "nombreOV": "CMM Zacatecas"
+    },
+    {
+      "id": "FY04",
+      "nombre": "CMM Zacapu",
+      "IdOV": 3106,
+      "nombreOV": "CMM Michoacan"
+    },
+    {
+      "id": "FE01",
+      "nombre": "CMM Zapopan",
+      "IdOV": 3105,
+      "nombreOV": "CMM Occidente"
+    },
+    {
+      "id": "GA02",
+      "nombre": "CMM Zihuatanejo",
+      "IdOV": 3121,
+      "nombreOV": "CMM Guerrero"
+    },
+    {
+      "id": "FY08",
+      "nombre": "CMM Zitacuaro",
+      "IdOV": 3106,
+      "nombreOV": "CMM Michoacan"
+    },
+    {
+      "id": "NE00",
+      "nombre": "CMO M Guadalajara",
+      "IdOV": 3105,
+      "nombreOV": "CMM Occidente"
+    },
+    {
+      "id": "FN02",
+      "nombre": "CMM Acayucan",
+      "IdOV": 3115,
+      "nombreOV": "CMM Veracruz"
+    },
+    {
+      "id": "FW10",
+      "nombre": "CMM Amuzgos",
+      "IdOV": 3123,
+      "nombreOV": "CMM Oaxaca"
+    },
+    {
+      "id": "FM08",
+      "nombre": "CMM Balancan",
+      "IdOV": 3113,
+      "nombreOV": "CMM Tabasco"
+    },
+    {
+      "id": "FP12",
+      "nombre": "CMM Bochil",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FP18",
+      "nombre": "CMM Canc√∫n URBAN",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FP07",
+      "nombre": "CMM Cancun",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FX05",
+      "nombre": "CMM Candelaria",
+      "IdOV": 3112,
+      "nombreOV": "CMM Campeche"
+    },
+    {
+      "id": "FX03",
+      "nombre": "CMM Carmen",
+      "IdOV": 3112,
+      "nombreOV": "CMM Campeche"
+    },
+    {
+      "id": "FP08",
+      "nombre": "CMM Carrillo Puerto",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FN01",
+      "nombre": "CMM Cd. Isla",
+      "IdOV": 3115,
+      "nombreOV": "CMM Veracruz"
+    },
+    {
+      "id": "FX01",
+      "nombre": "CMM Champoton",
+      "IdOV": 3112,
+      "nombreOV": "CMM Campeche"
+    },
+    {
+      "id": "FP13",
+      "nombre": "CMM Cintalapa",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FP14",
+      "nombre": "CMM Comalapa",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FP15",
+      "nombre": "CMM Comitan",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FP19",
+      "nombre": "CMM Concordia",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FP16",
+      "nombre": "CMM Copainala",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FP30",
+      "nombre": "CMM Cozumel",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FM01",
+      "nombre": "CMM Emiliano Zapata",
+      "IdOV": 3113,
+      "nombreOV": "CMM Tabasco"
+    },
+    {
+      "id": "FX04",
+      "nombre": "CMM Escarcega",
+      "IdOV": 3112,
+      "nombreOV": "CMM Campeche"
+    },
+    {
+      "id": "FP17",
+      "nombre": "CMM Escuintla",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FM07",
+      "nombre": "CMM Frontera",
+      "IdOV": 3113,
+      "nombreOV": "CMM Tabasco"
+    },
+    {
+      "id": "FX02",
+      "nombre": "CMM Hopelchen",
+      "IdOV": 3112,
+      "nombreOV": "CMM Campeche"
+    },
+    {
+      "id": "FW08",
+      "nombre": "CMM Huatulco",
+      "IdOV": 3123,
+      "nombreOV": "CMM Oaxaca"
+    },
+    {
+      "id": "FM02",
+      "nombre": "CMM Huimanguillo",
+      "IdOV": 3113,
+      "nombreOV": "CMM Tabasco"
+    },
+    {
+      "id": "FP09",
+      "nombre": "CMM Isla Mujeres",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FJ01",
+      "nombre": "CMM Ixtepec",
+      "IdOV": 3124,
+      "nombreOV": "CMM Istmo"
+    },
+    {
+      "id": "FP01",
+      "nombre": "CMM Izamal",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FM03",
+      "nombre": "CMM Jalpa de Mendez",
+      "IdOV": 3113,
+      "nombreOV": "CMM Tabasco"
+    },
+    {
+      "id": "FN03",
+      "nombre": "CMM Jaltipan",
+      "IdOV": 3115,
+      "nombreOV": "CMM Veracruz"
+    },
+    {
+      "id": "FJ02",
+      "nombre": "CMM Jesus Carranza",
+      "IdOV": 3124,
+      "nombreOV": "CMM Istmo"
+    },
+    {
+      "id": "FX00",
+      "nombre": "CMM M Campeche",
+      "IdOV": 3112,
+      "nombreOV": "CMM Campeche"
+    },
+    {
+      "id": "FR00",
+      "nombre": "CMM M Cardenas",
+      "IdOV": 3114,
+      "nombreOV": "CMM Macfe"
+    },
+    {
+      "id": "FJ00",
+      "nombre": "CMM M Juchitan",
+      "IdOV": 3124,
+      "nombreOV": "CMM Istmo"
+    },
+    {
+      "id": "FP00",
+      "nombre": "CMM M Merida",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FN00",
+      "nombre": "CMM M Minatitlan",
+      "IdOV": 3115,
+      "nombreOV": "CMM Veracruz"
+    },
+    {
+      "id": "FW00",
+      "nombre": "CMM M Oaxaca",
+      "IdOV": 3123,
+      "nombreOV": "CMM Oaxaca"
+    },
+    {
+      "id": "FM00",
+      "nombre": "CMM M Villahermosa",
+      "IdOV": 3113,
+      "nombreOV": "CMM Tabasco"
+    },
+    {
+      "id": "FJ07",
+      "nombre": "CMM Maria Lombardo",
+      "IdOV": 3124,
+      "nombreOV": "CMM Istmo"
+    },
+    {
+      "id": "FJ03",
+      "nombre": "CMM Matias Romero",
+      "IdOV": 3124,
+      "nombreOV": "CMM Istmo"
+    },
+    {
+      "id": "FP02",
+      "nombre": "CMM Maxcanu",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FW04",
+      "nombre": "CMM Miahuatlan",
+      "IdOV": 3123,
+      "nombreOV": "CMM Oaxaca"
+    },
+    {
+      "id": "FW03",
+      "nombre": "CMM Mitla",
+      "IdOV": 3123,
+      "nombreOV": "CMM Oaxaca"
+    },
+    {
+      "id": "FP23",
+      "nombre": "CMM Ocosingo",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FW02",
+      "nombre": "CMM Ocotlan",
+      "IdOV": 3123,
+      "nombreOV": "CMM Oaxaca"
+    },
+    {
+      "id": "FM09",
+      "nombre": "CMM Palenque",
+      "IdOV": 3113,
+      "nombreOV": "CMM Tabasco"
+    },
+    {
+      "id": "FM04",
+      "nombre": "CMM Paraiso",
+      "IdOV": 3113,
+      "nombreOV": "CMM Tabasco"
+    },
+    {
+      "id": "FP20",
+      "nombre": "CMM Pijijiapan",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FW05",
+      "nombre": "CMM PinotepaNaciona",
+      "IdOV": 3123,
+      "nombreOV": "CMM Oaxaca"
+    },
+    {
+      "id": "FP10",
+      "nombre": "CMM Playa del Carme",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FN04",
+      "nombre": "CMM Playa Vicente",
+      "IdOV": 3115,
+      "nombreOV": "CMM Veracruz"
+    },
+    {
+      "id": "FW07",
+      "nombre": "CMM Pochutla",
+      "IdOV": 3123,
+      "nombreOV": "CMM Oaxaca"
+    },
+    {
+      "id": "FP03",
+      "nombre": "CMM Progreso",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FW06",
+      "nombre": "CMM PuertoEscondido",
+      "IdOV": 3123,
+      "nombreOV": "CMM Oaxaca"
+    },
+    {
+      "id": "FW09",
+      "nombre": "CMM Rio Grande",
+      "IdOV": 3123,
+      "nombreOV": "CMM Oaxaca"
+    },
+    {
+      "id": "FJ04",
+      "nombre": "CMM Salina Cruz",
+      "IdOV": 3124,
+      "nombreOV": "CMM Istmo"
+    },
+    {
+      "id": "FP21",
+      "nombre": "CMM San Cristobal",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FJ08",
+      "nombre": "CMM Santiago Astata",
+      "IdOV": 3124,
+      "nombreOV": "CMM Istmo"
+    },
+    {
+      "id": "FP22",
+      "nombre": "CMM Simojovel",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FW01",
+      "nombre": "CMM SnBartolo Coyot",
+      "IdOV": 3123,
+      "nombreOV": "CMM Oaxaca"
+    },
+    {
+      "id": "FM05",
+      "nombre": "CMM Teapa",
+      "IdOV": 3113,
+      "nombreOV": "CMM Tabasco"
+    },
+    {
+      "id": "FP04",
+      "nombre": "CMM Tekax",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FM06",
+      "nombre": "CMM Tenosique",
+      "IdOV": 3113,
+      "nombreOV": "CMM Tabasco"
+    },
+    {
+      "id": "FP05",
+      "nombre": "CMM Tizimin",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FP24",
+      "nombre": "CMM Tonala",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FP29",
+      "nombre": "CMM Tulum",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FN05",
+      "nombre": "CMM Tuxtepec",
+      "IdOV": 3115,
+      "nombreOV": "CMM Veracruz"
+    },
+    {
+      "id": "FP11",
+      "nombre": "CMM Tuxtla Gutierre",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FJ05",
+      "nombre": "CMM Union Hidalgo",
+      "IdOV": 3124,
+      "nombreOV": "CMM Istmo"
+    },
+    {
+      "id": "FP06",
+      "nombre": "CMM Valladolid",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FN06",
+      "nombre": "CMM Valle Nacional",
+      "IdOV": 3115,
+      "nombreOV": "CMM Veracruz"
+    },
+    {
+      "id": "FP25",
+      "nombre": "CMM Venustiano Carr",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FP26",
+      "nombre": "CMM Villa de Acala",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FP27",
+      "nombre": "CMM Villaflores",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FP28",
+      "nombre": "CMM Yajalon",
+      "IdOV": 3111,
+      "nombreOV": "CMM Sureste"
+    },
+    {
+      "id": "FJ06",
+      "nombre": "CMM Zanatepec",
+      "IdOV": 3124,
+      "nombreOV": "CMM Istmo"
+    }
+  ],
+  "clientes": [
+    {
+      "id": 100847689,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "",
+      "idOV": "FD04",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100921332,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "",
+      "idOV": "FF11",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 400065505,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "",
+      "idOV": "FD03",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100692614,
+      "nombre": "CMM Edo de Mexico",
+      "agrupadorPrecios": "",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM M Metepec"
+    },
+    {
+      "id": 100039667,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "IMPULSO",
+      "idOV": "FA00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039669,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039700,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039753,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039178,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA04",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100017019,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039502,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039351,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA04",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039166,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "IMPULSO",
+      "idOV": "FA04",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039762,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100556915,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039448,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA03",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039208,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA04",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039338,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA04",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100477656,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Mayoristas",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039402,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA04",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039526,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "SOCIAL",
+      "idOV": "FA00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100587627,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039440,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA03",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100198116,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039254,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FE00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100000335,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FE00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039632,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "IMPULSO",
+      "idOV": "FA00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039683,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100044612,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100429489,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100307271,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100428875,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100428877,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100579188,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100633670,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "MI GUSTO ES 20",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100587626,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100633671,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "MR. SUSHI",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100633672,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "MR. SUSHI 12",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100856214,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Trad. sin PROMO",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039784,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039168,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA04",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039175,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA04",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039422,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA03",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100813927,
+      "nombre": "CMM Occidente",
+      "agrupadorPrecios": "Super Bara",
+      "idOV": "FE00",
+      "oficinaVentas": "CMM M Guadalajara"
+    },
+    {
+      "id": 100039400,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "SOCIAL",
+      "idOV": "FA04",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039703,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039614,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039339,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA04",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039508,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039596,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039206,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA04",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039378,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "IMPULSO",
+      "idOV": "FA04",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039161,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA04",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039252,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FE00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039313,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FE00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039751,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039764,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100302632,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100255030,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100428873,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100428874,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100478604,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039223,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA04",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100428878,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100477668,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100477675,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100477703,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100586074,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100039444,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "TRADICIONAL",
+      "idOV": "FA03",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100428876,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100307062,
+      "nombre": "CMM Edo de Mexico",
+      "agrupadorPrecios": "Mayoristas Canal Mod",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM M Metepec"
+    },
+    {
+      "id": 100497296,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100586076,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FG00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100962591,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FU00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100809295,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FQ00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100966492,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FU00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100963299,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "No Foco (Tradicional",
+      "idOV": "FU00",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100942967,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FG02",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 101029083,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "GB04",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100065811,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Trad. sin PROMO",
+      "idOV": "GB07",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100258977,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "No Foco (Tradicional",
+      "idOV": "FD04",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 101017253,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FU02",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100983682,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FU02",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100380423,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FE12",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100184461,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FG08",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100184415,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FG08",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100205200,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Dummy",
+      "idOV": "FF05",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100894949,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Botella Abierta Imag",
+      "idOV": "FK15",
+      "oficinaVentas": "CMM Tlaxcala"
+    },
+    {
+      "id": 100407433,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FE12",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100407957,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FE12",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100408670,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FE12",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100447628,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Dummy",
+      "idOV": "FK00",
+      "oficinaVentas": "CMM M Altiplano"
+    },
+    {
+      "id": 100418958,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FE12",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100447766,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Dummy",
+      "idOV": "FK00",
+      "oficinaVentas": "CMM M Altiplano"
+    },
+    {
+      "id": 100683790,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FE12",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100685002,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FE12",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100422014,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "No Foco (Tradicional",
+      "idOV": "FE12",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100453216,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FK00",
+      "oficinaVentas": "CMM M Altiplano"
+    },
+    {
+      "id": 100323916,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FY17",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100822383,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FE12",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100854450,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FE12",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100867202,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FE12",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100872720,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FE12",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100900980,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Dummy",
+      "idOV": "FE12",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100923930,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FE12",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100955505,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FE12",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100371184,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FE02",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100354755,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "GA06",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 101028228,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FE12",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100211821,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FF05",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100212965,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Dummy",
+      "idOV": "FF05",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100212981,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "No Foco (Tradicional",
+      "idOV": "FF05",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100213112,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FF05",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100859994,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "GB04",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 101005335,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Trad. sin PROMO",
+      "idOV": "FK00",
+      "oficinaVentas": "CMM M Altiplano"
+    },
+    {
+      "id": 100912852,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "GB04",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100852614,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "No Foco (Tradicional",
+      "idOV": "GB04",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100218109,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Dummy",
+      "idOV": "FF05",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100219296,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FF05",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100219482,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Dummy",
+      "idOV": "FF05",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100219839,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Dummy",
+      "idOV": "FF05",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100822564,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "GB06",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100808581,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "GB06",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100222168,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Dummy",
+      "idOV": "FF05",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100222286,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FF05",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100811663,
+      "nombre": "CMM Hidalgo",
+      "agrupadorPrecios": "Botella Abierta Soci",
+      "idOV": "GC08",
+      "oficinaVentas": "CMM Tula"
+    },
+    {
+      "id": 100167200,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FG13",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100167201,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FG13",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100167177,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FG13",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100820299,
+      "nombre": "CMM Hidalgo",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "GC08",
+      "oficinaVentas": "CMM Tula"
+    },
+    {
+      "id": 100223800,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Dummy",
+      "idOV": "FF05",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100951032,
+      "nombre": "CMM Hidalgo",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "GC08",
+      "oficinaVentas": "CMM Tula"
+    },
+    {
+      "id": 100223984,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "No Foco (Tradicional",
+      "idOV": "FF05",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100224058,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FF05",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100224155,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Dummy",
+      "idOV": "FF05",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100982458,
+      "nombre": "CMM Hidalgo",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "GC08",
+      "oficinaVentas": "CMM Tula"
+    },
+    {
+      "id": 101009849,
+      "nombre": "CMM Hidalgo",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "GC08",
+      "oficinaVentas": "CMM Tula"
+    },
+    {
+      "id": 100224378,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Dummy",
+      "idOV": "FF05",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100224414,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FF05",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 101011149,
+      "nombre": "CMM Hidalgo",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "GC08",
+      "oficinaVentas": "CMM Tula"
+    },
+    {
+      "id": 100686670,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "GE05",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100224456,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FF05",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100224693,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Dummy",
+      "idOV": "FF05",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100980571,
+      "nombre": "CMM Hidalgo",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "GC09",
+      "oficinaVentas": "CMM Zimapan"
+    },
+    {
+      "id": 100762146,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FE02",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100755354,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Botella Abierta Soci",
+      "idOV": "GA06",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 100778003,
+      "nombre": "CMM Hidalgo",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "GC11",
+      "oficinaVentas": "CMM Molango"
+    },
+    {
+      "id": 100366412,
+      "nombre": "CMM Hidalgo",
+      "agrupadorPrecios": "No Foco (Tradicional",
+      "idOV": "GC11",
+      "oficinaVentas": "CMM Molango"
+    },
+    {
+      "id": 100224965,
+      "nombre": "CMM Altiplano",
+      "agrupadorPrecios": "Dummy",
+      "idOV": "FF05",
+      "oficinaVentas": "CMM Chazumba"
+    },
+    {
+      "id": 101033588,
+      "nombre": "CMM Sonora",
+      "agrupadorPrecios": "No Foco (Tradicional",
+      "idOV": "FL04",
+      "oficinaVentas": "CMM Nogales"
+    },
+    {
+      "id": 100970013,
+      "nombre": "CMM Noreste",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FV08",
+      "oficinaVentas": "CMM Alamo"
+    },
+    {
+      "id": 100853717,
+      "nombre": "CMM Baja California",
+      "agrupadorPrecios": "Key Accounts 2 BA",
+      "idOV": "FA00",
+      "oficinaVentas": "CMM M Tijuana"
+    },
+    {
+      "id": 400001472,
+      "nombre": "CMM Norte",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FC00",
+      "oficinaVentas": "CMM M Torre√≥n"
+    },
+    {
+      "id": 400003630,
+      "nombre": "CMM Norte",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FC06",
+      "oficinaVentas": "CMM Saltillo"
+    },
+    {
+      "id": 400022195,
+      "nombre": "CMM Norte",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FC06",
+      "oficinaVentas": "CMM Saltillo"
+    },
+    {
+      "id": 400038897,
+      "nombre": "CMM Norte",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FC00",
+      "oficinaVentas": "CMM M Torre√≥n"
+    },
+    {
+      "id": 400056799,
+      "nombre": "CMM Norte",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FC06",
+      "oficinaVentas": "CMM Saltillo"
+    },
+    {
+      "id": 400067099,
+      "nombre": "CMM Norte",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FC06",
+      "oficinaVentas": "CMM Saltillo"
+    },
+    {
+      "id": 400074311,
+      "nombre": "CMM Norte",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FC00",
+      "oficinaVentas": "CMM M Torre√≥n"
+    },
+    {
+      "id": 100825331,
+      "nombre": "CMM Occidente",
+      "agrupadorPrecios": "Modeloramas",
+      "idOV": "FE00",
+      "oficinaVentas": "CMM M Guadalajara"
+    },
+    {
+      "id": 1012769,
+      "nombre": "CMM Occidente",
+      "agrupadorPrecios": "",
+      "idOV": "FE01",
+      "oficinaVentas": "CMM Zapopan"
+    },
+    {
+      "id": 100877737,
+      "nombre": "CMM Occidente",
+      "agrupadorPrecios": "Modeloramas",
+      "idOV": "FE00",
+      "oficinaVentas": "CMM M Guadalajara"
+    },
+    {
+      "id": 100877897,
+      "nombre": "CMM Occidente",
+      "agrupadorPrecios": "Modeloramas",
+      "idOV": "FE00",
+      "oficinaVentas": "CMM M Guadalajara"
+    },
+    {
+      "id": 100887568,
+      "nombre": "CMM Occidente",
+      "agrupadorPrecios": "Modeloramas",
+      "idOV": "FE00",
+      "oficinaVentas": "CMM M Guadalajara"
+    },
+    {
+      "id": 100892754,
+      "nombre": "CMM Occidente",
+      "agrupadorPrecios": "Modeloramas",
+      "idOV": "FE00",
+      "oficinaVentas": "CMM M Guadalajara"
+    },
+    {
+      "id": 100893121,
+      "nombre": "CMM Occidente",
+      "agrupadorPrecios": "Modeloramas",
+      "idOV": "FE00",
+      "oficinaVentas": "CMM M Guadalajara"
+    },
+    {
+      "id": 100363816,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "No Foco (Tradicional",
+      "idOV": "FN00",
+      "oficinaVentas": "CMM M Minatitlan"
+    },
+    {
+      "id": 100364456,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "No Foco (Tradicional",
+      "idOV": "FN00",
+      "oficinaVentas": "CMM M Minatitlan"
+    },
+    {
+      "id": 100743237,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "Botella Abierta Imag",
+      "idOV": "FN05",
+      "oficinaVentas": "CMM Tuxtepec"
+    },
+    {
+      "id": 400091895,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FN01",
+      "oficinaVentas": "CMM Cd. Isla"
+    },
+    {
+      "id": 100361299,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "Botella Abierta Imag",
+      "idOV": "FN05",
+      "oficinaVentas": "CMM Tuxtepec"
+    },
+    {
+      "id": 100610696,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "Botella Abierta Soci",
+      "idOV": "FN05",
+      "oficinaVentas": "CMM Tuxtepec"
+    },
+    {
+      "id": 100587940,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FN02",
+      "oficinaVentas": "CMM Acayucan"
+    },
+    {
+      "id": 100874525,
+      "nombre": "CMM Tabasco",
+      "agrupadorPrecios": "Trad. sin PROMO",
+      "idOV": "FM05",
+      "oficinaVentas": "CMM Teapa"
+    },
+    {
+      "id": 100868337,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "Botella Abierta Soci",
+      "idOV": "FN05",
+      "oficinaVentas": "CMM Tuxtepec"
+    },
+    {
+      "id": 400091610,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "Canal Moderno",
+      "idOV": "FN02",
+      "oficinaVentas": "CMM Acayucan"
+    },
+    {
+      "id": 101030067,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "No Foco (Tradicional",
+      "idOV": "FN00",
+      "oficinaVentas": "CMM M Minatitlan"
+    },
+    {
+      "id": 101032894,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "No Foco (Tradicional",
+      "idOV": "FN00",
+      "oficinaVentas": "CMM M Minatitlan"
+    },
+    {
+      "id": 100773770,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FN05",
+      "oficinaVentas": "CMM Tuxtepec"
+    },
+    {
+      "id": 100801555,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FN05",
+      "oficinaVentas": "CMM Tuxtepec"
+    },
+    {
+      "id": 100974086,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FN05",
+      "oficinaVentas": "CMM Tuxtepec"
+    },
+    {
+      "id": 101027859,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FN00",
+      "oficinaVentas": "CMM M Minatitlan"
+    },
+    {
+      "id": 101024671,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "No Foco (Tradicional",
+      "idOV": "FN05",
+      "oficinaVentas": "CMM Tuxtepec"
+    },
+    {
+      "id": 101033258,
+      "nombre": "CMM Tabasco",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FM05",
+      "oficinaVentas": "CMM Teapa"
+    },
+    {
+      "id": 101020439,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "Botella Abierta Soci",
+      "idOV": "FN05",
+      "oficinaVentas": "CMM Tuxtepec"
+    },
+    {
+      "id": 100358193,
+      "nombre": "CMM Tabasco",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FM05",
+      "oficinaVentas": "CMM Teapa"
+    },
+    {
+      "id": 100365243,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "No Foco (Tradicional",
+      "idOV": "FN01",
+      "oficinaVentas": "CMM Cd. Isla"
+    },
+    {
+      "id": 100365469,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FN01",
+      "oficinaVentas": "CMM Cd. Isla"
+    },
+    {
+      "id": 100695616,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "Botella Abierta Imag",
+      "idOV": "FN01",
+      "oficinaVentas": "CMM Cd. Isla"
+    },
+    {
+      "id": 100937417,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FN01",
+      "oficinaVentas": "CMM Cd. Isla"
+    },
+    {
+      "id": 100363040,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FN02",
+      "oficinaVentas": "CMM Acayucan"
+    },
+    {
+      "id": 101033974,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "No Foco (Tradicional",
+      "idOV": "FN02",
+      "oficinaVentas": "CMM Acayucan"
+    },
+    {
+      "id": 100366026,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "Botella Abierta Soci",
+      "idOV": "FN01",
+      "oficinaVentas": "CMM Cd. Isla"
+    },
+    {
+      "id": 100746655,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FN00",
+      "oficinaVentas": "CMM M Minatitlan"
+    },
+    {
+      "id": 100365239,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FN01",
+      "oficinaVentas": "CMM Cd. Isla"
+    },
+    {
+      "id": 100365464,
+      "nombre": "CMM Veracruz",
+      "agrupadorPrecios": "Foco (Tradicional)",
+      "idOV": "FN01",
+      "oficinaVentas": "CMM Cd. Isla"
+    }
   ]
 }

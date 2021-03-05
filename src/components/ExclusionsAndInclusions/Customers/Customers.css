@@ -1,0 +1,16 @@
+a.active {
+    font-weight: bold;
+    color: #1890ff!important;
+    font-family: 'Inter'!important;
+    font-style: normal;
+}
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link {
+    border-color: #e9ecef #e9ecef #dee2e6;
+}
+
+li.nav-item a.nav-link {
+    font-family: 'Inter';
+    color: #595959;
+    font-size: 14px;
+}

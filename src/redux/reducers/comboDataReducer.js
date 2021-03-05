@@ -12,17 +12,17 @@ const initialState = {
         agrupadorPrecios: [],
         maxCombosVentas: 0,
         maxCombosCliente: 0,
-        moneda:'',
-        aplicaciones: { allmobile: false, televenta: false, b2b: false, dbr: false}
+        moneda: '',
+        aplicaciones: { allmobile: false, televenta: false, b2b: false, dbr: false }
     }
 }
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default function( state = initialState, { type, payload }){
+export default function (state = initialState, { type, payload }) {
     switch (type) {
 
         case CREATE_DATA_COMBO:
-            return{
+            return {
                 ...state,
                 comboData: payload
             }
@@ -32,7 +32,6 @@ export default function( state = initialState, { type, payload }){
                 ...state,
                 comboData: payload // {}
             }
-
 
         default:
             return state;

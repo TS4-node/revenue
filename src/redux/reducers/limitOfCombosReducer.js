@@ -14,11 +14,11 @@ const initialState = {
 }
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default function(state = initialState, { type, payload }){
+export default function (state = initialState, { type, payload }) {
     switch (type) {
 
         case GET_LIMIT_OF_COMBOS:
-            return{
+            return {
                 ...state,
                 loading: payload,//true
             }
@@ -32,7 +32,7 @@ export default function(state = initialState, { type, payload }){
 
         case GET_LIMIT_OF_COMBOS_ERROR:
         case ADD_LIMIT_OF_COMBO_ERROR:
-            return{
+            return {
                 ...state,
                 loading: false,
                 error: payload

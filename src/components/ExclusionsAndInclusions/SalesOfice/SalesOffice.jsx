@@ -8,13 +8,13 @@ import { /*Spinner,*/ AlertGeneric } from '../../index';
 import TableFilter from '../TableFilter';
 
 import { useDispatch } from 'react-redux';
-import { setSalesOrganizationAction } from '../../../redux/actions/exclusionsAndInclusionsActions';
+import { setSalesOfficeAction } from '../../../redux/actions/exclusionsAndInclusionsActions';
 
 const columns = [
 	{ name: 'Número SAP', selector: 'id', sortable: true },
 	{ name: 'Nombre', selector: 'nombre', sortable: true },
 	{
-		name: 'Dirección Regional de Ventas',
+		name: 'Organización de Ventas',
 		selector: 'direccionRegionalVentas',
 		sortable: true
 	}
@@ -45,23 +45,26 @@ const customStyles = {
 		}
 	}
 };
-///this is the view #1 for the Exclusions and Inclusions
-const SalesOrganization = ({ setView, salesOrganization /*, loading */ }) => {
+
+///this is the view #2 for the Exclusions and Inclusions
+const SalesOffice = ({ setView, salesOffice }) => {
 	const dispatch = useDispatch();
 
-	const setSalesOrganizations = DGR => dispatch(setSalesOrganizationAction(DGR));
+	const setSalesOffice = salesOffice => dispatch(setSalesOfficeAction(salesOffice));
 
-	const newSalesOrganization = salesOrganization.map(item => {
-		let obj = {};
+	const newSalesOffice =
+		salesOffice &&
+		salesOffice.map(item => {
+			let obj = {};
 
-		obj['id'] = item.id;
-		obj['nombre'] = item.nombre;
-		obj['direccionRegionalVentas'] = `${item.idDGR} ${item.nombreDGR}`;
-		return obj;
-	});
+			obj['id'] = item.id;
+			obj['nombre'] = item.nombre;
+			obj['direccionRegionalVentas'] = `${item.IdOV} ${item.nombreOV}`;
+			return obj;
+		});
 
 	const [searchItem, setSearchItem] = useState('');
-	const [foundItem, setFoundItem] = useState(newSalesOrganization);
+	const [foundItem, setFoundItem] = useState(newSalesOffice);
 	const [idSAP, setIdSAP] = useState(false);
 	const [rowSelect, setRowSelect] = useState([]);
 	const [clear, setClear] = useState(false);
@@ -72,7 +75,7 @@ const SalesOrganization = ({ setView, salesOrganization /*, loading */ }) => {
 	const handleChangeInputSearch = e => {
 		e.persist();
 		setSearchItem(e.target.value);
-		filterSalesOrganization(searchItem, idSAP, setFoundItem, newSalesOrganization);
+		filterSalesOrganization(searchItem, idSAP, setFoundItem, newSalesOffice);
 	};
 
 	const handleRowSelect = state => {
@@ -82,7 +85,7 @@ const SalesOrganization = ({ setView, salesOrganization /*, loading */ }) => {
 	const handleButtonCancel = () => {
 		setClear(!clear);
 		setRowSelect({});
-		setView(0);
+		setView(1);
 	};
 
 	const handleButtonContinue = () => {
@@ -90,8 +93,8 @@ const SalesOrganization = ({ setView, salesOrganization /*, loading */ }) => {
 			setError(true);
 			return;
 		}
-		setSalesOrganizations(rowSelect);
-		setView(2);
+		setSalesOffice(rowSelect);
+		setView(3);
 	};
 
 	return (
@@ -106,7 +109,7 @@ const SalesOrganization = ({ setView, salesOrganization /*, loading */ }) => {
 				className='pt-2 mt-1'>
 				<Row>
 					<Col sm='10' md='10' className='text-center'>
-						<h3 className='encabezado text-center mt-3 '>Organizacion de Ventas</h3>
+						<h3 className='encabezado text-center mt-3 '>Oficina de Ventas</h3>
 					</Col>
 				</Row>
 
@@ -149,7 +152,7 @@ const SalesOrganization = ({ setView, salesOrganization /*, loading */ }) => {
 				)}
 			</Container>
 
-			<Row className='mt-5 mx-auto' style={{ paddingTop: '4rem' }}>
+			<Row className='mt-5 mx-auto' style={{ paddingTop: '3.5rem' }}>
 				<Col smd='10' md='10' className='d-flex justify-content-around' style={{ marginLeft: '5rem' }}>
 					<Button className='boton-exclusion' onClick={handleButtonCancel}>
 						Cancelar
@@ -162,5 +165,4 @@ const SalesOrganization = ({ setView, salesOrganization /*, loading */ }) => {
 		</>
 	);
 };
-
-export default SalesOrganization;
+export default SalesOffice;
