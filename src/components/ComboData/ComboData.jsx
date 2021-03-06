@@ -18,22 +18,15 @@ import { TextField, Checkbox, FormControlLabel } from '@material-ui/core';
 
 import './ComboData.css';
 import assignment_ind from '../../assets/images/assignment_ind.png';
+import { optionsListCD } from '../../helpers/selectsOption';
 import { AlertGeneric } from '../index';
 import { useSelect } from '../../hooks';
 import { createDataComboAction, clearDataComboAction } from '../../redux/actions/comboDataActions';
 
 //Simulate DB
 const owner = 'PPM Corporativo';
-
 const salesStructure = 'Grupo Modelo';
-
-const optionsList = [
-	{ value: 'Foco (Tradicional)', label: '42 - Foco (Tradicional)' },
-	{ value: 'Distribuidor Modelo', label: '43 - Distribuidor Modelo' }
-];
-
 const numberData = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
-
 const coinData = ['USD', 'EUR', 'MXN', 'CAD', 'CNY'];
 
 const initialCombo = {
@@ -60,7 +53,7 @@ const ComboData = ({ setValue }) => {
 	 * State Local
 	 */
 	const [combo, setCombo] = useState(dataCombo);
-	const [priceGrouper, setPriceGrouper, SelectPrices] = useSelect('', optionsList, 'Agrupador de Precios', true);
+	const [priceGrouper, setPriceGrouper, SelectPrices] = useSelect('', optionsListCD, 'Agrupador de Precios', true);
 	const [check, setCheck] = useState({});
 	const [error, setError] = useState(false);
 	// const [saved, setSaved] = useState(false);

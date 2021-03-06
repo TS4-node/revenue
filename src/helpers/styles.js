@@ -14,7 +14,7 @@
 */
 
 
-//for TabsCreateCombo : div for selector tab active
+//for TabsCreateCombo.jsx : div for selector tab active
 export const handleDivIndicator = (value) => {
     let selector = document.getElementById('selector');
 
@@ -53,7 +53,7 @@ export const customStylesCT = {
     }
 }
 
-//for react-data-table in tabs create combo-> Sales Organization / Sales Office / Customers
+//for react-data-table in tabs create combo-> SalesOrganization.jsx / SalesOffice.jsx / Customers.jsx
 export const customStyles = {
     table: {
         style: {
@@ -94,6 +94,7 @@ export const customStylesGDS = {
     }
 }
 
+//for TabsCreateCombo.jsx
 export const a11yProps = index => {
     return {
         id: `full-width-tab-${index}`,
