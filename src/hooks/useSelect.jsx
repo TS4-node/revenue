@@ -1,3 +1,15 @@
+/*  COMBOS HEROKU
+ *  March 2021
+ *
+ *  Author: Alejandro Montes de Oca TS4
+ *  Description: custom hook to use a Select and save the state of the selected option
+ *  =========================================================================
+ *  Information about changes:
+ *
+ *  No.         Date.        Author.      Description.
+ *
+ *
+*/
 import React, { useState } from 'react';
 import EmojiIcon from '@atlaskit/icon/glyph/search';
 import Select, { components } from 'react-select';

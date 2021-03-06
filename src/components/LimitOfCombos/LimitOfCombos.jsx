@@ -1,3 +1,15 @@
+/*	COMBOS HEROKU
+ *  March 2021
+ *
+ *  Author: Alejandro Montes de Oca TS4
+ *  Description: button for activate the action "Create an Combo" in modal view
+ *  =========================================================================
+ *  Information about changes:
+ *
+ *  No.         Date.        Author.      		Description.
+ *
+ *
+*/
 import React, { useState } from 'react';
 import { Col, Row } from 'reactstrap';
 import { useHistory } from 'react-router-dom';

@@ -1,3 +1,17 @@
+/*  COMBOS HEROKU
+ *  March 2021
+ *
+ *  Author: Alejandro Montes de Oca TS4
+ *  Description: types to consume in the different reducers in the app, each one 
+ *  has a comment in which it is used
+ *  =========================================================================
+ *  Information about changes:
+ *
+ *  No.         Date.        Author.      Description.
+ *
+ *
+*/
+
 /*  limit of Combos */
 export const GET_LIMIT_OF_COMBOS = 'GET_LIMIT_OF_COMBOS';
 export const GET_LIMIT_OF_COMBOS_SUCCESS = 'GET_LIMIT_OF_COMBOS_SUCCESS';
@@ -10,9 +24,8 @@ export const ADD_LIMIT_OF_COMBO_ERROR = 'ADD_LIMIT_OF_COMBO_ERROR'; //no action 
 export const CREATE_DATA_COMBO = 'CREATE_DATA_COMBO';
 export const CLEAR_DATA_COMBO = 'CLEAR_DATA_COMBO';
 
-/*
- *  exclusion and inclusions
-*/
+
+/*  exclusion and inclusions    */
 
 //regional sales department
 export const GET_GENERAL_REGIONAL_SALES = 'GET_GENERAL_DIRECTORATE_SALES';

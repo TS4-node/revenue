@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
-import { Button, Col, Container, Row } from 'reactstrap';
-import { FormControlLabel, Checkbox, Radio } from '@material-ui/core';
-// import DataTable from 'react-data-table-component';
+/*	COMBOS HEROKU
+ *  March 2021
+ *
+ *  Author: Alejandro Montes de Oca TS4
+ *  Description: This is a handler of tabs for the section with tables in exclusions and inclusions
+ *  =========================================================================
+ *  Information about changes:
+ *
+ *  No.         Date.        Author.      		Description.
+ *
+ *
+*/
+import React from 'react';
+import { Col, Container, Row } from 'reactstrap';
 
-// import { filterSalesOrganization } from '../../../helpers/validationForms';
-// import { /*Spinner,*/ AlertGeneric } from '../../index';
-import TableFilter from '../TableFilter';
 import TabsTable from './TabsTable';
 
 ///this is the view #3 for the Exclusions and Inclusions

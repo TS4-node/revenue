@@ -1,3 +1,15 @@
+/*  COMBOS HEROKU
+ *  March 2021
+ *
+ *  Author: Alejandro Montes de Oca TS4
+ *  Description: Actions for the view create combo -> Tab #2 "EXCLUSIONS AND INCLUSIONS"
+ *  =========================================================================
+ *  Information about changes:
+ *
+ *  No.         Date.        Author.      Description.
+ *
+ *
+*/
 import {
 	GET_GENERAL_REGIONAL_SALES,
 	GET_SALES_ORGANIZATION,

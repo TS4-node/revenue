@@ -1,3 +1,15 @@
+/*	COMBOS HEROKU
+ *  March 2021
+ *
+ *  Author: Alejandro Montes de Oca TS4
+ *  Description: handler of tab for the tables inclusions and exclusion in customers
+ *  =========================================================================
+ *  Information about changes:
+ *
+ *  No.         Date.        Author.      		Description.
+ *
+ *
+*/
 import React, { useState } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap';
 import { FormControlLabel, Checkbox, Radio } from '@material-ui/core';
@@ -5,7 +17,7 @@ import classnames from 'classnames';
 
 import './Customers.css';
 import TableFilter from '../TableFilter';
-import { filterCustomers } from '../../../helpers/validationForms';
+import { filterCustomers } from '../../../helpers/tableSearchRules';
 import TableOfExclusions from './TableOfExclusions';
 import TableOfInclusions from './TableOfInclusions';
 

@@ -1,4 +1,16 @@
-import React, { useState } from 'react'
+
+/*	COMBOS HEROKU
+ *  March 2021
+ *
+ *  Author: Alejandro Montes de Oca TS4
+ *  Description: handler for table of selection general directorate sales
+ *  =========================================================================
+ *  Information about changes:
+ *
+ *  No.         Date.        Author.      		Description.
+ *
+ *
+*/import React, { useState } from 'react'
 import { Button, Col, Container, Row } from 'reactstrap';
 import { FormControlLabel, Checkbox, Radio } from '@material-ui/core'
 import DataTable from 'react-data-table-component'
@@ -6,43 +18,14 @@ import DataTable from 'react-data-table-component'
 import  './GeneralDirectorateSales.css';
 import { Spinner, AlertGeneric } from '../../index';
 import TableFilter from '../TableFilter'
-import { filterGeneralDirectorateSales } from '../../../helpers/validationForms'
+import { filterGeneralDirectorateSales } from '../../../helpers/tableSearchRules'
 
+import { optionsPagination, columnsGDS  } from '../../../helpers/reactDataTable';
+import { customStylesGDS } from '../../../helpers/styles';
 import { useDispatch } from 'react-redux';
 import { setRegionalSalesDirectorateAction } from '../../../redux/actions/exclusionsAndInclusionsActions';
 
-const columns = [
-    { name: 'Número SAP', selector: 'id', sortable: true },
-    { name: 'Nombre', selector: 'nombre', sortable: true },
-    { name: 'Dirección Regional de Ventas', selector: 'direccionRegionalVentas', sortable: true }
-];
 
-
-const optionsPagination = {
-    rowsPerPageText: 'Registros por página',
-    rangeSeparatorText: 'de',
-    selectAllRowsItem: true,
-    selectAllRowsItemText: '*',
-}
-
-const customStyles = {
-    table:{
-        style: {
-            border: '1px solid rgba(0, 0, 0, 0.15)',
-            height: '12rem',
-            width: '45rem'
-        }
-    },
-    headCells: {
-        style: {
-            backgroundColor: '#E6F7FF',
-            color: '#1890FF',
-            fontWeight: 'bold',
-            textAlign: 'center',
-            height: '3.2rem'
-        }
-    }
-}
 
 
 ///this is the view #0 for the Exclusions and Inclusions
@@ -67,9 +50,7 @@ const GeneralDirectorateSales =  ({setView, generalDirectorateSales, setValue /*
         filterGeneralDirectorateSales(searchItem, idSAP, setFoundItem, generalDirectorateSales);
     }
 
-    const handleRowSelect = (state) => {
-        setRowSelect(state.selectedRows);
-    }
+    const handleRowSelect = (state) => setRowSelect(state.selectedRows);
 
     const handleButtonCancel = () => {
         setClear(!clear);
@@ -119,9 +100,9 @@ const GeneralDirectorateSales =  ({setView, generalDirectorateSales, setValue /*
                                 labelPlacement="end"
                             />
                             <DataTable
-                                columns={columns}
+                                columns={columnsGDS}
                                 data={foundItem}
-                                customStyles={customStyles}
+                                customStyles={customStylesGDS}
                                 noDataComponent={<span>No se encontró ningún elemento</span>}
                                 paginationComponentOptions={optionsPagination}
                                 selectableRows

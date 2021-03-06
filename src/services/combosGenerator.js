@@ -1,3 +1,16 @@
+/*  COMBOS HEROKU
+ *  March 2021
+ *
+ *  Author: Alejandro Montes de Oca TS4
+ *  Description: In this document I extracted the functions that make an HTTP request,
+ *  these are consumed directly in the Redux Actions and only have scope in the "Combos Generator" module
+ *  =========================================================================
+ *  Information about changes:
+ *
+ *  No.         Date.        Author.      Description.
+ *
+ *
+*/
 import axiosClient from '../config/axios';
 import {
     URL_limitOfCombos,

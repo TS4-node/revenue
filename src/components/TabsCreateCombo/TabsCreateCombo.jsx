@@ -1,3 +1,16 @@
+/*	COMBOS HEROKU
+ *  March 2021
+ *
+ *  Author: Alejandro Montes de Oca TS4
+ *  Description: this component groups the views for the creation of the combo in a specific panel
+ *  with animation: "Combo Data", "Exclusions and Inclusions", "Search for Materials", "Combo Summary"
+ *  =========================================================================
+ *  Information about changes:
+ *
+ *  No.         Date.        Author.      		Description.
+ *
+ *
+ */
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
@@ -7,8 +20,9 @@ import SwipeableViews from 'react-swipeable-views';
 
 import './TabsCreateCombo.css';
 import { TabPanel, ComboData, ExclusionsAndInclusions, SumaryCombo } from '../index';
+import { a11yProps } from '../../helpers/styles';
 import PopoverExclusionsAndInclusions from './PopoverExclusionsAndInclusions/PopoverExclusionsAndInclusions';
-import { handleSpanIndicator } from '../../helpers/styles';
+import { handleDivIndicator } from '../../helpers/styles';
 import { getAllDataAction } from '../../redux/actions/exclusionsAndInclusionsActions';
 
 const useStyles = makeStyles(theme => ({
@@ -22,17 +36,10 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
-function a11yProps(index) {
-	return {
-		id: `full-width-tab-${index}`,
-		'aria-controls': `full-width-tabpanel-${index}`
-	};
-}
 
 const TabsCreateCombo = () => {
-	/*
-	 * Redux
-	 */
+
+	/*    Redux     */
 	const dispatch = useDispatch();
 
 	const getAllData = () => dispatch(getAllDataAction());
@@ -42,28 +49,19 @@ const TabsCreateCombo = () => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
-	/*
-	 * For de Tabs in nav
-	 */
+	/*    Local State     */
 	const classes = useStyles();
 	const theme = useTheme();
 
+	//For de Tabs in nav
 	const [value, setValue] = useState(0);
-
-	const handleChange = (event, newValue) => {
-		setValue(newValue);
-	};
-
-	const handleChangeIndex = index => {
-		setValue(index);
-	};
-
-	/*
-	 * for Tab & PopoverExclusionsAndInclusions
-	 */
-
+	//for Tab & PopoverExclusionsAndInclusions
 	const [anchorEl, setAnchorEL] = useState(null);
 	const [view, setView] = useState(0);
+
+	const handleChange = (event, newValue) => setValue(newValue);
+
+	const handleChangeIndex = index => setValue(index);
 
 	const handleClick = event => {
 		event.stopPropagation();
@@ -71,10 +69,9 @@ const TabsCreateCombo = () => {
 	};
 
 	useEffect(() => {
-		handleSpanIndicator(value);
-	// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [value])
-
+		handleDivIndicator(value);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [value]);
 
 	return (
 		<div className={classes.root}>
@@ -94,16 +91,16 @@ const TabsCreateCombo = () => {
 
 				<PopoverExclusionsAndInclusions anchorEl={anchorEl} setAnchorEL={setAnchorEL} setView={setView} />
 			</AppBar>
-					<div
-						id='selector'
-						style={{backgroundColor:'#1890ff', height:'.22rem',left:'0px', width:'300px'}}
-					></div>
+
+			{/* this div is the selector in tab active on capture of combo */}
+			<div id='selector' style={{ backgroundColor: '#1890ff', height: '.22rem', left: '0px', width: '300px' }}></div>
 
 			<SwipeableViews
 				axis='x'
 				index={value}
 				onChangeIndex={handleChangeIndex}
-				style={{ paddingTop: '0rem', height: '45rem', overflow: 'hidden' }}>
+				style={{ paddingTop: '0rem', height: '45rem', overflow: 'hidden' }}
+			>
 				<TabPanel value={value} index={0} dir={theme.direction}>
 					<ComboData setValue={setValue} />
 				</TabPanel>
@@ -117,6 +114,7 @@ const TabsCreateCombo = () => {
 				<TabPanel value={value} index={3} dir={theme.direction}>
 					<SumaryCombo />
 				</TabPanel>
+
 			</SwipeableViews>
 		</div>
 	);

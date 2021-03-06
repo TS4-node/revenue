@@ -1,3 +1,15 @@
+/*	COMBOS HEROKU
+ *  March 2021
+ *
+ *  Author: Alejandro Montes de Oca TS4
+ *  Description: handler for search items in the tables with react-data-table
+ *  =========================================================================
+ *  Information about changes:
+ *
+ *  No.         Date.        Author.      		Description.
+ *
+ *
+*/
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Paper, InputBase, /*Divider,*/ IconButton } from '@material-ui/core'

@@ -1,3 +1,16 @@
+/*	COMBOS HEROKU
+ *  March 2021
+ *
+ *  Author: Alejandro Montes de Oca TS4
+ *  Description: This is a form for the capture initial of combo "DATA OF COMBO"
+ *  =========================================================================
+ *  Information about changes:
+ *
+ *  No.         Date.        Author.      		Description.
+ *
+ *
+*/
+
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Container, Row, Col, Label, Input, Button } from 'reactstrap';
@@ -36,10 +49,8 @@ const initialCombo = {
 };
 
 const ComboData = ({ setValue }) => {
-	/*
-	 * Redux
-	 */
 
+	/*    Redux     */
 	const dispatch = useDispatch();
 	const createDataCombo = dataCombo => dispatch(createDataComboAction(dataCombo));
 	const clearDataCombo = () => dispatch(clearDataComboAction());

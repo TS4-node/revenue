@@ -1,3 +1,15 @@
+/*  COMBOS HEROKU
+ *  March 2021
+ *
+ *  Author: Alejandro Montes de Oca TS4
+ *  Description: Actions for the view modal create a limit of combo
+ *  =========================================================================
+ *  Information about changes:
+ *
+ *  No.         Date.        Author.      Description.
+ *
+ *
+*/
 import {
     GET_LIMIT_OF_COMBOS,
     GET_LIMIT_OF_COMBOS_SUCCESS,

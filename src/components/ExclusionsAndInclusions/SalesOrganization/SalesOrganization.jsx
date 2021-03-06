@@ -1,50 +1,31 @@
+/*	COMBOS HEROKU
+ *  March 2021
+ *
+ *  Author: Alejandro Montes de Oca TS4
+ *  Description: handler for table of selection sales organization
+ *  =========================================================================
+ *  Information about changes:
+ *
+ *  No.         Date.        Author.      		Description.
+ *
+ *
+*/
 import React, { useState } from 'react';
 import { Button, Col, Container, Row } from 'reactstrap';
 import { FormControlLabel, Checkbox, Radio } from '@material-ui/core';
 import DataTable from 'react-data-table-component';
 
-import { filterSalesOrganization } from '../../../helpers/validationForms';
+import { optionsPagination, columnsSalesOrganziation } from '../../../helpers/reactDataTable';
+import { customStyles } from '../../../helpers/styles';
+import { filterSalesOrganization } from '../../../helpers/tableSearchRules';
 import { /*Spinner,*/ AlertGeneric } from '../../index';
 import TableFilter from '../TableFilter';
 
 import { useDispatch } from 'react-redux';
 import { setSalesOrganizationAction } from '../../../redux/actions/exclusionsAndInclusionsActions';
 
-const columns = [
-	{ name: 'Número SAP', selector: 'id', sortable: true },
-	{ name: 'Nombre', selector: 'nombre', sortable: true },
-	{
-		name: 'Dirección Regional de Ventas',
-		selector: 'direccionRegionalVentas',
-		sortable: true
-	}
-];
 
-const optionsPagination = {
-	rowsPerPageText: 'Registros por página',
-	rangeSeparatorText: 'de',
-	selectAllRowsItem: true,
-	selectAllRowsItemText: '*'
-};
 
-const customStyles = {
-	table: {
-		style: {
-			border: '1px solid rgba(0, 0, 0, 0.15)',
-			height: '18rem',
-			width: '45rem'
-		}
-	},
-	headCells: {
-		style: {
-			backgroundColor: '#E6F7FF',
-			color: '#1890FF',
-			fontWeight: 'bold',
-			textAlign: 'center',
-			height: '3.2rem'
-		}
-	}
-};
 ///this is the view #1 for the Exclusions and Inclusions
 const SalesOrganization = ({ setView, salesOrganization /*, loading */ }) => {
 	const dispatch = useDispatch();
@@ -119,7 +100,7 @@ const SalesOrganization = ({ setView, salesOrganization /*, loading */ }) => {
 						labelPlacement='end'
 					/>
 					<DataTable
-						columns={columns}
+						columns={columnsSalesOrganziation}
 						data={foundItem}
 						customStyles={customStyles}
 						noDataComponent={<span>No se encontró ningún elemento</span>}

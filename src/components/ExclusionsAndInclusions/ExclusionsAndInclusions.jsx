@@ -1,3 +1,15 @@
+/*	COMBOS HEROKU
+ *  March 2021
+ *
+ *  Author: Alejandro Montes de Oca TS4
+ *  Description: handler for content capture in the tabs for exclusions and inclusions
+ *  =========================================================================
+ *  Information about changes:
+ *
+ *  No.         Date.        Author.      		Description.
+ *
+ *
+*/
 import React from 'react';
 import SwipeableViews from 'react-swipeable-views';
 import { useTheme } from '@material-ui/core/styles';
@@ -10,9 +22,7 @@ import { useSelector } from 'react-redux';
 const ExclusionsAndInclusions = ({ view, setView, setValue }) => {
 	const theme = useTheme();
 
-	/*
-	 * Redux
-	 */
+	/*    Redux     */
 	const regionalDirectorateSales = useSelector(state => state.exclusionsAndInclusions.GET_regionalSalesDirectorate);
 	const filteredsalesOrganization = useSelector(state => state.exclusionsAndInclusions.FILTERED_salesOrganization);
 	const filteredSalesOffice = useSelector(state => state.exclusionsAndInclusions.FILTERED_salesOffice);
@@ -23,30 +33,25 @@ const ExclusionsAndInclusions = ({ view, setView, setValue }) => {
 	};
 
 	return (
-		<Container >
-			<SwipeableViews axis='x' index={view} onChangeIndex={handleChangeIndex} >
+		<Container>
+			<SwipeableViews axis='x' index={view} onChangeIndex={handleChangeIndex}>
 				<TabPanel value={view} index={0} dir={theme.direction}>
 					<GeneralDirectorateSales
 						setView={setView}
 						generalDirectorateSales={regionalDirectorateSales}
 						setValue={setValue}
-						// loading={loadingGeneralDirectorateSales}
 					/>
 				</TabPanel>
 
 				<TabPanel value={view} index={1} dir={theme.direction}>
-					<SalesOrganization
-						setView={setView}
-						salesOrganization={filteredsalesOrganization}
-						// loading={loadingSalesOrganization}
-					/>
+					<SalesOrganization setView={setView} salesOrganization={filteredsalesOrganization} />
 				</TabPanel>
 
 				<TabPanel value={view} index={2} dir={theme.direction}>
 					<SalesOffice setView={setView} salesOffice={filteredSalesOffice} />
 				</TabPanel>
 
-				<TabPanel value={view} index={3} dir={theme.direction} >
+				<TabPanel value={view} index={3} dir={theme.direction}>
 					<Customers setView={setView} customers={filteredCustomers} />
 				</TabPanel>
 			</SwipeableViews>

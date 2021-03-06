@@ -1,71 +1,45 @@
-import React, { useState, useMemo, useEffect } from 'react'
+/*	COMBOS HEROKU
+ *  March 2021
+ *
+ *  Author: Alejandro Montes de Oca TS4
+ *  Description: handler first table in the limits of combo
+ *  =========================================================================
+ *  Information about changes:
+ *
+ *  No.         Date.        Author.      		Description.
+ *
+ *
+*/
+import React, { useState, useMemo, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import DataTable from 'react-data-table-component'
+import DataTable from 'react-data-table-component';
 
-import TableFilter from './TableFilter'
-import { Spinner } from '../../index'
-import { getAllLimitOfCombosAction } from '../../../redux/actions/limitOfCombosActions'
+import { optionsPagination, columnsCombosTable } from '../../../helpers/reactDataTable';
+import { customStylesCT } from '../../../helpers/styles';
+import TableFilter from './TableFilter';
+import { Spinner } from '../../index';
+import { getAllLimitOfCombosAction } from '../../../redux/actions/limitOfCombosActions';
 
-const columns = [
-    { name: '', selector: 'id', sortable: true, width: '5rem' },
-    { name: 'ID Límite', selector: 'IdLimite', sortable: true },
-    { name: 'Nivel del Combo', selector: 'nivelCombo', sortable: true },
-    { name: 'Estructura de Ventas', selector: 'estructuraVenta', sortable: true },
-    { name: 'Combos Permitidos', selector: 'combosPermitidos', sortable: true },
-    { name: 'Combos Disponibles', selector: 'CombosDisponibles', sortable: true }
-]
 
-const customStyles = {
-    table:{
-        style: {
-            border: '1px solid rgba(0, 0, 0, 0.15)',
-            height: '24rem'
-        }
-    },
-    headCells: {
-        style: {
-            backgroundColor: '#E6F7FF',
-            color: '#1890FF',
-            fontWeight: 'bold',
-            textAlign: 'center',
-            height: '3.2rem'
-        }
-    }
-}
 
 const CombosTable = () => {
-    /*
-     * Redux
-    */
 
+	/*    Redux     */
     const dispatch = useDispatch();
-    const limitsOfCombos = useSelector( state => state.limitOfCombos.limitsOfCombos);
-    const loading = useSelector ( state => state.limitOfCombos.loading );
+	const limitsOfCombos = useSelector(state => state.limitOfCombos.limitsOfCombos);
+	const loading = useSelector(state => state.limitOfCombos.loading);
+    const getLimitsCombos = () => dispatch(getAllLimitOfCombosAction());
 
-    /*
-    * Local State
-    */
+	/*    Local State     */
+	const [filterText, setFilterText] = useState('');
+	const [resetPaginationToggle, setResetPaginationToggle] = useState(false);
 
-   const [filterText, setFilterText] = useState('');
-   const [resetPaginationToggle, setResetPaginationToggle] = useState(false);
+	useEffect(() => {
+		getLimitsCombos();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 
-    useEffect(() => {
-        const getLimitsCombos = () => dispatch( getAllLimitOfCombosAction() );
-        getLimitsCombos();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
-
-
-
-    // //filtrar elementos
-    // const filteredItems = limitsOfCombos.filter(
-    //     (item) =>
-    //         item.Idlimite &&
-    //         item.Idlimite.toLowerCase().includes(filterText.toLowerCase())
-    // );
-
-    const subHeaderComponentMemo = useMemo(() => {
-
+	const subHeaderComponentMemo = useMemo(() => {
 		const handleClear = () => {
 			if (filterText) {
 				setResetPaginationToggle(!resetPaginationToggle);
@@ -74,43 +48,35 @@ const CombosTable = () => {
 		};
 
 		return (
-			<TableFilter
-				onFilter={(e) => setFilterText(e.target.value)}
-				onClear={handleClear}
-				filterText={filterText}
-			/>
+			<TableFilter onFilter={e => setFilterText(e.target.value)} onClear={handleClear} filterText={filterText} />
 		);
 	}, [filterText, resetPaginationToggle]);
 
-    const component = loading
-        ? <Spinner />
-        : (
-        <>
-            <DataTable
-                columns={columns}
-                data={limitsOfCombos}
-                customStyles={customStyles}
-                dense={true}
-                striped={true}
-                fixedHeader={true}
-                responsive={true}
-                paginationResetDefaultPage={resetPaginationToggle}
-                subHeaderComponent={subHeaderComponentMemo}
-                subHeader
-                highlightOnHover
-                pagination
-            />
-            {/* <p className='total'>{limitsOfCombos.length} Elementos.</p> */}
-            </>
-        )
+	const component = loading ? (
+		<Spinner />
+	) : (
+		<>
+			<DataTable
+				columns={columnsCombosTable}
+				data={limitsOfCombos}
+				customStyles={customStylesCT}
+				paginationComponentOptions={optionsPagination}
+				noDataComponent={<span>No se encontró ningún elemento</span>}
+				paginationResetDefaultPage={resetPaginationToggle}
+				subHeaderComponent={subHeaderComponentMemo}
+				dense
+				striped
+				fixedHeader
+				responsive
+				subHeader
+				highlightOnHover
+				pagination
+			/>
+			{/* <p className='total'>{limitsOfCombos.length} Elementos.</p> */}
+		</>
+	);
 
-    return (
+	return <div style={{ marginTop: '-.55rem' }}>{component}</div>;
+};
 
-            <div style={{marginTop: '-.55rem'}}>
-                { component }
-            </div>
-
-    )
-}
-
-export default CombosTable
+export default CombosTable;

@@ -1,3 +1,15 @@
+/*  COMBOS HEROKU
+ *  March 2021
+ *
+ *  Author: Alejandro Montes de Oca TS4
+ *  Description: Reducer for the view create combo -> Tab #1 "DATA OF COMBO"
+ *  =========================================================================
+ *  Information about changes:
+ *
+ *  No.         Date.        Author.      Description.
+ *
+ *
+*/
 import {
     CREATE_DATA_COMBO,
     CLEAR_DATA_COMBO

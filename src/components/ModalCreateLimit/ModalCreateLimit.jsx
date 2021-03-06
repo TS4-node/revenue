@@ -1,3 +1,15 @@
+/*	COMBOS HEROKU
+ *  March 2021
+ *
+ *  Author: Alejandro Montes de Oca TS4
+ *  Description: modal for the capture and save information on "limit of combo"
+ *  =========================================================================
+ *  Information about changes:
+ *
+ *  No.         Date.        Author.      		Description.
+ *
+ *
+*/
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import {
@@ -39,17 +51,13 @@ const initialLimitOfCombo = {
 };
 
 const ModalCreateLimit = ({ modal, setModal, toggle }) => {
-	/*
-	 * Redux
-	 */
 
+	/*    Redux     */
 	const dispatch = useDispatch();
 
 	const addLimitOfCombo = limitOfCombo => dispatch(createLimitOfComboAction(limitOfCombo));
 
-	/*
-	 * Local State
-	 */
+	/*    Local State     */
 	const [limitOfCombo, setLimitOfCombo] = useState(initialLimitOfCombo);
 	const [error, setError] = useState(false);
 	const [saved, setSaved] = useState(false);
