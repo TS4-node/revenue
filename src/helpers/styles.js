@@ -14,7 +14,7 @@
 */
 
 
-//for TabsCreateCombo : div for selector tab active
+//for TabsCreateCombo.jsx : div for selector tab active
 export const handleDivIndicator = (value) => {
     let selector = document.getElementById('selector');
 
@@ -94,6 +94,7 @@ export const customStylesGDS = {
     }
 }
 
+//for TabsCreateCombo.jsx
 export const a11yProps = index => {
     return {
         id: `full-width-tab-${index}`,
