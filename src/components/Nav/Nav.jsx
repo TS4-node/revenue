@@ -1,3 +1,15 @@
+/*	COMBOS HEROKU
+ *  March 2021
+ *
+ *  Author: Alejandro Montes de Oca TS4
+ *  Description: in this component the options are grouped in drop-down menus for navigation
+ *  =========================================================================
+ *  Information about changes:
+ *
+ *  No.         Date.        Author.      		Description.
+ *
+ *
+ */
 import React from 'react'
 import './Nav.css'
 import gridImage from '../../assets/images/nav/Grid.png'

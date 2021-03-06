@@ -1,8 +1,21 @@
+/*  COMBOS HEROKU
+ *  March 2021
+ *
+ *  Author: Alejandro Montes de Oca TS4
+ *  Description: types to consume in the different reducers in the app, each one 
+ *  has a comment in which it is used
+ *  =========================================================================
+ *  Information about changes:
+ *
+ *  No.         Date.        Author.      Description.
+ *
+ *
+*/
+
 /*  limit of Combos */
 export const GET_LIMIT_OF_COMBOS = 'GET_LIMIT_OF_COMBOS';
 export const GET_LIMIT_OF_COMBOS_SUCCESS = 'GET_LIMIT_OF_COMBOS_SUCCESS';
 export const GET_LIMIT_OF_COMBOS_ERROR = 'GET_LIMIT_OF_COMBOS_ERROR'; //no action for the error yet
-
 export const ADD_LIMIT_OF_COMBO = 'ADD_LIMIT_OF_COMBO';
 export const ADD_LIMIT_OF_COMBO_SUCCESS = 'ADD_LIMIT_OF_COMBO_SUCCESS';
 export const ADD_LIMIT_OF_COMBO_ERROR = 'ADD_LIMIT_OF_COMBO_ERROR'; //no action for the error yet
@@ -28,3 +41,8 @@ export const FILTER_SALES_ORGANIZATION = 'FILTER_SALES_ORGANIZATION';
 export const GET_SALES_OFFICE = 'GET_SALES_OFFICE';
 export const SET_SALES_OFFICE = 'SET_SALES_OFFICE';
 export const FILTER_SALES_OFFICE = 'FILTER_SALES_OFFICE';
+
+//clients
+export const GET_CLIENTS = 'GET_CLIENTS';
+export const SET_CLIENTS = 'SET_CLIENTS';
+export const FILTER_CLIENTS = 'FILTER_CLIENTS';

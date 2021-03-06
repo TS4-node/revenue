@@ -1,6 +1,5 @@
-import React from "react";
-import styled from "styled-components";
-
+import React from 'react';
+import styled from 'styled-components';
 
 const TextField = styled.input`
 	height: 30px;
@@ -28,7 +27,7 @@ const Search = styled.button`
 	position: absolute;
 	left: 93.33%;
 	top: -130%;
-	background-image: url("/images/Search.png");
+	background-image: url('/images/Search.png');
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-color: #fff;
@@ -43,25 +42,25 @@ const Search = styled.button`
 `;
 
 const Image = styled.img`
-    position: absolute;
-    left: 97.18%;
-    top: -130%;
-    bottom: 88.95%;
-`
+	position: absolute;
+	left: 97.18%;
+	top: -130%;
+	bottom: 88.95%;
+`;
 
 const TableFilter = ({ filterText, onFilter, onClear }) => {
 	return (
 		<>
 			<TextField
-				id="search"
-				type="text"
-				placeholder="Busca Aquí"
-				aria-label="Search Input"
+				id='search'
+				type='text'
+				placeholder='Busca Aquí'
+				aria-label='Search Input'
 				value={filterText}
 				onChange={onFilter}
 			/>
-			<Search disabled/>
-            <Image src="/images/Desc.png" alt="Desc icon" className='pt-2 float-right'/>
+			<Search disabled />
+			<Image src='/images/Desc.png' alt='Desc icon' className='pt-2 float-right' />
 		</>
 	);
 };

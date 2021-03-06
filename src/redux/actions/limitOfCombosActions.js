@@ -1,3 +1,15 @@
+/*  COMBOS HEROKU
+ *  March 2021
+ *
+ *  Author: Alejandro Montes de Oca TS4
+ *  Description: Actions for the view modal create a limit of combo
+ *  =========================================================================
+ *  Information about changes:
+ *
+ *  No.         Date.        Author.      Description.
+ *
+ *
+*/
 import {
     GET_LIMIT_OF_COMBOS,
     GET_LIMIT_OF_COMBOS_SUCCESS,
@@ -6,22 +18,22 @@ import {
     ADD_LIMIT_OF_COMBO_SUCCESS,
     ADD_LIMIT_OF_COMBO_ERROR
 } from '../types'
-import axiosClient from '../../config/axios'
+import { _getLimitsOfCombos, _postLimitOfCombo } from '../../services/combosGenerator'
 
 
 /*
  * Get all limit of combos
  */
 
-export function getAllLimitOfCombosAction(){
+export function getAllLimitOfCombosAction() {
     return async (dispatch) => {
         dispatch(getAllLimitOfCombos());
         try {
-            const limitOfCombos = await axiosClient.get('/limiteCombos');
-            dispatch( getAllLimitOfCombosSuccess(limitOfCombos.data));
+            const limitOfCombos = await _getLimitsOfCombos();
+            dispatch(getAllLimitOfCombosSuccess(limitOfCombos));
         } catch (error) {
             console.log('this is the error: ', error);
-            dispatch( getAllLimitOfCombosError() );
+            dispatch(getAllLimitOfCombosError());
         }
     }
 }
@@ -34,7 +46,7 @@ const getAllLimitOfCombos = () => ({
 
 const getAllLimitOfCombosSuccess = limitOfCombos => ({
     type: GET_LIMIT_OF_COMBOS_SUCCESS,
-    payload:limitOfCombos
+    payload: limitOfCombos
 })
 
 const getAllLimitOfCombosError = () => ({
@@ -47,15 +59,15 @@ const getAllLimitOfCombosError = () => ({
  * create limit of combo
  */
 
-export function createLimitOfComboAction(limitOfCombo){
+export function createLimitOfComboAction(limitOfCombo) {
     return async (dispatch) => {
-        dispatch( addLimitOfCombo());
+        dispatch(addLimitOfCombo());
         try {
-            await axiosClient.post('/limiteCombos', limitOfCombo);
-            dispatch( addLimitOfComboSuccess(limitOfCombo));
+            await _postLimitOfCombo(limitOfCombo);
+            dispatch(addLimitOfComboSuccess(limitOfCombo));
         } catch (error) {
             console.log('this is the error:', error);
-            dispatch( addLimitOfComboError());
+            dispatch(addLimitOfComboError());
         }
     }
 }
@@ -71,6 +83,6 @@ const addLimitOfComboSuccess = limitOfCombo => ({
 })
 
 const addLimitOfComboError = () => ({
-    type:ADD_LIMIT_OF_COMBO_ERROR,
+    type: ADD_LIMIT_OF_COMBO_ERROR,
     payload: true
 })
