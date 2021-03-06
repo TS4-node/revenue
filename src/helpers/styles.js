@@ -53,7 +53,7 @@ export const customStylesCT = {
     }
 }
 
-//for react-data-table in tabs create combo-> Sales Organization / Sales Office / Customers
+//for react-data-table in tabs create combo-> SalesOrganization.jsx / SalesOffice.jsx / Customers.jsx
 export const customStyles = {
     table: {
         style: {
