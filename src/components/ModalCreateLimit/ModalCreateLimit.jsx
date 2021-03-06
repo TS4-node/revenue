@@ -27,6 +27,7 @@ import {
 } from 'reactstrap';
 
 import assignment_ind from '../../assets/images/assignment_ind.png';
+import { optionsListMCL } from '../../helpers/selectsOption.js'
 import { useSelect } from '../../hooks';
 import { AlertGeneric } from '../index';
 import { createLimitOfComboAction } from '../../redux/actions/limitOfCombosActions';
@@ -34,13 +35,7 @@ import { createLimitOfComboAction } from '../../redux/actions/limitOfCombosActio
 //Simulate DB
 const propietario = 'PPM Corporativo';
 
-const optionsList = [
-	{ value: '', label: '' },
-	{ value: 'CMM Metropolitan', label: 'CMM Metropolitan' },
-	{ value: 'CMM Michoacana', label: 'CMM Michoacana' },
-	{ value: 'CMM Morelos', label: 'CMM Morelos' },
-	{ value: 'CMM Macfe', label: 'CMM Macfe' }
-];
+
 
 const initialLimitOfCombo = {
 	nivelCombo: '',
@@ -61,7 +56,7 @@ const ModalCreateLimit = ({ modal, setModal, toggle }) => {
 	const [limitOfCombo, setLimitOfCombo] = useState(initialLimitOfCombo);
 	const [error, setError] = useState(false);
 	const [saved, setSaved] = useState(false);
-	const [saleStructure, setSaleStructure, SelectStructure] = useSelect('', optionsList, 'Estructura de Ventas');
+	const [saleStructure, setSaleStructure, SelectStructure] = useSelect('', optionsListMCL, 'Estructura de Ventas');
 
 	const handleChange = e => {
 		setLimitOfCombo({
