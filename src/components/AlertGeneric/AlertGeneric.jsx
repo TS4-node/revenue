@@ -13,6 +13,7 @@
 
 
 import React from 'react';
+import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/core/styles';
 import Alert from '@material-ui/lab/Alert';
 
@@ -33,5 +34,15 @@ const AlertGeneric = ({ severity, text }) => {
 		</div>
 	);
 };
+
+AlertGeneric.propTypes = {
+	severity: PropTypes.string.isRequired,
+	text: PropTypes.string.isRequired
+}
+
+AlertGeneric.defaultProps = {
+	severity: 'success',
+	text: 'Simple Alert'
+}
 
 export default AlertGeneric;

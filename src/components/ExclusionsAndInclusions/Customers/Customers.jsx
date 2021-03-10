@@ -11,7 +11,7 @@
  *
 */
 import React from 'react';
-import { Col, Container, Row } from 'reactstrap';
+import { Button, Col, Container, Row } from 'reactstrap';
 
 import TabsTable from './TabsTable';
 
@@ -55,7 +55,7 @@ const Customers = ({ setView, customers }) => {
 				)} */}
 			</Container>
 
-			{/* <Row className='mx-auto' style={{marginTop:'5rem'}}>
+			{/* <Row className='mx-auto' style={{marginTop:'12rem'}}>
 				<Col smd='10' md='10' className='d-flex justify-content-around' style={{ marginLeft: '5rem' }}>
 					<Button
 						className='boton-exclusion'

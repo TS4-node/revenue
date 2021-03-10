@@ -15,6 +15,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Container, Row, Col, Label, Input, Button } from 'reactstrap';
 import { TextField, Checkbox, FormControlLabel } from '@material-ui/core';
+import { PropTypes } from 'prop-types';
 
 import './ComboData.css';
 import assignment_ind from '../../assets/images/assignment_ind.png';
@@ -371,5 +372,9 @@ const ComboData = ({ setValue }) => {
 		</Container>
 	);
 };
+
+ComboData.propTypes = {
+	setValue: PropTypes.func.isRequired
+}
 
 export default ComboData;
