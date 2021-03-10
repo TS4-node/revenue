@@ -29,6 +29,7 @@ const useStyles = makeStyles(theme => ({
 	root: {
 		backgroundColor: theme.palette.background.paper,
 		width: 1200,
+		minHeight: '55rem',
 		margin: '0 auto'
 	},
 	Tab: {
@@ -93,13 +94,13 @@ const TabsCreateCombo = () => {
 			</AppBar>
 
 			{/* this div is the selector in tab active on capture of combo */}
-			<div id='selector' style={{ backgroundColor: '#1890ff', height: '.22rem', left: '0px', width: '300px' }}></div>
+			<div id='selector'></div>
 
 			<SwipeableViews
 				axis='x'
 				index={value}
 				onChangeIndex={handleChangeIndex}
-				style={{ paddingTop: '0rem', height: '45rem', overflow: 'hidden' }}
+				style={{ paddingTop: '0rem', height: '55rem', overflow: 'hidden' }}
 			>
 				<TabPanel value={value} index={0} dir={theme.direction}>
 					<ComboData setValue={setValue} />
