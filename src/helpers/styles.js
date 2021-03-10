@@ -101,3 +101,37 @@ export const a11yProps = index => {
         'aria-controls': `full-width-tabpanel-${index}`
     };
 }
+
+
+//DropzoneExclusions.jsx
+export const baseStyle = {
+	textAlign: 'center',
+	margintop: '1rem',
+	width: 'auto',
+	borderStyle: 'dashed',
+	borderWidth: 2,
+	borderColor: '#eeeeee',
+	boxsizing: 'border-box',
+	transition: '0.3s ease all'
+};
+
+export const baseStyleDrop = {
+	textAlign: 'center',
+	margintop: '1rem',
+	width: 'auto',
+	boxsizing: 'border-box',
+	transition: '0.3s ease all'
+};
+
+export const activeStyle = {
+	borderColor: '#1890ff'
+};
+
+export const acceptStyle = {
+	borderColor: '#008f39',
+	background: '#bdecb6'
+};
+
+export const rejectStyle = {
+	borderColor: '#ff1744'
+};
