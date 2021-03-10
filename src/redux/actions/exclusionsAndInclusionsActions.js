@@ -18,11 +18,15 @@ import {
 	SET_REGIONAL_SALES_DIRECTORATE,
 	SET_SALES_ORGANIZATION,
 	SET_SALES_OFFICE,
-	SET_CLIENTS,
+	SET_CLIENTS_EXCLUSION,
+	SET_CLIENTS_INCLUSION,
+	SET_CLIENTS_EXCLUSION_CSV,
+	SET_FILENAME_EXCLUSION,
+	CLEAR_EXCLUSION,
+
 	FILTER_REGIONAL_SALES_DIRECTORATE,
 	FILTER_SALES_ORGANIZATION,
-	FILTER_SALES_OFFICE,
-	FILTER_CLIENTS
+	FILTER_SALES_OFFICE
 } from '../types';
 import { _getRegionalDirectorateSales, _getsalesOrganization, _getsalesOffice, _getCustomers } from '../../services/combosGenerator'
 
@@ -131,19 +135,68 @@ const filteredSalesOffice = salesOffice => ({
 /*
  * Set clients
  */
-export function setClientsAction(clients) {
+
+//Exclusion in Select Tables
+export function setClientsExclusionAction(clients) {
 	return dispatch => {
-		dispatch(setClients(clients));
-		dispatch(filteredClients(clients));
+		dispatch(setClientsExclusion(clients));
+		// dispatch(filteredClients(clients));
 	};
 }
 
-const setClients = salesOffice => ({
-	type: SET_SALES_OFFICE,
-	payload: salesOffice
+const setClientsExclusion = clients => ({
+	type: SET_CLIENTS_EXCLUSION,
+	payload: clients
 });
 
-const filteredClients = salesOffice => ({
-	type: FILTER_SALES_OFFICE,
-	payload: salesOffice
+//Exclusion from CSV
+export function setClientsExclusionCSVAction(clients) {
+	return dispatch => {
+		dispatch(setClientsExclusionCSV(clients));
+		// dispatch(filteredClients(clients));
+	};
+}
+
+const setClientsExclusionCSV = clients => ({
+	type: SET_CLIENTS_EXCLUSION_CSV,
+	payload: clients
+});
+
+//Exclusion from react-data-table
+export function setFileNameExclusionsAction(fileNames) {
+	return dispatch => {
+		dispatch(setFileNameExclusion(fileNames));
+		// dispatch(filteredClients(clients));
+	};
+}
+
+const setFileNameExclusion = fileNames => ({
+	type: SET_FILENAME_EXCLUSION,
+	payload: fileNames
+});
+
+//Clear Exclusions
+export function clearExclusionsAction() {
+	return dispatch => {
+		dispatch(clearExclusions());
+	};
+}
+
+const clearExclusions = () => ({
+	type: CLEAR_EXCLUSION,
+});
+
+
+
+//Inclusion
+export function setClientsInclusionAction(clients) {
+	return dispatch => {
+		dispatch(setClientsInclusion(clients));
+		// dispatch(filteredClients(clients));
+	};
+}
+
+const setClientsInclusion = clients => ({
+	type: SET_CLIENTS_INCLUSION,
+	payload: clients
 });

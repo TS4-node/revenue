@@ -18,11 +18,16 @@ import {
 	SET_REGIONAL_SALES_DIRECTORATE,
 	SET_SALES_ORGANIZATION,
 	SET_SALES_OFFICE,
-	SET_CLIENTS,
+	SET_CLIENTS_EXCLUSION,
+	SET_CLIENTS_INCLUSION,
+	SET_CLIENTS_EXCLUSION_CSV,
+	SET_FILENAME_EXCLUSION,
+	CLEAR_EXCLUSION,
+
 	FILTER_REGIONAL_SALES_DIRECTORATE,
 	FILTER_SALES_ORGANIZATION,
-	FILTER_SALES_OFFICE,
-	FILTER_CLIENTS
+	FILTER_SALES_OFFICE
+
 } from '../types';
 
 const initialState = {
@@ -34,12 +39,13 @@ const initialState = {
 	SET_regionalSalesDirectorate: [],
 	SET_salesOrganization: [],
 	SET_salesOffice: [],
-	SET_clients: [],
+	SET_clientsExclusion: [],
+	SET_clientsInclusion: [],
+	fileNamesExclusions: [],
 
 	FILTERED_regionalSalesDirectorate: [],
 	FILTERED_salesOrganization: [],
-	FILTERED_salesOffice: [],
-	FILTERED_clients: []
+	FILTERED_salesOffice: []
 };
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -93,12 +99,36 @@ export default function (state = initialState, { type, payload }) {
 				SET_salesOffice: payload
 			};
 
-		// case SET_CLIENTS:
-		//     return {
-		//         ...state,
-		//         SET_clients: payload
-		//     };
+		case SET_CLIENTS_EXCLUSION:
+		    return {
+		        ...state,
+		        SET_clientsExclusion: state.SET_clientsExclusion.concat(payload)
+		    };
 
+		case SET_CLIENTS_EXCLUSION_CSV:
+			return {
+				...state,
+				SET_clientsExclusion: state.SET_clientsExclusion.concat(payload)
+			};
+
+		case SET_FILENAME_EXCLUSION:
+			return{
+				...state,
+				fileNamesExclusions: state.fileNamesExclusions.concat(payload)
+			}
+
+		case CLEAR_EXCLUSION:
+			return{
+				...state,
+				fileNamesExclusions: [],
+				SET_clientsExclusion: []
+			}
+
+		case SET_CLIENTS_INCLUSION:
+			return {
+				...state,
+				SET_clientsInclusion: payload
+			};
 		/*
 		 *  FILTER
 		*/
@@ -150,23 +180,13 @@ export default function (state = initialState, { type, payload }) {
 					})
 			};
 
-		// case FILTER_CLIENTS:
-		//     return {
-		//         ...state,
-		//         FILTERED_clients: state.GET_clients.filter(client => {
-		//             let ok = false;
-		//             for (let i = 0; i < payload.length && !ok; i++) {
-		//                 // Corta cuando no hay mas following o cuando ya se encontró uno
-		//                 let office = payload[i];
-		//                 if (office['id'] == client['IdOV']) {
-		//                     ok = true;
-		//                 }
-		//             }
-		//             return ok;
-		//         })
-		//     };
-
 		default:
 			return state;
 	}
 }
+
+function getUniqueListBy(arr, key) {
+    return [...new Map(arr.map(item => [item[key], item])).values()]
+}
+
+// state.fileNamesExclusions.length === 0 ?state.fileNamesExclusions.concat(payload) : getUniqueListBy(state.fileNamesExclusions.concat(payload), 'id')
