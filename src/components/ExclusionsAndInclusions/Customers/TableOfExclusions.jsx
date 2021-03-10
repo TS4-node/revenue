@@ -14,16 +14,19 @@ import React from 'react';
 import { Row, Col } from 'reactstrap';
 import { Radio } from '@material-ui/core';
 
+
 import DataTable from 'react-data-table-component';
+import DropzoneExclusions from './DropzoneExclusions'
 import { optionsPagination, columnsExclusions } from '../../../helpers/reactDataTable';
 import { customStyles } from '../../../helpers/styles';
 
 
 const TableOfExclusions = ({ foundItem, handleRowSelect, clear }) => {
+
 	return (
 		<>
-			<Row>
-				<Col sm='12'>
+			<Row >
+				<Col sm='12' md='12'>
 					<DataTable
 						columns={columnsExclusions}
 						data={foundItem}
@@ -44,8 +47,8 @@ const TableOfExclusions = ({ foundItem, handleRowSelect, clear }) => {
 				</Col>
 			</Row>
             <Row>
-                <Col>
-                    
+                <Col sm='12' md='12'>
+                    <DropzoneExclusions />
                 </Col>
             </Row>
 		</>
