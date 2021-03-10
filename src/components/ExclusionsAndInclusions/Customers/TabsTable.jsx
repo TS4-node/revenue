@@ -11,17 +11,25 @@
  *
 */
 import React, { useState } from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap';
-import { FormControlLabel, Checkbox, Radio } from '@material-ui/core';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Button } from 'reactstrap';
+import { FormControlLabel, Checkbox } from '@material-ui/core';
 import classnames from 'classnames';
+import { useDispatch } from 'react-redux';
 
 import './Customers.css';
 import TableFilter from '../TableFilter';
 import { filterCustomers } from '../../../helpers/tableSearchRules';
 import TableOfExclusions from './TableOfExclusions';
 import TableOfInclusions from './TableOfInclusions';
+import ModalExclusions from './ModalExclusions';
+import { setClientsExclusionAction } from '../../../redux/actions/exclusionsAndInclusionsActions';
 
-const TabsTable = ({ customers }) => {
+
+const TabsTable = ({ customers }) =>{
+
+	const dispatch = useDispatch();
+
+	const setCostumersExclusion = customers => dispatch(setClientsExclusionAction(customers) );
 
 	const newCustomers = customers && customers.map( item => {
 		let obj = {};
@@ -44,6 +52,7 @@ const TabsTable = ({ customers }) => {
 	const [rowSelectExclusions, setRowSelectExclusions] = useState([]);
 	//for DataTable -> Inclusions
 	const [rowSelectInclusions, setRowSelectInclusions] = useState([]);
+	const [error, setError] = useState(false);
 
 
 
@@ -57,12 +66,27 @@ const TabsTable = ({ customers }) => {
 		filterCustomers(searchItem, idSAP, setFoundItem, newCustomers);
 	};
 
-	const handleRowSelectExclusions = state => setRowSelectExclusions(state.selectedRows);
+	const handleRowSelectExclusions = state => {
+		setRowSelectExclusions(state.selectedRows);
+	};
 
 	const handleRowSelectInclusions = state => setRowSelectInclusions(state.selectedRows);
 
+	const handleClickExclusions = () => {
+
+		setCostumersExclusion(rowSelectExclusions);
+		setModalExclusion(true);
+
+	}
+
+	//Modals
+	const [modalExclusion, setModalExclusion] = useState(false);
+
+	const toggleExclusions = () => setModalExclusion(!modalExclusion);
+
 
 	return (
+		<>
 		<div>
 			<TableFilter name={'search'} value={searchItem} onChange={handleChangeInputSearch} />
 			<FormControlLabel
@@ -99,8 +123,9 @@ const TabsTable = ({ customers }) => {
 						handleRowSelect={handleRowSelectExclusions}
 						clear={clear}
 					/>
-				</TabPane>
 
+
+				</TabPane>
 				<TabPane tabId='2'>
 					<TableOfInclusions
 						foundItem={foundItem}
@@ -111,6 +136,27 @@ const TabsTable = ({ customers }) => {
 
 			</TabContent>
 		</div>
+
+		{ activeTab === '1' &&
+			(
+				<div className='mt-4 d-flex justify-content-beetwen' style={{position:'relative', left:'-6%'}}>
+					<Button
+						className='boton-exclusion mr-2'
+					>
+						Cancelar
+					</Button>
+					<Button
+						className='boton-exclusion ml-2'
+						onClick={handleClickExclusions}
+					>
+						{rowSelectExclusions.length === 0 ?'Continuar' :'Excluir'}
+					</Button>
+				</div>
+
+			)
+		}
+		<ModalExclusions toggleExclusions={toggleExclusions} modal={modalExclusion} setActiveTab={setActiveTab}/>
+		</>
 	);
 };
 
