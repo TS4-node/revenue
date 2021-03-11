@@ -360,7 +360,7 @@ const ComboData = ({ setValue }) => {
 			</Row>
 			<Row className='mt-1 px-3'>
 				<Button className=' boton-gris boton-combo' type='submit' onClick={saveCombo}>
-					Guardar
+					Continuar
 				</Button>
 			</Row>
 

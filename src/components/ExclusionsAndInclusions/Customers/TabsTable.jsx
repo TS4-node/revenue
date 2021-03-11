@@ -22,14 +22,18 @@ import { filterCustomers } from '../../../helpers/tableSearchRules';
 import TableOfExclusions from './TableOfExclusions';
 import TableOfInclusions from './TableOfInclusions';
 import ModalExclusions from './ModalExclusions';
-import { setClientsExclusionAction } from '../../../redux/actions/exclusionsAndInclusionsActions';
+import ModalInclusions from './ModalInclusions';
+import { setClientsExclusionAction, setClientsInclusionAction, clearExclusionsAction, clearInclusionsAction } from '../../../redux/actions/exclusionsAndInclusionsActions';
 
 
-const TabsTable = ({ customers }) =>{
+const TabsTable = ({ setView, setValue, customers }) =>{
 
 	const dispatch = useDispatch();
 
 	const setCostumersExclusion = customers => dispatch(setClientsExclusionAction(customers) );
+	const setCostumersInclusion = customers => dispatch(setClientsInclusionAction(customers) );
+    const clearAllExclusions = () => dispatch( clearExclusionsAction());
+	const clearAllInclusions = () => dispatch( clearInclusionsAction());
 
 	const newCustomers = customers && customers.map( item => {
 		let obj = {};
@@ -52,110 +56,142 @@ const TabsTable = ({ customers }) =>{
 	const [rowSelectExclusions, setRowSelectExclusions] = useState([]);
 	//for DataTable -> Inclusions
 	const [rowSelectInclusions, setRowSelectInclusions] = useState([]);
-	const [error, setError] = useState(false);
+
+	//Modals
+	const [modalExclusion, setModalExclusion] = useState(false);
+	const [modalInclusion, setModalInclusion] = useState(false);
 
 
-
+	//for Tabs
 	const toggle = tab => activeTab !== tab && setActiveTab(tab);
 
+	//for the TableFilter
 	const handleChangeCheckbox = () => setIdSAP(!idSAP);
 
+	//for Data on DataTable
 	const handleChangeInputSearch = e => {
 		e.persist();
 		setSearchItem(e.target.value);
 		filterCustomers(searchItem, idSAP, setFoundItem, newCustomers);
 	};
 
-	const handleRowSelectExclusions = state => {
-		setRowSelectExclusions(state.selectedRows);
-	};
+	//for DataTable -> Exclusions
+	const handleRowSelectExclusions = state => setRowSelectExclusions(state.selectedRows);
 
-	const handleRowSelectInclusions = state => setRowSelectInclusions(state.selectedRows);
-
-	const handleClickExclusions = () => {
-
-		setCostumersExclusion(rowSelectExclusions);
-		setModalExclusion(true);
-
+	const handleCancelExclusions = () => {
+		setRowSelectExclusions([]);
+		clearAllExclusions();
+		setView(2);
 	}
 
-	//Modals
-	const [modalExclusion, setModalExclusion] = useState(false);
+	const handleClickExclusions = () => {
+		setCostumersExclusion(rowSelectExclusions);
+		setModalExclusion(true);
+	}
 
+	//for DataTable -> Inclusions
+	const handleRowSelectInclusions = state => setRowSelectInclusions(state.selectedRows);
+
+	const handleCancelInclusions = () => {
+		setRowSelectInclusions([]);
+		clearAllInclusions();
+		toggle('1');
+	}
+
+	const handleClickInclusions = () => {
+		setCostumersInclusion(rowSelectInclusions);
+		setModalInclusion(true);
+	}
+
+	//for modals
 	const toggleExclusions = () => setModalExclusion(!modalExclusion);
+	const toggleInclusions = () => setModalInclusion(!modalInclusion);
+
+
 
 
 	return (
 		<>
-		<div>
-			<TableFilter name={'search'} value={searchItem} onChange={handleChangeInputSearch} />
-			<FormControlLabel
-				value='idSAP'
-				control={<Checkbox color='primary' onChange={handleChangeCheckbox} />}
-				label='Buscar por lista de ID de SAP de la oficina de ventas'
-				labelPlacement='end'
-			/>
-			<Nav tabs>
-				<NavItem>
-					<NavLink
-						className={classnames({ active: activeTab === '1' })}
-						onClick={() => {
-							toggle('1');
-						}}>
-						Exclusiones
-					</NavLink>
-				</NavItem>
-				<NavItem>
-					<NavLink
-						className={classnames({ active: activeTab === '2' })}
-						onClick={() => {
-							toggle('2');
-						}}>
-						Inclusiones
-					</NavLink>
-				</NavItem>
-			</Nav>
-			<TabContent activeTab={activeTab}>
+			<div>
+				<TableFilter name={'search'} value={searchItem} onChange={handleChangeInputSearch} />
+				<FormControlLabel
+					value='idSAP'
+					control={<Checkbox color='primary' onChange={handleChangeCheckbox} />}
+					label='Buscar por lista de ID de SAP de la oficina de ventas'
+					labelPlacement='end'
+				/>
+				<Nav tabs>
+					<NavItem>
+						<NavLink
+							className={classnames({ active: activeTab === '1' })}
+							onClick={() => {
+								toggle('1');
+							}}>
+							Exclusiones
+						</NavLink>
+					</NavItem>
+					<NavItem>
+						<NavLink
+							className={classnames({ active: activeTab === '2' })}
+							onClick={() => {
+								toggle('2');
+							}}>
+							Inclusiones
+						</NavLink>
+					</NavItem>
+				</Nav>
+				<TabContent activeTab={activeTab}>
+					<TabPane tabId='1'>
+						<TableOfExclusions
+							foundItem={foundItem}
+							handleRowSelect={handleRowSelectExclusions}
+							clear={clear}
+						/>
+					</TabPane>
+					<TabPane tabId='2'>
+						<TableOfInclusions
+							foundItem={foundItem}
+							handleRowSelect={handleRowSelectInclusions}
+							clear={clear}
+						/>
+					</TabPane>
+				</TabContent>
+			</div>
 
-				<TabPane tabId='1'>
-					<TableOfExclusions
-						foundItem={foundItem}
-						handleRowSelect={handleRowSelectExclusions}
-						clear={clear}
-					/>
-
-
-				</TabPane>
-				<TabPane tabId='2'>
-					<TableOfInclusions
-						foundItem={foundItem}
-						handleRowSelect={handleRowSelectInclusions}
-						clear={clear}
-					/>
-				</TabPane>
-
-			</TabContent>
-		</div>
-
-		{ activeTab === '1' &&
-			(
-				<div className='mt-4 d-flex justify-content-beetwen' style={{position:'relative', left:'-6%'}}>
-					<Button
-						className='boton-exclusion mr-2'
-					>
+			{activeTab === '1' && (
+				<div className='mt-4 d-flex justify-content-beetwen' style={{ position: 'relative', left: '-6%' }}>
+					<Button className='boton-exclusion mr-2' onClick={handleCancelExclusions}>
 						Cancelar
 					</Button>
-					<Button
-						className='boton-exclusion ml-2'
-						onClick={handleClickExclusions}
-					>
-						{rowSelectExclusions.length === 0 ?'Continuar' :'Excluir'}
+					<Button className='boton-exclusion ml-2' onClick={handleClickExclusions}>
+						{rowSelectExclusions.length === 0 ? 'Continuar' : 'Excluir'}
 					</Button>
 				</div>
+			)}
+			{activeTab === '2' && (
+				<div className='mt-4 d-flex justify-content-beetwen' style={{ position: 'relative', left: '-6%' }}>
+					<Button className='boton-exclusion mr-2' onClick={handleCancelInclusions}>
+						Cancelar
+					</Button>
+					<Button className='boton-exclusion ml-2' onClick={handleClickInclusions}>
+						{rowSelectInclusions.length === 0 ? 'Continuar' : 'Incluir'}
+					</Button>
+				</div>
+			)}
+			<ModalExclusions
+				toggleExclusions={toggleExclusions}
+				modal={modalExclusion}
+				setActiveTab={setActiveTab}
+				setRowSelectExclusions={setRowSelectExclusions}
+			/>
 
-			)
-		}
-		<ModalExclusions toggleExclusions={toggleExclusions} modal={modalExclusion} setActiveTab={setActiveTab}/>
+			<ModalInclusions
+				toggleInclusions={toggleInclusions}
+				modal={modalInclusion}
+				setActiveTab={setActiveTab}
+				setRowSelectInclusions={setRowSelectInclusions}
+				setValue={setValue}
+			/>
 		</>
 	);
 };

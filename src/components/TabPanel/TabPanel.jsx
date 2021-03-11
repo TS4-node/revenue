@@ -24,8 +24,11 @@ const TabPanel = props => {
 			id={`full-width-tabpanel-${index}`}
 			aria-labelledby={`full-width-tab-${index}`}
 			style={{ height: '55rem', overflow: 'hidden' }}
-			{...other}>
+			className={'py-0'}
+			{...other}
+		>
 			{value === index && <Box p={1}>{children}</Box>}
+
 		</div>
 	);
 };

@@ -84,10 +84,10 @@ const SalesOffice = ({ setView, salesOffice }) => {
 					height: '28rem',
 					paddingLeft: '8rem'
 				}}
-				className='pt-2 mt-1'>
+				className='pt-0 mt-0'>
 				<Row>
 					<Col sm='10' md='10' className='text-center'>
-						<h3 className='encabezado text-center mt-3 '>Oficina de Ventas</h3>
+						<h3 className='encabezado text-center mt-2'>Oficina de Ventas</h3>
 					</Col>
 				</Row>
 
@@ -130,7 +130,7 @@ const SalesOffice = ({ setView, salesOffice }) => {
 				)}
 			</Container>
 
-			<Row className='mt-5 mx-auto' style={{ paddingTop: '3.5rem' }}>
+			<Row className='mt-4 mx-auto' style={{ paddingTop: '3.5rem' }}>
 				<Col smd='10' md='10' className='d-flex justify-content-around' style={{ marginLeft: '5rem' }}>
 					<Button className='boton-exclusion' onClick={handleButtonCancel}>
 						Cancelar

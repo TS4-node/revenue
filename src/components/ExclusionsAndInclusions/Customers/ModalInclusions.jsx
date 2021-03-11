@@ -3,15 +3,16 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Row, Col } from 're
 import { useDispatch, useSelector } from 'react-redux';
 
 import OKimage from '../../../assets/images/ok.png';
-import { clearExclusionsAction } from '../../../redux/actions/exclusionsAndInclusionsActions';
+import { clearInclusionsAction } from '../../../redux/actions/exclusionsAndInclusionsActions';
 
-const ModalExclusions = ({ toggleExclusions, modal, setActiveTab, setRowSelectExclusions }) => {
+
+const ModalInclusions = ({ toggleInclusions, modal, setActiveTab, setValue, setRowSelectInclusions }) => {
 
     const dispatch = useDispatch();
 
-    const clearAllExclusions = () => dispatch( clearExclusionsAction());
+    const clearAllInclusions = () => dispatch( clearInclusionsAction());
 
-	const fileNames = useSelector(state => state.exclusionsAndInclusions.fileNamesExclusions);
+	const fileNames = useSelector(state => state.exclusionsAndInclusions.fileNamesInclusions);
 
 	const [nestedModal, setNestedModal] = useState(false);
 	const [closeAll, setCloseAll] = useState(false);
@@ -24,19 +25,20 @@ const ModalExclusions = ({ toggleExclusions, modal, setActiveTab, setRowSelectEx
 	const toggleAll = () => {
 		setNestedModal(!nestedModal);
 		setCloseAll(true);
-        setActiveTab('2');
+        setValue(2);
 	};
 
     const toggleClear = () => {
-		setRowSelectExclusions([]);
-        clearAllExclusions();
-        toggleExclusions();
+		setRowSelectInclusions([]);
+        clearAllInclusions();
+        toggleInclusions();
+        setActiveTab('1');
     }
 
 	return (
 		<div>
-			<Modal isOpen={modal} toggle={toggleExclusions} centered size='sm'>
-				<ModalHeader toggle={toggleExclusions}>
+			<Modal isOpen={modal} toggle={toggleInclusions} centered size='sm'>
+				<ModalHeader toggle={toggleInclusions}>
 						{fileNames.length !== 0
 							?(
 								<div className='ml-4 text-center header-modal'>
@@ -45,12 +47,13 @@ const ModalExclusions = ({ toggleExclusions, modal, setActiveTab, setRowSelectEx
 							)
 							:(
 								<div className='ml-4 text-center header-modal'>
-									¿Está seguro de excluir los registros seleccionados?
+									¿Está seguro de incluir los registros seleccionados?
 								</div>
 							)
 						}
 				</ModalHeader>
-				{fileNames.length === 0
+
+                    {fileNames.length === 0
                         ? null
                         :(
                             <ModalBody className='mb-0'>
@@ -63,7 +66,8 @@ const ModalExclusions = ({ toggleExclusions, modal, setActiveTab, setRowSelectEx
                                 </ul>
                             </ModalBody>
                         )
-				}
+                    }
+
 				<Row className='px-4 mb-3'>
 					<Col sm='6' md='6'>
 						<Button className='button-ghost' block onClick={toggleClear}>
@@ -82,14 +86,14 @@ const ModalExclusions = ({ toggleExclusions, modal, setActiveTab, setRowSelectEx
             <Modal
                 isOpen={nestedModal}
                 toggle={toggleNested}
-                onClosed={closeAll ? toggleExclusions : undefined}
+                onClosed={closeAll ? toggleInclusions : undefined}
                 centered
                 size='sm'>
                 <ModalBody>
                     <div className='text-center'>
                         <img src={OKimage} alt="ok logo" style={{width:'40px', height:'40px'}} className='mb-3'/>
                         <div className='ml-4 text-center header-modal'>
-                            Los clientes han sido <br /> excluidos con éxito
+                            Los clientes han sido <br /> incluidos con éxito
                         </div>
                     </div>
                 </ModalBody>
@@ -104,4 +108,4 @@ const ModalExclusions = ({ toggleExclusions, modal, setActiveTab, setRowSelectEx
 	);
 };
 
-export default ModalExclusions;
+export default ModalInclusions;

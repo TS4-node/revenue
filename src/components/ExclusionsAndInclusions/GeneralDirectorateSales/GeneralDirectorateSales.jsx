@@ -55,8 +55,8 @@ const GeneralDirectorateSales =  ({setView, generalDirectorateSales, setValue /*
     const handleButtonCancel = () => {
         setClear(!clear);
         setRowSelect({});
-        setView(0)
-        setValue(0)
+        setView(0);
+        setValue(0);
     }
 
     const handleButtonContinue = () => {
@@ -72,12 +72,12 @@ const GeneralDirectorateSales =  ({setView, generalDirectorateSales, setValue /*
         <>
         <Container
             style={{ fontSize: '14px', width: '60rem', height: '28rem', paddingLeft:'8rem'}}
-            className='pt-2 mt-1'
+            className='pt-0 mt-0'
         >
 
             <Row>
                 <Col sm='10' md='10'  className='text-center'>
-                    <h3 className='encabezado text-center mt-3 '>
+                    <h3 className='encabezado text-center mt-2 '>
                         Direccion Regional de Ventas
                     </h3>
                 </Col>
@@ -138,7 +138,7 @@ const GeneralDirectorateSales =  ({setView, generalDirectorateSales, setValue /*
         {/* {
             !loading &&
                 ( */}
-                    <Row className='mt-3 mx-auto'>
+                    <Row className='mt-1 mx-auto'>
                         <Col smd='10' md='10' className='d-flex justify-content-around' style={{marginLeft:'5rem'}}>
                             <Button
                                 className='boton-exclusion'

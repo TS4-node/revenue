@@ -110,7 +110,9 @@ const TabsCreateCombo = () => {
 					<ExclusionsAndInclusions view={view} setView={setView} setValue={setValue} />
 				</TabPanel>
 
-				<TabPanel value={value} index={2} dir={theme.direction}></TabPanel>
+				<TabPanel value={value} index={2} dir={theme.direction}>
+					<h1>Busqueda de materiales</h1>
+				</TabPanel>
 
 				<TabPanel value={value} index={3} dir={theme.direction}>
 					<SumaryCombo />

@@ -33,8 +33,8 @@ const ExclusionsAndInclusions = ({ view, setView, setValue }) => {
 	};
 
 	return (
-		<Container>
-			<SwipeableViews axis='x' index={view} onChangeIndex={handleChangeIndex}>
+		<Container className='py-0 my-0'>
+			<SwipeableViews axis='x' index={view} onChangeIndex={handleChangeIndex} className='my-0 py-0'>
 				<TabPanel value={view} index={0} dir={theme.direction}>
 					<GeneralDirectorateSales
 						setView={setView}
@@ -52,7 +52,7 @@ const ExclusionsAndInclusions = ({ view, setView, setValue }) => {
 				</TabPanel>
 
 				<TabPanel value={view} index={3} dir={theme.direction}>
-					<Customers setView={setView} customers={filteredCustomers} />
+					<Customers setView={setView} setValue={setValue} customers={filteredCustomers} />
 				</TabPanel>
 			</SwipeableViews>
 		</Container>

@@ -13,12 +13,11 @@
 import React from 'react';
 import { Row, Col } from 'reactstrap';
 import { Radio } from '@material-ui/core';
-
-
 import DataTable from 'react-data-table-component';
+
 import DropzoneExclusions from './DropzoneExclusions'
 import { optionsPagination, columnsExclusions } from '../../../helpers/reactDataTable';
-import { customStyles } from '../../../helpers/styles';
+import { customStyles_ } from '../../../helpers/styles';
 
 
 const TableOfExclusions = ({ foundItem, handleRowSelect, clear }) => {
@@ -30,7 +29,7 @@ const TableOfExclusions = ({ foundItem, handleRowSelect, clear }) => {
 					<DataTable
 						columns={columnsExclusions}
 						data={foundItem}
-						customStyles={customStyles}
+						customStyles={customStyles_}
 						noDataComponent={<span>No se encontró ningún elemento</span>}
 						paginationComponentOptions={optionsPagination}
 						selectableRows

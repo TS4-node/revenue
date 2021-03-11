@@ -19,20 +19,19 @@ import shapeImage from '../../../assets/images/Shape.png';
 import excelImage from '../../../assets/images/excel.png';
 import { baseStyle, baseStyleDrop, activeStyle, acceptStyle, rejectStyle } from '../../../helpers/styles';
 import { readCSV } from '../../../helpers/dropzone';
-import { setClientsExclusionCSVAction, setFileNameExclusionsAction } from '../../../redux/actions/exclusionsAndInclusionsActions';
+import { setClientsInclusionCSVAction, setFileNameInclusionsAction } from '../../../redux/actions/exclusionsAndInclusionsActions';
 
-const DropzoneExclusions = () => {
+const DropzoneInclusions = () => {
 
 	const dispatch = useDispatch();
 
-	const setCustomerExclusionCSV = customers => dispatch( setClientsExclusionCSVAction(customers) );
-	const setFileNamesExclusion = fileNames => dispatch( setFileNameExclusionsAction(fileNames) );
+	const setCustomerInclusionCSV = customers => dispatch( setClientsInclusionCSVAction(customers) );
+	const setFileNamesInclusion = fileNames => dispatch( setFileNameInclusionsAction(fileNames) );
 
-	const exclusions = useSelector(state => state.exclusionsAndInclusions.fileNamesExclusions);
-
+	const inclusions = useSelector(state => state.exclusionsAndInclusions.fileNamesInclusions);
 
 	/*	 Local Estate	*/
-	const [dataCSV, setDataCSV] = useState(exclusions);
+	const [dataCSV, setDataCSV] = useState(inclusions);
 
 
 	// eslint-disable-next-line react-hooks/exhaustive-deps
@@ -42,7 +41,7 @@ const DropzoneExclusions = () => {
 	});
 
 	useEffect(() => {
-		setCustomerExclusionCSV(dataCSV);
+		setCustomerInclusionCSV(dataCSV);
 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [dataCSV])
 
@@ -56,19 +55,20 @@ const DropzoneExclusions = () => {
 
 	useEffect(() =>{
 		const fileNames = acceptedFiles.map(file => file.path);
-		setFileNamesExclusion(fileNames);
+		setFileNamesInclusion(fileNames);
 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	},[acceptedFiles]);
 
 	const style = useMemo(
 		() => ({
-			...(exclusions.length !== 0 ? baseStyleDrop : baseStyle),
+			...(inclusions.length !== 0 ? baseStyleDrop : baseStyle),
 			...(isDragActive ? activeStyle : {}),
 			...(isDragAccept ? acceptStyle : {}),
 			...(isDragReject ? rejectStyle : {})
 		}),
-		[isDragActive, isDragAccept, isDragReject, exclusions]
+		[isDragActive, isDragAccept, isDragReject, inclusions]
 	);
+
 
 
 	const fileList = acceptedFiles.map(file => (
@@ -83,10 +83,10 @@ const DropzoneExclusions = () => {
 		<div style={{ marginTop: '.3rem', width:'45rem' }}>
 			<div
 				{...getRootProps({ style })}
-				className={acceptedFiles.length === 0 ? 'd-flex flex-column align-items-center pt-1 mt-0' : 'd-flex flex-column align-items-center pt-1 mt-0'}>
+				className={acceptedFiles.length === 0 ? 'd-flex flex-column align-items-center pt-1 MT-0' : 'd-flex flex-column align-items-center pt-1 mt-0'}>
 				<input {...getInputProps()} />
 
-				{exclusions.length === 0
+				{inclusions.length === 0
 					? (
 					<>
 						<img
@@ -106,7 +106,7 @@ const DropzoneExclusions = () => {
 				) : (
 					<>
 						<Container>
-							<Row className='mb-2 d-flex justify-content-between'>
+                            <Row className='mb-2 d-flex justify-content-between'>
 								<div>
 									<p className='text-upload-success'>Clientes Totales: { dataCSV.length }</p>
 								</div>
@@ -117,11 +117,13 @@ const DropzoneExclusions = () => {
 								</div>
 							</Row>
 							<Row>
-								<p className='text-upload-success'>Carga tus archivos para excluir clientes</p>
+								<p className='text-upload-success'>Carga tus archivos para incluir clientes</p>
 							</Row>
 							<Row className='d-flex align-items-center'>
 								<Col sm='8' md='8' className='upload-success m-1'>
-									<ul className='p-2 mb-0'>{fileList}</ul>
+									<ul className='p-2 mb-0'>
+                                        {fileList}
+                                    </ul>
 								</Col>
 
 								<Col sm='1' md='1'>
@@ -145,4 +147,4 @@ const DropzoneExclusions = () => {
 	);
 };
 
-export default DropzoneExclusions;
+export default DropzoneInclusions;

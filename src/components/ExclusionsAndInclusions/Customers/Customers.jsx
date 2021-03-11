@@ -16,7 +16,7 @@ import { Button, Col, Container, Row } from 'reactstrap';
 import TabsTable from './TabsTable';
 
 ///this is the view #3 for the Exclusions and Inclusions
-const Customers = ({ setView, customers }) => {
+const Customers = ({ setView, setValue, customers }) => {
 
 
 
@@ -30,16 +30,18 @@ const Customers = ({ setView, customers }) => {
 					height: '28rem',
 					paddingLeft: '8rem'
 				}}
-				className='pt-2 mt-1'>
+				className='pt-0 mt-0'>
 				<Row>
 					<Col sm='10' md='10' className='text-center'>
-						<h3 className='encabezado text-center mt-3 '>Clientes</h3>
+						<h3 className='encabezado text-center mt-1 '>Clientes</h3>
 					</Col>
 				</Row>
 
 				<Row>
 					<TabsTable
 						customers={customers}
+						setView={setView}
+						setValue={setValue}
 					/>
 				</Row>
 
