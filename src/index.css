@@ -10,10 +10,6 @@ body {
   font-family: 'Inter', 'sans-serif';
 }
 
-button.boton-gris:hover {
-  background-color: #1890ff!important;
-  color: #ffffff!important;
-}
 
 a:hover{
   text-decoration: none!important;
