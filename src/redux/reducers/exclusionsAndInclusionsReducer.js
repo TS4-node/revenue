@@ -12,22 +12,28 @@
 */
 import {
 	GET_GENERAL_REGIONAL_SALES,
-	GET_SALES_ORGANIZATION,
-	GET_SALES_OFFICE,
-	GET_CLIENTS,
 	SET_REGIONAL_SALES_DIRECTORATE,
+	FILTER_REGIONAL_SALES_DIRECTORATE,
+
+	GET_SALES_ORGANIZATION,
 	SET_SALES_ORGANIZATION,
+	FILTER_SALES_ORGANIZATION,
+
+	GET_SALES_OFFICE,
 	SET_SALES_OFFICE,
+	FILTER_SALES_OFFICE,
+
+	GET_CLIENTS,
 	SET_CLIENTS_EXCLUSION,
 	SET_CLIENTS_INCLUSION,
+
 	SET_CLIENTS_EXCLUSION_CSV,
 	SET_FILENAME_EXCLUSION,
 	CLEAR_EXCLUSION,
 
-	FILTER_REGIONAL_SALES_DIRECTORATE,
-	FILTER_SALES_ORGANIZATION,
-	FILTER_SALES_OFFICE
-
+	SET_CLIENTS_INCLUSION_CSV,
+	SET_FILENAME_INCLUSION,
+	CLEAR_INCLUSION
 } from '../types';
 
 const initialState = {
@@ -41,7 +47,9 @@ const initialState = {
 	SET_salesOffice: [],
 	SET_clientsExclusion: [],
 	SET_clientsInclusion: [],
+
 	fileNamesExclusions: [],
+	fileNamesInclusions: [],
 
 	FILTERED_regionalSalesDirectorate: [],
 	FILTERED_salesOrganization: [],
@@ -99,6 +107,7 @@ export default function (state = initialState, { type, payload }) {
 				SET_salesOffice: payload
 			};
 
+		/* Clients Exclusion */
 		case SET_CLIENTS_EXCLUSION:
 		    return {
 		        ...state,
@@ -124,11 +133,31 @@ export default function (state = initialState, { type, payload }) {
 				SET_clientsExclusion: []
 			}
 
+		/* Clients Inclusion */
 		case SET_CLIENTS_INCLUSION:
 			return {
 				...state,
-				SET_clientsInclusion: payload
+				SET_clientsInclusion: state.SET_clientsInclusion.concat(payload)
 			};
+
+		case SET_CLIENTS_INCLUSION_CSV:
+			return{
+				...state,
+				SET_clientsInclusion: state.SET_clientsInclusion.concat(payload)
+			}
+
+		case SET_FILENAME_INCLUSION:
+			return{
+				...state,
+				fileNamesInclusions: state.fileNamesInclusions.concat(payload)
+			}
+
+		case CLEAR_INCLUSION:
+			return{
+				...state,
+				fileNamesInclusions: [],
+				SET_clientsInclusion: []
+			}
 		/*
 		 *  FILTER
 		*/
