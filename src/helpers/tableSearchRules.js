@@ -34,7 +34,7 @@ export const filterGeneralDirectorateSales = (searchItem, idSAP, setFoundItem, g
             setFoundItem(generalDirectorateSales)
         } else {
             let searchResult = generalDirectorateSales.filter(item => {
-                if (item.id.toString().includes(searchItem)) {
+                if (item.id.toString().toLowerCase().includes(searchItem)) {
                     return item;
                 }
             });
@@ -45,9 +45,9 @@ export const filterGeneralDirectorateSales = (searchItem, idSAP, setFoundItem, g
             setFoundItem(generalDirectorateSales)
         } else {
             let searchResult = generalDirectorateSales.filter(item => {
-                if (item.id.toString().includes(searchItem) ||
-                    item.nombre.toLowerCase().includes(searchItem.toLocaleLowerCase()) ||
-                    item.direccionRegionalVentas.toLowerCase().includes(searchItem.toLocaleLowerCase())
+                if (item.id.toString().toLowerCase().includes(searchItem) ||
+                    item.nombre.toLowerCase().includes(searchItem.toLowerCase()) ||
+                    item.direccionRegionalVentas.toLowerCase().includes(searchItem.toLowerCase())
                 ) {
                     return item;
                 }
@@ -76,8 +76,8 @@ export const filterSalesOrganization = (searchItem, idSAP, setFoundItem, salesOr
         } else {
             let searchResult = salesOrganization.filter(item => {
                 if (item.id.toString().includes(searchItem) ||
-                    item.nombre.toLowerCase().includes(searchItem.toLocaleLowerCase()) ||
-                    item.direccionRegionalVentas.toLowerCase().includes(searchItem.toLocaleLowerCase())
+                    item.nombre.toLowerCase().includes(searchItem.toLowerCase()) ||
+                    item.direccionRegionalVentas.toLowerCase().includes(searchItem.toLowerCase())
                 ) {
                     return item;
                 }
@@ -94,7 +94,7 @@ export const filterSalesOffice = (searchItem, idSAP, setFoundItem, salesOffice) 
             setFoundItem(salesOffice)
         } else {
             let searchResult = salesOffice.filter(item => {
-                if (item.id.toString().toLowerCase().includes(searchItem.toLocaleLowerCase())) {
+                if (item.id.toString().toLowerCase().includes(searchItem.toLowerCase())) {
                     return item;
                 }
             });
@@ -105,9 +105,9 @@ export const filterSalesOffice = (searchItem, idSAP, setFoundItem, salesOffice) 
             setFoundItem(salesOffice)
         } else {
             let searchResult = salesOffice.filter(item => {
-                if (item.id.toString().toLocaleLowerCase().includes(searchItem.toLocaleLowerCase()) ||
-                    item.nombre.toLowerCase().includes(searchItem.toLocaleLowerCase()) ||
-                    item.direccionRegionalVentas.toLowerCase().includes(searchItem.toLocaleLowerCase())
+                if (item.id.toString().toLowerCase().includes(searchItem.toLowerCase()) ||
+                    item.nombre.toLowerCase().includes(searchItem.toLowerCase()) ||
+                    item.direccionRegionalVentas.toLowerCase().includes(searchItem.toLowerCase())
                 ) {
                     return item;
                 }
@@ -135,10 +135,10 @@ export const filterCustomers = (searchItem, idSAP, setFoundItem, customers) => {
             setFoundItem(customers)
         } else {
             let searchResult = customers.filter(item => {
-                if (item.id.toString().toLocaleLowerCase().includes(searchItem) ||
-                    item.nombre.toLowerCase().includes(searchItem.toLocaleLowerCase()) ||
-                    item.oficinaVentas.toLowerCase().includes(searchItem.toLocaleLowerCase()) ||
-                    item.agrupadorPrecios.toLowerCase().includes(searchItem.toLocaleLowerCase())
+                if (item.id.toString().toLowerCase().includes(searchItem) ||
+                    item.nombre.toLowerCase().includes(searchItem.toLowerCase()) ||
+                    item.oficinaVentas.toLowerCase().includes(searchItem.toLowerCase()) ||
+                    item.agrupadorPrecios.toLowerCase().includes(searchItem.toLowerCase())
                 ) {
                     return item;
                 }

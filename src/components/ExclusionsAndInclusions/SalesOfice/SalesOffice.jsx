@@ -10,14 +10,14 @@
  *
  *
 */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Col, Container, Row } from 'reactstrap';
 import { FormControlLabel, Checkbox, Radio } from '@material-ui/core';
 import DataTable from 'react-data-table-component';
 
 import { optionsPagination, columnsSalesOffice } from '../../../helpers/reactDataTable';
 import { customStyles } from '../../../helpers/styles';
-import { filterSalesOrganization } from '../../../helpers/tableSearchRules';
+import { filterSalesOffice } from '../../../helpers/tableSearchRules';
 import { /*Spinner,*/ AlertGeneric } from '../../index';
 import TableFilter from '../TableFilter';
 
@@ -55,8 +55,12 @@ const SalesOffice = ({ setView, salesOffice }) => {
 	const handleChangeInputSearch = e => {
 		e.persist();
 		setSearchItem(e.target.value);
-		filterSalesOrganization(searchItem, idSAP, setFoundItem, newSalesOffice);
 	};
+
+	useEffect(() => {
+		filterSalesOffice(searchItem, idSAP, setFoundItem, newSalesOffice);
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [searchItem])
 
 	const handleRowSelect = state => setRowSelect(state.selectedRows);
 

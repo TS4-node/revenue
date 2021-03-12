@@ -10,7 +10,7 @@
  *
  *
 */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Col, Container, Row } from 'reactstrap';
 import { FormControlLabel, Checkbox, Radio } from '@material-ui/core';
 import DataTable from 'react-data-table-component';
@@ -53,8 +53,12 @@ const SalesOrganization = ({ setView, salesOrganization /*, loading */ }) => {
 	const handleChangeInputSearch = e => {
 		e.persist();
 		setSearchItem(e.target.value);
-		filterSalesOrganization(searchItem, idSAP, setFoundItem, newSalesOrganization);
 	};
+
+	useEffect(() => {
+		filterSalesOrganization(searchItem, idSAP, setFoundItem, newSalesOrganization);
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [searchItem])
 
 	const handleRowSelect = state => {
 		setRowSelect(state.selectedRows);

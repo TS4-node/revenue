@@ -21,8 +21,10 @@ const useStyles = makeStyles(theme => ({
 	root: {
 		width: '100%',
 		'& > * + *': {
-			marginTop: theme.spacing(2)
-		}
+			marginTop: theme.spacing(2),
+			marginBottom: theme.spacing(2)
+		},
+		margin:'.5rem 0 .3rem 0'
 	}
 }));
 

@@ -9,7 +9,7 @@
  *  No.         Date.        Author.      		Description.
  *
  *
-*/
+ */
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import {
@@ -27,15 +27,13 @@ import {
 } from 'reactstrap';
 
 import assignment_ind from '../../assets/images/assignment_ind.png';
-import { optionsListMCL } from '../../helpers/selectsOption.js'
+import { optionsListMCL } from '../../helpers/selectsOption.js';
 import { useSelect } from '../../hooks';
 import { AlertGeneric } from '../index';
 import { createLimitOfComboAction } from '../../redux/actions/limitOfCombosActions';
 
 //Simulate DB
 const propietario = 'PPM Corporativo';
-
-
 
 const initialLimitOfCombo = {
 	nivelCombo: '',
@@ -46,7 +44,6 @@ const initialLimitOfCombo = {
 };
 
 const ModalCreateLimit = ({ modal, setModal, toggle }) => {
-
 	/*    Redux     */
 	const dispatch = useDispatch();
 
@@ -79,7 +76,8 @@ const ModalCreateLimit = ({ modal, setModal, toggle }) => {
 		if (
 			limitOfCombo.nivelCombo.trim() === '' ||
 			limitOfCombo.estructuraVenta === '' ||
-			limitOfCombo.combosPermitidos === 0
+			parseInt(limitOfCombo.combosPermitidos) === 0 ||
+			parseInt(limitOfCombo.combosPermitidos) <= 0
 		) {
 			setError(true);
 		} else {
@@ -107,7 +105,8 @@ const ModalCreateLimit = ({ modal, setModal, toggle }) => {
 		if (
 			limitOfCombo.nivelCombo.trim() === '' ||
 			limitOfCombo.estructuraVenta === '' ||
-			limitOfCombo.combosPermitidos === 0
+			parseInt(limitOfCombo.combosPermitidos) === 0 ||
+			parseInt(limitOfCombo.combosPermitidos) < 0
 		) {
 			setError(true);
 		} else {
@@ -173,7 +172,7 @@ const ModalCreateLimit = ({ modal, setModal, toggle }) => {
 								</div>
 
 								<Row>
-									<Col sm='8' xs='8' className='d-flex align-items-center'>
+									<Col sm='9' xs='9' className='d-flex align-items-center'>
 										<label className='label my-0' style={{ width: '18rem' }}>
 											Combos Permitidos{' '}
 											<span
@@ -185,21 +184,14 @@ const ModalCreateLimit = ({ modal, setModal, toggle }) => {
 											</span>
 										</label>
 										<Input
-											type='select'
-											style={{ width: '4rem' }}
-											className='mr-2'
+											type='number'
+											min='1'
+											placeholder='0'
+											style={{ width: '5.5rem' }}
+											className='mr-2 text-center'
 											name='combosPermitidos'
 											onChange={handleChange}
-											id='combosPermitidos'>
-											<option value='0' disabled selected>
-												-
-											</option>
-											<option value='1'>1</option>
-											<option value='2'>2</option>
-											<option value='3'>3</option>
-											<option value='4'>4</option>
-											<option value='5'>5</option>
-										</Input>
+											id='combosPermitidos'></Input>
 
 										<FormGroup check>
 											<Label check className='mt-1 id'>
@@ -239,12 +231,12 @@ const ModalCreateLimit = ({ modal, setModal, toggle }) => {
 				<ModalFooter className='border-0 mt-5 pt-2'>
 					<Row className='container d-flex justify-content-around'>
 						<Col md='6' className='p-0 m-0 font-weight-light'>
-							<Button className='modal-button boton-gris' type='submit' onClick={saveAndNewLimitOfCombo}>
+							<Button className='modal-button' type='submit' onClick={saveAndNewLimitOfCombo}>
 								Guardar y Nuevo
 							</Button>
 						</Col>
 						<Col md='6' className='p-0 m-0 font-weight-light'>
-							<Button className='modal-button boton-gris' type='submit' onClick={saveLimitOfCombo}>
+							<Button className='modal-button' type='submit' onClick={saveLimitOfCombo}>
 								Guardar
 							</Button>
 						</Col>

@@ -111,9 +111,19 @@ const ComboData = ({ setValue }) => {
 	};
 
 	const saveCombo = e => {
+		let date = Date.parse(new Date().toLocaleDateString());
+		let newDateBegin = Date.parse(dataCombo.fechaIni.split('-').reverse().join('/'));
+		let newDateEnd = Date.parse(dataCombo.fechaFin.split('-').reverse().join('/'));
+
+		if (dataCombo.fechaIni === '' || newDateBegin < date) {
+			alert('la fecha inicio no debe estar vacía y debe ser mayor a la fecha del día de hoy ')
+		} else if(dataCombo.fechaFin === '' || newDateEnd < date){
+			alert('la fecha fin no debe estar vacía y debe ser mayor a la fecha del día de hoy ')
+		}
+
 		if (
-			dataCombo.fechaIni === '' ||
-			dataCombo.fechaFin === '' ||
+			dataCombo.fechaIni === '' || newDateBegin < date ||
+			dataCombo.fechaFin === '' || newDateEnd < date ||
 			dataCombo.descripcionCorta.trim() === '' ||
 			dataCombo.descripcionLarga.trim() === '' ||
 			dataCombo.agrupadorPrecios === [] ||
@@ -127,7 +137,6 @@ const ComboData = ({ setValue }) => {
 			createDataCombo(combo);
 			setCombo(combo);
 			setValue(1);
-			// setSaved(true);
 		}
 	};
 
@@ -164,6 +173,7 @@ const ComboData = ({ setValue }) => {
 						value={dataCombo.fechaIni ? dataCombo.fechaIni : null}
 					/>
 				</Col>
+				
 				<Col sm='6' md='6'>
 					<TextField
 						id='endDate'
@@ -228,20 +238,22 @@ const ComboData = ({ setValue }) => {
 				</Col>
 				<Col sm='3' md='3' style={{ height: '1rem' }}>
 					<Input
-						type='select'
+						type='number'
+						min='1'
+						placeholder='0'
 						id='maximoCombosVentas'
 						style={{ height: '1.8rem', fontSize: '13px' }}
 						onChange={handleChange}
 						name='maxCombosVentas'
 						value={dataCombo.maxCombosVentas ? dataCombo.maxCombosVentas : null}>
-						<option value='0' disabled selected>
+						{/* <option value='0' disabled selected>
 							-
 						</option>
 						{numberData.map(number => (
 							<option key={number} value={number}>
 								{number}
 							</option>
-						))}
+						))} */}
 					</Input>
 				</Col>
 			</Row>
@@ -253,20 +265,22 @@ const ComboData = ({ setValue }) => {
 				</Col>
 				<Col sm='3' md='3' style={{ height: '1rem' }}>
 					<Input
-						type='select'
+						type='number'
+						min='1'
+						placeholder='0'
 						id='maximoCombosCliente'
 						style={{ height: '1.8rem', fontSize: '13px' }}
 						onChange={handleChange}
 						name='maxCombosCliente'
 						value={dataCombo.maxCombosCliente ? dataCombo.maxCombosCliente : null}>
-						<option value='0' disabled selected>
+						{/* <option value='0' disabled selected>
 							-
 						</option>
 						{numberData.map(number => (
 							<option key={number} value={number}>
 								{number}
 							</option>
-						))}
+						))} */}
 					</Input>
 				</Col>
 			</Row>
