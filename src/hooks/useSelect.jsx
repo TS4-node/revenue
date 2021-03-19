@@ -23,7 +23,7 @@ const DropdownIndicator = props => {
 	);
 };
 
-const useSelect = (initialState, optionsList, placeholder = 'Busca Aquí', isMulti = false) => {
+const useSelect = (initialState, optionsList, placeholder = 'Busca Aquí', isMulti = false, isClearable = false) => {
 	const [selectedOption, setSelectedOption] = useState(initialState);
 
 	const handleChange = option => {
@@ -38,16 +38,22 @@ const useSelect = (initialState, optionsList, placeholder = 'Busca Aquí', isMul
 			components={{ DropdownIndicator }}
 			placeholder={placeholder}
 			styles={{
-				control: css => ({ ...css, paddingLeft: '.5rem' })
+				// container: css => ({ ...css, height:'1rem' }),
+				control: css => ({ ...css, fontSize:'14px'})
+				// valueContainer: css => ({ ...css, padding: '0'}),
+				// menu: css => ({ ...css, fontSize:'14px'}),
+				// menuList: css => ({ ...css, fontSize:'14px'})
+
 			}}
 			isMulti={isMulti}
+			isClearable={isClearable}
 		/>
 	);
 
 	if (isMulti) {
 		return [selectedOption, setSelectedOption, SelectSearch];
 	} else {
-		return [selectedOption.value, setSelectedOption, SelectSearch];
+		return [selectedOption === null ?initialState :selectedOption.value , setSelectedOption, SelectSearch];
 	}
 };
 
