@@ -17,7 +17,8 @@ import {
     URL_regionalDirectorateSales,
     URL_salesOrganization,
     URL_salesOffice,
-    URL_customers
+    URL_customers,
+    URL_products
 } from './endpoints'
 
 
@@ -52,5 +53,10 @@ export const _getsalesOffice = async () => {
 
 export const _getCustomers = async () => {
     const { data } = await axiosClient.get(URL_customers);
+    return data;
+}
+
+export const _getProducts = async () => {
+    const { data } = await axiosClient.get(URL_products);
     return data;
 }

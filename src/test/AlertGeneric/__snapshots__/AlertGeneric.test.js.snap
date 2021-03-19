@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in <AlertGeneric /> should show <AlertGeneric /> correctly 1`] = `
+<div
+  className="makeStyles-root-1"
+>
+  <WithStyles(ForwardRef(Alert))
+    severity="warning"
+  >
+    text for test
+  </WithStyles(ForwardRef(Alert))>
+</div>
+`;

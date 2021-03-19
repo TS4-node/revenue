@@ -12,17 +12,28 @@
 */
 import {
 	GET_GENERAL_REGIONAL_SALES,
-	GET_SALES_ORGANIZATION,
-	GET_SALES_OFFICE,
-	GET_CLIENTS,
 	SET_REGIONAL_SALES_DIRECTORATE,
-	SET_SALES_ORGANIZATION,
-	SET_SALES_OFFICE,
-	SET_CLIENTS,
 	FILTER_REGIONAL_SALES_DIRECTORATE,
+
+	GET_SALES_ORGANIZATION,
+	SET_SALES_ORGANIZATION,
 	FILTER_SALES_ORGANIZATION,
+
+	GET_SALES_OFFICE,
+	SET_SALES_OFFICE,
 	FILTER_SALES_OFFICE,
-	FILTER_CLIENTS
+
+	GET_CLIENTS,
+	SET_CLIENTS_EXCLUSION,
+	SET_CLIENTS_INCLUSION,
+
+	SET_CLIENTS_EXCLUSION_CSV,
+	SET_FILENAME_EXCLUSION,
+	CLEAR_EXCLUSION,
+
+	SET_CLIENTS_INCLUSION_CSV,
+	SET_FILENAME_INCLUSION,
+	CLEAR_INCLUSION
 } from '../types';
 import { _getRegionalDirectorateSales, _getsalesOrganization, _getsalesOffice, _getCustomers } from '../../services/combosGenerator'
 
@@ -129,21 +140,110 @@ const filteredSalesOffice = salesOffice => ({
 });
 
 /*
- * Set clients
- */
-export function setClientsAction(clients) {
+ * Clients | Customers
+*/
+
+/* E X C L U S I O N S */
+
+//Exclusion in Select Tables
+export function setClientsExclusionAction(clients) {
 	return dispatch => {
-		dispatch(setClients(clients));
-		dispatch(filteredClients(clients));
+		dispatch(setClientsExclusion(clients));
+		// dispatch(filteredClients(clients));
 	};
 }
 
-const setClients = salesOffice => ({
-	type: SET_SALES_OFFICE,
-	payload: salesOffice
+const setClientsExclusion = clients => ({
+	type: SET_CLIENTS_EXCLUSION,
+	payload: clients
 });
 
-const filteredClients = salesOffice => ({
-	type: FILTER_SALES_OFFICE,
-	payload: salesOffice
+//Exclusion from CSV
+export function setClientsExclusionCSVAction(clients) {
+	return dispatch => {
+		dispatch(setClientsExclusionCSV(clients));
+		// dispatch(filteredClients(clients));
+	};
+}
+
+const setClientsExclusionCSV = clients => ({
+	type: SET_CLIENTS_EXCLUSION_CSV,
+	payload: clients
+});
+
+//Exclusion from react-data-table
+export function setFileNameExclusionsAction(fileNames) {
+	return dispatch => {
+		dispatch(setFileNameExclusion(fileNames));
+		// dispatch(filteredClients(clients));
+	};
+}
+
+const setFileNameExclusion = fileNames => ({
+	type: SET_FILENAME_EXCLUSION,
+	payload: fileNames
+});
+
+//Clear Exclusions
+export function clearExclusionsAction() {
+	return dispatch => {
+		dispatch(clearExclusions());
+	};
+}
+
+const clearExclusions = () => ({
+	type: CLEAR_EXCLUSION,
+});
+
+
+/* I N C L U S I O N S */
+
+//Inclusion in Select Tables
+export function setClientsInclusionAction(clients) {
+	return dispatch => {
+		dispatch(setClientsInclusion(clients));
+		// dispatch(filteredClients(clients));
+	};
+}
+
+const setClientsInclusion = clients => ({
+	type: SET_CLIENTS_INCLUSION,
+	payload: clients
+});
+
+//Inclusion from CSV
+export function setClientsInclusionCSVAction(clients) {
+	return dispatch => {
+		dispatch(setClientsInclusionCSV(clients));
+		// dispatch(filteredClients(clients));
+	};
+}
+
+const setClientsInclusionCSV = clients => ({
+	type: SET_CLIENTS_INCLUSION_CSV,
+	payload: clients
+});
+
+//Inclusion from react-data-table
+export function setFileNameInclusionsAction(fileNames) {
+	return dispatch => {
+		dispatch(setFileNameInclusion(fileNames));
+		// dispatch(filteredClients(clients));
+	};
+}
+
+const setFileNameInclusion = fileNames => ({
+	type: SET_FILENAME_INCLUSION,
+	payload: fileNames
+});
+
+//Clear Inclusions
+export function clearInclusionsAction() {
+	return dispatch => {
+		dispatch(clearInclusions());
+	};
+}
+
+const clearInclusions = () => ({
+	type: CLEAR_INCLUSION,
 });

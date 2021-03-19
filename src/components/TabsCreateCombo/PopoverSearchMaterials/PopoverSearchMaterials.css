@@ -1,0 +1,20 @@
+element.style {
+    opacity: 1;
+    transform: none;
+    transition: opacity 260ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 173ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    top: 9rem;
+    left: 22rem;
+    width: 19rem;
+    height: 9rem;
+    transform-origin: 102px 0px;
+    background-color: #F9F9F9;
+}
+
+
+.option {
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 10px!important;
+    line-height: 12px;
+    color: rgba(0, 0, 0, 0.65);
+}

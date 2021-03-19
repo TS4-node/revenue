@@ -10,7 +10,7 @@
  *
  *
 */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Col, Container, Row } from 'reactstrap';
 import { FormControlLabel, Checkbox, Radio } from '@material-ui/core';
 import DataTable from 'react-data-table-component';
@@ -53,8 +53,12 @@ const SalesOrganization = ({ setView, salesOrganization /*, loading */ }) => {
 	const handleChangeInputSearch = e => {
 		e.persist();
 		setSearchItem(e.target.value);
-		filterSalesOrganization(searchItem, idSAP, setFoundItem, newSalesOrganization);
 	};
+
+	useEffect(() => {
+		filterSalesOrganization(searchItem, idSAP, setFoundItem, newSalesOrganization);
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [searchItem])
 
 	const handleRowSelect = state => {
 		setRowSelect(state.selectedRows);
@@ -84,10 +88,10 @@ const SalesOrganization = ({ setView, salesOrganization /*, loading */ }) => {
 					height: '28rem',
 					paddingLeft: '8rem'
 				}}
-				className='pt-2 mt-1'>
+				className='pt-0 mt-0'>
 				<Row>
 					<Col sm='10' md='10' className='text-center'>
-						<h3 className='encabezado text-center mt-3 '>Organizacion de Ventas</h3>
+						<h3 className='encabezado text-center mt-2 '>Organizacion de Ventas</h3>
 					</Col>
 				</Row>
 
@@ -130,7 +134,7 @@ const SalesOrganization = ({ setView, salesOrganization /*, loading */ }) => {
 				)}
 			</Container>
 
-			<Row className='mt-5 mx-auto' style={{ paddingTop: '4rem' }}>
+			<Row className='mt-3 mx-auto' style={{ paddingTop: '4rem' }}>
 				<Col smd='10' md='10' className='d-flex justify-content-around' style={{ marginLeft: '5rem' }}>
 					<Button className='boton-exclusion' onClick={handleButtonCancel}>
 						Cancelar

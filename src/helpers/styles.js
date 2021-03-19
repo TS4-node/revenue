@@ -53,8 +53,28 @@ export const customStylesCT = {
     }
 }
 
-//for react-data-table in tabs create combo-> SalesOrganization.jsx / SalesOffice.jsx / Customers.jsx
+//for react-data-table in tabs create combo-> SalesOrganization.jsx / SalesOffice.jsx
 export const customStyles = {
+    table: {
+        style: {
+            border: '1px solid rgba(0, 0, 0, 0.15)',
+            height: '18rem',
+            width: '45rem'
+        }
+    },
+    headCells: {
+        style: {
+            backgroundColor: '#E6F7FF',
+            color: '#1890FF',
+            fontWeight: 'bold',
+            textAlign: 'center',
+            height: '3.2rem'
+        }
+    }
+};
+
+//for react-data-table in TableOfExclusions.jsx / TableOfInclusions.jsx
+export const customStyles_ = {
     table: {
         style: {
             border: '1px solid rgba(0, 0, 0, 0.15)',
@@ -101,3 +121,39 @@ export const a11yProps = index => {
         'aria-controls': `full-width-tabpanel-${index}`
     };
 }
+
+
+//DropzoneExclusions.jsx
+export const baseStyle = {
+	textAlign: 'center',
+	margintop: '1rem',
+	width: 'auto',
+    height: '6.5rem',
+	borderStyle: 'dashed',
+	borderWidth: 2,
+	borderColor: '#eeeeee',
+	boxsizing: 'border-box',
+	transition: '0.3s ease all',
+    background: 'rgba(0, 0, 0, 0.04)'
+};
+
+export const baseStyleDrop = {
+	textAlign: 'center',
+	margintop: '1rem',
+	width: 'auto',
+	boxsizing: 'border-box',
+	transition: '0.3s ease all'
+};
+
+export const activeStyle = {
+	borderColor: '#1890ff'
+};
+
+export const acceptStyle = {
+	borderColor: '#008f39',
+	background: '#bdecb6'
+};
+
+export const rejectStyle = {
+	borderColor: '#ff1744'
+};

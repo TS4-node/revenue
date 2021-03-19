@@ -26,7 +26,6 @@ export const CLEAR_DATA_COMBO = 'CLEAR_DATA_COMBO';
 
 
 /*  exclusion and inclusions    */
-
 //regional sales department
 export const GET_GENERAL_REGIONAL_SALES = 'GET_GENERAL_DIRECTORATE_SALES';
 export const SET_REGIONAL_SALES_DIRECTORATE = 'SET_REGIONAL_SALES_DIRECTORATE';
@@ -44,5 +43,20 @@ export const FILTER_SALES_OFFICE = 'FILTER_SALES_OFFICE';
 
 //clients
 export const GET_CLIENTS = 'GET_CLIENTS';
-export const SET_CLIENTS = 'SET_CLIENTS';
-export const FILTER_CLIENTS = 'FILTER_CLIENTS';
+export const SET_CLIENTS_EXCLUSION = 'SET_CLIENTS_EXCLUSION';
+export const SET_CLIENTS_INCLUSION = 'SET_CLIENTS_INCLUSION';
+
+//clients -> Exclusions
+export const SET_CLIENTS_EXCLUSION_CSV = 'SET_CLIENTS_EXCLUSION_CSV';
+export const SET_FILENAME_EXCLUSION = 'SET_FILENAME_EXCLUSION';
+export const CLEAR_EXCLUSION = 'CLEAR_EXCLUSION'
+
+//clients -> Inclusions
+export const SET_CLIENTS_INCLUSION_CSV = 'SET_CLIENTS_INCLUSION_CSV';
+export const SET_FILENAME_INCLUSION = 'SET_FILENAME_INCLUSION';
+export const CLEAR_INCLUSION = 'CLEAR_INCLUSION'
+
+/*  Search Materials    */
+export const GET_PRODUCTS = 'GET_PRODUCTS';
+export const SET_PRODUCTS = 'SET_PRODUCTS';
+export const CLEAR_PRODUCTS = 'CLEAR_PRODUCTS';

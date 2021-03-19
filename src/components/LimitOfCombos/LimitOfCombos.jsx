@@ -2,7 +2,8 @@
  *  March 2021
  *
  *  Author: Alejandro Montes de Oca TS4
- *  Description: button for activate the action "Create an Combo" in modal view
+ *  Description: main view for limit of combos, here is the table and the modal
+ *  to create limit of combo and also to create a combo
  *  =========================================================================
  *  Information about changes:
  *

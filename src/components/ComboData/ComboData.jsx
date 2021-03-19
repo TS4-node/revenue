@@ -15,6 +15,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Container, Row, Col, Label, Input, Button } from 'reactstrap';
 import { TextField, Checkbox, FormControlLabel } from '@material-ui/core';
+import { PropTypes } from 'prop-types';
 
 import './ComboData.css';
 import assignment_ind from '../../assets/images/assignment_ind.png';
@@ -26,7 +27,6 @@ import { createDataComboAction, clearDataComboAction } from '../../redux/actions
 //Simulate DB
 const owner = 'PPM Corporativo';
 const salesStructure = 'Grupo Modelo';
-const numberData = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
 const coinData = ['USD', 'EUR', 'MXN', 'CAD', 'CNY'];
 
 const initialCombo = {
@@ -110,9 +110,19 @@ const ComboData = ({ setValue }) => {
 	};
 
 	const saveCombo = e => {
+		let date = Date.parse(new Date().toLocaleDateString());
+		let newDateBegin = Date.parse(dataCombo.fechaIni.split('-').reverse().join('/'));
+		let newDateEnd = Date.parse(dataCombo.fechaFin.split('-').reverse().join('/'));
+
+		if (dataCombo.fechaIni === '' || newDateBegin < date) {
+			alert('la fecha inicio no debe estar vacía y debe ser mayor a la fecha del día de hoy ')
+		} else if(dataCombo.fechaFin === '' || newDateEnd < date){
+			alert('la fecha fin no debe estar vacía y debe ser mayor a la fecha del día de hoy ')
+		}
+
 		if (
-			dataCombo.fechaIni === '' ||
-			dataCombo.fechaFin === '' ||
+			dataCombo.fechaIni === '' || newDateBegin < date ||
+			dataCombo.fechaFin === '' || newDateEnd < date ||
 			dataCombo.descripcionCorta.trim() === '' ||
 			dataCombo.descripcionLarga.trim() === '' ||
 			dataCombo.agrupadorPrecios === [] ||
@@ -126,7 +136,6 @@ const ComboData = ({ setValue }) => {
 			createDataCombo(combo);
 			setCombo(combo);
 			setValue(1);
-			// setSaved(true);
 		}
 	};
 
@@ -163,6 +172,7 @@ const ComboData = ({ setValue }) => {
 						value={dataCombo.fechaIni ? dataCombo.fechaIni : null}
 					/>
 				</Col>
+
 				<Col sm='6' md='6'>
 					<TextField
 						id='endDate'
@@ -227,20 +237,14 @@ const ComboData = ({ setValue }) => {
 				</Col>
 				<Col sm='3' md='3' style={{ height: '1rem' }}>
 					<Input
-						type='select'
+						type='number'
+						min='1'
+						placeholder='0'
 						id='maximoCombosVentas'
 						style={{ height: '1.8rem', fontSize: '13px' }}
 						onChange={handleChange}
 						name='maxCombosVentas'
 						value={dataCombo.maxCombosVentas ? dataCombo.maxCombosVentas : null}>
-						<option value='0' disabled selected>
-							-
-						</option>
-						{numberData.map(number => (
-							<option key={number} value={number}>
-								{number}
-							</option>
-						))}
 					</Input>
 				</Col>
 			</Row>
@@ -252,20 +256,14 @@ const ComboData = ({ setValue }) => {
 				</Col>
 				<Col sm='3' md='3' style={{ height: '1rem' }}>
 					<Input
-						type='select'
+						type='number'
+						min='1'
+						placeholder='0'
 						id='maximoCombosCliente'
 						style={{ height: '1.8rem', fontSize: '13px' }}
 						onChange={handleChange}
 						name='maxCombosCliente'
 						value={dataCombo.maxCombosCliente ? dataCombo.maxCombosCliente : null}>
-						<option value='0' disabled selected>
-							-
-						</option>
-						{numberData.map(number => (
-							<option key={number} value={number}>
-								{number}
-							</option>
-						))}
 					</Input>
 				</Col>
 			</Row>
@@ -359,7 +357,7 @@ const ComboData = ({ setValue }) => {
 			</Row>
 			<Row className='mt-1 px-3'>
 				<Button className=' boton-gris boton-combo' type='submit' onClick={saveCombo}>
-					Guardar
+					Continuar
 				</Button>
 			</Row>
 
@@ -371,5 +369,9 @@ const ComboData = ({ setValue }) => {
 		</Container>
 	);
 };
+
+ComboData.propTypes = {
+	setValue: PropTypes.func.isRequired
+}
 
 export default ComboData;
