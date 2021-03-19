@@ -30,8 +30,8 @@ const TabsTable = ({ setView, setValue, customers }) =>{
 
 	const dispatch = useDispatch();
 
-	const setCostumersExclusion = customers => dispatch(setClientsExclusionAction(customers) );
-	const setCostumersInclusion = customers => dispatch(setClientsInclusionAction(customers) );
+	const setCostumersExclusion = customers => dispatch( setClientsExclusionAction(customers) );
+	const setCostumersInclusion = customers => dispatch( setClientsInclusionAction(customers) );
     const clearAllExclusions = () => dispatch( clearExclusionsAction());
 	const clearAllInclusions = () => dispatch( clearInclusionsAction());
 
