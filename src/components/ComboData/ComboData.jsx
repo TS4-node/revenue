@@ -27,7 +27,6 @@ import { createDataComboAction, clearDataComboAction } from '../../redux/actions
 //Simulate DB
 const owner = 'PPM Corporativo';
 const salesStructure = 'Grupo Modelo';
-const numberData = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
 const coinData = ['USD', 'EUR', 'MXN', 'CAD', 'CNY'];
 
 const initialCombo = {
@@ -173,7 +172,7 @@ const ComboData = ({ setValue }) => {
 						value={dataCombo.fechaIni ? dataCombo.fechaIni : null}
 					/>
 				</Col>
-				
+
 				<Col sm='6' md='6'>
 					<TextField
 						id='endDate'
@@ -246,14 +245,6 @@ const ComboData = ({ setValue }) => {
 						onChange={handleChange}
 						name='maxCombosVentas'
 						value={dataCombo.maxCombosVentas ? dataCombo.maxCombosVentas : null}>
-						{/* <option value='0' disabled selected>
-							-
-						</option>
-						{numberData.map(number => (
-							<option key={number} value={number}>
-								{number}
-							</option>
-						))} */}
 					</Input>
 				</Col>
 			</Row>
@@ -273,14 +264,6 @@ const ComboData = ({ setValue }) => {
 						onChange={handleChange}
 						name='maxCombosCliente'
 						value={dataCombo.maxCombosCliente ? dataCombo.maxCombosCliente : null}>
-						{/* <option value='0' disabled selected>
-							-
-						</option>
-						{numberData.map(number => (
-							<option key={number} value={number}>
-								{number}
-							</option>
-						))} */}
 					</Input>
 				</Col>
 			</Row>
