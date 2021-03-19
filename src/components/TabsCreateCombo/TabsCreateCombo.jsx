@@ -19,11 +19,13 @@ import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import SwipeableViews from 'react-swipeable-views';
 
 import './TabsCreateCombo.css';
-import { TabPanel, ComboData, ExclusionsAndInclusions, SumaryCombo } from '../index';
+import { TabPanel, ComboData, ExclusionsAndInclusions, SearchMaterials, SumaryCombo } from '../index';
 import { a11yProps } from '../../helpers/styles';
 import PopoverExclusionsAndInclusions from './PopoverExclusionsAndInclusions/PopoverExclusionsAndInclusions';
+import PopoverSearchMaterials from './PopoverSearchMaterials/PopoverSearchMaterials';
 import { handleDivIndicator } from '../../helpers/styles';
 import { getAllDataAction } from '../../redux/actions/exclusionsAndInclusionsActions';
+import { getAllMaterialsAction } from '../../redux/actions/searchMaterialsActions';
 
 const useStyles = makeStyles(theme => ({
 	root: {
@@ -43,10 +45,12 @@ const TabsCreateCombo = () => {
 	/*    Redux     */
 	const dispatch = useDispatch();
 
-	const getAllData = () => dispatch(getAllDataAction());
+	const getAllDataExclusionsAndInclusions = () => dispatch(getAllDataAction());
+	const getAllDataMaterials = () => dispatch(getAllMaterialsAction());
 
 	useEffect(() => {
-		getAllData();
+		getAllDataExclusionsAndInclusions();
+		getAllDataMaterials();
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
@@ -57,16 +61,25 @@ const TabsCreateCombo = () => {
 	//For de Tabs in nav
 	const [value, setValue] = useState(0);
 	//for Tab & PopoverExclusionsAndInclusions
-	const [anchorEl, setAnchorEL] = useState(null);
-	const [view, setView] = useState(0);
+	const [anchorElExclusionsAndInclusions, setAnchorELExclusionsAndInclusions] = useState(null);
+	const [viewExclusionsAndInclusions, setViewExclusionsAndInclusions] = useState(0);
+
+	//for Tab & PopoverSearchMaterials
+	const [anchorElSearchMaterials, setAnchorELSearchMaterials] = useState(null);
+	const [viewSearchMaterials, setViewSearchMaterials] = useState(0);
 
 	const handleChange = (event, newValue) => setValue(newValue);
 
 	const handleChangeIndex = index => setValue(index);
 
-	const handleClick = event => {
+	const handleClickExclusionsAndInclusionsTab = event => {
 		event.stopPropagation();
-		setAnchorEL(event.currentTarget);
+		setAnchorELExclusionsAndInclusions(event.currentTarget);
+	};
+
+	const handleClickSearchMaterials = event => {
+		event.stopPropagation();
+		setAnchorELSearchMaterials(event.currentTarget);
 	};
 
 	useEffect(() => {
@@ -84,13 +97,14 @@ const TabsCreateCombo = () => {
 					textColor='primary'
 					variant='fullWidth'
 					style={{ height: '1rem' }}>
-					<Tab label='DATOS DEL COMBO' {...a11yProps(0)} />
-					<Tab label={'Exclusiones e Inclusiones'} icon={<ArrowDropDownIcon onClick={handleClick} />} />
-					<Tab label='BUSQUEDA DE MATERIALES' {...a11yProps(2)} />
-					<Tab label='RESUMEN DEL COMBO' {...a11yProps(3)} />
+					<Tab label={'DATOS DEL COMBO'} {...a11yProps(0)} />
+					<Tab label={'EXCLUSIONES E INCLUSIONES'} icon={<ArrowDropDownIcon onClick={handleClickExclusionsAndInclusionsTab} />} />
+					<Tab label={'BUSQUEDA DE MATERIALES'} icon={<ArrowDropDownIcon onClick={handleClickSearchMaterials} />} />
+					<Tab label={'RESUMEN DEL COMBO'} {...a11yProps(3)} />
 				</Tabs>
 
-				<PopoverExclusionsAndInclusions anchorEl={anchorEl} setAnchorEL={setAnchorEL} setView={setView} />
+				<PopoverExclusionsAndInclusions anchorEl={anchorElExclusionsAndInclusions} setAnchorEL={setAnchorELExclusionsAndInclusions} setView={setViewExclusionsAndInclusions} />
+				<PopoverSearchMaterials anchorEl={anchorElSearchMaterials} setAnchorEL={setAnchorELSearchMaterials} setView={setViewSearchMaterials} />
 			</AppBar>
 
 			{/* this div is the selector in tab active on capture of combo */}
@@ -107,11 +121,11 @@ const TabsCreateCombo = () => {
 				</TabPanel>
 
 				<TabPanel value={value} index={1} dir={theme.direction}>
-					<ExclusionsAndInclusions view={view} setView={setView} setValue={setValue} />
+					<ExclusionsAndInclusions view={viewExclusionsAndInclusions} setView={setViewExclusionsAndInclusions} setValue={setValue} />
 				</TabPanel>
 
 				<TabPanel value={value} index={2} dir={theme.direction}>
-					<h1>Busqueda de materiales</h1>
+					<SearchMaterials view={viewSearchMaterials} setView={setViewSearchMaterials} setValue={setValue}/>
 				</TabPanel>
 
 				<TabPanel value={value} index={3} dir={theme.direction}>
