@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import '../SearchMaterials.css';
 import imageTrash from '../../../assets/images/Trash.png';
+import ModalProducts from './ModalProducts';
 import { setProductsAction, clearProductsAction } from '../../../redux/actions/searchMaterialsActions';
 
 let formatterPesos = new Intl.NumberFormat('en-US', {
@@ -43,6 +44,9 @@ const Products = ({ setView, setValue, products, handleButtonActiveQuota }) => {
 	const [selectProduct, setSelectProduct] = useState('');
 	const [arrayProductsSelected, setArrayProductsSelected] = useState(productStore ?productStore :[]);
 	const [total, setTotal] = useState(0);
+	const [modal, setModal] = useState(false);
+
+	const toggle = () => setModal(!modal);
 
 	useEffect(() => {
 		const listFilteredProducts = listProducts.filter(obj => obj.value !== selectProduct);
@@ -130,8 +134,8 @@ const Products = ({ setView, setValue, products, handleButtonActiveQuota }) => {
 	}
 
 	const handleContinue = () => {
+		toggle();
 		setProducts(arrayProductsSelected);
-		handleButtonActiveQuota()
 	}
 
 	return (
@@ -304,12 +308,17 @@ const Products = ({ setView, setValue, products, handleButtonActiveQuota }) => {
 								Cancelar
 							</Button>
 							<Button className='boton-exclusion mr-3' onClick={ handleContinue }>
-								Continuar
+								Guardar Combo
 							</Button>
 						</Row>
 					</Container>
 				</>
 			)}
+			<ModalProducts
+				modal={modal}
+				toggle={toggle}
+				handleButtonActiveQuota={handleButtonActiveQuota}
+			/>
 		</>
 	);
 };

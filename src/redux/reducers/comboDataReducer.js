@@ -42,7 +42,7 @@ export default function (state = initialState, { type, payload }) {
         case CLEAR_DATA_COMBO:
             return {
                 ...state,
-                comboData: payload // {}
+                comboData: initialState.comboData
             }
 
         default:

@@ -109,7 +109,8 @@ const ComboData = ({ setValue }) => {
 		clearDataCombo();
 	};
 
-	const saveCombo = e => {
+	const saveCombo = () => {
+
 		let date = Date.parse(new Date().toLocaleDateString());
 		let newDateBegin = Date.parse(dataCombo.fechaIni.split('-').reverse().join('/'));
 		let newDateEnd = Date.parse(dataCombo.fechaFin.split('-').reverse().join('/'));
@@ -131,6 +132,9 @@ const ComboData = ({ setValue }) => {
 			dataCombo.moneda === ''
 		) {
 			setError(true);
+			setTimeout(() => {
+				setError(false);
+			}, 1500);
 		} else {
 			setError(false);
 			createDataCombo(combo);
@@ -353,10 +357,10 @@ const ComboData = ({ setValue }) => {
 			</Row>
 			<Row className='my-1 px-3'>
 				{error && <AlertGeneric severity='warning' text='Todos los campos son obligatorios.' />}
-				{/* {saved &&  <AlertGeneric severity="success" text="Se ha guardado el Limite de Combo" />} */}
+
 			</Row>
 			<Row className='mt-1 px-3'>
-				<Button className=' boton-gris boton-combo' type='submit' onClick={saveCombo}>
+				<Button className='boton-combo' type='submit' onClick={saveCombo}>
 					Continuar
 				</Button>
 			</Row>

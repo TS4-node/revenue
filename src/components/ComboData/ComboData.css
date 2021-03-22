@@ -44,6 +44,10 @@ svg.MuiSvgIcon-root {
 	color: #fff;
 	border: 1px solid #1890ff;
 	box-shadow: none;
+	outline: none;
+}
+.btn.focus, .btn:focus {
+	box-shadow: none;
 }
 
 .eliminar-datos{
