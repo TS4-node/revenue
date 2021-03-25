@@ -10,3 +10,4 @@ export { default as ComboData } from './ComboData/ComboData';
 export { default as ExclusionsAndInclusions } from './ExclusionsAndInclusions/ExclusionsAndInclusions';
 export { default as SumaryCombo } from './SumaryCombo/SumaryCombo';
 export { default as SearchMaterials } from './SearchMaterials/SearchMaterials';
+export { default as TableFilter } from './TableFilter/TableFilter';
