@@ -53,7 +53,7 @@ const customStyles = {
 };
 
 
-const ModalSelectionQuota = ({ toggle, modal, selectedCategory, categoryList, familyCategoryList, handleQuotaItemes }) => {
+const ModalSelectionQuota = ({ toggle, modal, selectedCategory, setSelectedCategory, categoryList, familyCategoryList, handleQuotaItems, selectableRowsQuota,setSelectableRowsQuota }) => {
 
 
 	//filter items
@@ -85,6 +85,14 @@ const ModalSelectionQuota = ({ toggle, modal, selectedCategory, categoryList, fa
 			filterItems(searchItem, setFoundItem, newCatergoryList);
 		}
 	}
+
+	useEffect(() => {
+		if(selectableRowsQuota.length > 0){
+			setQuotaList(selectableRowsQuota);
+			setSelectableRowsQuota([]);
+		}
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [])
 
 	useEffect(() => {
 		handleCategoryListFiltered();
@@ -143,8 +151,9 @@ const ModalSelectionQuota = ({ toggle, modal, selectedCategory, categoryList, fa
 			'totalImpuestos': 0
 		}
 
-		handleQuotaItemes(quotaWhitSku);
+		handleQuotaItems(quotaWhitSku);
 		setQuotaList([]);
+		setSelectedCategory('');
 		toggle();
 	}
 
@@ -290,9 +299,9 @@ const ModalSelectionQuota = ({ toggle, modal, selectedCategory, categoryList, fa
 							Agregar
 						</Button>
 					</Col>
-					<Button className='boton-exclusion' onClick={toggle}>
+					{/* <Button className='boton-exclusion' onClick={toggle}>
 							cancelar
-					</Button>
+					</Button> */}
 				</Row>
 			</Container>
 		</Modal>
