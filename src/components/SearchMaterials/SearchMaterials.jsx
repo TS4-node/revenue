@@ -71,7 +71,13 @@ const SearchMaterials = ({ view, setView, setValue }) => {
 						handleButtonActiveQuota={handleButtonActiveQuota}
 					/>
 				)}
-				{buttonQuotaActive && <Quota setView={setView} setValue={setValue} />}
+				{buttonQuotaActive && (
+					<Quota
+						setView={setView}
+						setValue={setValue}
+						products={products}
+					/>
+				)}
 			</Container>
 		</Container>
 	);
