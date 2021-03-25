@@ -20,12 +20,14 @@ export const ADD_LIMIT_OF_COMBO = 'ADD_LIMIT_OF_COMBO';
 export const ADD_LIMIT_OF_COMBO_SUCCESS = 'ADD_LIMIT_OF_COMBO_SUCCESS';
 export const ADD_LIMIT_OF_COMBO_ERROR = 'ADD_LIMIT_OF_COMBO_ERROR'; //no action for the error yet
 
+
 /*  combo data    */
 export const CREATE_DATA_COMBO = 'CREATE_DATA_COMBO';
 export const CLEAR_DATA_COMBO = 'CLEAR_DATA_COMBO';
 
 
 /*  exclusion and inclusions    */
+
 //regional sales department
 export const GET_GENERAL_REGIONAL_SALES = 'GET_GENERAL_DIRECTORATE_SALES';
 export const SET_REGIONAL_SALES_DIRECTORATE = 'SET_REGIONAL_SALES_DIRECTORATE';
@@ -56,7 +58,13 @@ export const SET_CLIENTS_INCLUSION_CSV = 'SET_CLIENTS_INCLUSION_CSV';
 export const SET_FILENAME_INCLUSION = 'SET_FILENAME_INCLUSION';
 export const CLEAR_INCLUSION = 'CLEAR_INCLUSION'
 
+
 /*  Search Materials    */
+
+//products
 export const GET_PRODUCTS = 'GET_PRODUCTS';
 export const SET_PRODUCTS = 'SET_PRODUCTS';
 export const CLEAR_PRODUCTS = 'CLEAR_PRODUCTS';
+
+//quotas
+export const SET_QUOTA = 'SET_QUOTA';
