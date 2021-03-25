@@ -192,7 +192,7 @@ const Products = ({ setView, setValue, products, handleButtonActiveQuota }) => {
 								sm='1'
 								md='1'
 								className='column-header d-flex align-items-center justify-content-center'>
-								<p className='pl-2'>
+								<p >
 									Precio Unitario <hr className='m-0 p-0 border-0' />
 									con Impuestos
 								</p>
@@ -201,7 +201,7 @@ const Products = ({ setView, setValue, products, handleButtonActiveQuota }) => {
 								sm='1'
 								md='1'
 								className='column-header d-flex align-items-center justify-content-center'>
-								<p className='pl-3'>Precio Unitario</p>
+								<p >Precio Unitario</p>
 							</Col>
 							<Col
 								sm='1'
@@ -255,12 +255,7 @@ const Products = ({ setView, setValue, products, handleButtonActiveQuota }) => {
 								<Col
 									sm='1'
 									md='1'
-									className='d-flex align-items-center justify-content-center pl-4 pr-1'>
-									<p
-										className='my-0 text-summary pr-1'
-										style={{ fontSize: '14px', marginLeft: '-1rem' }}>
-										$
-									</p>
+									className='d-flex align-items-center justify-content-center'>
 									<CurrencyInput
 										id={item.sku}
 										name='precioUnitarioImpuestos'
@@ -274,7 +269,7 @@ const Products = ({ setView, setValue, products, handleButtonActiveQuota }) => {
 								<Col
 									sm='1'
 									md='1'
-									className='d-flex align-items-center justify-content-center pl-4 pr-3'>
+									className='d-flex align-items-center justify-content-center '>
 									<Input
 										type='number'
 										min='1'
@@ -297,7 +292,7 @@ const Products = ({ setView, setValue, products, handleButtonActiveQuota }) => {
 						))}
 						<Row className='d-flex justify-content-end pr-5 pt-3'>
 							<Col sm='3' md='3' className='text-right pr-5'>
-								<p className='text-total'>Total {formatterPesos.format(total.toFixed(2))}</p>
+								<p className='text-total'>Total {formatterPesos.format(total)}</p>
 							</Col>
 						</Row>
 					</div>
