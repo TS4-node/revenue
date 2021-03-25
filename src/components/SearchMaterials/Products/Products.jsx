@@ -291,7 +291,7 @@ const Products = ({ setView, setValue, products, handleButtonActiveQuota }) => {
 									<p className='m-0 text-summary'>{formatterPesos.format(item.totalImpuestos)}</p>
 								</Col>
 								<Col sm='1' md='1' className='d-flex align-items-center justify-content-center py-1'>
-									<img src={imageTrash} alt='trash logo' onClick={() => handleDeleteItem(item.sku)} />
+									<img style={{cursor:'pointer'}} src={imageTrash} alt='trash logo' onClick={() => handleDeleteItem(item.sku)} />
 								</Col>
 							</Row>
 						))}
