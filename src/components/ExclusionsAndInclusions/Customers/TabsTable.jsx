@@ -85,8 +85,12 @@ const TabsTable = ({ setView, setValue, customers }) =>{
 	}
 
 	const handleClickExclusions = () => {
-		setCostumersExclusion(rowSelectExclusions);
-		setModalExclusion(true);
+		if(rowSelectExclusions.length === 0){
+			setActiveTab('2');
+		} else {
+			setCostumersExclusion(rowSelectExclusions);
+			setModalExclusion(true);
+		}
 	}
 
 	//for DataTable -> Inclusions
@@ -99,8 +103,12 @@ const TabsTable = ({ setView, setValue, customers }) =>{
 	}
 
 	const handleClickInclusions = () => {
-		setCostumersInclusion(rowSelectInclusions);
-		setModalInclusion(true);
+		if(rowSelectInclusions.length === 0){
+			setValue(2);
+		} else {
+			setCostumersInclusion(rowSelectInclusions);
+			setModalInclusion(true);
+		}
 	}
 
 	//for modals

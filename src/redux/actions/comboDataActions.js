@@ -41,6 +41,5 @@ export function clearDataComboAction() {
 }
 
 const clearDataCombo = () => ({
-    type: CLEAR_DATA_COMBO,
-    payload: {}
+    type: CLEAR_DATA_COMBO
 })

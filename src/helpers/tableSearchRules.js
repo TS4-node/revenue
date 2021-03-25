@@ -147,3 +147,22 @@ export const filterCustomers = (searchItem, idSAP, setFoundItem, customers) => {
         }
     }
 }
+
+
+export const filterItems = (searchItem, setFoundItem, categoryList) => {
+
+
+    if (searchItem.length === 1) setFoundItem(categoryList);
+    else {
+        let searchResult = categoryList.filter(item => {
+            if (item.sku.toString().toLowerCase().includes(searchItem) ||
+                item.material.toLowerCase().includes(searchItem.toLowerCase()) ||
+                item.categoria.toLowerCase().includes(searchItem.toLowerCase()) ||
+                item.familia.toLowerCase().includes(searchItem.toLowerCase())
+            ) {
+                return item;
+            }
+        });
+        setFoundItem(searchResult);
+    }
+}

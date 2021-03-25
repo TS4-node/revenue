@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import '../SearchMaterials.css';
 import imageTrash from '../../../assets/images/Trash.png';
+import ModalProducts from './ModalProducts';
 import { setProductsAction, clearProductsAction } from '../../../redux/actions/searchMaterialsActions';
 
 let formatterPesos = new Intl.NumberFormat('en-US', {
@@ -43,6 +44,9 @@ const Products = ({ setView, setValue, products, handleButtonActiveQuota }) => {
 	const [selectProduct, setSelectProduct] = useState('');
 	const [arrayProductsSelected, setArrayProductsSelected] = useState(productStore ?productStore :[]);
 	const [total, setTotal] = useState(0);
+	const [modal, setModal] = useState(false);
+
+	const toggle = () => setModal(!modal);
 
 	useEffect(() => {
 		const listFilteredProducts = listProducts.filter(obj => obj.value !== selectProduct);
@@ -130,8 +134,8 @@ const Products = ({ setView, setValue, products, handleButtonActiveQuota }) => {
 	}
 
 	const handleContinue = () => {
+		toggle();
 		setProducts(arrayProductsSelected);
-		handleButtonActiveQuota()
 	}
 
 	return (
@@ -188,7 +192,7 @@ const Products = ({ setView, setValue, products, handleButtonActiveQuota }) => {
 								sm='1'
 								md='1'
 								className='column-header d-flex align-items-center justify-content-center'>
-								<p className='pl-2'>
+								<p >
 									Precio Unitario <hr className='m-0 p-0 border-0' />
 									con Impuestos
 								</p>
@@ -197,7 +201,7 @@ const Products = ({ setView, setValue, products, handleButtonActiveQuota }) => {
 								sm='1'
 								md='1'
 								className='column-header d-flex align-items-center justify-content-center'>
-								<p className='pl-3'>Precio Unitario</p>
+								<p >Precio Unitario</p>
 							</Col>
 							<Col
 								sm='1'
@@ -251,12 +255,7 @@ const Products = ({ setView, setValue, products, handleButtonActiveQuota }) => {
 								<Col
 									sm='1'
 									md='1'
-									className='d-flex align-items-center justify-content-center pl-4 pr-1'>
-									<p
-										className='my-0 text-summary pr-1'
-										style={{ fontSize: '14px', marginLeft: '-1rem' }}>
-										$
-									</p>
+									className='d-flex align-items-center justify-content-center'>
 									<CurrencyInput
 										id={item.sku}
 										name='precioUnitarioImpuestos'
@@ -270,7 +269,7 @@ const Products = ({ setView, setValue, products, handleButtonActiveQuota }) => {
 								<Col
 									sm='1'
 									md='1'
-									className='d-flex align-items-center justify-content-center pl-4 pr-3'>
+									className='d-flex align-items-center justify-content-center '>
 									<Input
 										type='number'
 										min='1'
@@ -287,13 +286,13 @@ const Products = ({ setView, setValue, products, handleButtonActiveQuota }) => {
 									<p className='m-0 text-summary'>{formatterPesos.format(item.totalImpuestos)}</p>
 								</Col>
 								<Col sm='1' md='1' className='d-flex align-items-center justify-content-center py-1'>
-									<img src={imageTrash} alt='trash logo' onClick={() => handleDeleteItem(item.sku)} />
+									<img style={{cursor:'pointer'}} src={imageTrash} alt='trash logo' onClick={() => handleDeleteItem(item.sku)} />
 								</Col>
 							</Row>
 						))}
 						<Row className='d-flex justify-content-end pr-5 pt-3'>
 							<Col sm='3' md='3' className='text-right pr-5'>
-								<p className='text-total'>Total {formatterPesos.format(total.toFixed(2))}</p>
+								<p className='text-total'>Total {formatterPesos.format(total)}</p>
 							</Col>
 						</Row>
 					</div>
@@ -304,12 +303,17 @@ const Products = ({ setView, setValue, products, handleButtonActiveQuota }) => {
 								Cancelar
 							</Button>
 							<Button className='boton-exclusion mr-3' onClick={ handleContinue }>
-								Continuar
+								Guardar Combo
 							</Button>
 						</Row>
 					</Container>
 				</>
 			)}
+			<ModalProducts
+				modal={modal}
+				toggle={toggle}
+				handleButtonActiveQuota={handleButtonActiveQuota}
+			/>
 		</>
 	);
 };
