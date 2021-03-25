@@ -35,11 +35,11 @@ export default function (state = initialState, { type, payload }) {
                 SET_products: []
             }
 
-        // case SET_QUOTA:
-        //     return{
-        //         ...state,
-        //         SET_QUOTA: payload
-        //     }
+        case SET_QUOTA:
+            return{
+                ...state,
+                SET_QUOTA: payload
+            }
 
         default:
             return state;
