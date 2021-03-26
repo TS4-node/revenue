@@ -22,7 +22,7 @@ import { filterGeneralDirectorateSales } from '../../../helpers/tableSearchRules
 
 import { optionsPagination, columnsGDS  } from '../../../helpers/reactDataTable';
 import { customStylesGDS } from '../../../helpers/styles';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setRegionalSalesDirectorateAction } from '../../../redux/actions/exclusionsAndInclusionsActions';
 
 
@@ -34,11 +34,12 @@ const GeneralDirectorateSales =  ({setView, generalDirectorateSales, setValue /*
     const dispatch = useDispatch();
 
     const setGeneralDirectorateSales = DGR => dispatch( setRegionalSalesDirectorateAction(DGR) );
+    const generalDirectorateSalesStore = useSelector( state => state.exclusionsAndInclusions.SET_REGIONAL_SALES_DIRECTORATE)
 
     const [searchItem, setSearchItem] = useState('');
     const [foundItem, setFoundItem] = useState(generalDirectorateSales);
     const [idSAP, setIdSAP] = useState(false);
-    const [rowSelect, setRowSelect] = useState([]);
+    const [rowSelect, setRowSelect] = useState(generalDirectorateSalesStore ?generalDirectorateSalesStore :[]);
     const [clear, setClear] = useState(false);
     const [error, setError] = useState(false);
 
@@ -54,8 +55,11 @@ const GeneralDirectorateSales =  ({setView, generalDirectorateSales, setValue /*
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [searchItem])
 
+    const selectProps = { indeterminate: isIndeterminate => isIndeterminate };
 
-    const handleRowSelect = (state) => setRowSelect(state.selectedRows);
+    const handleRowSelect = (state) => {
+        setRowSelect(state.selectedRows);
+    };
 
     const handleButtonCancel = () => {
         setClear(!clear);
@@ -72,6 +76,8 @@ const GeneralDirectorateSales =  ({setView, generalDirectorateSales, setValue /*
         setGeneralDirectorateSales(rowSelect);
         setView(1);
     }
+
+
 
     return (
         <>
@@ -120,6 +126,7 @@ const GeneralDirectorateSales =  ({setView, generalDirectorateSales, setValue /*
                                 responsive
                                 highlightOnHover
                                 pagination
+                                selectableRowsComponentProps={selectProps}
                             />
                         </Row>
 

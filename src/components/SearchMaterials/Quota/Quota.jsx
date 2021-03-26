@@ -50,7 +50,7 @@ const Quota = ({ setView, setValue, products }) => {
 
 	const setQuotas = quotas => dispatch( setQuotasAction(quotas) );
 
-	const quotasStore = useSelector(state => state.materials.SET_QUOTA );
+	const quotasStore = useSelector(state => state.materials.SET_quota );
 
 	/*	LOCAL STATE	*/
 	const [listCategories, setListCategories] = useState(optionListCategories);

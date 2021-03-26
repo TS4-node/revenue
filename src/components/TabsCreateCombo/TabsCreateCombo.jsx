@@ -103,8 +103,16 @@ const TabsCreateCombo = () => {
 					<Tab label={'RESUMEN DEL COMBO'} {...a11yProps(3)} />
 				</Tabs>
 
-				<PopoverExclusionsAndInclusions anchorEl={anchorElExclusionsAndInclusions} setAnchorEL={setAnchorELExclusionsAndInclusions} setView={setViewExclusionsAndInclusions} />
-				<PopoverSearchMaterials anchorEl={anchorElSearchMaterials} setAnchorEL={setAnchorELSearchMaterials} setView={setViewSearchMaterials} />
+				<PopoverExclusionsAndInclusions
+					anchorEl={anchorElExclusionsAndInclusions}
+					setAnchorEL={setAnchorELExclusionsAndInclusions}
+					setView={setViewExclusionsAndInclusions}
+				/>
+				<PopoverSearchMaterials
+					anchorEl={anchorElSearchMaterials}
+					setAnchorEL={setAnchorELSearchMaterials}
+					setView={setViewSearchMaterials}
+				/>
 			</AppBar>
 
 			{/* this div is the selector in tab active on capture of combo */}
