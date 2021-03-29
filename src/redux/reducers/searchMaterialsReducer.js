@@ -8,7 +8,6 @@ import {
 const initialState = {
     GET_products: [],
     SET_products: [],
-
     SET_quota: []
 }
 

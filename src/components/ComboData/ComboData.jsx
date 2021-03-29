@@ -9,7 +9,7 @@
  *  No.         Date.        Author.      		Description.
  *
  *
-*/
+ */
 
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -41,23 +41,20 @@ const initialCombo = {
 	aplicaciones: { allmobile: false, televenta: false, b2b: false, dbr: false }
 };
 
-function compareDates(dateString){
-    let compareDate = dateString.split('-').reverse();
-    let currentDate = new Date().toLocaleDateString().split('/');
+function compareDates(dateString) {
+	let compareDate = dateString.split('-').reverse();
+	let currentDate = new Date().toLocaleDateString().split('/');
 
-    if( parseInt( compareDate[0] ) >= parseInt( currentDate[0] ) &&
-        parseInt( compareDate[1] ) >= parseInt( currentDate[1] ) &&
-        parseInt( compareDate[2] ) >= parseInt( currentDate[2] ) 
-       ){
-        return true;
-    } else{
-        return false
-    }
-
+	if (
+		parseInt(compareDate[0]) >= parseInt(currentDate[0]) &&
+		parseInt(compareDate[1]) >= parseInt(currentDate[1]) &&
+		parseInt(compareDate[2]) >= parseInt(currentDate[2])
+	)
+		return true;
+	else return false;
 }
 
-const ComboData = ({ setValue }) => {
-
+const ComboData = ({ setValue, setView }) => {
 	/*    Redux     */
 	const dispatch = useDispatch();
 	const createDataCombo = dataCombo => dispatch(createDataComboAction(dataCombo));
@@ -67,7 +64,7 @@ const ComboData = ({ setValue }) => {
 	/*
 	 * State Local
 	 */
-	const [combo, setCombo] = useState(dataCombo ?dataCombo :initialCombo);
+	const [combo, setCombo] = useState(dataCombo ? dataCombo : initialCombo);
 	const [priceGrouper, setPriceGrouper, SelectPrices] = useSelect('', optionsListCD, 'Agrupador de Precios', true);
 	const [check, setCheck] = useState({});
 	const [error, setError] = useState(false);
@@ -96,8 +93,6 @@ const ComboData = ({ setValue }) => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [priceGrouper]);
 
-
-
 	const handleChangeCheckbox = e => {
 		setCheck({
 			...check,
@@ -106,8 +101,9 @@ const ComboData = ({ setValue }) => {
 	};
 
 	const handleChange = e => {
-
-		const { target:{ name, value } } = e;
+		const {
+			target: { name, value }
+		} = e;
 
 		if (name === 'fechaIni') {
 			if (!compareDates(value)) {
@@ -153,6 +149,13 @@ const ComboData = ({ setValue }) => {
 				setErrorMaxCombosCliente(true);
 				setMsgError('Máximo de combos por cliente no puede ser menor a 1.');
 				return;
+			}
+			if (combo.maxCombosVentas < value) {
+				setErrorMaxCombosCliente(true);
+				setMsgError(
+					'Máximo de combos por cliente no puede ser mayor a combos máximo por estructura de ventas.'
+				);
+				return;
 			} else {
 				setErrorMaxCombosCliente(false);
 				setMsgError('');
@@ -193,8 +196,10 @@ const ComboData = ({ setValue }) => {
 
 	const saveCombo = () => {
 		if (
-			dataCombo.fechaIni === '' || !compareDates(dataCombo.fechaIni) ||
-			dataCombo.fechaFin === '' || !compareDates(dataCombo.fechaFin) ||
+			dataCombo.fechaIni === '' ||
+			!compareDates(dataCombo.fechaIni) ||
+			dataCombo.fechaFin === '' ||
+			!compareDates(dataCombo.fechaFin) ||
 			dataCombo.descripcionCorta.trim() === '' ||
 			dataCombo.descripcionLarga.trim() === '' ||
 			dataCombo.agrupadorPrecios === [] ||
@@ -208,6 +213,7 @@ const ComboData = ({ setValue }) => {
 			createDataCombo(combo);
 			setCombo(combo);
 			setValue(1);
+			setView(0)
 		}
 	};
 
@@ -260,13 +266,13 @@ const ComboData = ({ setValue }) => {
 						onChange={handleChange}
 						name='fechaFin'
 						value={dataCombo.fechaFin ? dataCombo.fechaFin : null}
-						/>
+					/>
 				</Col>
 			</Row>
 
-			{ errorDate && (
+			{errorDate && (
 				<Row className='my-1 px-3'>
-					<AlertGeneric severity='warning' text={ msgError }/>
+					<AlertGeneric severity='warning' text={msgError} />
 				</Row>
 			)}
 
@@ -322,13 +328,12 @@ const ComboData = ({ setValue }) => {
 						style={{ height: '1.8rem', fontSize: '13px' }}
 						onChange={handleChange}
 						name='maxCombosVentas'
-						value={dataCombo.maxCombosVentas ? dataCombo.maxCombosVentas : null}>
-					</Input>
+						value={dataCombo.maxCombosVentas ? dataCombo.maxCombosVentas : null}></Input>
 				</Col>
 			</Row>
-			{ errorMaxCombosVentas && (
+			{errorMaxCombosVentas && (
 				<Row className='my-1 px-3'>
-					<AlertGeneric severity='warning' text={ msgError }/>
+					<AlertGeneric severity='warning' text={msgError} />
 				</Row>
 			)}
 			<Row className='mt-4 d-flex align-items-center'>
@@ -346,13 +351,12 @@ const ComboData = ({ setValue }) => {
 						style={{ height: '1.8rem', fontSize: '13px' }}
 						onChange={handleChange}
 						name='maxCombosCliente'
-						value={dataCombo.maxCombosCliente ? dataCombo.maxCombosCliente : null}>
-					</Input>
+						value={dataCombo.maxCombosCliente ? dataCombo.maxCombosCliente : null}></Input>
 				</Col>
 			</Row>
-			{ errorMaxCombosCliente && (
+			{errorMaxCombosCliente && (
 				<Row className='my-1 px-3'>
-					<AlertGeneric severity='warning' text={ msgError }/>
+					<AlertGeneric severity='warning' text={msgError} />
 				</Row>
 			)}
 			<Row className='mt-4 d-flex align-items-center'>
@@ -441,7 +445,6 @@ const ComboData = ({ setValue }) => {
 			</Row>
 			<Row className='my-1 px-3'>
 				{error && <AlertGeneric severity='warning' text='Todos los campos son obligatorios.' />}
-
 			</Row>
 			<Row className='mt-1 px-3'>
 				<Button className='boton-combo' type='submit' onClick={saveCombo}>
@@ -460,6 +463,6 @@ const ComboData = ({ setValue }) => {
 
 ComboData.propTypes = {
 	setValue: PropTypes.func.isRequired
-}
+};
 
 export default ComboData;

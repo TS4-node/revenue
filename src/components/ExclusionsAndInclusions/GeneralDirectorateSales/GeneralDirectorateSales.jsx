@@ -120,6 +120,7 @@ const GeneralDirectorateSales =  ({setView, generalDirectorateSales, setValue /*
                                 onSelectedRowsChange={handleRowSelect}
                                 selectableRowsComponent={Radio}
                                 clearSelectedRows={clear}
+                                selectableRowSelected={row => row}
                                 dense
                                 striped
                                 fixedHeader

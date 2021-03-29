@@ -14,7 +14,7 @@ import React, { useState } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Button } from 'reactstrap';
 import { FormControlLabel, Checkbox } from '@material-ui/core';
 import classnames from 'classnames';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import './Customers.css';
 import TableFilter from '../TableFilter';
@@ -34,6 +34,8 @@ const TabsTable = ({ setView, setValue, customers }) =>{
 	const setCostumersInclusion = customers => dispatch( setClientsInclusionAction(customers) );
     const clearAllExclusions = () => dispatch( clearExclusionsAction());
 	const clearAllInclusions = () => dispatch( clearInclusionsAction());
+
+	const exclusions = useSelector(state => state.exclusionsAndInclusions.fileNamesExclusions);
 
 	const newCustomers = customers && customers.map( item => {
 		let obj = {};
@@ -61,6 +63,7 @@ const TabsTable = ({ setView, setValue, customers }) =>{
 	const [modalExclusion, setModalExclusion] = useState(false);
 	const [modalInclusion, setModalInclusion] = useState(false);
 
+	const [exclusionsFiles, setExclusionsFiles] = useState(false);
 
 	//for Tabs
 	const toggle = tab => activeTab !== tab && setActiveTab(tab);
@@ -85,7 +88,7 @@ const TabsTable = ({ setView, setValue, customers }) =>{
 	}
 
 	const handleClickExclusions = () => {
-		if(rowSelectExclusions.length === 0){
+		if(rowSelectExclusions.length === 0 || exclusionsFiles === false){
 			setActiveTab('2');
 		} else {
 			setCostumersExclusion(rowSelectExclusions);
@@ -103,7 +106,7 @@ const TabsTable = ({ setView, setValue, customers }) =>{
 	}
 
 	const handleClickInclusions = () => {
-		if(rowSelectInclusions.length === 0){
+		if(rowSelectInclusions.length === 0	){
 			setValue(2);
 		} else {
 			setCostumersInclusion(rowSelectInclusions);
@@ -154,6 +157,7 @@ const TabsTable = ({ setView, setValue, customers }) =>{
 							foundItem={foundItem}
 							handleRowSelect={handleRowSelectExclusions}
 							clear={clear}
+							setExclusionsFiles={setExclusionsFiles}
 						/>
 					</TabPane>
 					<TabPane tabId='2'>
@@ -172,7 +176,7 @@ const TabsTable = ({ setView, setValue, customers }) =>{
 						Cancelar
 					</Button>
 					<Button className='boton-exclusion ml-2' onClick={handleClickExclusions}>
-						{rowSelectExclusions.length === 0 ? 'Continuar' : 'Excluir'}
+						{(rowSelectExclusions.length === 0 || exclusionsFiles===false) ? 'Continuar' : 'Excluir'}
 					</Button>
 				</div>
 			)}
