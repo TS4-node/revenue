@@ -10,7 +10,7 @@
  *
  *
 */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import EmojiIcon from '@atlaskit/icon/glyph/search';
 import Select, { components } from 'react-select';
 
@@ -23,8 +23,13 @@ const DropdownIndicator = props => {
 	);
 };
 
-const useSelect = (initialState, optionsList, placeholder = 'Busca Aquí', isMulti = false, isClearable = false) => {
+const useSelect = (initialState, optionsList, placeholder = 'Busca Aquí', isMulti = false, isClearable = false, selected='') => {
 	const [selectedOption, setSelectedOption] = useState(initialState);
+
+	useEffect(() => {
+		if(selected !== '') setSelectedOption(selected);
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [])
 
 	const handleChange = option => {
 		setSelectedOption(option);

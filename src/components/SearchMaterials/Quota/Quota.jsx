@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import ModalSelectionQuota from './ModalSelectionQuota';
 import imageTrash from '../../../assets/images/Trash.png';
 import { setQuotasAction } from '../../../redux/actions/searchMaterialsActions';
+import { formatterPesos } from '../../../helpers/materials';
 
 const DropdownIndicator = props => {
 	return (
@@ -38,19 +39,13 @@ const optionListCategories = [
 	{ value: 'Latón', label: '18 Latón', sku: '18' }
 ];
 
-let formatterPesos = new Intl.NumberFormat('en-US', {
-	style: 'currency',
-	currency: 'USD'
-});
-
 const Quota = ({ setView, setValue, products }) => {
-
 	/*	REDUX	*/
 	const dispatch = useDispatch();
 
-	const setQuotas = quotas => dispatch( setQuotasAction(quotas) );
+	const setQuotas = quotas => dispatch(setQuotasAction(quotas));
 
-	const quotasStore = useSelector(state => state.materials.SET_QUOTA );
+	const quotasStore = useSelector(state => state.materials.SET_quota);
 
 	/*	LOCAL STATE	*/
 	const [listCategories, setListCategories] = useState(optionListCategories);
@@ -60,7 +55,7 @@ const Quota = ({ setView, setValue, products }) => {
 	const [selectedCategory, setSelectedCategory] = useState('');
 	const [modal, setModal] = useState(false);
 
-	const [quotaItems, setQuotaItems] = useState(quotasStore ?quotasStore :[]);
+	const [quotaItems, setQuotaItems] = useState(quotasStore ? quotasStore : []);
 	const [total, setTotal] = useState(0);
 
 	const [selectableRowsQuota, setSelectableRowsQuota] = useState([]);
@@ -130,6 +125,7 @@ const Quota = ({ setView, setValue, products }) => {
 				(item.sku === id ? (value === '' ? 0 : parseInt(value)) : parseInt(item.cantidad)) *
 					item.precioUnitarioImpuestos
 			);
+			obj['tipo'] = item.tipo;
 
 			return obj;
 		});
@@ -140,6 +136,8 @@ const Quota = ({ setView, setValue, products }) => {
 		const { id, value, name } = e.target;
 		const valueFloat = value === '' ? 0 : parseFloat(value).toFixed(2);
 		const floatValue = parseFloat(valueFloat);
+
+		console.log(value);
 
 		if (name === 'precioUnitarioImpuestos') {
 			const updatedQuota = quotaItems.map(item => {
@@ -156,6 +154,7 @@ const Quota = ({ setView, setValue, products }) => {
 				obj['totalImpuestos'] = parseFloat(
 					(item.cantidad * (item.sku === id ? floatValue : item.precioUnitarioImpuestos)).toFixed(2)
 				);
+				obj['tipo'] = item.tipo;
 
 				return obj;
 			});
@@ -176,6 +175,7 @@ const Quota = ({ setView, setValue, products }) => {
 					2
 				);
 				obj['totalImpuestos'] = parseFloat((item.cantidad * item.precioUnitarioImpuestos).toFixed(2));
+				obj['tipo'] = item.tipo;
 
 				return obj;
 			});
@@ -242,31 +242,36 @@ const Quota = ({ setView, setValue, products }) => {
 							<Col
 								sm='1'
 								md='1'
-								className='column-header d-flex align-items-center justify-content-center'>
+								className='column-header d-flex align-items-center justify-content-center'
+							>
 								<p>Tipo</p>
 							</Col>
 							<Col
 								sm='2'
 								md='2'
-								className='column-header d-flex align-items-center justify-content-center'>
+								className='column-header d-flex align-items-center justify-content-center'
+							>
 								<p>SKU / Código</p>
 							</Col>
 							<Col
 								sm='3'
 								md='3'
-								className='column-header d-flex align-items-center justify-content-center'>
+								className='column-header d-flex align-items-center justify-content-center'
+							>
 								<p>Material / Cupo</p>
 							</Col>
 							<Col
 								sm='1'
 								md='1'
-								className='column-header d-flex align-items-center justify-content-center'>
+								className='column-header d-flex align-items-center justify-content-center'
+							>
 								<p>Cantidad</p>
 							</Col>
 							<Col
 								sm='1'
 								md='1'
-								className='column-header d-flex align-items-center justify-content-center'>
+								className='column-header d-flex align-items-center justify-content-center'
+							>
 								<p className=''>
 									Precio Unitario <hr className='m-0 p-0 border-0' />
 									c/Impuestos
@@ -275,25 +280,29 @@ const Quota = ({ setView, setValue, products }) => {
 							<Col
 								sm='1'
 								md='1'
-								className='column-header d-flex align-items-center justify-content-center'>
+								className='column-header d-flex align-items-center justify-content-center'
+							>
 								<p className=''>Precio Unitario</p>
 							</Col>
 							<Col
 								sm='1'
 								md='1'
-								className='column-header d-flex align-items-center justify-content-center'>
+								className='column-header d-flex align-items-center justify-content-center'
+							>
 								<p>Total</p>
 							</Col>
 							<Col
 								sm='1'
 								md='1'
-								className='column-header d-flex align-items-center justify-content-center'>
+								className='column-header d-flex align-items-center justify-content-center'
+							>
 								<p>Total con Impuestos</p>
 							</Col>
 							<Col
 								sm='1'
 								md='1'
-								className='column-header d-flex align-items-center justify-content-center'>
+								className='column-header d-flex align-items-center justify-content-center'
+							>
 								<p> </p>
 							</Col>
 						</Row>
@@ -308,11 +317,13 @@ const Quota = ({ setView, setValue, products }) => {
 								<Col
 									sm='3'
 									md='3'
-									className='d-flex align-items-center justify-content-center py-1 px-0'>
+									className='d-flex align-items-center justify-content-center py-1 px-0'
+								>
 									<p
 										className='m-0 text-summary material'
 										style={{ fontWeight: 'bold', fontSize: '12px' }}
-										onClick={() => handleAddMoreItemsQuota(item)}>
+										onClick={() => handleAddMoreItemsQuota(item)}
+									>
 										{item.material[0].categoria}
 									</p>
 								</Col>
@@ -334,22 +345,24 @@ const Quota = ({ setView, setValue, products }) => {
 									<CurrencyInput
 										id={item.sku}
 										name='precioUnitarioImpuestos'
-										placeholder={'0.00'}
+										placeholder={item.precioUnitarioImpuestos}
 										decimalsLimit={2}
 										onChange={handleInputCurrencyChange}
 										style={{ height: '28px', fontSize: '14px', width: '79px' }}
 										className='text-center form-control'
+										// value={ item.precioUnitarioImpuestos }
 									/>
 								</Col>
 								<Col sm='1' md='1' className='d-flex align-items-center justify-content-center '>
 									<CurrencyInput
 										id={item.sku}
 										name='precioUnitario'
-										placeholder={'0.00'}
+										placeholder={item.precioUnitario}
 										decimalsLimit={2}
 										onChange={handleInputCurrencyChange}
 										style={{ height: '28px', fontSize: '14px', width: '79px' }}
 										className='text-center form-control'
+										// value={ item.precioUnitario }
 									/>
 								</Col>
 								<Col sm='1' md='1' className='d-flex align-items-center justify-content-center py-1'>

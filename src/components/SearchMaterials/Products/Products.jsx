@@ -9,11 +9,8 @@ import '../SearchMaterials.css';
 import imageTrash from '../../../assets/images/Trash.png';
 import ModalProducts from './ModalProducts';
 import { setProductsAction, clearProductsAction } from '../../../redux/actions/searchMaterialsActions';
+import { formatterPesos } from '../../../helpers/materials';
 
-let formatterPesos = new Intl.NumberFormat('en-US', {
-	style: 'currency',
-	currency: 'USD'
-});
 
 const DropdownIndicator = props => {
 	return (
@@ -69,9 +66,11 @@ const Products = ({ setView, setValue, products, handleButtonActiveQuota }) => {
 		const product = products.filter(obj => obj.sku === value);
 		//add properties to the object "product"
 		product[0].cantidad = '';
-		product[0].precioUnitarioImpuestos = '';
+		product[0].precioUnitarioImpuestos = 0.0;
+		product[0].precioUnitario = 0.0;
 		product[0].total = 0.0;
 		product[0].totalImpuestos = 0.0;
+		product[0].tipo = 'Producto';
 
 		setArrayProductsSelected([...arrayProductsSelected, product].flat());
 	};
@@ -96,9 +95,11 @@ const Products = ({ setView, setValue, products, handleButtonActiveQuota }) => {
 				: (obj['cantidad'] = product.cantidad);
 			obj['sku'] = parseInt(product.sku);
 			obj['material'] = product.material;
+			obj['precioUnitario'] = product.precioUnitario;
 			obj['precioUnitarioImpuestos'] = product.precioUnitarioImpuestos;
 			obj['total'] = product.total;
 			obj['totalImpuestos'] = parseFloat((obj.cantidad * product.precioUnitarioImpuestos).toFixed(2));
+			obj['tipo'] = product.tipo;
 
 			return obj;
 		});
@@ -119,8 +120,10 @@ const Products = ({ setView, setValue, products, handleButtonActiveQuota }) => {
 			obj['sku'] = parseInt(product.sku);
 			obj['material'] = product.material;
 			obj['cantidad'] = product.cantidad;
+			obj['precioUnitario'] = product.precioUnitario;
 			obj['total'] = product.total;
 			obj['totalImpuestos'] = parseFloat((obj['cantidad'] * obj['precioUnitarioImpuestos']).toFixed(2));
+			obj['tipo'] = product.tipo;
 
 			return obj;
 		});
@@ -194,7 +197,7 @@ const Products = ({ setView, setValue, products, handleButtonActiveQuota }) => {
 								className='column-header d-flex align-items-center justify-content-center'>
 								<p >
 									Precio Unitario <hr className='m-0 p-0 border-0' />
-									con Impuestos
+									c/Impuestos
 								</p>
 							</Col>
 							<Col
@@ -259,11 +262,12 @@ const Products = ({ setView, setValue, products, handleButtonActiveQuota }) => {
 									<CurrencyInput
 										id={item.sku}
 										name='precioUnitarioImpuestos'
-										placeholder={'0.00'}
+										placeholder={ item.precioUnitarioImpuestos }
 										decimalsLimit={2}
 										onChange={handleInputCurrencyChange}
 										style={{ height: '28px', fontSize: '14px', width: '79px' }}
 										className='text-center form-control'
+										// value={ item.precioUnitarioImpuestos }
 									/>
 								</Col>
 								<Col
@@ -280,7 +284,7 @@ const Products = ({ setView, setValue, products, handleButtonActiveQuota }) => {
 									/>
 								</Col>
 								<Col sm='1' md='1' className='d-flex align-items-center justify-content-center py-1'>
-									<p className='m-0 text-summary'>$ 0.00</p>
+									<p className='m-0 text-summary'>{formatterPesos.format(item.total)}</p>
 								</Col>
 								<Col sm='1' md='1' className='d-flex align-items-center justify-content-center py-1'>
 									<p className='m-0 text-summary'>{formatterPesos.format(item.totalImpuestos)}</p>

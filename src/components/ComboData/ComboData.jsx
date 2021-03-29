@@ -9,7 +9,7 @@
  *  No.         Date.        Author.      		Description.
  *
  *
-*/
+ */
 
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -41,8 +41,20 @@ const initialCombo = {
 	aplicaciones: { allmobile: false, televenta: false, b2b: false, dbr: false }
 };
 
-const ComboData = ({ setValue }) => {
+function compareDates(dateString) {
+	let compareDate = dateString.split('-').reverse();
+	let currentDate = new Date().toLocaleDateString().split('/');
 
+	if (
+		parseInt(compareDate[0]) >= parseInt(currentDate[0]) &&
+		parseInt(compareDate[1]) >= parseInt(currentDate[1]) &&
+		parseInt(compareDate[2]) >= parseInt(currentDate[2])
+	)
+		return true;
+	else return false;
+}
+
+const ComboData = ({ setValue, setView }) => {
 	/*    Redux     */
 	const dispatch = useDispatch();
 	const createDataCombo = dataCombo => dispatch(createDataComboAction(dataCombo));
@@ -52,11 +64,15 @@ const ComboData = ({ setValue }) => {
 	/*
 	 * State Local
 	 */
-	const [combo, setCombo] = useState(dataCombo);
+	const [combo, setCombo] = useState(dataCombo ? dataCombo : initialCombo);
 	const [priceGrouper, setPriceGrouper, SelectPrices] = useSelect('', optionsListCD, 'Agrupador de Precios', true);
 	const [check, setCheck] = useState({});
 	const [error, setError] = useState(false);
-	// const [saved, setSaved] = useState(false);
+
+	const [msgError, setMsgError] = useState('');
+	const [errorDate, setErrorDate] = useState(false);
+	const [errorMaxCombosVentas, setErrorMaxCombosVentas] = useState(false);
+	const [errorMaxCombosCliente, setErrorMaxCombosCliente] = useState(false);
 
 	useEffect(() => {
 		setCombo({
@@ -85,13 +101,82 @@ const ComboData = ({ setValue }) => {
 	};
 
 	const handleChange = e => {
+		const {
+			target: { name, value }
+		} = e;
+
+		if (name === 'fechaIni') {
+			if (!compareDates(value)) {
+				setErrorDate(true);
+				setMsgError('La fecha inicio debe ser mayor a la fecha del día de hoy');
+				return;
+			} else {
+				setErrorDate(false);
+				setMsgError('');
+			}
+		}
+		if (name === 'fechaFin') {
+			if (!compareDates(value)) {
+				setErrorDate(true);
+				setMsgError('La fecha fin debe ser mayor a la fecha del día de hoy');
+				return;
+			} else {
+				setErrorDate(false);
+				setMsgError('');
+			}
+		}
+		if (name === 'maxCombosVentas') {
+			if (parseInt(value) < 1) {
+				setErrorMaxCombosVentas(true);
+				setMsgError('Máximo de combos por estructura no puede ser menor a 1.');
+				return;
+			} else {
+				setErrorMaxCombosVentas(false);
+				setMsgError('');
+				setCombo({
+					...combo,
+					[name]: parseInt(value)
+				});
+				createDataCombo({
+					...combo,
+					[name]: parseInt(value)
+				});
+				return;
+			}
+		}
+		if (name === 'maxCombosCliente') {
+			if (parseInt(value) < 1) {
+				setErrorMaxCombosCliente(true);
+				setMsgError('Máximo de combos por cliente no puede ser menor a 1.');
+				return;
+			}
+			if (combo.maxCombosVentas < value) {
+				setErrorMaxCombosCliente(true);
+				setMsgError(
+					'Máximo de combos por cliente no puede ser mayor a combos máximo por estructura de ventas.'
+				);
+				return;
+			} else {
+				setErrorMaxCombosCliente(false);
+				setMsgError('');
+			}
+			setCombo({
+				...combo,
+				[name]: parseInt(value)
+			});
+			createDataCombo({
+				...combo,
+				[name]: parseInt(value)
+			});
+			return;
+		}
 		setCombo({
 			...combo,
-			[e.target.name]: e.target.value
+			[name]: value
 		});
 		createDataCombo({
 			...combo,
-			[e.target.name]: e.target.value
+			[name]: value
 		});
 	};
 
@@ -110,20 +195,11 @@ const ComboData = ({ setValue }) => {
 	};
 
 	const saveCombo = () => {
-
-		let date = Date.parse(new Date().toLocaleDateString());
-		let newDateBegin = Date.parse(dataCombo.fechaIni.split('-').reverse().join('/'));
-		let newDateEnd = Date.parse(dataCombo.fechaFin.split('-').reverse().join('/'));
-
-		if (dataCombo.fechaIni === '' || newDateBegin < date) {
-			alert('la fecha inicio no debe estar vacía y debe ser mayor a la fecha del día de hoy ')
-		} else if(dataCombo.fechaFin === '' || newDateEnd < date){
-			alert('la fecha fin no debe estar vacía y debe ser mayor a la fecha del día de hoy ')
-		}
-
 		if (
-			dataCombo.fechaIni === '' || newDateBegin < date ||
-			dataCombo.fechaFin === '' || newDateEnd < date ||
+			dataCombo.fechaIni === '' ||
+			!compareDates(dataCombo.fechaIni) ||
+			dataCombo.fechaFin === '' ||
+			!compareDates(dataCombo.fechaFin) ||
 			dataCombo.descripcionCorta.trim() === '' ||
 			dataCombo.descripcionLarga.trim() === '' ||
 			dataCombo.agrupadorPrecios === [] ||
@@ -132,14 +208,12 @@ const ComboData = ({ setValue }) => {
 			dataCombo.moneda === ''
 		) {
 			setError(true);
-			setTimeout(() => {
-				setError(false);
-			}, 1500);
 		} else {
 			setError(false);
 			createDataCombo(combo);
 			setCombo(combo);
 			setValue(1);
+			setView(0)
 		}
 	};
 
@@ -196,6 +270,12 @@ const ComboData = ({ setValue }) => {
 				</Col>
 			</Row>
 
+			{errorDate && (
+				<Row className='my-1 px-3'>
+					<AlertGeneric severity='warning' text={msgError} />
+				</Row>
+			)}
+
 			<Row className='mt-2' style={{}}>
 				<Col sm='12' md='12'>
 					<TextField
@@ -248,10 +328,14 @@ const ComboData = ({ setValue }) => {
 						style={{ height: '1.8rem', fontSize: '13px' }}
 						onChange={handleChange}
 						name='maxCombosVentas'
-						value={dataCombo.maxCombosVentas ? dataCombo.maxCombosVentas : null}>
-					</Input>
+						value={dataCombo.maxCombosVentas ? dataCombo.maxCombosVentas : null}></Input>
 				</Col>
 			</Row>
+			{errorMaxCombosVentas && (
+				<Row className='my-1 px-3'>
+					<AlertGeneric severity='warning' text={msgError} />
+				</Row>
+			)}
 			<Row className='mt-4 d-flex align-items-center'>
 				<Col sm='9' md='9' style={{ height: '1rem' }}>
 					<Label for='maximoCombosCliente' className='text-left'>
@@ -267,10 +351,14 @@ const ComboData = ({ setValue }) => {
 						style={{ height: '1.8rem', fontSize: '13px' }}
 						onChange={handleChange}
 						name='maxCombosCliente'
-						value={dataCombo.maxCombosCliente ? dataCombo.maxCombosCliente : null}>
-					</Input>
+						value={dataCombo.maxCombosCliente ? dataCombo.maxCombosCliente : null}></Input>
 				</Col>
 			</Row>
+			{errorMaxCombosCliente && (
+				<Row className='my-1 px-3'>
+					<AlertGeneric severity='warning' text={msgError} />
+				</Row>
+			)}
 			<Row className='mt-4 d-flex align-items-center'>
 				<Col sm='9' md='9' style={{ height: '1rem' }}>
 					<Label for='moneda' className='text-left'>
@@ -357,7 +445,6 @@ const ComboData = ({ setValue }) => {
 			</Row>
 			<Row className='my-1 px-3'>
 				{error && <AlertGeneric severity='warning' text='Todos los campos son obligatorios.' />}
-
 			</Row>
 			<Row className='mt-1 px-3'>
 				<Button className='boton-combo' type='submit' onClick={saveCombo}>
@@ -376,6 +463,6 @@ const ComboData = ({ setValue }) => {
 
 ComboData.propTypes = {
 	setValue: PropTypes.func.isRequired
-}
+};
 
 export default ComboData;

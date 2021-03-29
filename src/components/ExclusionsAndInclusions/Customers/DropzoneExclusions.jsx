@@ -21,7 +21,7 @@ import { baseStyle, baseStyleDrop, activeStyle, acceptStyle, rejectStyle } from 
 import { readCSV } from '../../../helpers/dropzone';
 import { setClientsExclusionCSVAction, setFileNameExclusionsAction } from '../../../redux/actions/exclusionsAndInclusionsActions';
 
-const DropzoneExclusions = () => {
+const DropzoneExclusions = ({setExclusionsFiles}) => {
 
 	const dispatch = useDispatch();
 
@@ -43,6 +43,7 @@ const DropzoneExclusions = () => {
 
 	useEffect(() => {
 		setCustomerExclusionCSV(dataCSV);
+		setExclusionsFiles(true);
 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [dataCSV])
 

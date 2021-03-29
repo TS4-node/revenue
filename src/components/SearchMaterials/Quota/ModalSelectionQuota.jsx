@@ -148,7 +148,8 @@ const ModalSelectionQuota = ({ toggle, modal, selectedCategory, setSelectedCateg
 			'precioUnitarioImpuestos': 0,
 			'precioUnitario': 0,
 			'total': 0,
-			'totalImpuestos': 0
+			'totalImpuestos': 0,
+			'tipo': 'Cupo'
 		}
 
 		handleQuotaItems(quotaWhitSku);

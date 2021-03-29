@@ -113,6 +113,7 @@ const SalesOffice = ({ setView, salesOffice }) => {
 						onSelectedRowsChange={handleRowSelect}
 						selectableRowsComponent={Radio}
 						clearSelectedRows={clear}
+						selectableRowSelected={row => row}
 						dense
 						striped
 						fixedHeader

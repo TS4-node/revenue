@@ -8,7 +8,6 @@ import {
 const initialState = {
     GET_products: [],
     SET_products: [],
-
     SET_quota: []
 }
 
@@ -38,7 +37,7 @@ export default function (state = initialState, { type, payload }) {
         case SET_QUOTA:
             return{
                 ...state,
-                SET_QUOTA: payload
+                SET_quota: payload
             }
 
         default:

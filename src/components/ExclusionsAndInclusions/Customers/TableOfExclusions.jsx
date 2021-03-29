@@ -20,7 +20,7 @@ import { optionsPagination, columnsExclusions } from '../../../helpers/reactData
 import { customStyles_ } from '../../../helpers/styles';
 
 
-const TableOfExclusions = ({ foundItem, handleRowSelect, clear }) => {
+const TableOfExclusions = ({ foundItem, handleRowSelect, clear, setExclusionsFiles }) => {
 
 	return (
 		<>
@@ -47,7 +47,9 @@ const TableOfExclusions = ({ foundItem, handleRowSelect, clear }) => {
 			</Row>
             <Row>
                 <Col sm='12' md='12'>
-                    <DropzoneExclusions />
+                    <DropzoneExclusions
+						setExclusionsFiles={setExclusionsFiles}
+					/>
                 </Col>
             </Row>
 		</>

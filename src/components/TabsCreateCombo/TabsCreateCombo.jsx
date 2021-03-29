@@ -65,8 +65,8 @@ const TabsCreateCombo = () => {
 	const [viewExclusionsAndInclusions, setViewExclusionsAndInclusions] = useState(0);
 
 	//for Tab & PopoverSearchMaterials
-	const [anchorElSearchMaterials, setAnchorELSearchMaterials] = useState(null);
-	const [viewSearchMaterials, setViewSearchMaterials] = useState(0);
+	// const [anchorElSearchMaterials, setAnchorELSearchMaterials] = useState(null);
+	// const [viewSearchMaterials, setViewSearchMaterials] = useState(0);
 
 	const handleChange = (event, newValue) => setValue(newValue);
 
@@ -77,10 +77,10 @@ const TabsCreateCombo = () => {
 		setAnchorELExclusionsAndInclusions(event.currentTarget);
 	};
 
-	const handleClickSearchMaterials = event => {
-		event.stopPropagation();
-		setAnchorELSearchMaterials(event.currentTarget);
-	};
+	// const handleClickSearchMaterials = event => {
+	// 	event.stopPropagation();
+	// 	setAnchorELSearchMaterials(event.currentTarget);
+	// };
 
 	useEffect(() => {
 		handleDivIndicator(value);
@@ -99,12 +99,20 @@ const TabsCreateCombo = () => {
 					style={{ height: '1rem' }}>
 					<Tab label={'DATOS DEL COMBO'} {...a11yProps(0)} />
 					<Tab label={'EXCLUSIONES E INCLUSIONES'} icon={<ArrowDropDownIcon onClick={handleClickExclusionsAndInclusionsTab} />} />
-					<Tab label={'BUSQUEDA DE MATERIALES'} icon={<ArrowDropDownIcon onClick={handleClickSearchMaterials} />} />
+					<Tab label={'BUSQUEDA DE MATERIALES'} /*icon={<ArrowDropDownIcon onClick={handleClickSearchMaterials} />} *//>
 					<Tab label={'RESUMEN DEL COMBO'} {...a11yProps(3)} />
 				</Tabs>
 
-				<PopoverExclusionsAndInclusions anchorEl={anchorElExclusionsAndInclusions} setAnchorEL={setAnchorELExclusionsAndInclusions} setView={setViewExclusionsAndInclusions} />
-				<PopoverSearchMaterials anchorEl={anchorElSearchMaterials} setAnchorEL={setAnchorELSearchMaterials} setView={setViewSearchMaterials} />
+				<PopoverExclusionsAndInclusions
+					anchorEl={anchorElExclusionsAndInclusions}
+					setAnchorEL={setAnchorELExclusionsAndInclusions}
+					setView={setViewExclusionsAndInclusions}
+				/>
+				{/* <PopoverSearchMaterials
+					anchorEl={anchorElSearchMaterials}
+					setAnchorEL={setAnchorELSearchMaterials}
+					setView={setViewSearchMaterials}
+				/> */}
 			</AppBar>
 
 			{/* this div is the selector in tab active on capture of combo */}
@@ -117,7 +125,7 @@ const TabsCreateCombo = () => {
 				style={{ paddingTop: '0rem', height: '55rem', overflow: 'hidden' }}
 			>
 				<TabPanel value={value} index={0} dir={theme.direction}>
-					<ComboData setValue={setValue} />
+					<ComboData setValue={setValue} setView={setViewExclusionsAndInclusions}/>
 				</TabPanel>
 
 				<TabPanel value={value} index={1} dir={theme.direction}>
@@ -125,11 +133,11 @@ const TabsCreateCombo = () => {
 				</TabPanel>
 
 				<TabPanel value={value} index={2} dir={theme.direction}>
-					<SearchMaterials view={viewSearchMaterials} setView={setViewSearchMaterials} setValue={setValue}/>
+					<SearchMaterials /*view={viewSearchMaterials} setView={setViewSearchMaterials} */ setValue={setValue}/>
 				</TabPanel>
 
 				<TabPanel value={value} index={3} dir={theme.direction}>
-					<SumaryCombo />
+					<SumaryCombo setValue={setValue} />
 				</TabPanel>
 
 			</SwipeableViews>
