@@ -197,7 +197,7 @@ const ModalSelectionQuota = props => {
 		{
 			name: 'material',
 			selector: 'material',
-			width: '20rem',
+			width: '22rem',
 			cell: row => (
 				<p className='m-0' style={{ fontWeight: 'bold'}}>
 					{row.material}
