@@ -25,6 +25,7 @@ const Products = ({ setView, setValue, products, handleButtonActiveQuota }) => {
 	const dispatch = useDispatch();
 
 	const productStore = useSelector( state => state.materials.SET_products );
+	const quotaStore = useSelector( state => state.materials.SET_quota );
 
 	const setProducts = products => dispatch( setProductsAction(products) );
 	const clearProducts = () => dispatch( clearProductsAction() );
