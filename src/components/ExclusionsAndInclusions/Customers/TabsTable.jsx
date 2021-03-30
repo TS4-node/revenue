@@ -35,7 +35,7 @@ const TabsTable = ({ setView, setValue, customers }) =>{
     const clearAllExclusions = () => dispatch( clearExclusionsAction());
 	const clearAllInclusions = () => dispatch( clearInclusionsAction());
 
-	const exclusions = useSelector(state => state.exclusionsAndInclusions.fileNamesExclusions);
+	// const exclusions = useSelector(state => state.exclusionsAndInclusions.fileNamesExclusions);
 
 	const newCustomers = customers && customers.map( item => {
 		let obj = {};

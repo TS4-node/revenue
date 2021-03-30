@@ -9,18 +9,37 @@
  *  No.         Date.        Author.      Description.
  *
  *
-*/
+ */
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import { LimitOfCombos, TabsCreateCombo } from '../components';
+import { Head, Nav, LimitOfCombos, TabsCreateCombo } from '../components';
+import Home from '../views/Home';
+import CreateLimitOfCombo from '../views/CreateLimitOfCombo';
 
 const CombosGeneratorRouter = () => {
 	return (
 		<>
 			<Switch>
-				<Route exact path='/' component={LimitOfCombos} />
-				<Route exact path='/crear-combo' component={TabsCreateCombo} />
-
+				<Route exact path='/'>
+					<header>
+						<Head />
+					</header>
+					<Home />
+				</Route>
+				<Route exact path='/crear-limite-combo'>
+					<header>
+						<Head />
+						<Nav />
+					</header>
+					<CreateLimitOfCombo />
+				</Route>
+				<Route exact path='/crear-combo'>
+					<header>
+						<Head />
+						<Nav />
+					</header>
+					<TabsCreateCombo />
+				</Route>
 				<Redirect to='/' />
 			</Switch>
 		</>

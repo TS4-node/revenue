@@ -22,7 +22,7 @@ import './TabsCreateCombo.css';
 import { TabPanel, ComboData, ExclusionsAndInclusions, SearchMaterials, SumaryCombo } from '../index';
 import { a11yProps } from '../../helpers/styles';
 import PopoverExclusionsAndInclusions from './PopoverExclusionsAndInclusions/PopoverExclusionsAndInclusions';
-import PopoverSearchMaterials from './PopoverSearchMaterials/PopoverSearchMaterials';
+// import PopoverSearchMaterials from './PopoverSearchMaterials/PopoverSearchMaterials';
 import { handleDivIndicator } from '../../helpers/styles';
 import { getAllDataAction } from '../../redux/actions/exclusionsAndInclusionsActions';
 import { getAllMaterialsAction } from '../../redux/actions/searchMaterialsActions';

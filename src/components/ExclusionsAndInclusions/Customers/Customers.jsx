@@ -11,7 +11,7 @@
  *
  */
 import React from 'react';
-import { Button, Col, Container, Row } from 'reactstrap';
+import { Col, Container, Row } from 'reactstrap';
 
 import TabsTable from './TabsTable';
 
