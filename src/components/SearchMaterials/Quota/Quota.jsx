@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import ModalSelectionQuota from './ModalSelectionQuota';
 import imageTrash from '../../../assets/images/Trash.png';
+import imageEye from '../../../assets/images/eye.png'
 import { setQuotasAction } from '../../../redux/actions/searchMaterialsActions';
 import { formatterPesos } from '../../../helpers/materials';
 
@@ -325,6 +326,15 @@ const Quota = ({ setView, setValue, products }) => {
 										onClick={() => handleAddMoreItemsQuota(item)}
 									>
 										{item.material[0].categoria}
+										<img
+											src={imageEye}
+											alt='logo eye'
+											className='mt-1 ml-3'
+											style={{
+												height:'10px',
+												width:'17px'
+											}}
+										/>
 									</p>
 								</Col>
 								<Col sm='1' md='1' className='d-flex align-items-center justify-content-center py-1'>
@@ -392,9 +402,6 @@ const Quota = ({ setView, setValue, products }) => {
 							<Button className='boton-exclusion mx-4' onClick={handleCancel}>
 								Cancelar
 							</Button>
-							{/* <Button className='boton-exclusion mx-4' onClick={ handleContinue }>
-							Añadir +
-						</Button> */}
 							<Button className='boton-exclusion mx-4' onClick={handleContinue}>
 								Continuar
 							</Button>
