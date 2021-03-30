@@ -16,13 +16,15 @@ import {
     GET_LIMIT_OF_COMBOS_SUCCESS,
     ADD_LIMIT_OF_COMBO,
     ADD_LIMIT_OF_COMBO_SUCCESS,
-    ADD_LIMIT_OF_COMBO_ERROR
+    ADD_LIMIT_OF_COMBO_ERROR,
+    ID_LIMIT_OF_COMBO_CURRENT
 } from '../types'
 
 const initialState = {
     limitsOfCombos: [],
     loading: false,
-    error: false
+    error: false,
+    currentId: ''
 }
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -61,6 +63,12 @@ export default function (state = initialState, { type, payload }) {
                 ...state,
                 loading: false,
                 limitsOfCombos: [...state.limitsOfCombos, payload]
+            }
+
+        case ID_LIMIT_OF_COMBO_CURRENT:
+            return{
+                ...state,
+                currentId: payload
             }
 
         default:

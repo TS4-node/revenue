@@ -19,6 +19,7 @@ export const GET_LIMIT_OF_COMBOS_ERROR = 'GET_LIMIT_OF_COMBOS_ERROR'; //no actio
 export const ADD_LIMIT_OF_COMBO = 'ADD_LIMIT_OF_COMBO';
 export const ADD_LIMIT_OF_COMBO_SUCCESS = 'ADD_LIMIT_OF_COMBO_SUCCESS';
 export const ADD_LIMIT_OF_COMBO_ERROR = 'ADD_LIMIT_OF_COMBO_ERROR'; //no action for the error yet
+export const ID_LIMIT_OF_COMBO_CURRENT = 'ID_LIMIT_OF_COMBO_CURRENT';
 
 
 /*  combo data    */
