@@ -160,7 +160,7 @@ const ModalSelectionQuota = props => {
 		const quotaWhitSku = {
 			sku: sku,
 			material: quotaList,
-			cantidad: 0,
+			cantidad: '',
 			precioUnitarioImpuestos: 0,
 			precioUnitario: 0,
 			total: 0,
