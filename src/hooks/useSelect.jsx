@@ -44,7 +44,7 @@ const useSelect = (initialState, optionsList, placeholder = 'Busca Aquí', isMul
 			placeholder={placeholder}
 			styles={{
 				// container: css => ({ ...css, height:'1rem' }),
-				control: css => ({ ...css, fontSize:'14px'})
+				control: css => ({ ...css, fontSize:'14px', textAlign:'left'})
 				// valueContainer: css => ({ ...css, padding: '0'}),
 				// menu: css => ({ ...css, fontSize:'14px'}),
 				// menuList: css => ({ ...css, fontSize:'14px'})
