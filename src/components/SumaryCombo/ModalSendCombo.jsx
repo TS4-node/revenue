@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Row, Col } from 'reactstrap';
 
 import OKimage from '../../assets/images/ok.png';
 
 const ModalSendCombo = ({ idCombo, toggle, modal }) => {
+
+	//TODO: limpiar el store para no dejar registro del combo creado previamente
+
+	const history = useHistory();
+
 	const [nestedModal, setNestedModal] = useState(false);
 	const [closeAll, setCloseAll] = useState(false);
 
@@ -18,12 +24,16 @@ const ModalSendCombo = ({ idCombo, toggle, modal }) => {
 	const toggleAll = () => {
 		setNestedModal(!nestedModal);
 		setCloseAll(true);
+		setTimeout(() => {
+			history.push('/');
+		}, 1000);
 	};
 
 	const toggleClear = () => {
 		// setRowSelectExclusions([]);
 		// clearAllExclusions();
 		toggle();
+
 	};
 
 	return (
