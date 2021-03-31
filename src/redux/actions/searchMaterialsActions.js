@@ -2,7 +2,9 @@ import {
 	GET_PRODUCTS,
 	SET_PRODUCTS,
 	CLEAR_PRODUCTS,
-	SET_QUOTA
+	SET_QUOTA,
+	CLEAR_QUOTAS,
+	CLEAR_ALL_MATERIALS
 } from '../types';
 import { _getProducts } from '../../services/combosGenerator';
 
@@ -69,4 +71,24 @@ export function setQuotasAction(quotas) {
 const setQuotas = quotas => ({
 	type: SET_QUOTA,
 	payload: quotas
+})
+
+export function clearQuotasAction() {
+	return dispatch => {
+		dispatch(clearQuotas());
+	}
+}
+
+const clearQuotas = () => ({
+	type: CLEAR_QUOTAS
+})
+
+export function clearAllMaterialsAction() {
+	return dispatch => {
+		dispatch(clearAllMaterials());
+	}
+}
+
+const clearAllMaterials = () => ({
+	type: CLEAR_ALL_MATERIALS
 })

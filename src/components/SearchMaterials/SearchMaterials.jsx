@@ -10,21 +10,29 @@
  *
  *
  */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Alert } from 'reactstrap';
+import { useSelector, useDispatch } from 'react-redux';
 
 import Products from './Products/Products';
 import Quota from './Quota/Quota';
-import { useSelector } from 'react-redux';
+import { setTabViewAction } from '../../redux/actions/tabsViewCreateComboActions';
 
 const SearchMaterials = ({ view, setView, setValue }) => {
 	/*	Redux	*/
+	const dispatch = useDispatch();
+	const setCurrentViewTab = currentViewIndex => dispatch( setTabViewAction(currentViewIndex) );
 
 	const products = useSelector(state => state.materials.GET_products);
 
 	/*	State Local	*/
 	const [buttonProductsActive, setButtonProductsActive] = useState(false);
 	const [buttonQuotaActive, setButtonQuotaActive] = useState(false);
+
+	useEffect(() => {
+		setCurrentViewTab(2);
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [])
 
 	const handleButtonActiveProducts = () => {
 		setButtonProductsActive(true);

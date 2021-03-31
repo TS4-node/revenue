@@ -10,7 +10,7 @@
  *
  *
 */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Button } from 'reactstrap';
 import { FormControlLabel, Checkbox } from '@material-ui/core';
 import classnames from 'classnames';
@@ -26,7 +26,7 @@ import ModalInclusions from './ModalInclusions';
 import { setClientsExclusionAction, setClientsInclusionAction, clearExclusionsAction, clearInclusionsAction } from '../../../redux/actions/exclusionsAndInclusionsActions';
 
 
-const TabsTable = ({ setView, setValue, customers }) =>{
+const TabsTable = ({ setView, setValue, customers, setCurrentViewTab, setCurrentNestedViewTab }) =>{
 
 	const dispatch = useDispatch();
 
@@ -35,7 +35,7 @@ const TabsTable = ({ setView, setValue, customers }) =>{
     const clearAllExclusions = () => dispatch( clearExclusionsAction());
 	const clearAllInclusions = () => dispatch( clearInclusionsAction());
 
-	const exclusions = useSelector(state => state.exclusionsAndInclusions.fileNamesExclusions);
+	// const exclusions = useSelector(state => state.exclusionsAndInclusions.fileNamesExclusions);
 
 	const newCustomers = customers && customers.map( item => {
 		let obj = {};
@@ -64,6 +64,12 @@ const TabsTable = ({ setView, setValue, customers }) =>{
 	const [modalInclusion, setModalInclusion] = useState(false);
 
 	const [exclusionsFiles, setExclusionsFiles] = useState(false);
+
+	useEffect(() => {
+        setCurrentViewTab(1);
+        setCurrentNestedViewTab(3);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [rowSelectExclusions, rowSelectInclusions, ])
 
 	//for Tabs
 	const toggle = tab => activeTab !== tab && setActiveTab(tab);

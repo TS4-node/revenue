@@ -75,3 +75,13 @@ input[type='number'] {
 	transform: scale(1.3);
 	text-decoration: underline;
 }
+
+.delete-all{
+	transition: .3s ease all;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+.delete-all:hover{
+	text-decoration: underline;
+}

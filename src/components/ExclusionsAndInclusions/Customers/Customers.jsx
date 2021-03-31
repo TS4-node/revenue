@@ -11,12 +11,12 @@
  *
  */
 import React from 'react';
-import { Button, Col, Container, Row } from 'reactstrap';
+import { Col, Container, Row } from 'reactstrap';
 
 import TabsTable from './TabsTable';
 
 ///this is the view #3 for the Exclusions and Inclusions
-const Customers = ({ setView, setValue, customers }) => {
+const Customers = ({ setView, setValue, customers, setCurrentViewTab, setCurrentNestedViewTab }) => {
 	return (
 		<>
 			<Container
@@ -34,7 +34,13 @@ const Customers = ({ setView, setValue, customers }) => {
 				</Row>
 
 				<Row>
-					<TabsTable customers={customers} setView={setView} setValue={setValue} />
+					<TabsTable
+						customers={customers}
+						setView={setView}
+						setValue={setValue}
+						setCurrentViewTab={setCurrentViewTab}
+						setCurrentNestedViewTab={setCurrentNestedViewTab}
+					/>
 				</Row>
 			</Container>
 		</>

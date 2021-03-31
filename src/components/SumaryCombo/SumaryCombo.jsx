@@ -1,20 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container } from 'reactstrap';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import './SumaryCombo.css';
 import DetailComboData from './DetailComboData';
 import DetailExclusionsInclusions from './DetailExclusionsInclusions';
 import DetailMaterials from './DetailMaterials';
+import { setTabViewAction } from '../../redux/actions/tabsViewCreateComboActions';
 
 //This is id for the combo
 let idCombo = new Date().getFullYear();
 
 const SumaryCombo = ({setValue}) => {
 
+	/*	REDUX	*/
+	const dispatch = useDispatch();
+	const setCurrentViewTab = currentViewIndex => dispatch( setTabViewAction(currentViewIndex) );
+
 	const productsStore = useSelector(state => state.materials.SET_products);
 	const quotasStore = useSelector(state => state.materials.SET_quota);
 	const allProducts = productsStore.concat(quotasStore);
+
+	useEffect(() => {
+		setCurrentViewTab(3);
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [])
 
 	return (
 		<Container className='pt-1 mt-1'>

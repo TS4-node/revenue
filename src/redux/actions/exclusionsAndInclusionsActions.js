@@ -33,7 +33,9 @@ import {
 
 	SET_CLIENTS_INCLUSION_CSV,
 	SET_FILENAME_INCLUSION,
-	CLEAR_INCLUSION
+	CLEAR_INCLUSION,
+
+	CLEAR_EXCLUSIONS_AND_INCLUSIONS
 } from '../types';
 import { _getRegionalDirectorateSales, _getsalesOrganization, _getsalesOffice, _getCustomers } from '../../services/combosGenerator'
 
@@ -246,4 +248,17 @@ export function clearInclusionsAction() {
 
 const clearInclusions = () => ({
 	type: CLEAR_INCLUSION,
+});
+
+
+/*	C L E A R  A L L  S T A T E  O F  R E D U C E R	*/
+
+export function clearExclusionsAndInclusionsAction() {
+	return dispatch => {
+		dispatch(clearAll());
+	};
+}
+
+const clearAll = () => ({
+	type: CLEAR_EXCLUSIONS_AND_INCLUSIONS,
 });

@@ -33,7 +33,9 @@ import {
 
 	SET_CLIENTS_INCLUSION_CSV,
 	SET_FILENAME_INCLUSION,
-	CLEAR_INCLUSION
+	CLEAR_INCLUSION,
+
+	CLEAR_EXCLUSIONS_AND_INCLUSIONS
 } from '../types';
 
 const initialState = {
@@ -59,6 +61,28 @@ const initialState = {
 // eslint-disable-next-line import/no-anonymous-default-export
 export default function (state = initialState, { type, payload }) {
 	switch (type) {
+		/*
+		 * CLEAR ALL STATE
+		*/
+		case CLEAR_EXCLUSIONS_AND_INCLUSIONS:
+			return {
+				GET_regionalSalesDirectorate: [],
+				GET_salesOrganization: [],
+				GET_salesOffice: [],
+				GET_clients: [],
+				SET_regionalSalesDirectorate: [],
+				SET_salesOrganization: [],
+				SET_salesOffice: [],
+				SET_clientsExclusion: [],
+				SET_clientsInclusion: [],
+				fileNamesExclusions: [],
+				fileNamesInclusions: [],
+				FILTERED_regionalSalesDirectorate: [],
+				FILTERED_salesOrganization: [],
+				FILTERED_salesOffice: []
+			}
+
+
 		/*
 		 *  GET
 		*/

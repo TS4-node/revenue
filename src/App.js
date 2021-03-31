@@ -12,9 +12,10 @@
  *
 */
 
-import { Provider } from 'react-redux'
-import store from './redux/store'
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 
+import { store, persistor } from './redux/store';
 import { AppRouter } from './routers'
 
 
@@ -22,7 +23,9 @@ function App() {
 	return (
 		<>
 			<Provider store={store}>
-				<AppRouter />
+				<PersistGate persistor={persistor}>
+					<AppRouter />
+				</PersistGate>
 			</Provider>
 		</>
 

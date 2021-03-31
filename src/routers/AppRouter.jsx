@@ -19,11 +19,6 @@ import { CombosGeneratorRouter } from './index';
 const AppRouter = () => {
 	return (
 		<Router>
-			<header>
-				<Head />
-				<Nav />
-			</header>
-
 			<Switch>
 				<Route path='/' component={CombosGeneratorRouter} />
 			</Switch>

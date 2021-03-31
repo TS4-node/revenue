@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Col, Row, Input, Container, Button } from 'reactstrap';
+import { Col, Row, Input, Container, Button, Label } from 'reactstrap';
 import EmojiIcon from '@atlaskit/icon/glyph/search';
 import Select, { components } from 'react-select';
 import CurrencyInput from 'react-currency-input-field';
@@ -7,7 +7,8 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import ModalSelectionQuota from './ModalSelectionQuota';
 import imageTrash from '../../../assets/images/Trash.png';
-import { setQuotasAction } from '../../../redux/actions/searchMaterialsActions';
+import imageEye from '../../../assets/images/eye.png';
+import { setQuotasAction, clearQuotasAction } from '../../../redux/actions/searchMaterialsActions';
 import { formatterPesos } from '../../../helpers/materials';
 
 const DropdownIndicator = props => {
@@ -44,8 +45,10 @@ const Quota = ({ setView, setValue, products }) => {
 	const dispatch = useDispatch();
 
 	const setQuotas = quotas => dispatch(setQuotasAction(quotas));
+	const clearQuotas = () => dispatch( clearQuotasAction() );
 
 	const quotasStore = useSelector(state => state.materials.SET_quota);
+	const productsStore = useSelector(state => state.materials.SET_products);
 
 	/*	LOCAL STATE	*/
 	const [listCategories, setListCategories] = useState(optionListCategories);
@@ -86,9 +89,10 @@ const Quota = ({ setView, setValue, products }) => {
 	}, [selectedCategory]);
 
 	useEffect(() => {
-		const totalAmount = quotaItems.reduce((acc, el) => acc + el.totalImpuestos, 0);
-		setTotal(totalAmount);
-		// if(arrayProductsSelected.length === 0) clearProducts();
+		const totalAmountProducts = productsStore.reduce((acc, el) => acc + el.totalImpuestos, 0);
+		const totalAmountQuota = quotaItems.reduce((acc, el) => acc + el.totalImpuestos, 0);
+		setTotal(totalAmountQuota + totalAmountProducts);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [quotaItems]);
 
 	const handleQuotaItems = quotaGroup => {
@@ -204,6 +208,7 @@ const Quota = ({ setView, setValue, products }) => {
 
 	const handleCancel = () => {
 		setQuotaItems([]);
+		clearQuotas();
 		setListCategories(optionListCategories);
 	};
 
@@ -235,7 +240,7 @@ const Quota = ({ setView, setValue, products }) => {
 				</Col>
 			</Row>
 
-			{quotaItems.length > 0 && (
+			{(quotaItems.length > 0 || productsStore.length > 0) && (
 				<>
 					<div className='mt-4' style={{ border: '1px solid rgba(0, 0, 0, 0.15)' }}>
 						<Row className=' text-center mx-0'>
@@ -306,6 +311,106 @@ const Quota = ({ setView, setValue, products }) => {
 								<p> </p>
 							</Col>
 						</Row>
+
+						{productsStore.length > 0 &&
+							productsStore.map(item => (
+								<Row key={item.sku} className='text-center'>
+									<Col
+										sm='1'
+										md='1'
+										className='d-flex align-items-center justify-content-center py-1'
+									>
+										<p className='m-0 text-summary pl-4'>Producto</p>
+									</Col>
+									<Col
+										sm='2'
+										md='2'
+										className='d-flex align-items-center justify-content-center py-1'
+									>
+										<p className='m-0 text-summary'>{item.sku}</p>
+									</Col>
+									<Col
+										sm='3'
+										md='3'
+										className='d-flex align-items-center justify-content-center py-1 px-0'
+									>
+										<p
+											className='m-0 text-summary'
+											style={{ fontWeight: 'bold', fontSize: '12px' }}
+										>
+											{item.material}
+										</p>
+									</Col>
+									<Col
+										sm='1'
+										md='1'
+										className='d-flex align-items-center justify-content-center py-1'
+									>
+										<Input
+											id={item.sku}
+											type='number'
+											min='1'
+											style={{ height: '28px', fontSize: '14px' }}
+											className='text-center'
+											name='cantidad'
+											placeholder='0'
+											value={item.cantidad}
+											// onChange={handleInputChange}
+											fixedDecimalLength={2}
+											disabled
+										/>
+									</Col>
+									<Col sm='1' md='1' className='d-flex align-items-center justify-content-center'>
+										<CurrencyInput
+											id={item.sku}
+											name='precioUnitarioImpuestos'
+											placeholder={item.precioUnitarioImpuestos}
+											decimalsLimit={2}
+											// onChange={handleInputCurrencyChange}
+											style={{ height: '28px', fontSize: '14px', width: '79px' }}
+											className='text-center form-control'
+											disabled
+										/>
+									</Col>
+									<Col sm='1' md='1' className='d-flex align-items-center justify-content-center '>
+										<Input
+											type='number'
+											min='1'
+											placeholder='0'
+											className='text-center'
+											style={{ height: '28px', fontSize: '14px', width: '79px' }}
+											disabled
+										/>
+									</Col>
+									<Col
+										sm='1'
+										md='1'
+										className='d-flex align-items-center justify-content-center py-1'
+									>
+										<p className='m-0 text-summary'>{formatterPesos.format(item.total)}</p>
+									</Col>
+									<Col
+										sm='1'
+										md='1'
+										className='d-flex align-items-center justify-content-center py-1'
+									>
+										<p className='m-0 text-summary'>{formatterPesos.format(item.totalImpuestos)}</p>
+									</Col>
+									<Col
+										sm='1'
+										md='1'
+										className='d-flex align-items-center justify-content-center py-1'
+									>
+										{/* <img
+											style={{ cursor: 'pointer' }}
+											src={imageTrash}
+											alt='trash logo'
+											onClick={'() => handleDeleteItem(item.sku)'}
+										/> */}
+									</Col>
+								</Row>
+							))}
+
 						{quotaItems.map(item => (
 							<Row key={item.sku} className='text-center'>
 								<Col sm='1' md='1' className='d-flex align-items-center justify-content-center py-1'>
@@ -325,6 +430,15 @@ const Quota = ({ setView, setValue, products }) => {
 										onClick={() => handleAddMoreItemsQuota(item)}
 									>
 										{item.material[0].categoria}
+										<img
+											src={imageEye}
+											alt='logo eye'
+											className='mt-1 ml-3'
+											style={{
+												height: '10px',
+												width: '17px'
+											}}
+										/>
 									</p>
 								</Col>
 								<Col sm='1' md='1' className='d-flex align-items-center justify-content-center py-1'>
@@ -387,14 +501,20 @@ const Quota = ({ setView, setValue, products }) => {
 							</Col>
 						</Row>
 					</div>
+					<Row className='mt-2 d-flex justify-content-end '>
+						<Label
+							className='mr-4 delete-all'
+							style={{fontSize:'14px'}}
+							onClick={ handleCancel }
+						>
+							Borrar todos los materiales cupo
+						</Label>
+					</Row>
 					<Container className='mt-5 pt-3 px-5 mx-2'>
 						<div className='d-flex justify-content-between'>
 							<Button className='boton-exclusion mx-4' onClick={handleCancel}>
 								Cancelar
 							</Button>
-							{/* <Button className='boton-exclusion mx-4' onClick={ handleContinue }>
-							Añadir +
-						</Button> */}
 							<Button className='boton-exclusion mx-4' onClick={handleContinue}>
 								Continuar
 							</Button>

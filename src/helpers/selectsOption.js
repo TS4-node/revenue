@@ -19,7 +19,7 @@ export const optionsListCD = [
 
 //ModalCreateLimit.jsx
 export const optionsListMCL = [
-	{ value: '', label: '' },
+	// { value: '', label: '' },
 	{ value: 'CMM Metropolitan', label: 'CMM Metropolitan' },
 	{ value: 'CMM Michoacana', label: 'CMM Michoacana' },
 	{ value: 'CMM Morelos', label: 'CMM Morelos' },

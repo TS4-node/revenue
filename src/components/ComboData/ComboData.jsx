@@ -24,6 +24,7 @@ import { AlertGeneric } from '../index';
 import { useSelect } from '../../hooks';
 import { createDataComboAction, clearDataComboAction } from '../../redux/actions/comboDataActions';
 
+
 //Simulate DB
 const owner = 'PPM Corporativo';
 const salesStructure = 'Grupo Modelo';
@@ -41,17 +42,19 @@ const initialCombo = {
 	aplicaciones: { allmobile: false, televenta: false, b2b: false, dbr: false }
 };
 
-function compareDates(dateString) {
-	let compareDate = dateString.split('-').reverse();
-	let currentDate = new Date().toLocaleDateString().split('/');
 
-	if (
-		parseInt(compareDate[0]) >= parseInt(currentDate[0]) &&
-		parseInt(compareDate[1]) >= parseInt(currentDate[1]) &&
-		parseInt(compareDate[2]) >= parseInt(currentDate[2])
-	)
+function compareDatess(dateString) {
+	let currentDate = new Date();
+	let compareDate = new Date(dateString);
+
+	// compare only date => not hours!!
+	currentDate.setHours(0, 0, 0, 0);
+
+	if (currentDate <= compareDate) {
 		return true;
-	else return false;
+	} else {
+		return false;
+	}
 }
 
 const ComboData = ({ setValue, setView }) => {
@@ -60,6 +63,7 @@ const ComboData = ({ setValue, setView }) => {
 	const createDataCombo = dataCombo => dispatch(createDataComboAction(dataCombo));
 	const clearDataCombo = () => dispatch(clearDataComboAction());
 	const dataCombo = useSelector(state => state.comboData.comboData);
+	const currentIdlimitOfCombo = useSelector( state => state.limitOfCombos.currentId );
 
 	/*
 	 * State Local
@@ -106,7 +110,8 @@ const ComboData = ({ setValue, setView }) => {
 		} = e;
 
 		if (name === 'fechaIni') {
-			if (!compareDates(value)) {
+			// if (!compareDates(value, 'start')) {
+			if (!compareDatess(value)) {
 				setErrorDate(true);
 				setMsgError('La fecha inicio debe ser mayor a la fecha del día de hoy');
 				return;
@@ -116,7 +121,8 @@ const ComboData = ({ setValue, setView }) => {
 			}
 		}
 		if (name === 'fechaFin') {
-			if (!compareDates(value)) {
+			// if (!compareDates(value, 'end')) {
+			if (!compareDatess(value)) {
 				setErrorDate(true);
 				setMsgError('La fecha fin debe ser mayor a la fecha del día de hoy');
 				return;
@@ -197,9 +203,11 @@ const ComboData = ({ setValue, setView }) => {
 	const saveCombo = () => {
 		if (
 			dataCombo.fechaIni === '' ||
-			!compareDates(dataCombo.fechaIni) ||
+			// !compareDates(dataCombo.fechaIni) ||
+			!compareDatess(dataCombo.fechaIni)||
 			dataCombo.fechaFin === '' ||
-			!compareDates(dataCombo.fechaFin) ||
+			// !compareDates(dataCombo.fechaFin) ||
+			!compareDatess(dataCombo.fechaFin)||
 			dataCombo.descripcionCorta.trim() === '' ||
 			dataCombo.descripcionLarga.trim() === '' ||
 			dataCombo.agrupadorPrecios === [] ||
@@ -219,12 +227,18 @@ const ComboData = ({ setValue, setView }) => {
 
 	return (
 		<Container style={{ fontSize: '14px', width: '30rem', height: '34rem' }} className='mt-3'>
-			<div className='d-flex justify-content-between'>
-				<p className='label mr-1 '>
+				<p className='label mr-1 text-center '>
 					Propietario:
 					<span style={{ color: '#1890FF', fontWeight: '700' }} className='ml-1'>
 						<img src={assignment_ind} alt='id logo' />
 						{owner}
+					</span>
+				</p>
+			<div className='d-flex justify-content-between my-3 pt-2'>
+				<p className='label mr-1 '>
+					ID limite:
+					<span style={{ color: '#1890FF', fontWeight: '700' }} className='ml-1'>
+						{ currentIdlimitOfCombo }
 					</span>
 				</p>
 				<p className='label mr-1 '>
@@ -276,7 +290,7 @@ const ComboData = ({ setValue, setView }) => {
 				</Row>
 			)}
 
-			<Row className='mt-2' style={{}}>
+			<Row className='pt-2'>
 				<Col sm='12' md='12'>
 					<TextField
 						label='Descripción Corta'
