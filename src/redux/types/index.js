@@ -20,6 +20,7 @@ export const ADD_LIMIT_OF_COMBO = 'ADD_LIMIT_OF_COMBO';
 export const ADD_LIMIT_OF_COMBO_SUCCESS = 'ADD_LIMIT_OF_COMBO_SUCCESS';
 export const ADD_LIMIT_OF_COMBO_ERROR = 'ADD_LIMIT_OF_COMBO_ERROR'; //no action for the error yet
 export const ID_LIMIT_OF_COMBO_CURRENT = 'ID_LIMIT_OF_COMBO_CURRENT';
+export const CLEAR_ID_LIMIT_OF_COMBO_CURRENT = 'CLEAR_ID_LIMIT_OF_COMBO_CURRENT';
 
 
 /*  combo data    */
@@ -28,6 +29,9 @@ export const CLEAR_DATA_COMBO = 'CLEAR_DATA_COMBO';
 
 
 /*  exclusion and inclusions    */
+
+//clear data
+export const CLEAR_EXCLUSIONS_AND_INCLUSIONS = 'CLEAR_EXCLUSIONS_AND_INCLUSIONS';
 
 //regional sales department
 export const GET_GENERAL_REGIONAL_SALES = 'GET_GENERAL_DIRECTORATE_SALES';
@@ -62,6 +66,8 @@ export const CLEAR_INCLUSION = 'CLEAR_INCLUSION'
 
 /*  Search Materials    */
 
+export const CLEAR_ALL_MATERIALS = 'CLEAR_ALL_MATERIALS';
+
 //products
 export const GET_PRODUCTS = 'GET_PRODUCTS';
 export const SET_PRODUCTS = 'SET_PRODUCTS';
@@ -70,3 +76,9 @@ export const CLEAR_PRODUCTS = 'CLEAR_PRODUCTS';
 //quotas
 export const SET_QUOTA = 'SET_QUOTA';
 export const CLEAR_QUOTAS = 'CLEAR_QUOTAS';
+
+/*  Handler View Create Combo    */
+
+export const SET_VIEW = 'SET_VIEW';
+export const SET_NESTED_VIEW = 'SET_NESTED_VIEW';
+export const CLEAR_ALL_INDEX_VIEWS = 'CLEAR_ALL_INDEX_VIEWS';

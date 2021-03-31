@@ -17,7 +17,8 @@ import {
     ADD_LIMIT_OF_COMBO,
     ADD_LIMIT_OF_COMBO_SUCCESS,
     ADD_LIMIT_OF_COMBO_ERROR,
-    ID_LIMIT_OF_COMBO_CURRENT
+    ID_LIMIT_OF_COMBO_CURRENT,
+    CLEAR_ID_LIMIT_OF_COMBO_CURRENT
 } from '../types'
 
 const initialState = {
@@ -69,6 +70,14 @@ export default function (state = initialState, { type, payload }) {
             return{
                 ...state,
                 currentId: payload
+            }
+
+        case CLEAR_ID_LIMIT_OF_COMBO_CURRENT:
+            return{
+                limitsOfCombos: [],
+                loading: false,
+                error: false,
+                currentId: ''
             }
 
         default:

@@ -17,7 +17,8 @@ import {
     ADD_LIMIT_OF_COMBO,
     ADD_LIMIT_OF_COMBO_SUCCESS,
     ADD_LIMIT_OF_COMBO_ERROR,
-    ID_LIMIT_OF_COMBO_CURRENT
+    ID_LIMIT_OF_COMBO_CURRENT,
+    CLEAR_ID_LIMIT_OF_COMBO_CURRENT
 } from '../types'
 import { _getLimitsOfCombos, _postLimitOfCombo } from '../../services/combosGenerator'
 
@@ -101,4 +102,18 @@ export function createIDLimitOfComboAction(id) {
 const createIDLimitOfCombo = id => ({
     type: ID_LIMIT_OF_COMBO_CURRENT,
     payload: id
+})
+
+/*
+ * clear a current id limit of combo
+ */
+
+export function clearIDLimitOfComboAction() {
+    return (dispatch) => {
+        dispatch(clearIDLimitOfCombo());
+    }
+}
+
+const clearIDLimitOfCombo = () => ({
+    type: CLEAR_ID_LIMIT_OF_COMBO_CURRENT
 })

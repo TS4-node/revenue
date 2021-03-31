@@ -3,7 +3,8 @@ import {
     SET_PRODUCTS,
     CLEAR_PRODUCTS,
     SET_QUOTA,
-    CLEAR_QUOTAS
+    CLEAR_QUOTAS,
+    CLEAR_ALL_MATERIALS
 } from '../types';
 
 const initialState = {
@@ -44,6 +45,13 @@ export default function (state = initialState, { type, payload }) {
         case CLEAR_QUOTAS:
             return{
                 ...state,
+                SET_quota: []
+            }
+
+        case CLEAR_ALL_MATERIALS:
+            return{
+                GET_products: [],
+                SET_products: [],
                 SET_quota: []
             }
 
