@@ -13,9 +13,11 @@
 */
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
+import { persistStore } from 'redux-persist'
+
 import reducer from './reducers';
 
-const store = createStore(
+export const store = createStore(
     reducer,
     compose(applyMiddleware(thunk),
 
@@ -23,6 +25,6 @@ const store = createStore(
             ? window.__REDUX_DEVTOOLS_EXTENSION__()
             : f => f
     )
-
 );
-export default store;
+
+export const persistor = persistStore(store);
