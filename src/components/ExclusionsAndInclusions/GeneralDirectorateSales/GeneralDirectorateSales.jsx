@@ -29,7 +29,7 @@ import { setRegionalSalesDirectorateAction } from '../../../redux/actions/exclus
 
 
 ///this is the view #0 for the Exclusions and Inclusions
-const GeneralDirectorateSales =  ({setView, generalDirectorateSales, setValue /*, loading*/ }) => {
+const GeneralDirectorateSales =  ({setView, generalDirectorateSales, setValue, setCurrentViewTab, setCurrentNestedViewTab }) => {
 
     const dispatch = useDispatch();
 
@@ -49,6 +49,12 @@ const GeneralDirectorateSales =  ({setView, generalDirectorateSales, setValue /*
         e.persist();
         setSearchItem( e.target.value );
     }
+
+    useEffect(() => {
+        setCurrentViewTab(1);
+        setCurrentNestedViewTab(0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [rowSelect])
 
     useEffect(() => {
         filterGeneralDirectorateSales(searchItem, idSAP, setFoundItem, generalDirectorateSales);

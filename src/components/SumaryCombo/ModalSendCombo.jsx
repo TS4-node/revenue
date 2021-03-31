@@ -4,7 +4,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Row, Col } from 're
 
 import OKimage from '../../assets/images/ok.png';
 
-const ModalSendCombo = ({ idCombo, toggle, modal }) => {
+const ModalSendCombo = ({ idCombo, toggle, modal, clearIdLimitComboStore, clearDataComboStore, clearExclusionsAndInclusionsStore, clearMaterialsStore, clearAllIndexViews}) => {
 
 	//TODO: limpiar el store para no dejar registro del combo creado previamente
 
@@ -25,6 +25,11 @@ const ModalSendCombo = ({ idCombo, toggle, modal }) => {
 		setNestedModal(!nestedModal);
 		setCloseAll(true);
 		setTimeout(() => {
+			clearIdLimitComboStore();
+			clearDataComboStore();
+			clearExclusionsAndInclusionsStore();
+			clearMaterialsStore();
+			clearAllIndexViews();
 			history.push('/');
 		}, 1000);
 	};

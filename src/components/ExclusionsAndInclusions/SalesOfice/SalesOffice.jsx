@@ -27,7 +27,7 @@ import { setSalesOfficeAction } from '../../../redux/actions/exclusionsAndInclus
 
 
 ///this is the view #2 for the Exclusions and Inclusions
-const SalesOffice = ({ setView, salesOffice }) => {
+const SalesOffice = ({ setView, salesOffice, setCurrentViewTab, setCurrentNestedViewTab  }) => {
 	const dispatch = useDispatch();
 
 	const setSalesOffice = salesOffice => dispatch(setSalesOfficeAction(salesOffice));
@@ -49,6 +49,12 @@ const SalesOffice = ({ setView, salesOffice }) => {
 	const [rowSelect, setRowSelect] = useState([]);
 	const [clear, setClear] = useState(false);
 	const [error, setError] = useState(false);
+
+	useEffect(() => {
+        setCurrentViewTab(1);
+        setCurrentNestedViewTab(2);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [rowSelect])
 
 	const handleChangeCheckbox = () => setIdSAP(!idSAP);
 

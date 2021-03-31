@@ -12,7 +12,7 @@
  *
  */
 import React, { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { AppBar, Tabs, Tab } from '@material-ui/core';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
@@ -48,6 +48,9 @@ const TabsCreateCombo = () => {
 	const getAllDataExclusionsAndInclusions = () => dispatch(getAllDataAction());
 	const getAllDataMaterials = () => dispatch(getAllMaterialsAction());
 
+	const currentViewIndex = useSelector( state => state.currentViewIndexCreateCombo.currentTabView);
+	const currentNestedViewIndex = useSelector( state => state.currentViewIndexCreateCombo.currentNestedView );
+
 	useEffect(() => {
 		getAllDataExclusionsAndInclusions();
 		getAllDataMaterials();
@@ -59,10 +62,10 @@ const TabsCreateCombo = () => {
 	const theme = useTheme();
 
 	//For de Tabs in nav
-	const [value, setValue] = useState(0);
+	const [value, setValue] = useState(currentViewIndex);
 	//for Tab & PopoverExclusionsAndInclusions
 	const [anchorElExclusionsAndInclusions, setAnchorELExclusionsAndInclusions] = useState(null);
-	const [viewExclusionsAndInclusions, setViewExclusionsAndInclusions] = useState(0);
+	const [viewExclusionsAndInclusions, setViewExclusionsAndInclusions] = useState(currentNestedViewIndex);
 
 	//for Tab & PopoverSearchMaterials
 	// const [anchorElSearchMaterials, setAnchorELSearchMaterials] = useState(null);

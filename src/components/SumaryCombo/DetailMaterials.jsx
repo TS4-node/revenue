@@ -1,12 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Col, Input, Label, Row } from 'reactstrap';
-
+import { useDispatch } from 'react-redux';
 
 import { formatterPesos } from '../../helpers/materials';
 import CurrencyInput from 'react-currency-input-field';
 import ModalSendCombo from './ModalSendCombo';
+import { clearIDLimitOfComboAction } from '../../redux/actions/limitOfCombosActions';
+import { clearDataComboAction } from '../../redux/actions/comboDataActions';
+import { clearExclusionsAndInclusionsAction } from '../../redux/actions/exclusionsAndInclusionsActions';
+import { clearAllMaterialsAction } from '../../redux/actions/searchMaterialsActions';
+import { clearAllIndexAction } from '../../redux/actions/tabsViewCreateComboActions';
 
 const DetalMaterials = ({ idCombo, setValue, allProducts }) => {
+
+	/*	REDUX	*/
+	const dispatch = useDispatch();
+	const clearIdLimitComboStore = () => dispatch(clearIDLimitOfComboAction());
+	const clearDataComboStore = () => dispatch(clearDataComboAction());
+	const clearExclusionsAndInclusionsStore = () => dispatch(clearExclusionsAndInclusionsAction());
+	const clearMaterialsStore = () => dispatch(clearAllMaterialsAction());
+	const clearAllIndexViews = () => dispatch(clearAllIndexAction());
+
+	/*	LOCAL STATE	*/
 	const [totalAmount, setTotalAmount] = useState(0);
 	const [modal, setModal] = useState(false);
 
@@ -18,7 +33,7 @@ const DetalMaterials = ({ idCombo, setValue, allProducts }) => {
 
 	const toggle = () => setModal(!modal);
 
-	const handleSendCombo = () => toggle();
+	const handleSendCombo = () =>  toggle();
 
 	return (
 		<>
@@ -133,7 +148,16 @@ const DetalMaterials = ({ idCombo, setValue, allProducts }) => {
 					Enviar Aprobación
 				</Button>
 			</Row>
-			<ModalSendCombo idCombo={idCombo} toggle={toggle} modal={modal} />
+			<ModalSendCombo
+				idCombo={idCombo}
+				toggle={toggle}
+				modal={modal}
+				clearIdLimitComboStore={clearIdLimitComboStore}
+				clearDataComboStore={clearDataComboStore}
+				clearExclusionsAndInclusionsStore={clearExclusionsAndInclusionsStore}
+				clearMaterialsStore={clearMaterialsStore}
+				clearAllIndexViews={clearAllIndexViews}
+			/>
 		</>
 	);
 };
