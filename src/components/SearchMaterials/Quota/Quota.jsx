@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Col, Row, Input, Container, Button } from 'reactstrap';
+import { Col, Row, Input, Container, Button, Label } from 'reactstrap';
 import EmojiIcon from '@atlaskit/icon/glyph/search';
 import Select, { components } from 'react-select';
 import CurrencyInput from 'react-currency-input-field';
@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import ModalSelectionQuota from './ModalSelectionQuota';
 import imageTrash from '../../../assets/images/Trash.png';
 import imageEye from '../../../assets/images/eye.png';
-import { setQuotasAction } from '../../../redux/actions/searchMaterialsActions';
+import { setQuotasAction, clearQuotasAction } from '../../../redux/actions/searchMaterialsActions';
 import { formatterPesos } from '../../../helpers/materials';
 
 const DropdownIndicator = props => {
@@ -45,6 +45,7 @@ const Quota = ({ setView, setValue, products }) => {
 	const dispatch = useDispatch();
 
 	const setQuotas = quotas => dispatch(setQuotasAction(quotas));
+	const clearQuotas = () => dispatch( clearQuotasAction() );
 
 	const quotasStore = useSelector(state => state.materials.SET_quota);
 	const productsStore = useSelector(state => state.materials.SET_products);
@@ -207,6 +208,7 @@ const Quota = ({ setView, setValue, products }) => {
 
 	const handleCancel = () => {
 		setQuotaItems([]);
+		clearQuotas();
 		setListCategories(optionListCategories);
 	};
 
@@ -499,6 +501,15 @@ const Quota = ({ setView, setValue, products }) => {
 							</Col>
 						</Row>
 					</div>
+					<Row className='mt-2 d-flex justify-content-end '>
+						<Label
+							className='mr-4 delete-all'
+							style={{fontSize:'14px'}}
+							onClick={ handleCancel }
+						>
+							Borrar todos los materiales cupo
+						</Label>
+					</Row>
 					<Container className='mt-5 pt-3 px-5 mx-2'>
 						<div className='d-flex justify-content-between'>
 							<Button className='boton-exclusion mx-4' onClick={handleCancel}>

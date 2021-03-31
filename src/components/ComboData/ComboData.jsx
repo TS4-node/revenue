@@ -42,17 +42,27 @@ const initialCombo = {
 	aplicaciones: { allmobile: false, televenta: false, b2b: false, dbr: false }
 };
 
-function compareDates(dateString) {
+function compareDates(dateString, periodTovalidate) {
 	let compareDate = dateString.split('-').reverse();
 	let currentDate = new Date().toLocaleDateString().split('/');
 
-	if (
-		parseInt(compareDate[0]) >= parseInt(currentDate[0]) &&
-		parseInt(compareDate[1]) >= parseInt(currentDate[1]) &&
-		parseInt(compareDate[2]) >= parseInt(currentDate[2])
-	)
-		return true;
-	else return false;
+	if(periodTovalidate === 'start'){
+		if (
+			parseInt(compareDate[0]) > parseInt(currentDate[0]) &&  //day
+			parseInt(compareDate[1]) >= parseInt(currentDate[1]) && //month
+			parseInt(compareDate[2]) >= parseInt(currentDate[2])	//year
+		) return true;
+		else return false;
+	}
+	if(periodTovalidate === 'end'){
+		if (
+			parseInt(compareDate[0]) >= parseInt(currentDate[0]) &&  //day
+			parseInt(compareDate[1]) >= parseInt(currentDate[1]) && //month
+			parseInt(compareDate[2]) >= parseInt(currentDate[2])	//year
+		) return true;
+		else return false;
+	}
+
 }
 
 const ComboData = ({ setValue, setView }) => {
@@ -108,7 +118,7 @@ const ComboData = ({ setValue, setView }) => {
 		} = e;
 
 		if (name === 'fechaIni') {
-			if (!compareDates(value)) {
+			if (!compareDates(value, 'start')) {
 				setErrorDate(true);
 				setMsgError('La fecha inicio debe ser mayor a la fecha del día de hoy');
 				return;
@@ -118,7 +128,7 @@ const ComboData = ({ setValue, setView }) => {
 			}
 		}
 		if (name === 'fechaFin') {
-			if (!compareDates(value)) {
+			if (!compareDates(value, 'end')) {
 				setErrorDate(true);
 				setMsgError('La fecha fin debe ser mayor a la fecha del día de hoy');
 				return;

@@ -438,7 +438,7 @@ const Products = ({ setView, setValue, products, handleButtonActiveQuota }) => {
 								Cancelar
 							</Button>
 							<Button className='boton-exclusion mr-3' onClick={handleContinue}>
-								Guardar Combo
+								Continuar
 							</Button>
 						</Row>
 					</Container>
