@@ -2,7 +2,8 @@ import {
     GET_PRODUCTS,
     SET_PRODUCTS,
     CLEAR_PRODUCTS,
-    SET_QUOTA
+    SET_QUOTA,
+    CLEAR_QUOTAS
 } from '../types';
 
 const initialState = {
@@ -38,6 +39,12 @@ export default function (state = initialState, { type, payload }) {
             return{
                 ...state,
                 SET_quota: payload
+            }
+
+        case CLEAR_QUOTAS:
+            return{
+                ...state,
+                SET_quota: []
             }
 
         default:

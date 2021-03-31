@@ -69,3 +69,4 @@ export const CLEAR_PRODUCTS = 'CLEAR_PRODUCTS';
 
 //quotas
 export const SET_QUOTA = 'SET_QUOTA';
+export const CLEAR_QUOTAS = 'CLEAR_QUOTAS';
