@@ -219,7 +219,7 @@ const CreateLimitOfCombo = () => {
 										value={selectedOption}
 										onChange={handleChangeSelect}
 										options={optionsListMCL}
-										components={{ DropdownIndicator }}
+										components={ <DropdownIndicator label={''}/> }
 										placeholder='Estructura de Ventas'
 										styles={{ control: css => ({ ...css, fontSize: '14px', textAlign: 'left' }) }}
 									/>
