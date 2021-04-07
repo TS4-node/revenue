@@ -4,10 +4,10 @@ import EmojiIcon from '@atlaskit/icon/glyph/search';
 import Select, { components } from 'react-select';
 import { useDispatch } from 'react-redux';
 
-import idLogo from '../assets/images/assignment_ind.png';
-import { optionsListMCL } from '../helpers/selectsOption.js';
-import { AlertGeneric, ModalCreateLimit } from '../components';
-import { createLimitOfComboAction, createIDLimitOfComboAction } from '../redux/actions/limitOfCombosActions';
+import idLogo from '../../assets/images/assignment_ind.png';
+import { optionsListMCL } from '../../helpers/selectsOption.js';
+import { AlertGeneric, ModalCreateLimit } from '../../components';
+import { createLimitOfComboAction, createIDLimitOfComboAction } from '../../redux/actions/limitOfCombosActions';
 
 const owner = 'PPM Corporativo';
 
