@@ -18,7 +18,8 @@ import {
     URL_salesOrganization,
     URL_salesOffice,
     URL_customers,
-    URL_products
+    URL_products,
+    URL_listOfCombos
 } from './endpoints'
 
 
@@ -58,5 +59,13 @@ export const _getCustomers = async () => {
 
 export const _getProducts = async () => {
     const { data } = await axiosClient.get(URL_products);
+    return data;
+}
+
+
+/* List Of Combos */
+
+export const _getCombos = async () => {
+    const { data } = await axiosClient.get(URL_listOfCombos);
     return data;
 }

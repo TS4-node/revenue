@@ -19,3 +19,4 @@ export const URL_salesOrganization = '/organizacionVentas';
 export const URL_salesOffice = '/oficinaVentas';
 export const URL_customers = '/clientes';
 export const URL_products = '/productos';
+export const URL_listOfCombos = '/combos';

@@ -15,10 +15,10 @@
 /*  limit of Combos */
 export const GET_LIMIT_OF_COMBOS = 'GET_LIMIT_OF_COMBOS';
 export const GET_LIMIT_OF_COMBOS_SUCCESS = 'GET_LIMIT_OF_COMBOS_SUCCESS';
-export const GET_LIMIT_OF_COMBOS_ERROR = 'GET_LIMIT_OF_COMBOS_ERROR'; //no action for the error yet
+export const GET_LIMIT_OF_COMBOS_ERROR = 'GET_LIMIT_OF_COMBOS_ERROR'; //TODO: no action for the error yet
 export const ADD_LIMIT_OF_COMBO = 'ADD_LIMIT_OF_COMBO';
 export const ADD_LIMIT_OF_COMBO_SUCCESS = 'ADD_LIMIT_OF_COMBO_SUCCESS';
-export const ADD_LIMIT_OF_COMBO_ERROR = 'ADD_LIMIT_OF_COMBO_ERROR'; //no action for the error yet
+export const ADD_LIMIT_OF_COMBO_ERROR = 'ADD_LIMIT_OF_COMBO_ERROR'; //TODO: no action for the error yet
 export const ID_LIMIT_OF_COMBO_CURRENT = 'ID_LIMIT_OF_COMBO_CURRENT';
 export const CLEAR_ID_LIMIT_OF_COMBO_CURRENT = 'CLEAR_ID_LIMIT_OF_COMBO_CURRENT';
 
@@ -82,3 +82,9 @@ export const CLEAR_QUOTAS = 'CLEAR_QUOTAS';
 export const SET_VIEW = 'SET_VIEW';
 export const SET_NESTED_VIEW = 'SET_NESTED_VIEW';
 export const CLEAR_ALL_INDEX_VIEWS = 'CLEAR_ALL_INDEX_VIEWS';
+
+
+/*      List of all Combos        */
+export const GET_LIST_OF_COMBOS = 'GET_LIST_OF_COMBOS';
+export const GET_LIST_OF_COMBOS_SUCCESS = 'GET_LIST_OF_COMBOS_SUCCESS';
+export const GET_LIST_OF_COMBOS_ERROR = 'GET_LIST_OF_COMBOS_ERROR'; //TODO: no action for the error yet

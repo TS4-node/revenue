@@ -30,7 +30,7 @@ const LimiteCombos = () => {
     return (
         <div>
             <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
-                <DropdownToggle nav caret className='text pl-1'>
+                <DropdownToggle nav caret className='text '>
                     Limite de Combos
                 </DropdownToggle>
                 <DropdownMenu className='submenu'>

@@ -9,7 +9,8 @@ const MainCard = ({ image, text, description, classNameHover, onClick }) => {
 			onClick={onClick}
 			style={{
 				width:291,
-				height: 419
+				height: 419,
+				cursor: 'pointer'
 			}}
 		>
 			<img

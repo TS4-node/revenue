@@ -92,15 +92,15 @@ const GettingStart = () => {
 				</div>
 			</header>
 
-			<main className='px-5 mx-5 py-5 contenedor'>
-				<div className='d-flex mt-3 justify-content-between align-items-center'>
+			<main className='px-5 mx-5 pb-5 pt-4 contenedor'>
+				<div className='d-flex justify-content-between align-items-center'>
 					{moduleInformation.map(item => (
 						<div
 							key={item.buttonColor}
 							className={`text-center pt-5 card-main ${item.className}`}
 							style={{
 								boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.15)',
-								height: '536px',
+								height: '520px',
 								width: '273px'
 							}}
 						>

@@ -35,7 +35,7 @@ export function getAllLimitOfCombosAction() {
             dispatch(getAllLimitOfCombosSuccess(limitOfCombos));
         } catch (error) {
             console.log('this is the error: ', error);
-            dispatch(getAllLimitOfCombosError());
+            dispatch(getAllLimitOfCombosError(error));
         }
     }
 }
@@ -51,9 +51,9 @@ const getAllLimitOfCombosSuccess = limitOfCombos => ({
     payload: limitOfCombos
 })
 
-const getAllLimitOfCombosError = () => ({
+const getAllLimitOfCombosError = error => ({
     type: GET_LIMIT_OF_COMBOS_ERROR,
-    payload: true
+    payload: error
 })
 
 
@@ -69,7 +69,7 @@ export function createLimitOfComboAction(limitOfCombo) {
             dispatch(addLimitOfComboSuccess(limitOfCombo));
         } catch (error) {
             console.log('this is the error:', error);
-            dispatch(addLimitOfComboError());
+            dispatch(addLimitOfComboError(error));
         }
     }
 }
@@ -84,9 +84,9 @@ const addLimitOfComboSuccess = limitOfCombo => ({
     payload: limitOfCombo
 })
 
-const addLimitOfComboError = () => ({
+const addLimitOfComboError = error => ({
     type: ADD_LIMIT_OF_COMBO_ERROR,
-    payload: true
+    payload: error
 })
 
 /*

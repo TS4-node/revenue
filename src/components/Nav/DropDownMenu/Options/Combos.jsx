@@ -12,12 +12,15 @@
  *
  */
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { Dropdown, DropdownItem, DropdownToggle, DropdownMenu } from 'reactstrap';
 
 import { ModalCreateCombo } from '../../../index';
 
 const Combos = () => {
+
+	const history = useHistory();
+
 	const [dropdownOpen, setDropdownOpen] = useState(false);
 	const [modal, setModal] = useState(false);
 
@@ -27,25 +30,23 @@ const Combos = () => {
 	return (
 		<div>
 			<Dropdown nav isOpen={dropdownOpen} toggle={toggleDropDownMenu}>
-				<DropdownToggle nav caret className='text pl-1'>
+				<DropdownToggle nav caret className='text '>
 					Combos
 				</DropdownToggle>
 				<DropdownMenu className='submenu'>
-					<DropdownItem
-						className='option'
-						onClick={toggleModal}
-					>
-							Crear Combo
+					<DropdownItem className='option' onClick={toggleModal}>
+						Crear Combo
 					</DropdownItem>
-					<DropdownItem className='option'>Detalle</DropdownItem>
-					<DropdownItem className='option'>Relacionado</DropdownItem>
+					<DropdownItem className='option'>
+						Agregados Recientemente
+					</DropdownItem>
+					<DropdownItem className='option' onClick={() => history.push('/combos-generator/todos-los-combos')}>
+						Todos los combos
+					</DropdownItem>
 				</DropdownMenu>
 			</Dropdown>
 
-			<ModalCreateCombo
-				toggle={toggleModal}
-				modal={modal}
-			/>
+			<ModalCreateCombo toggle={toggleModal} modal={modal} />
 		</div>
 	);
 };

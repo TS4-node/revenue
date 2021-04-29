@@ -16,7 +16,7 @@ const Home = () => {
 
 			<Container>
 				<h1
-					className='my-5 py-2 text-center'
+					className='my-4 py-2 text-center'
 					style={{
 						color: '#1890ff',
 						fontFamily: 'Roboto, sans-serif',

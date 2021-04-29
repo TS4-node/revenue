@@ -13,3 +13,4 @@ export { default as SearchMaterials } from './SearchMaterials/SearchMaterials';
 export { default as TableFilter } from './TableFilter/TableFilter';
 export { default as MainCard } from './MainCard/MainCard';
 export { default as ModalCreateCombo } from './ModalCreateCombo/ModalCreateCombo';
+export { default as AllCombosTable } from './AllCombosTable/AllCombosTable';

@@ -296,6 +296,317 @@
       "activo": false,
       "IdLimite": "L-520367810",
       "id": 33
+    },
+    {
+      "nivelCombo": "Oficina de Ventas",
+      "estructuraVenta": "CMM Metropolitan",
+      "combosPermitidos": "100",
+      "CombosDisponibles": "100",
+      "activo": false,
+      "IdLimite": "L-956596550",
+      "id": 34
+    }
+  ],
+  "combos": [
+    {
+      "id": 1,
+      "IdCombo": "C0066977",
+      "descripcionCorta": "Combo 2021",
+      "descripcionLarga": "Combo 2021",
+      "estructuraVentas": "Central-Bajío",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Activo"
+    },
+    {
+      "id": 2,
+      "IdCombo": "C0066192",
+      "descripcionCorta": "Combo 2021",
+      "descripcionLarga": "Combo 2021",
+      "estructuraVentas": "Central-Bajío",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Inactivo"
+    },
+    {
+      "id": 3,
+      "IdCombo": "C0062396",
+      "descripcionCorta": "Combo 2021",
+      "descripcionLarga": "Combo 2021",
+      "estructuraVentas": "Norte",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Activo"
+    },
+    {
+      "id": 4,
+      "IdCombo": "C0061259",
+      "descripcionCorta": "Combo 2021",
+      "descripcionLarga": "Combo 2021",
+      "estructuraVentas": "Norte",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Activo"
+    },
+    {
+      "id": 5,
+      "IdCombo": "C0062955",
+      "descripcionCorta": "Combo 2021",
+      "descripcionLarga": "Combo 2021",
+      "estructuraVentas": "Norte",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Activo"
+    },
+    {
+      "id": 6,
+      "IdCombo": "C0064457",
+      "descripcionCorta": "Combo 2021",
+      "descripcionLarga": "Combo 2021",
+      "estructuraVentas": "Norte",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Activo"
+    },
+    {
+      "id": 7,
+      "IdCombo": "C0062525",
+      "descripcionCorta": "Combo 2021",
+      "descripcionLarga": "Combo 2021",
+      "estructuraVentas": "Norte",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Inactivo"
+    },
+    {
+      "id": 8,
+      "IdCombo": "C0064000",
+      "descripcionCorta": "Flujo Combo",
+      "descripcionLarga": "Flujo Combo",
+      "estructuraVentas": "Norte",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Activo"
+    },
+    {
+      "id": 9,
+      "IdCombo": "C0068958",
+      "descripcionCorta": "Flujo Combo",
+      "descripcionLarga": "Flujo Combo",
+      "estructuraVentas": "Norte",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Activo"
+    },
+    {
+      "id": 10,
+      "IdCombo": "C0061353",
+      "descripcionCorta": "Flujo Combo",
+      "descripcionLarga": "Flujo Combo",
+      "estructuraVentas": "Central-Bajío",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Inactivo"
+    },
+    {
+      "id": 11,
+      "IdCombo": "C0068520",
+      "descripcionCorta": "Flujo Combo",
+      "descripcionLarga": "Flujo Combo",
+      "estructuraVentas": "Central-Bajío",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Activo"
+    },
+    {
+      "id": 12,
+      "IdCombo": "C0063437",
+      "descripcionCorta": "Flujo Combo",
+      "descripcionLarga": "Flujo Combo",
+      "estructuraVentas": "Central-Bajío",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Activo"
+    },
+    {
+      "id": 13,
+      "IdCombo": "C0062045",
+      "descripcionCorta": "Flujo Combo",
+      "descripcionLarga": "Flujo Combo",
+      "estructuraVentas": "Central-Bajío",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Inactivo"
+    },
+    {
+      "id": 14,
+      "IdCombo": "C0066678",
+      "descripcionCorta": "Flujo Combo",
+      "descripcionLarga": "Flujo Combo",
+      "estructuraVentas": "Sureste",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Activo"
+    },
+    {
+      "id": 15,
+      "IdCombo": "C0063341",
+      "descripcionCorta": "PPM Reg",
+      "descripcionLarga": "PPM Reg",
+      "estructuraVentas": "Sureste",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Activo"
+    },
+    {
+      "id": 16,
+      "IdCombo": "C0069692",
+      "descripcionCorta": "Combo 2021",
+      "descripcionLarga": "Combo 2021",
+      "estructuraVentas": "Sureste",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Activo"
+    },
+    {
+      "id": 17,
+      "IdCombo": "C0067783",
+      "descripcionCorta": "Combo 2021",
+      "descripcionLarga": "Combo 2021",
+      "estructuraVentas": "Sureste",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Activo"
+    },
+    {
+      "id": 18,
+      "IdCombo": "C0066551",
+      "descripcionCorta": "Combo 2021",
+      "descripcionLarga": "Combo 2021",
+      "estructuraVentas": "Sureste",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Inactivo"
+    },
+    {
+      "id": 19,
+      "IdCombo": "C0062727",
+      "descripcionCorta": "Combo 2021",
+      "descripcionLarga": "Combo 2021",
+      "estructuraVentas": "Sureste",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Activo"
+    },
+    {
+      "id": 20,
+      "IdCombo": "C0068004",
+      "descripcionCorta": "Combo 2021",
+      "descripcionLarga": "Combo 2021",
+      "estructuraVentas": "Central-Bajío",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Activo"
+    },
+    {
+      "id": 21,
+      "IdCombo": "C0068962",
+      "descripcionCorta": "Combo 2021",
+      "descripcionLarga": "Combo 2021",
+      "estructuraVentas": "Central-Bajío",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Activo"
+    },
+    {
+      "id": 22,
+      "IdCombo": "C0067221",
+      "descripcionCorta": "Combo 2021",
+      "descripcionLarga": "Combo 2021",
+      "estructuraVentas": "Norte",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Activo"
+    },
+    {
+      "id": 23,
+      "IdCombo": "C0062310",
+      "descripcionCorta": "Combo 2021",
+      "descripcionLarga": "Combo 2021",
+      "estructuraVentas": "Norte",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Activo"
+    },
+    {
+      "id": 24,
+      "IdCombo": "C0060101",
+      "descripcionCorta": "Combo 2021",
+      "descripcionLarga": "Combo 2021",
+      "estructuraVentas": "Norte",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Inactivo"
+    },
+    {
+      "id": 25,
+      "IdCombo": "C0069932",
+      "descripcionCorta": "Combo 2021",
+      "descripcionLarga": "Combo 2021",
+      "estructuraVentas": "Norte",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Activo"
+    },
+    {
+      "id": 26,
+      "IdCombo": "C0068315",
+      "descripcionCorta": "Combo 2021",
+      "descripcionLarga": "Combo 2021",
+      "estructuraVentas": "Norte",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Activo"
+    },
+    {
+      "id": 27,
+      "IdCombo": "C0066576",
+      "descripcionCorta": "Combo 2021",
+      "descripcionLarga": "Combo 2021",
+      "estructuraVentas": "Norte",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Activo"
+    },
+    {
+      "id": 28,
+      "IdCombo": "C0065002",
+      "descripcionCorta": "Combo 2021",
+      "descripcionLarga": "Combo 2021",
+      "estructuraVentas": "Central-Bajío",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Activo"
+    },
+    {
+      "id": 29,
+      "IdCombo": "C0062559",
+      "descripcionCorta": "Combo 2021",
+      "descripcionLarga": "Combo 2021",
+      "estructuraVentas": "Central-Bajío",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Activo"
+    },
+    {
+      "id": 30,
+      "IdCombo": "C0063268",
+      "descripcionCorta": "Combo 2021",
+      "descripcionLarga": "Combo 2021",
+      "estructuraVentas": "Central-Bajío",
+      "fechaIni": "26/02/2021",
+      "fechaFin": "26/02/2021",
+      "estatus": "Activo"
     }
   ],
   "direccionRegionalVentas": [
