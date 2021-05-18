@@ -305,6 +305,159 @@
       "activo": false,
       "IdLimite": "L-956596550",
       "id": 34
+    },
+    {
+      "nivelCombo": "Oficina de Ventas",
+      "estructuraVenta": "CMM Morelos",
+      "combosPermitidos": "100",
+      "CombosDisponibles": "100",
+      "activo": false,
+      "IdLimite": "L-980181875",
+      "id": 35
+    },
+    {
+      "nivelCombo": "Oficina de Ventas",
+      "estructuraVenta": "CMM Morelos",
+      "combosPermitidos": "100",
+      "CombosDisponibles": "100",
+      "activo": "true",
+      "IdLimite": "L-820426210",
+      "id": 36
+    },
+    {
+      "nivelCombo": "Oficina de Ventas",
+      "estructuraVenta": "CMM Michoacana",
+      "combosPermitidos": "100",
+      "CombosDisponibles": "100",
+      "activo": false,
+      "IdLimite": "L-308629901",
+      "id": 37
+    },
+    {
+      "nivelCombo": "Oficina de Ventas",
+      "estructuraVenta": "CMM Macfe",
+      "combosPermitidos": "2",
+      "CombosDisponibles": "2",
+      "activo": false,
+      "IdLimite": "L-828622742",
+      "id": 38
+    },
+    {
+      "nivelCombo": "Organización de Ventas",
+      "estructuraVenta": "CMM Morelos",
+      "combosPermitidos": "100",
+      "CombosDisponibles": "100",
+      "activo": false,
+      "IdLimite": "L-268275961",
+      "id": 39
+    },
+    {
+      "nivelCombo": "Oficina de Ventas",
+      "estructuraVenta": "CMM Michoacana",
+      "combosPermitidos": "2",
+      "CombosDisponibles": "2",
+      "activo": false,
+      "IdLimite": "L-819323425",
+      "id": 40
+    },
+    {
+      "nivelCombo": "Organización de Ventas",
+      "estructuraVenta": "CMM Morelos",
+      "combosPermitidos": "0100",
+      "CombosDisponibles": "0100",
+      "activo": "true",
+      "IdLimite": "L-834600854",
+      "id": 41
+    },
+    {
+      "nivelCombo": "Oficina de Ventas",
+      "estructuraVenta": "CMM Michoacana",
+      "combosPermitidos": "10",
+      "CombosDisponibles": "10",
+      "activo": false,
+      "IdLimite": "L-425237882",
+      "id": 42
+    },
+    {
+      "nivelCombo": "Oficina de Ventas",
+      "estructuraVenta": "CMM Michoacana",
+      "combosPermitidos": "100",
+      "CombosDisponibles": "100",
+      "activo": false,
+      "IdLimite": "L-146416455",
+      "id": 43
+    },
+    {
+      "nivelCombo": "Oficina de Ventas",
+      "estructuraVenta": "CMM Morelos",
+      "combosPermitidos": "100",
+      "CombosDisponibles": "100",
+      "activo": false,
+      "IdLimite": "L-653703418",
+      "id": 44
+    },
+    {
+      "nivelCombo": "Organización de Ventas",
+      "estructuraVenta": "CMM Michoacana",
+      "combosPermitidos": "100",
+      "CombosDisponibles": "100",
+      "activo": false,
+      "IdLimite": "L-815506747",
+      "id": 45
+    },
+    {
+      "nivelCombo": "Oficina de Ventas",
+      "estructuraVenta": "CMM Michoacana",
+      "combosPermitidos": "100",
+      "CombosDisponibles": "100",
+      "activo": false,
+      "IdLimite": "L-443073533",
+      "id": 46
+    },
+    {
+      "nivelCombo": "Oficina de Ventas",
+      "estructuraVenta": "CMM Michoacana",
+      "combosPermitidos": "100",
+      "CombosDisponibles": "100",
+      "activo": false,
+      "IdLimite": "L-753141121",
+      "id": 47
+    },
+    {
+      "nivelCombo": "Organización de Ventas",
+      "estructuraVenta": "CMM Metropolitan",
+      "combosPermitidos": "100",
+      "CombosDisponibles": "100",
+      "activo": false,
+      "IdLimite": "L-451146725",
+      "id": 48
+    },
+    {
+      "nivelCombo": "Oficina de Ventas",
+      "estructuraVenta": "CMM Morelos",
+      "combosPermitidos": "10",
+      "CombosDisponibles": "10",
+      "activo": false,
+      "IdLimite": "L-854296207",
+      "id": 49
+    },
+    {
+      "nivelCombo": "Organización de Ventas",
+      "estructuraVenta": "CMM Michoacana",
+      "combosPermitidos": "",
+      "CombosDisponibles": "",
+      "activo": false,
+      "IdLimite": "L-733858392",
+      "id": 50
+    },
+    {
+      "nivelCombo": "Organización de Ventas",
+      "estructuraVenta": "CMM Metropolitan",
+      "combosPermitidos": "010",
+      "CombosDisponibles": "010",
+      "activo": false,
+      "IdLimite": "L-245644528",
+      "id": 51
     }
   ],
   "combos": [

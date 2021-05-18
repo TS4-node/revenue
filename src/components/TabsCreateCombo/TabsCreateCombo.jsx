@@ -13,13 +13,19 @@
  */
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import { AppBar, Tabs, Tab } from '@material-ui/core';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import SwipeableViews from 'react-swipeable-views';
 
 import './TabsCreateCombo.css';
-import { TabPanel, ComboData, ExclusionsAndInclusions, SearchMaterials, SumaryCombo } from '../index';
+import {
+	TabPanel,
+	ComboData,
+	ExclusionsAndInclusions,
+	SearchMaterials,
+	SumaryCombo,
+} from '../index';
 import { a11yProps } from '../../helpers/styles';
 import PopoverExclusionsAndInclusions from './PopoverExclusionsAndInclusions/PopoverExclusionsAndInclusions';
 // import PopoverSearchMaterials from './PopoverSearchMaterials/PopoverSearchMaterials';
@@ -27,29 +33,19 @@ import { handleDivIndicator } from '../../helpers/styles';
 import { getAllDataAction } from '../../redux/actions/exclusionsAndInclusionsActions';
 import { getAllMaterialsAction } from '../../redux/actions/searchMaterialsActions';
 
-const useStyles = makeStyles(theme => ({
-	root: {
-		backgroundColor: theme.palette.background.paper,
-		width: 1200,
-		minHeight: '55rem',
-		margin: '0 auto'
-	},
-	Tab: {
-		flexDirection: 'row-reverse'
-	}
-}));
-
-
 const TabsCreateCombo = () => {
-
 	/*    Redux     */
 	const dispatch = useDispatch();
 
 	const getAllDataExclusionsAndInclusions = () => dispatch(getAllDataAction());
 	const getAllDataMaterials = () => dispatch(getAllMaterialsAction());
 
-	const currentViewIndex = useSelector( state => state.currentViewIndexCreateCombo.currentTabView);
-	const currentNestedViewIndex = useSelector( state => state.currentViewIndexCreateCombo.currentNestedView );
+	const currentViewIndex = useSelector(
+		state => state.currentViewIndexCreateCombo.currentTabView,
+	);
+	const currentNestedViewIndex = useSelector(
+		state => state.currentViewIndexCreateCombo.currentNestedView,
+	);
 
 	useEffect(() => {
 		getAllDataExclusionsAndInclusions();
@@ -58,18 +54,19 @@ const TabsCreateCombo = () => {
 	}, []);
 
 	/*    Local State     */
+
 	const classes = useStyles();
-	const theme = useTheme();
 
 	//For de Tabs in nav
 	const [value, setValue] = useState(currentViewIndex);
 	//for Tab & PopoverExclusionsAndInclusions
-	const [anchorElExclusionsAndInclusions, setAnchorELExclusionsAndInclusions] = useState(null);
-	const [viewExclusionsAndInclusions, setViewExclusionsAndInclusions] = useState(currentNestedViewIndex);
+	const [ anchorElExclusionsAndInclusions, setAnchorELExclusionsAndInclusions ] = useState(null);
+	const [ viewExclusionsAndInclusions, setViewExclusionsAndInclusions ] = useState(currentNestedViewIndex);
 
-	//for Tab & PopoverSearchMaterials
-	// const [anchorElSearchMaterials, setAnchorELSearchMaterials] = useState(null);
-	// const [viewSearchMaterials, setViewSearchMaterials] = useState(0);
+	useEffect(() => {
+		handleDivIndicator(value);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [value]);
 
 	const handleChange = (event, newValue) => setValue(newValue);
 
@@ -80,18 +77,9 @@ const TabsCreateCombo = () => {
 		setAnchorELExclusionsAndInclusions(event.currentTarget);
 	};
 
-	// const handleClickSearchMaterials = event => {
-	// 	event.stopPropagation();
-	// 	setAnchorELSearchMaterials(event.currentTarget);
-	// };
-
-	useEffect(() => {
-		handleDivIndicator(value);
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [value]);
 
 	return (
-		<div className={classes.root}>
+		<div className={classes.tabContainer}>
 			<AppBar position='static' color='default' className='mt-2'>
 				<Tabs
 					value={value}
@@ -99,11 +87,43 @@ const TabsCreateCombo = () => {
 					indicatorColor='primary'
 					textColor='primary'
 					variant='fullWidth'
-					style={{ height: '1rem' }}>
-					<Tab label={'DATOS DEL COMBO'} {...a11yProps(0)} />
-					<Tab label={'EXCLUSIONES E INCLUSIONES'} icon={<ArrowDropDownIcon onClick={handleClickExclusionsAndInclusionsTab} />} />
-					<Tab label={'BUSQUEDA DE MATERIALES'} /*icon={<ArrowDropDownIcon onClick={handleClickSearchMaterials} />} *//>
-					<Tab label={'RESUMEN DEL COMBO'} {...a11yProps(3)} />
+					style={{ height: '1rem' }}
+				>
+					<Tab
+						{...a11yProps(0)}
+						label={'DATOS DEL COMBO'}
+						className={[
+							classes.wrapper,
+							value >= 0 ? classes.tabActive : classes.tabInactive,
+						]}
+					/>
+					<Tab
+						label={'EXCLUSIONES E INCLUSIONES'}
+						className={[
+							classes.wrapper,
+							value >= 1 ? classes.tabActive : classes.tabInactive,
+						]}
+						icon={
+							<ArrowDropDownIcon
+								onClick={handleClickExclusionsAndInclusionsTab}
+							/>
+						}
+					/>
+					<Tab
+						label={'BUSQUEDA DE MATERIALES'}
+						className={[
+							classes.wrapper,
+							value >= 2 ? classes.tabActive : classes.tabInactive,
+						]}
+					/>
+					<Tab
+						{...a11yProps(3)}
+						label={'RESUMEN DEL COMBO'}
+						className={[
+							classes.wrapper,
+							value >= 3 ? classes.tabActive : classes.tabInactive,
+						]}
+					/>
 				</Tabs>
 
 				<PopoverExclusionsAndInclusions
@@ -111,41 +131,82 @@ const TabsCreateCombo = () => {
 					setAnchorEL={setAnchorELExclusionsAndInclusions}
 					setView={setViewExclusionsAndInclusions}
 				/>
-				{/* <PopoverSearchMaterials
-					anchorEl={anchorElSearchMaterials}
-					setAnchorEL={setAnchorELSearchMaterials}
-					setView={setViewSearchMaterials}
-				/> */}
 			</AppBar>
 
 			{/* this div is the selector in tab active on capture of combo */}
-			<div id='selector'></div>
+			<div className='d-flex m-0'>
+				<div id='selector'></div>
+				<div id='selector2'></div>
+			</div>
+			<div className={classes.bar}></div>
 
 			<SwipeableViews
 				axis='x'
 				index={value}
 				onChangeIndex={handleChangeIndex}
-				style={{ paddingTop: '0rem', height: '55rem', overflow: 'hidden' }}
+				className={classes.views}
 			>
-				<TabPanel value={value} index={0} dir={theme.direction}>
-					<ComboData setValue={setValue} setView={setViewExclusionsAndInclusions}/>
+				<TabPanel value={value} index={0}>
+					<ComboData
+						setValue={setValue}
+						setView={setViewExclusionsAndInclusions}
+					/>
 				</TabPanel>
 
-				<TabPanel value={value} index={1} dir={theme.direction}>
-					<ExclusionsAndInclusions view={viewExclusionsAndInclusions} setView={setViewExclusionsAndInclusions} setValue={setValue} />
+				<TabPanel value={value} index={1}>
+					<ExclusionsAndInclusions
+						view={viewExclusionsAndInclusions}
+						setView={setViewExclusionsAndInclusions}
+						setValue={setValue}
+					/>
 				</TabPanel>
 
-				<TabPanel value={value} index={2} dir={theme.direction}>
-					<SearchMaterials /*view={viewSearchMaterials} setView={setViewSearchMaterials} */ setValue={setValue}/>
+				<TabPanel value={value} index={2}>
+					<SearchMaterials setValue={setValue} />
 				</TabPanel>
 
-				<TabPanel value={value} index={3} dir={theme.direction}>
+				<TabPanel value={value} index={3}>
 					<SumaryCombo setValue={setValue} />
 				</TabPanel>
-
 			</SwipeableViews>
 		</div>
 	);
 };
+
+const useStyles = makeStyles(theme => ({
+	root: {
+		// backgroundColor: theme.palette.background.paper,
+		width: 1200,
+		minHeight: '55rem',
+		margin: '0 auto',
+	},
+	wrapper: {
+		fontFamily: 'Inter, sans-serif',
+		fontWeight: 600,
+		fontSize: '12px',
+	},
+	tabActive: {
+		color: '#1890ff!important',
+	},
+	tabInactive: {
+		color: '#9a9a9a!important',
+	},
+	tabContainer: {
+		width: 1200,
+		minHeight: '55rem',
+		margin: '0 auto',
+	},
+	views: {
+		paddingTop: '0rem',
+		height: '55rem',
+		overflow: 'hidden',
+	},
+	bar: {
+		backgroundColor: '#e6e6e6',
+		height: '.18rem',
+		// marginTop: '-0.9px',
+		background: 'none'
+	},
+}));
 
 export default TabsCreateCombo;

@@ -59,3 +59,26 @@ svg.MuiSvgIcon-root {
 	color: #1890ff;
 	font-weight: bold;
 }
+
+input.MuiInputBase-input {
+	outline: #CDCDCD;
+	font-family: 'Inter', sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	color: #9A9A9A;
+	background-color: #fff!important;
+}
+
+textarea.MuiInputBase-input{
+	outline: #CDCDCD;
+	font-family: 'Inter', sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	color: #9A9A9A;
+}
+
+span.MuiFormControlLabel-label{
+	font-size: 14px;
+	font-family: 'Inter', sans-serif;
+	color: #686868;
+}

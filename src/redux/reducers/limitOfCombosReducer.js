@@ -25,7 +25,7 @@ const initialState = {
     limitsOfCombos: [],
     loading: false,
     error: false,
-    currentId: ''
+    currentLimitOfCombo: {}
 }
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -69,7 +69,7 @@ export default function (state = initialState, { type, payload }) {
         case ID_LIMIT_OF_COMBO_CURRENT:
             return{
                 ...state,
-                currentId: payload
+                currentLimitOfCombo: payload
             }
 
         case CLEAR_ID_LIMIT_OF_COMBO_CURRENT:
@@ -77,7 +77,7 @@ export default function (state = initialState, { type, payload }) {
                 limitsOfCombos: [],
                 loading: false,
                 error: false,
-                currentId: ''
+                currentLimitOfCombo: {}
             }
 
         default:

@@ -16,12 +16,12 @@ const Home = () => {
 
 			<Container>
 				<h1
-					className='my-4 py-2 text-center'
+					className='mt-4 pt-2 text-center'
 					style={{
 						color: '#1890ff',
-						fontFamily: 'Roboto, sans-serif',
+						fontFamily: 'Inter, sans-serif',
 						fontWeight: 'bold',
-						fontSize: '36px'
+						fontSize: '32px'
 					}}
 				>
 					¿Qué quieres hacer?
@@ -54,16 +54,16 @@ const Home = () => {
 						/>
 					</Col>
 				</Row>
-				<Row className='mt-4'>
-					<Container className='text-center pr-5'>
+				<Row className='mt-5 pt-3'>
+					<Container className='text-center pr-5 mt-5'>
 						<p
-							className='mt-4'
+							className='mt-5'
 							style={{
 								fontFamily: 'Robot, sans-serif',
-								fontWeight: 'bold',
+								fontWeight: '600',
 								fontSize: '14px',
 								textDecoration: 'underline',
-                                color: '#666666'
+                                color: '#1890FF'
 							}}
 						>
 							Consultar límites y combos

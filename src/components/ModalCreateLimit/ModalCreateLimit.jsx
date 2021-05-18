@@ -30,17 +30,17 @@ const ModalCreateLimit = ({ modal, setModal, toggle, id}) => {
 		<Modal isOpen={modal} toggle={toggle} centered size='sm' backdrop={'static'}>
 			<ModalBody>
 				<div className='text-center'>
-					{/* <img src={OKimage} alt='ok logo' style={{ width: '40px', height: '40px' }} className='mb-3' /> */}
-					<div className='ml-4 text-center header-modal'>
+					<div className='ml-1 text-center header-modal'>
 						Tu ID límite de combo <br/>
 						ha sido creado
 					</div>
 					<p
 						className='mb-0 my-3'
 						style={{
-							fontFamily:'Roboto, sans-serif',
+							fontFamily:'Inter, sans-serif',
+							fontWeight: 700,
 							fontSize:'24px',
-							color: 'rgba(0, 0, 0, 0.65)'
+							color: '#686868'
 						}}
 					>
 						{ id }
@@ -52,7 +52,7 @@ const ModalCreateLimit = ({ modal, setModal, toggle, id}) => {
 					className='button-success'
 					style={{
 						fontFamily:'Inter, sans-serif',
-						width:'200px'
+						width:'250px'
 					}}
 					onClick={handleClick}>
 					Crear Combo

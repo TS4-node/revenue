@@ -43,12 +43,36 @@ const useSelect = (initialState, optionsList, placeholder = 'Busca Aquí', isMul
 			components={{ DropdownIndicator }}
 			placeholder={placeholder}
 			styles={{
-				// container: css => ({ ...css, height:'1rem' }),
-				control: css => ({ ...css, fontSize:'14px', textAlign:'left'})
-				// valueContainer: css => ({ ...css, padding: '0'}),
-				// menu: css => ({ ...css, fontSize:'14px'}),
-				// menuList: css => ({ ...css, fontSize:'14px'})
-
+				control: css => ({
+					...css,
+					fontFamily: 'Inter, sans-serif',
+					fontSize: '14px',
+				}),
+				valueContainer: css => ({
+					fontFamily: 'Inter, sans-serif',
+					fontSize: '12px',
+					fontWeight: 500,
+					color: '#9a9a9a',
+					paddingLeft: 10,
+					display: 'flex'
+				}),
+				option: (css, state) => ({
+					...css,
+					fontFamily: 'Inter, sans-serif',
+					fontWeight: 700,
+					fontSize: '14px',
+					color: state.isSelected ? '#ffffff' : '#686868',
+					backgroundColor: state.isSelected ? '#1890ff' : '#fafafa',
+					textAlign: 'left',
+					':hover': {
+						...css,
+						fontFamily: 'Inter, sans-serif',
+						fontWeight: 700,
+						fontSize: '14px',
+						backgroundColor: '#E6F7FF',
+						color: '#1890ff',
+					},
+				}),
 			}}
 			isMulti={isMulti}
 			isClearable={isClearable}

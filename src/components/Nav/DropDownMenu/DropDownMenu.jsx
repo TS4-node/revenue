@@ -19,12 +19,12 @@ const DropDownMenu = () => {
 	return (
 		<div>
 			<Nav>
-				<Clientes />
 				<LimiteCombos />
 				<Combos />
+				<Clientes />
 				<AprobacionesMasivas />
 				<Productos />
-				<Informes />
+				{/* <Informes /> */}
 				<Paneles />
 			</Nav>
 		</div>

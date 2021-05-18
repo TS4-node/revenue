@@ -42,7 +42,7 @@ const LimitsOfCombos = () => {
 			</Row>
 
 			<Row className='m-0'>
-				<Col sm='11.5' md='11.5' className='px-5 d-flex justify-content-center'>
+				<Col sm='12' md='12' className='px-5 d-flex justify-content-center'>
 					<CombosTable />
 				</Col>
 			</Row>

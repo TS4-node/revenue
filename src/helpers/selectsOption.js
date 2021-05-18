@@ -17,11 +17,21 @@ export const optionsListCD = [
 	{ value: 'Distribuidor Modelo', label: '43 - Distribuidor Modelo' }
 ];
 
-//ModalCreateLimit.jsx
-export const optionsListMCL = [
+//CreateLimitOfCombo.jsx
+export const optionsListComboNivel = [
+	// { value: '', label: '' },
+	{ value: 'Ninguno', label: 'Ninguno' },
+	{ value: 'Oficina de Ventas', label: 'Oficina de Ventas' },
+	{ value: 'Organización de Ventas', label: 'Organización de Ventas' },
+	{ value: 'Dirección Regional de Ventas', label: 'Dirección Regional de Ventas' },
+	{ value: 'Nacional', label: 'Nacional' }
+];
+
+export const optionsListSaleStructure = [
 	// { value: '', label: '' },
 	{ value: 'CMM Metropolitan', label: 'CMM Metropolitan' },
 	{ value: 'CMM Michoacana', label: 'CMM Michoacana' },
 	{ value: 'CMM Morelos', label: 'CMM Morelos' },
-	{ value: 'CMM Macfe', label: 'CMM Macfe' }
+	{ value: 'CMM Macfe', label: 'CMM Macfe' },
+	{ value: 'Crear Cliente', label: '+ Crear Cliente' },
 ];

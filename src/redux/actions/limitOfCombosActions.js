@@ -93,15 +93,15 @@ const addLimitOfComboError = error => ({
  * create a current id limit of combo
  */
 
-export function createIDLimitOfComboAction(id) {
+export function createCurrentLimitOfComboAction(limitOfCombo) {
     return (dispatch) => {
-        dispatch(createIDLimitOfCombo(id));
+        dispatch(createCurrentLimitOfCombo(limitOfCombo));
     }
 }
 
-const createIDLimitOfCombo = id => ({
+const createCurrentLimitOfCombo = limitOfCombo => ({
     type: ID_LIMIT_OF_COMBO_CURRENT,
-    payload: id
+    payload: limitOfCombo
 })
 
 /*
@@ -116,4 +116,19 @@ export function clearIDLimitOfComboAction() {
 
 const clearIDLimitOfCombo = () => ({
     type: CLEAR_ID_LIMIT_OF_COMBO_CURRENT
+})
+
+/*
+ * select a current id limit of combo
+ */
+
+export function selectLimitOfComboAction(limitOfCombo) {
+    return (dispatch) => {
+        dispatch(selectLimitOfCombo(limitOfCombo));
+    }
+}
+
+const selectLimitOfCombo = limitOfCombo => ({
+    type: ID_LIMIT_OF_COMBO_CURRENT,
+    payload: limitOfCombo
 })

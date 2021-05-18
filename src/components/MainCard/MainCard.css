@@ -1,23 +1,29 @@
 .main-card {
 	transition: 0.2s ease-in all;
+    border-radius: 20px;
 }
 
-.main-card:hover {
-    border-radius: 10px;
-    transform: scale(1.1);
-}
+/* .main-card:hover {
+    /* transform: scale(1.1); 
+} */
 
 .main-card-green:hover{
-    border: 1px solid #008f39;
-    background: #bdecb646;
+    /* border: 1px solid #008f39; */
+    background: #E3F2E0;
+    height: 300px;
+    width: 350px;
 }
 
 .main-card-magenta:hover{
-    border: 1px solid #FF725E;
-    background: #f5908241;
+    /* border: 1px solid #FF725E; */
+    background: #FFDCD7;
+    height: 300px;
+    width: 350px;
 }
 
 .main-card-purple:hover{
-    border: 1px solid #BA68C8;
-    background: #e7a8f24c;
+    /* border: 1px solid #BA68C8; */
+    background: #EAD2EF;
+    height: 300px;
+    width: 350px;
 }

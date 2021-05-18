@@ -5,7 +5,7 @@ import './MainCard.css';
 const MainCard = ({ image, text, description, classNameHover, onClick }) => {
 	return (
 		<div
-			className={`text-center main-card ${ classNameHover } py-3 mt-3`}
+			className={`text-center py-3 mt-3`}
 			onClick={onClick}
 			style={{
 				width:291,
@@ -13,21 +13,29 @@ const MainCard = ({ image, text, description, classNameHover, onClick }) => {
 				cursor: 'pointer'
 			}}
 		>
-			<img
-                src={image}
-                alt={`Logo ${ text }`}
-                style={{
-                    height:'220px'
+			<div
+				className={`${classNameHover} main-card  p-0 m-0 mb-2 d-flex align-items-center justify-content-center`}
+				style={{
+					height:'350px',
+					width: '300px'
+				}}
+			>
+				<img
+					src={image}
+					alt={`Logo ${ text }`}
+					style={{
+						height:'220px'
 
-                }}
-            />
+					}}
+				/>
+			</div>
 			<h3
-				className='my-4 py-2'
+				className='mb-4 pb-2'
 				style={{
 					color: '#1890ff',
-					fontFamily: 'Roboto, sans-serif',
+					fontFamily: 'Inter, sans-serif',
 					fontWeight: 'bold',
-					fontSize: '24px',
+					fontSize: '20px',
                     height:'74px'
 				}}
 			>
@@ -36,10 +44,11 @@ const MainCard = ({ image, text, description, classNameHover, onClick }) => {
 			<p
 				className='m-0'
 				style={{
-					fontFamily: 'Roboto, sans-serif',
-					fontSize: '12px',
-					color: '#8a8a8a',
-                    padding: '0 4rem'
+					fontFamily: 'Inter, sans-serif',
+					fontWeight: '500',
+					fontSize: '14px',
+					color: '#686868',
+                    padding: '0 1.5rem'
 				}}
 			>
 				{ description }

@@ -18,8 +18,7 @@ import TrashIcon from '../../../assets/images/Trash.png';
 import { optionsPagination } from '../../../helpers/reactDataTable';
 import { customStylesCT } from '../../../helpers/styles';
 import { Spinner } from '../../index';
-import { getAllLimitOfCombosAction } from '../../../redux/actions/limitOfCombosActions';
-import { createIDLimitOfComboAction } from '../../../redux/actions/limitOfCombosActions.js';
+import { getAllLimitOfCombosAction, createCurrentLimitOfComboAction, selectLimitOfComboAction } from '../../../redux/actions/limitOfCombosActions';
 import { useHistory } from 'react-router';
 
 
@@ -32,7 +31,8 @@ const CombosTable = () => {
 	const limitsOfCombos = useSelector(state => state.limitOfCombos.limitsOfCombos);
 	const loading = useSelector(state => state.limitOfCombos.loading);
 	const getLimitsCombos = () => dispatch(getAllLimitOfCombosAction());
-	const currentIDlimitOfCombo = id => dispatch(createIDLimitOfComboAction(id));
+	const createCurrentlimitOfCombo = limitOfcombo => dispatch(createCurrentLimitOfComboAction(limitOfcombo));
+	const selectLimitOfCombo = limitOfCombo => dispatch(selectLimitOfComboAction(limitOfCombo));
 
 	/*    Local State     */
 
@@ -42,18 +42,32 @@ const CombosTable = () => {
 	}, []);
 
 	const createCombo = idLimitOfCombo => {
-		currentIDlimitOfCombo(idLimitOfCombo);
+		createCurrentlimitOfCombo(idLimitOfCombo);
 		history.push('/combos-generator/crear-combo');
 	};
 
-	const Detail = row => <p className='m-0 link-table'>Ver Detalle</p>;
+	const detailLimitOfCombo = row => {
+		selectLimitOfCombo(row);
+		history.push('/combos-generator/editar-limite-combo');
+	}
+
+	const Detail = row => (
+		<p
+			className='m-0 link-table'
+			value={row.IdLimite}
+			name={row.IdLimite}
+			onClick={() => detailLimitOfCombo(row)}
+		>
+			Ver Detalle
+		</p>
+	);
 
 	const CreateCombo = row => (
 		<p
 			className='m-0 link-table'
 			value={row.IdLimite}
 			name={row.IdLimite}
-			onClick={() => createCombo(row.IdLimite)}
+			onClick={() => createCombo(row)}
 		>
 			Crear Combo
 		</p>

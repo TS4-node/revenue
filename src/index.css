@@ -16,6 +16,10 @@ a:hover {
 	text-decoration: none !important;
 }
 
+input:focus{
+	box-shadow: none!important;
+}
+
 /*  Login    */
 .contenedor {
 	height: calc(100vh - 55px - 24px);

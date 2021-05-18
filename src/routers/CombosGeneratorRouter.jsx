@@ -16,6 +16,7 @@ import { Head, Nav, LimitOfCombos, TabsCreateCombo } from '../components';
 import Home from '../views/combos-generator/Home';
 import CreateLimitOfCombo from '../views/combos-generator/CreateLimitOfCombo';
 import AllCombos from '../views/combos-generator/AllCombos';
+import EditLimitOfCombo from '../views/combos-generator/EditLimitOfCombo';
 
 const CombosGeneratorRouter = () => {
 
@@ -43,6 +44,7 @@ const CombosGeneratorRouter = () => {
 			<Switch>
 				<Route exact path='/combos-generator' component={Home}/>
 				<Route exact path='/combos-generator/crear-limite-combo' component={CreateLimitOfCombo}/>
+				<Route exact path='/combos-generator/editar-limite-combo' component={EditLimitOfCombo}/>
 				<Route exact path='/combos-generator/crear-combo' component={TabsCreateCombo}/>
 				<Route exact path='/combos-generator/limite-combos' component={LimitOfCombos}/>
 				<Route exact path='/combos-generator/todos-los-combos' component={AllCombos}/>

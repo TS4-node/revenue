@@ -17,20 +17,26 @@
 //for TabsCreateCombo.jsx : div for selector tab active
 export const handleDivIndicator = (value) => {
     let selector = document.getElementById('selector');
+    let selector2 = document.getElementById('selector2');
 
-    let style = 'background-color: #1890ff; height: .22rem; left: 0px; transition: 1s all ease; width:'
+    let style = 'background-color: #1890ff; height: .22rem; margin-bottom: 0;left: 0px; transition: 1s all ease; width:'
+    let style2 = 'background-color: #E6F7FF; height: .22rem; margin-bottom: 0;left: 0px; transition: 1s all ease; width:'
 
     if (value === 0) {
         selector.setAttribute('style', `${style} 300px`);
+        selector2.setAttribute('style', `${style2} 900px`);
     }
     if (value === 1) {
         selector.setAttribute('style', `${style} 600px`);
+        selector2.setAttribute('style', `${style2} 600px`);
     }
     if (value === 2) {
         selector.setAttribute('style', `${style} 900px`);
+        selector2.setAttribute('style', `${style2} 300px`);
     }
     if (value === 3) {
         selector.setAttribute('style', `${style} 1200px`);
+        selector2.setAttribute('style', `${style2} 0px`);
     }
 }
 

@@ -53,14 +53,17 @@ const Head = () => {
 				</Col>
 				<Col xs='4' sm='4' className='text-center'>
 					<Link to={'/main/start'} style={{ textDecoration: 'none' }} onClick={clearStore}>
-						<img src={ABILogo} alt='ABInBev Logo' />
+						<img src={ABILogo} alt='ABInBev Logo' style={{
+							height:'51px',
+							width: '90px'
+						}}/>
 					</Link>
 				</Col>
-				<Col xs='4' sm='4' className='mt-3'>
+				<Col xs='4' sm='4' className='mt-2'>
 					<HeadMenu />
 				</Col>
 			</Row>
-			<hr className='my-0' />
+			<hr className='my-0' style={{borderTop:'1.5px solid #CDCDCD'}} />
 		</>
 	);
 };

@@ -129,11 +129,9 @@ li.nav-item a.nav-link {
 }
 
 .header-modal {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 500;
-	font-style: normal;
+	font-family: 'Inter', sans-serif;
+	font-weight: 700;
 	font-size: 24px;
-	line-height: 28px;
 	text-align: center;
 	color: #1890ff;
 }
@@ -188,7 +186,7 @@ li.nav-item a.nav-link {
 	border: none;
 	outline: none;
 	box-shadow: none;
-	transform: scale(1.1);
+	transform: scale(1.05);
 }
 
 .modal-header {
